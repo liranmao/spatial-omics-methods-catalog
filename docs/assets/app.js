@@ -4,7 +4,7 @@
 
   // ---- Site configuration: fill in on release ----
   const CONFIG = {
-    repoUrl: "https://github.com/liranmao/spatial-omics-methods",
+    repoUrl: "https://github.com/liranmao/spatial-omics-methods-catalog",
     archiveDoi: "",  // e.g. "10.5281/zenodo.1234567"
     paperDoi: "",    // AOAS DOI once published
   };

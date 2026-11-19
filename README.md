@@ -34,7 +34,7 @@ year, first_author, title, journal, doi, paper_url, code_url, code_source, bib_k
 ## Deployment
 
 The site is served by GitHub Pages from the `docs/` folder of the `main` branch:
-https://liranmao.github.io/spatial-omics-methods/
+https://liranmao.github.io/spatial-omics-methods-catalog/
 
 After editing `methods.csv`, run `python3 scripts/build_site.py`, commit and push. `build_site.py` also bumps the
 `?v=` stamp on the CSS/JS links so visitors get the new files instead of a cached copy.
