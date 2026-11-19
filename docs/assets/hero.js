@@ -403,12 +403,6 @@
     tl.insertAdjacentHTML("afterbegin", `<svg width="${width}" height="${axisY + 8}" viewBox="0 0 ${width} ${axisY + 8}" role="group" aria-label="Methods by year and task">${cols}${svg}${pts.join("")}${ticks}</svg>`);
   }
 
-  // Data-derived note: the shift in paradigm over time.
-  (() => {
-    const share = list => list.length ? Math.round(100 * list.filter(m => m.paradigm !== "Statistical / classical ML").length / list.length) : 0;
-    const early = C.data.filter(m => m.year && m.year <= 2021), late = C.data.filter(m => m.year && m.year >= 2024);
-    $("tl-note").textContent = `${share(early)}% of catalogued methods published up to 2021 use deep learning (alone or hybrid); for methods published since 2024 it is ${share(late)}%. Years follow the cited publication.`;
-  })();
 
   function showTip(el) {
     const m = C.data.find(x => x.id === el.dataset.id);
