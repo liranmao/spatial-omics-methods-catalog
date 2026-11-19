@@ -354,7 +354,7 @@ section[id], main[id], header[id] { scroll-margin-top: var(--nav-h); }
 .topnav-inner { max-width: 1320px; height: 100%; margin: 0 auto; padding: 0 28px; display: flex; align-items: center; gap: 32px; }
 .brand { display: inline-flex; align-items: center; gap: 9px; font-weight: 600; font-size: 15px; letter-spacing: -.01em; color: inherit; text-decoration: none; }
 .brand-mark { width: 22px; height: 22px; }
-.topnav-links { display: flex; gap: 28px; margin: 0 auto; font-size: 13.5px; }
+.topnav-links { display: flex; gap: 28px; margin: 0 0 0 auto; font-size: 13.5px; }
 .topnav-links a { color: inherit; opacity: .78; text-decoration: none; transition: opacity .15s ease-out; }
 .topnav-links a:hover { opacity: 1; }
 .topnav :focus-visible { outline-color: #2a34c9; }
@@ -368,7 +368,6 @@ section[id], main[id], header[id] { scroll-margin-top: var(--nav-h); }
 .pill-dark:hover { background: #24242c; }
 .pill-light { background: rgb(255 255 255 / .92); color: #121218 !important; box-shadow: 0 1px 2px rgb(0 0 0 / .06), 0 8px 24px rgb(10 20 80 / .12); }
 .pill-light:hover { background: #fff; }
-.topnav-cta { font-size: 13px; padding: 7px 14px; }
 .pill-lg { font-size: 17px; padding: 14px 26px; }
 
 .cover { position: relative; isolation: isolate; overflow: hidden; background: linear-gradient(to bottom, var(--cover-bg) 0%, var(--cover-bg) 72%, var(--bg-2) 100%); min-height: 100svh;
@@ -417,7 +416,6 @@ section[id], main[id], header[id] { scroll-margin-top: var(--nav-h); }
   .topnav-links { display: none; }
   .brand { white-space: nowrap; min-width: 0; }
   .brand span { font-size: 14px; }
-  .topnav-cta { padding: 6px 12px; white-space: nowrap; }
   .g1 { width: 160vw; left: -30vw; } .g2 { width: 110vw; left: -5vw; }
   .g3 { width: 110vw; left: -45vw; } .g4 { width: 110vw; left: 35vw; }
   .cover-cta .pill-lg { font-size: 16px; padding: 13px 22px; }
@@ -431,8 +429,6 @@ section[id], main[id], header[id] { scroll-margin-top: var(--nav-h); }
 /* Phone nav: keep the full brand name next to a compact button */
 @media (max-width: 480px) {
   .brand span { overflow: hidden; text-overflow: ellipsis; font-size: 13.5px; }
-  .topnav-cta .cta-more { display: none; }
-  .topnav-cta { flex-shrink: 0; }
 }
 .foot .copyright { margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--hair); }
 
