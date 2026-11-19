@@ -53,3 +53,7 @@ each method as described in its own publication; some fields are derived automat
 
 Mao L\*, Li C\*, Jiang S, Li W, Jin K, Zhang NR, Li M†. Computational landscape and emerging frontiers in spatial omics.
 *Annals of Applied Statistics*, in revision. (\*equal contribution, †corresponding author)
+
+---
+
+© Copyright Mingyao Li Lab, 2026.

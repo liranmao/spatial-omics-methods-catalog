@@ -435,3 +435,4 @@ section[id], main[id], header[id] { scroll-margin-top: var(--nav-h); }
   .topnav-cta .cta-more { display: none; }
   .topnav-cta { flex-shrink: 0; }
 }
+.foot .copyright { margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--hair); }
