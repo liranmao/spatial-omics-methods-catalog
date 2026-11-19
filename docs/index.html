@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Spatial Omics Methods Catalog</title>
+<meta name="description" content="Find spatial-omics analysis methods by task, paradigm, language and model family. 112 methods from the review “Computational Landscape and Emerging Frontiers in Spatial Omics” (Annals of Applied Statistics).">
+<meta name="theme-color" content="#011F5B">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css?v=20261118205715">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-ext" viewBox="0 0 16 16"><path d="M6 3H3.5A1.5 1.5 0 0 0 2 4.5v8A1.5 1.5 0 0 0 3.5 14h8a1.5 1.5 0 0 0 1.5-1.5V10M9 2h5v5M14 2 7 9" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-search" viewBox="0 0 16 16"><circle cx="7" cy="7" r="4.75" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="m10.5 10.5 3.5 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></symbol>
+  <symbol id="i-chev" viewBox="0 0 16 16"><path d="m6 4 4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-sort" viewBox="0 0 16 16"><path d="m5 6 3-3 3 3M5 10l3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+</svg>
+
+<nav class="topnav" id="topnav" aria-label="Site">
+  <div class="topnav-inner">
+    <a class="brand" href="#top" aria-label="Spatial Omics Methods Catalog, back to top">
+      <svg class="brand-mark" viewBox="0 0 24 24" aria-hidden="true">
+        <circle cx="12" cy="12" r="3.2" fill="#990000"/>
+        <circle cx="12" cy="4.6" r="2.6" fill="#011F5B"/><circle cx="18.4" cy="8.3" r="2.6" fill="#011F5B"/>
+        <circle cx="18.4" cy="15.7" r="2.6" fill="#011F5B"/><circle cx="12" cy="19.4" r="2.6" fill="#011F5B"/>
+        <circle cx="5.6" cy="15.7" r="2.6" fill="#011F5B"/><circle cx="5.6" cy="8.3" r="2.6" fill="#011F5B"/>
+      </svg>
+      <span>Spatial Omics Methods</span>
+    </a>
+    <span class="topnav-links">
+      <a href="#pipeline">Overview</a>
+      <a href="#catalog">Catalog</a>
+      <a href="#cite">Cite</a>
+      <a id="suggest-top" href="#contribute">Contribute</a>
+    </span>
+    <a class="pill pill-dark topnav-cta" href="#catalog">Browse methods<svg aria-hidden="true" viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+  </div>
+</nav>
+
+<header class="cover" id="top">
+  <div class="glow" aria-hidden="true"><i class="g1"></i><i class="g2"></i><i class="g3"></i><i class="g4"></i></div>
+  <div class="cover-inner" id="cover-inner">
+    <h1 class="cover-h1"><span class="ln">Spatial Omics</span><span class="ln">Methods Catalog</span></h1>
+    <p class="cover-sub">Mao L<sup>*</sup>, Li C<sup>*</sup>, Jiang S, Li W, Jin K, Zhang NR, Li M<sup>&dagger;</sup>. Computational landscape and emerging frontiers in spatial omics. <i>Annals of Applied Statistics</i>
+      <span class="cover-note"><sup>*</sup>Equal contribution &nbsp;·&nbsp; <sup>&dagger;</sup>Corresponding author</span></p>
+    <div class="cover-cta">
+      <a class="pill pill-dark pill-lg" href="#catalog">Browse methods<svg aria-hidden="true" viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <a class="pill pill-light pill-lg" id="paper-link" href="#cite">Check our paper</a>
+    </div>
+  </div>
+</header>
+
+<section class="sec sec-gray" id="pipeline" aria-labelledby="pipe-h">
+  <div class="wrap">
+    <header class="sec-head">
+      <h2 class="sec-h" id="pipe-h">Methods along the<br>analysis pipeline.</h2>
+      <p class="sec-sub">The <span id="n-total">112</span> methods discussed in our review, placed on the workflow of Figure 1.
+        A curated selection, not a complete list (<a href="#disclaimer">about this list</a>). Hover a task to see what it does.</p>
+    </header>
+
+    <ol class="stages" aria-label="Analysis pipeline (Figure 1 of the review)">
+      <li class="stage s1"><span class="sn">1</span><span class="st">Data acquisition<br>&amp; preprocessing</span></li>
+      <li class="stage s2"><span class="sn">2</span><span class="st">Quality control<br>&amp; feature selection</span></li>
+      <li class="stage s3"><span class="sn">3</span><span class="st">Spatial domains<br>&amp; cell types</span></li>
+      <li class="stage s4"><span class="sn">4</span><span class="st">Downstream<br>integrative analysis</span></li>
+    </ol>
+
+    <div class="pipe-grid">
+      <div class="card tasks-card">
+        <div class="tasklist" id="hero-tasks"></div>
+      </div>
+      <figure class="card card-black inset" id="inset">
+        <canvas id="inset-canvas" aria-hidden="true"></canvas>
+        <figcaption><b id="inset-title">Cell-type deconvolution</b><span id="inset-text"></span>
+          <span class="synthetic">Schematic with synthetic data</span></figcaption>
+      </figure>
+    </div>
+
+    <p class="sec-links"><a class="more" href="#catalog">Browse all methods<svg aria-hidden="true"><use href="#i-chev"/></svg></a></p>
+  </div>
+</section>
+
+<section class="sec sec-white timeline" id="timeline" aria-labelledby="tl-h">
+  <div class="wrap">
+    <header class="sec-head">
+      <h2 class="sec-h" id="tl-h">From statistical models<br>to deep learning.</h2>
+      <p class="sec-sub">Every method, placed by publication year and task. Hover a point to see it, click to open it.</p>
+      <ul class="tl-legend" aria-label="Point colors">
+        <li><span class="pt p-stat"></span>Statistical</li>
+        <li><span class="pt p-hyb"></span>Hybrid</li>
+        <li><span class="pt p-dl"></span>Deep learning</li>
+      </ul>
+    </header>
+    <div class="tl-chart" id="tl-chart"></div>
+    <p class="tl-note" id="tl-note"></p>
+  </div>
+</section>
+
+<main class="sec sec-gray" id="catalog">
+  <div class="wrap">
+    <header class="sec-head">
+      <h2 class="sec-h">Find the method<br>for your data.</h2>
+      <p class="sec-sub">Choose a task, then narrow by paradigm, language or model family.</p>
+    </header>
+
+    <div class="card filters">
+      <section class="tasks" id="start" aria-labelledby="tasks-label">
+        <div class="f-head">
+          <h3 class="f-label" id="tasks-label">Task</h3>
+          <ul class="legend" aria-label="Bar colors">
+            <li><span class="sw sw-stat"></span>Statistical</li>
+            <li><span class="sw sw-hyb"></span>Hybrid</li>
+            <li><span class="sw sw-dl"></span>Deep learning</li>
+          </ul>
+        </div>
+        <details class="tasks-d" id="tasks-d" open>
+          <summary><span id="tasks-summary">All tasks</span><svg aria-hidden="true"><use href="#i-chev"/></svg></summary>
+          <div class="task-chart" id="tasks" role="group" aria-labelledby="tasks-label"></div>
+        </details>
+      </section>
+
+      <section class="toolbar" aria-label="Search and refine">
+        <label class="search">
+          <svg aria-hidden="true"><use href="#i-search"/></svg>
+          <span class="sr">Search</span>
+          <input id="q" type="search" placeholder="Search methods, models, papers" autocomplete="off" spellcheck="false">
+        </label>
+        <div class="seg" role="group" aria-label="Modeling paradigm" id="paradigm"></div>
+        <label class="sel"><span class="sr">Language</span>
+          <select id="lang"><option value="">Any language</option></select>
+        </label>
+        <label class="sel"><span class="sr">Model family</span>
+          <select id="model"><option value="">Any model family</option></select>
+        </label>
+      </section>
+    </div>
+
+    <div class="statusbar">
+      <p class="status" id="status" aria-live="polite"></p>
+      <button type="button" class="reset" id="reset" hidden>Clear all filters</button>
+    </div>
+
+    <div class="card table-shell">
+      <table class="grid" id="grid">
+        <colgroup>
+          <col class="col-m"><col class="col-task"><col class="col-core">
+          <col class="col-req" span="7"><col class="col-lang"><col class="col-links">
+        </colgroup>
+        <thead>
+          <tr>
+            <th scope="col" aria-sort="none"><button type="button" class="sortbtn" data-sort="method">Method<svg aria-hidden="true"><use href="#i-sort"/></svg></button></th>
+            <th scope="col">Task</th>
+            <th scope="col">Core method</th>
+            <th scope="colgroup" colspan="7" class="req-group">Requires</th>
+            <th scope="col" aria-sort="none"><button type="button" class="sortbtn" data-sort="year">Year<svg aria-hidden="true"><use href="#i-sort"/></svg></button></th>
+            <th scope="col"><span class="sr">Links</span></th>
+          </tr>
+          <tr class="req-labels" id="req-labels">
+            <th></th><th></th><th></th>
+          </tr>
+        </thead>
+        <tbody id="rows"></tbody>
+      </table>
+      <div class="empty" id="empty" hidden>
+        <p class="empty-title">No method matches all of these filters.</p>
+        <p id="empty-why"></p>
+      </div>
+    </div>
+    <p class="note">Requirements and model families are read automatically from each method’s published description.
+      Check the paper before relying on them. Spot an error? <a href="#contribute">Tell us</a>.</p>
+  </div>
+</main>
+
+<section class="sec sec-white" aria-label="Cite and contribute">
+  <div class="wrap closing">
+    <section class="card card-soft" id="cite" aria-labelledby="cite-h">
+      <h2 class="close-h" id="cite-h">Cite the review.</h2>
+      <p class="ref" id="citation">Mao L<sup>*</sup>, Li C<sup>*</sup>, Jiang S, Li W, Jin K, Zhang NR, Li M<sup>&dagger;</sup>. Computational landscape and emerging frontiers in spatial omics. <i>Annals of Applied Statistics</i>, in revision.</p>
+      <p class="ref-note"><sup>*</sup>Equal contribution &nbsp;·&nbsp; <sup>&dagger;</sup>Corresponding author</p>
+      <p class="actions"><button type="button" class="pill pill-dark" id="copy-cite">Copy citation</button>
+        <span class="muted" id="archive">Archived snapshot DOI added on release.</span></p>
+    </section>
+    <section class="card card-soft" id="contribute" aria-labelledby="contrib-h">
+      <h2 class="close-h" id="contrib-h">Suggest a method.</h2>
+      <p>We add published spatial-omics methods with available code. Send the method name, its task, required
+        input data, language, core model and DOI.</p>
+      <p class="actions"><a class="pill pill-dark" id="suggest" href="#contribute" aria-disabled="true">Open an issue on GitHub<svg aria-hidden="true"><use href="#i-ext"/></svg></a>
+        <span class="muted" id="suggest-note">Repository link added on release.</span></p>
+    </section>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap foot-inner">
+    <p>Statistical Center for Single-Cell and Spatial Genomics, University of Pennsylvania.</p>
+    <p class="disclaimer" id="disclaimer"><b>Disclaimer.</b> This catalog is not exhaustive. It lists the methods discussed in our review,
+      chosen to illustrate the main computational approaches in spatial omics, and many other valuable methods are not included.
+      Inclusion is not an endorsement, and omission does not reflect on a method&rsquo;s quality. Entries summarize each method as
+      described in its own publication; some fields are derived automatically and may contain errors, so please consult the original
+      paper before use. To suggest a method or a correction, see <a href="#contribute">Suggest a method</a>.</p>
+    <p>Data updated <span id="updated"></span>.</p>
+  </div>
+</footer>
+
+<script src="data/methods.js?v=20261118205715"></script>
+<script src="assets/app.js?v=20261118205715"></script>
+<script src="assets/hero.js?v=20261118205715"></script>
+<script src="assets/cover.js?v=20261118205715"></script>
+</body>
+</html>

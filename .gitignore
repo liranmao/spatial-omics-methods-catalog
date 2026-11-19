@@ -1,0 +1,11 @@
+# Kept locally, not published
+data_raw.csv
+scripts/code_candidates_UNVERIFIED.tsv
+scripts/code_candidates_checked.tsv
+scripts/check_code_links.sh
+PRODUCT.md
+DESIGN.md
+.impeccable/
+.DS_Store
+__pycache__/
+MANUSCRIPT_NOTES.md
