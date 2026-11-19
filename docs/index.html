@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Spatial Omics Methods Catalog</title>
-<meta name="description" content="A curated catalog of 112 spatial omics computational methods from our Annals of Applied Statistics review. Filter by task, paradigm, language and model family.">
+<meta name="description" content="A curated catalog of 112 spatial omics computational methods from our Annals of Applied Statistics review (paper edition). Filter by task, paradigm, language and model family.">
 <link rel="canonical" href="https://liranmao.github.io/spatial-omics-methods-catalog/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Spatial Omics Methods Catalog">
 <meta property="og:title" content="Spatial Omics Methods Catalog">
-<meta property="og:description" content="A curated catalog of 112 spatial omics computational methods from our Annals of Applied Statistics review.">
+<meta property="og:description" content="A curated catalog of 112 spatial omics computational methods from our Annals of Applied Statistics review (paper edition).">
 <meta property="og:url" content="https://liranmao.github.io/spatial-omics-methods-catalog/">
 <meta property="og:image" content="https://liranmao.github.io/spatial-omics-methods-catalog/og-image.png">
 <meta property="og:image:width" content="1200">
@@ -17,19 +17,24 @@
 <meta property="og:image:alt" content="Spatial Omics Methods Catalog">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Spatial Omics Methods Catalog">
-<meta name="twitter:description" content="A curated catalog of 112 spatial omics computational methods from our Annals of Applied Statistics review.">
+<meta name="twitter:description" content="A curated catalog of 112 spatial omics computational methods from our Annals of Applied Statistics review (paper edition).">
 <meta name="twitter:image" content="https://liranmao.github.io/spatial-omics-methods-catalog/og-image.png">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
 <link rel="alternate icon" href="favicon.ico">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <meta name="theme-color" content="#2B37C9">
-<script>/* Edition: "review" = paper edition (methods discussed in the review, frozen); "living" = everything, kept up to date. */
-document.documentElement.dataset.edition = new URLSearchParams(location.search).get("edition") === "review" ? "review" : "living";</script>
+<script>/* Edition, from the URL: the site root is the paper edition ("review": the methods discussed in the review, kept as
+   published); /dev/ is the living edition ("living": all methods, ongoing). ?edition=review|living overrides it for local previews. */
+(function () {
+  var q = new URLSearchParams(location.search).get("edition");
+  var dev = /\/dev\/(index\.html)?$/.test(location.pathname);
+  document.documentElement.dataset.edition = (q === "review" || q === "living") ? q : (dev ? "living" : "review");
+})();</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/style.css?v=20261119103536">
+<link rel="stylesheet" href="assets/style.css?v=20261119122344">
 </head>
 <body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -39,7 +44,12 @@ document.documentElement.dataset.edition = new URLSearchParams(location.search).
   <symbol id="i-sort" viewBox="0 0 16 16"><path d="m5 6 3-3 3 3M5 10l3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
 </svg>
 
-<div class="devbar" id="devbar" role="note" hidden>Development preview: features and content may change. <a id="devbar-stable" href="../">Go to the stable site</a></div>
+<div class="edbar" role="note">
+  <span class="ed-review"><b>Paper edition</b><span class="edbar-text"> · The <span class="n-review">112</span> methods discussed in our review, kept as published.</span>
+    <a href="https://liranmao.github.io/spatial-omics-methods-catalog/dev/" data-ed="living">Living edition (ongoing), with all methods&nbsp;›</a></span>
+  <span class="ed-living"><b>Living edition (ongoing)</b><span class="edbar-text"> · All <span class="n-all">112</span> methods, updated as new methods are added.</span>
+    <a href="https://liranmao.github.io/spatial-omics-methods-catalog/" data-ed="review">Paper edition&nbsp;›</a></span>
+</div>
 
 <nav class="topnav" id="topnav" aria-label="Site">
   <div class="topnav-inner">
@@ -54,8 +64,8 @@ document.documentElement.dataset.edition = new URLSearchParams(location.search).
       <a id="suggest-top" href="#contribute">Contribute</a>
     </span>
     <span class="edition" role="group" aria-label="Edition">
-      <a href="?edition=review#top" data-ed="review" title="Paper edition: the methods discussed in our review, unchanged">Paper</a>
-      <a href="./#top" data-ed="living" title="Living catalog: the review methods plus methods added since">Living</a>
+      <a href="https://liranmao.github.io/spatial-omics-methods-catalog/" data-ed="review" title="Paper edition: the methods discussed in our review, kept as published">Paper</a>
+      <a href="https://liranmao.github.io/spatial-omics-methods-catalog/dev/" data-ed="living" title="Living edition (ongoing): all methods, updated as new methods are added">Living</a>
     </span>
   </div>
 </nav>
@@ -63,6 +73,7 @@ document.documentElement.dataset.edition = new URLSearchParams(location.search).
 <header class="cover" id="top">
   <div class="glow" aria-hidden="true"><i class="g1"></i><i class="g2"></i><i class="g3"></i><i class="g4"></i></div>
   <div class="cover-inner" id="cover-inner">
+    <p class="cover-ed"><span class="ed-review">Paper edition</span><span class="ed-living">Living edition · ongoing</span></p>
     <h1 class="cover-h1"><span class="ln">Spatial Omics</span><span class="ln">Methods Catalog</span></h1>
     <p class="cover-sub">Mao L<sup>*</sup>, Li C<sup>*</sup>, Jiang S, Li W, Jin K, Zhang NR, Li M<sup>&dagger;</sup>. Computational landscape and emerging frontiers in spatial omics. <i>Annals of Applied Statistics</i>
       <span class="cover-note"><sup>*</sup>Equal contribution &nbsp;·&nbsp; <sup>&dagger;</sup>Corresponding author</span></p>
@@ -78,7 +89,7 @@ document.documentElement.dataset.edition = new URLSearchParams(location.search).
     <header class="sec-head">
       <h2 class="sec-h" id="pipe-h">Methods along the<br>analysis pipeline.</h2>
       <p class="sec-sub"><span class="ed-review">The <span class="n-total">112</span> methods discussed in our review, placed on the workflow of Figure 1.
-        A curated selection, not a complete list</span><span class="ed-living">The <span class="n-total">112</span> methods in the living catalog: the
+        A curated selection, not a complete list</span><span class="ed-living">The <span class="n-total">112</span> methods in the living edition: the
         <span class="n-review">112</span> discussed in our review<span class="n-added-wrap">, plus <span class="n-added">0</span> added since</span>, placed on the workflow of Figure 1.
         Not a complete list</span> (<a href="#disclaimer">about this list</a>). Hover a task to see what it does.</p>
     </header>
@@ -221,12 +232,14 @@ document.documentElement.dataset.edition = new URLSearchParams(location.search).
         <p>The Spatial Omics Methods Catalog is a curated catalog of computational methods for analyzing spatial omics data,
           compiled from our review <i>Computational landscape and emerging frontiers in spatial omics</i> (Annals of Applied Statistics).
           It was created by the <a href="https://www.med.upenn.edu/apps/faculty/index.php/g275/p8122973" target="_blank" rel="noopener">Mingyao Li Lab</a>,
-          part of the Statistical Center for Single-Cell and Spatial Genomics at the University of Pennsylvania in Philadelphia, USA.</p>
+          part of the Statistical Center for Single-Cell and Spatial Genomics at the University of Pennsylvania in Philadelphia, USA.
+          It comes in two editions: the <a href="https://liranmao.github.io/spatial-omics-methods-catalog/" data-ed="review">paper edition</a>, with the methods discussed in the review
+          kept as published, and the <a href="https://liranmao.github.io/spatial-omics-methods-catalog/dev/" data-ed="living">living edition</a>, which includes all methods and is updated as new ones are added.</p>
       </section>
       <section class="about" id="disclaimer" aria-labelledby="disc-h">
         <h2 class="about-h" id="disc-h">Disclaimer</h2>
         <p>This catalog is not exhaustive. <span class="ed-review">The paper edition lists the methods discussed in our review, chosen to illustrate the main computational
-          approaches in spatial omics, and many other valuable methods are not included.</span><span class="ed-living">The living catalog starts from the methods
+          approaches in spatial omics, and many other valuable methods are not included.</span><span class="ed-living">The living edition starts from the methods
           discussed in our review and grows as methods are added, and many other valuable methods are not included yet.</span> Inclusion is not an endorsement, and omission
           does not reflect on a method&rsquo;s quality. Entries summarize each method as described in its own publication; some fields
           are derived automatically and may contain errors, so please consult the original paper before use. To suggest a method or a
@@ -238,9 +251,9 @@ document.documentElement.dataset.edition = new URLSearchParams(location.search).
   </div>
 </footer>
 
-<script src="data/methods.js?v=20261119103536"></script>
-<script src="assets/app.js?v=20261119103536"></script>
-<script src="assets/hero.js?v=20261119103536"></script>
-<script src="assets/cover.js?v=20261119103536"></script>
+<script src="data/methods.js?v=20261119122344"></script>
+<script src="assets/app.js?v=20261119122344"></script>
+<script src="assets/hero.js?v=20261119122344"></script>
+<script src="assets/cover.js?v=20261119122344"></script>
 </body>
 </html>

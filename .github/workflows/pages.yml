@@ -1,6 +1,6 @@
 # Publishes both versions of the site to GitHub Pages:
 #   main -> https://liranmao.github.io/spatial-omics-methods-catalog/       (stable)
-#   dev  -> https://liranmao.github.io/spatial-omics-methods-catalog/dev/   (development preview)
+#   dev  -> https://liranmao.github.io/spatial-omics-methods-catalog/dev/   (living edition, ongoing)
 # Runs on a push to either branch and always rebuilds both, so one never overwrites the other.
 name: Deploy site
 
@@ -40,8 +40,8 @@ jobs:
           if [ -f devsrc/docs/index.html ]; then
             mkdir _site/dev
             cp -R devsrc/docs/. _site/dev/
-            # Keep the preview out of search results; the stable site stays canonical.
-            sed -i 's#<meta charset="utf-8">#<meta charset="utf-8">\n<meta name="robots" content="noindex">#' _site/dev/index.html
+            # The living edition gets its own canonical URL, title and description for search and link previews.
+            python3 devsrc/scripts/make_living_meta.py _site/dev/index.html
           fi
       - uses: actions/upload-pages-artifact@v3
         with:

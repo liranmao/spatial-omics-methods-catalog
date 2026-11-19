@@ -9,9 +9,11 @@
     paperDoi: "",    // AOAS DOI once published
   };
 
-  // Edition (set in <head> from ?edition=): the paper edition keeps only methods discussed in the review.
+  // Edition (set in <head> from the URL): the paper edition keeps only methods discussed in the review.
   const ALL = (window.CATALOG && window.CATALOG.methods) || [];
-  const EDITION = document.documentElement.dataset.edition === "review" ? "review" : "living";
+  const EDITION = document.documentElement.dataset.edition === "living" ? "living" : "review";
+  // Keep an explicit ?edition= (local previews) in the URL when filters change.
+  const EDITION_PARAM = new URLSearchParams(location.search).get("edition") || "";
   const DATA = EDITION === "review" ? ALL.filter(m => m.source === "review") : ALL;
 
   // Input requirements (tags come from build_site.py). The first seven get matrix columns.
@@ -231,7 +233,7 @@
   function writeUrl() {
     const p = new URLSearchParams();
     state.have.forEach(v => p.append("have", v));
-    if (EDITION === "review") p.set("edition", "review");
+    if (EDITION_PARAM) p.set("edition", EDITION_PARAM);
     for (const k of ["task", "paradigm", "lang", "model", "q", "sort"]) if (state[k]) p.set(k, state[k]);
     const qs = p.toString();
     try { history.replaceState(null, "", (qs ? `?${qs}` : location.pathname) + location.hash); } catch (_) { /* file:// */ }
@@ -287,6 +289,7 @@
   const nReview = ALL.filter(m => m.source === "review").length, nAdded = ALL.length - nReview;
   document.querySelectorAll(".n-total").forEach(el => { el.textContent = DATA.length; });
   document.querySelectorAll(".n-review").forEach(el => { el.textContent = nReview; });
+  document.querySelectorAll(".n-all").forEach(el => { el.textContent = ALL.length; });
   document.querySelectorAll(".n-added").forEach(el => { el.textContent = nAdded; });
   document.querySelectorAll(".n-added-wrap").forEach(el => { el.hidden = !nAdded; });
   document.querySelectorAll(".edition a").forEach(a => {
@@ -305,21 +308,26 @@
   if (CONFIG.paperDoi) $("citation").insertAdjacentHTML("beforeend", ` <a href="https://doi.org/${esc(CONFIG.paperDoi)}">doi:${esc(CONFIG.paperDoi)}</a>`);
   $("suggest").addEventListener("click", e => { if ($("suggest").getAttribute("aria-disabled") === "true") e.preventDefault(); });
 
-  // Switching edition reloads the page; keep the current filters and scroll position.
-  document.querySelectorAll(".edition a").forEach(a => a.addEventListener("click", e => {
-    if (a.dataset.ed === EDITION) { e.preventDefault(); return; }
+  // Edition links (top bar, nav switch, About). On the live site the paper edition is the root and the living edition
+  // is /dev/; on a local preview the same page switches with ?edition=. Filters and scroll position carry over.
+  const LOCAL = location.protocol === "file:" || /^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname);
+  const BASE = location.pathname.replace(/index\.html$/, "").replace(/dev\/$/, "");
+  const editionUrl = ed => {
     const p = new URLSearchParams(location.search);
-    if (a.dataset.ed === "review") p.set("edition", "review"); else p.delete("edition");
-    try { sessionStorage.setItem("edition-scroll", String(scrollY)); } catch (_) { /* storage blocked */ }
-    e.preventDefault();
-    location.href = location.pathname + (p.toString() ? `?${p}` : "");
-  }));
-
-  // Development preview (deployed under /dev/ by the Pages workflow)
-  if (/\/dev\/?$/.test(location.pathname.replace(/index\.html$/, ""))) {
-    $("devbar").hidden = false;
-    $("devbar-stable").href = location.pathname.replace(/dev\/(index\.html)?$/, "");
-  }
+    p.delete("edition");
+    if (LOCAL) p.set("edition", ed);
+    const qs = p.toString();
+    return (LOCAL ? location.pathname : BASE + (ed === "living" ? "dev/" : "")) + (qs ? `?${qs}` : "");
+  };
+  document.querySelectorAll("a[data-ed]").forEach(a => {
+    a.addEventListener("click", e => {
+      e.preventDefault();
+      if (a.dataset.ed === EDITION) return;
+      try { sessionStorage.setItem("edition-scroll", String(scrollY)); } catch (_) { /* storage blocked */ }
+      location.href = editionUrl(a.dataset.ed);
+    });
+  });
+  document.title = EDITION === "living" ? "Spatial Omics Methods Catalog · Living edition" : "Spatial Omics Methods Catalog · Paper edition";
 
   fillSelects();
   readUrl();
