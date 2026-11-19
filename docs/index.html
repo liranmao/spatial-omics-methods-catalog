@@ -24,10 +24,12 @@
 <link rel="alternate icon" href="favicon.ico">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <meta name="theme-color" content="#2B37C9">
+<script>/* Edition: "review" = paper edition (methods discussed in the review, frozen); "living" = everything, kept up to date. */
+document.documentElement.dataset.edition = new URLSearchParams(location.search).get("edition") === "review" ? "review" : "living";</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/style.css?v=20261118224630">
+<link rel="stylesheet" href="assets/style.css?v=20261119103536">
 </head>
 <body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -36,6 +38,8 @@
   <symbol id="i-chev" viewBox="0 0 16 16"><path d="m6 4 4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
   <symbol id="i-sort" viewBox="0 0 16 16"><path d="m5 6 3-3 3 3M5 10l3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
 </svg>
+
+<div class="devbar" id="devbar" role="note" hidden>Development preview: features and content may change. <a id="devbar-stable" href="../">Go to the stable site</a></div>
 
 <nav class="topnav" id="topnav" aria-label="Site">
   <div class="topnav-inner">
@@ -48,6 +52,10 @@
       <a href="#catalog">Catalog</a>
       <a href="#cite">Cite</a>
       <a id="suggest-top" href="#contribute">Contribute</a>
+    </span>
+    <span class="edition" role="group" aria-label="Edition">
+      <a href="?edition=review#top" data-ed="review" title="Paper edition: the methods discussed in our review, unchanged">Paper</a>
+      <a href="./#top" data-ed="living" title="Living catalog: the review methods plus methods added since">Living</a>
     </span>
   </div>
 </nav>
@@ -69,8 +77,10 @@
   <div class="wrap">
     <header class="sec-head">
       <h2 class="sec-h" id="pipe-h">Methods along the<br>analysis pipeline.</h2>
-      <p class="sec-sub">The <span id="n-total">112</span> methods discussed in our review, placed on the workflow of Figure 1.
-        A curated selection, not a complete list (<a href="#disclaimer">about this list</a>). Hover a task to see what it does.</p>
+      <p class="sec-sub"><span class="ed-review">The <span class="n-total">112</span> methods discussed in our review, placed on the workflow of Figure 1.
+        A curated selection, not a complete list</span><span class="ed-living">The <span class="n-total">112</span> methods in the living catalog: the
+        <span class="n-review">112</span> discussed in our review<span class="n-added-wrap">, plus <span class="n-added">0</span> added since</span>, placed on the workflow of Figure 1.
+        Not a complete list</span> (<a href="#disclaimer">about this list</a>). Hover a task to see what it does.</p>
     </header>
 
     <ol class="stages" aria-label="Analysis pipeline (Figure 1 of the review)">
@@ -215,8 +225,9 @@
       </section>
       <section class="about" id="disclaimer" aria-labelledby="disc-h">
         <h2 class="about-h" id="disc-h">Disclaimer</h2>
-        <p>This catalog is not exhaustive. It lists the methods discussed in our review, chosen to illustrate the main computational
-          approaches in spatial omics, and many other valuable methods are not included. Inclusion is not an endorsement, and omission
+        <p>This catalog is not exhaustive. <span class="ed-review">The paper edition lists the methods discussed in our review, chosen to illustrate the main computational
+          approaches in spatial omics, and many other valuable methods are not included.</span><span class="ed-living">The living catalog starts from the methods
+          discussed in our review and grows as methods are added, and many other valuable methods are not included yet.</span> Inclusion is not an endorsement, and omission
           does not reflect on a method&rsquo;s quality. Entries summarize each method as described in its own publication; some fields
           are derived automatically and may contain errors, so please consult the original paper before use. To suggest a method or a
           correction, see <a href="#contribute">Suggest a method</a>.</p>
@@ -227,9 +238,9 @@
   </div>
 </footer>
 
-<script src="data/methods.js?v=20261118224630"></script>
-<script src="assets/app.js?v=20261118224630"></script>
-<script src="assets/hero.js?v=20261118224630"></script>
-<script src="assets/cover.js?v=20261118224630"></script>
+<script src="data/methods.js?v=20261119103536"></script>
+<script src="assets/app.js?v=20261119103536"></script>
+<script src="assets/hero.js?v=20261119103536"></script>
+<script src="assets/cover.js?v=20261119103536"></script>
 </body>
 </html>

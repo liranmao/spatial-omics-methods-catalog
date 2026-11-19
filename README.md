@@ -84,6 +84,15 @@ The website is a static page served by GitHub Pages from the `docs/` folder.
    then open http://127.0.0.1:8765.
 4. Commit and push. The live site updates within a minute or two.
 
+**Two editions.** The `source` column decides where a method appears. Rows marked `review` are the methods
+discussed in the review and make up the *paper edition* (`?edition=review`), which stays frozen. A new method gets a
+blank `source` (and the date in `added_on`); it shows only in the *living catalog* (the default), with a "New" badge.
+
+**Stable and development sites.** `main` is the stable site at the root URL; `dev` is the development version,
+published at [`/dev/`](https://liranmao.github.io/spatial-omics-methods-catalog/dev/) with a preview banner and
+hidden from search engines. Both are deployed by `.github/workflows/pages.yml` on every push to either branch.
+Work on `dev`, and merge into `main` when a batch of changes is ready.
+
 [`CHANGES.md`](CHANGES.md) records how the catalog differs from the table in the manuscript.
 
 </details>

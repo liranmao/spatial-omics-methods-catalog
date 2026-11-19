@@ -391,8 +391,8 @@
         const n = Math.min(perRow, l.length - row * perRow);
         const cx = labelW + yi * cellW + cellW / 2 + (col - (n - 1) / 2) * gap;
         const cy = y + labelH + (h - labelH) / 2 + (row - (stack - 1) / 2) * gap;
-        pts.push(`<circle class="tl-pt p-${C.paradigmClass[m.paradigm] || "x"}" cx="${cx.toFixed(1)}" cy="${cy.toFixed(1)}" r="${r}" tabindex="0" role="button"
-          data-id="${esc(m.id)}" data-yi="${yi}" style="--yi:${yi}" aria-label="${esc(m.method)}, ${m.year}, ${esc(m.paradigm)}. Open in catalog."></circle>`);
+        pts.push(`<circle class="tl-pt p-${C.paradigmClass[m.paradigm] || "x"}${m.source === "added" ? " tl-added" : ""}" cx="${cx.toFixed(1)}" cy="${cy.toFixed(1)}" r="${r}" tabindex="0" role="button"
+          data-id="${esc(m.id)}" data-yi="${yi}" style="--yi:${yi}" aria-label="${esc(m.method)}, ${m.year}, ${esc(m.paradigm)}${m.source === "added" ? ", added after the review" : ""}. Open in catalog."></circle>`);
       }));
       y += h;
     });
@@ -407,7 +407,7 @@
   function showTip(el) {
     const m = C.data.find(x => x.id === el.dataset.id);
     if (!m) return;
-    tip.innerHTML = `<b>${esc(m.method)}</b><span>${esc(m.first_author)} ${m.year} · ${esc(m.paradigm)}</span><span>${esc(m.task)}</span>`;
+    tip.innerHTML = `<b>${esc(m.method)}</b><span>${esc(m.first_author)} ${m.year} · ${esc(m.paradigm)}</span><span>${esc(m.task)}</span>${m.source === "added" ? `<span>Added after the review</span>` : ""}`;
     tip.hidden = false;
     const box = tl.getBoundingClientRect(), r = el.getBoundingClientRect();
     const x = Math.min(Math.max(r.left - box.left + r.width / 2, 110), box.width - 110);
