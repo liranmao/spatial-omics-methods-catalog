@@ -406,7 +406,7 @@ section[id], main[id], header[id] { scroll-margin-top: var(--nav-h); }
 @keyframes drift4 { to { transform: translate(-5vw, -6vh) scale(1.05); } }
 
 .cover-inner { max-width: 980px; margin-top: -4vh; transform: translateY(calc(var(--p, 0) * -70px)) scale(calc(1 - var(--p, 0) * .05)); opacity: calc(1 - var(--p, 0) * 1.15); }
-.cover-h1 { font-family: var(--display); font-weight: 600; font-size: clamp(2.75rem, 7.4vw, 6rem); line-height: 1.03; letter-spacing: -.038em;
+.cover-h1 { font-family: var(--display); font-weight: 600; font-size: clamp(2.4rem, 6.4vw, 5.25rem); line-height: 1.04; letter-spacing: -.038em;
   color: #fff; margin: 0; text-wrap: balance; text-shadow: 0 2px 40px rgb(16 24 110 / .28); }
 .cover-h1 .ln { display: block; }
 .cover-sub { max-width: 46ch; margin: 28px auto 0; font-size: clamp(15px, 1.35vw, 19px); line-height: 1.5; letter-spacing: -.012em; color: rgb(255 255 255 / .82); text-wrap: balance; text-shadow: 0 1px 24px rgb(16 24 110 / .3); }
