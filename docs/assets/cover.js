@@ -17,7 +17,7 @@
   // Scroll-out fade: like the cover, each block eases up, shrinks a little and fades as it leaves under the nav.
   // The long methods table (and its status line and note) is left alone.
   const fades = [...document.querySelectorAll(
-    ".sec-head, .stages, .pipe-grid, .sec-links, .tl-chart, .tl-note, .filters, .closing .card, .foot-inner")];
+    ".sec-head, .stages, .pipe-grid, .tl-chart, .tl-note, .filters, .closing .card, .foot-inner")];
   const navH = () => document.getElementById("topnav")?.offsetHeight || 0;
   const fadeOut = () => {
     const line = navH(), vh = innerHeight;
