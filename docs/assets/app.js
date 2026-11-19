@@ -11,6 +11,7 @@
 
   // Edition (set in <head> from the URL): the paper edition keeps only methods discussed in the review.
   const ALL = (window.CATALOG && window.CATALOG.methods) || [];
+  const CATALOG_ASOF = (window.CATALOG && window.CATALOG.citations_as_of) || "";
   const EDITION = document.documentElement.dataset.edition === "living" ? "living" : "review";
   // Keep an explicit ?edition= (local previews) in the URL when filters change.
   const EDITION_PARAM = new URLSearchParams(location.search).get("edition") || "";
@@ -121,13 +122,13 @@
     $("model").insertAdjacentHTML("beforeend", freq(m => m.model_tags).map(([v, n]) => `<option value="${esc(v)}">${esc(v)} (${n})</option>`).join(""));
     $("req-labels").insertAdjacentHTML("beforeend",
       COLS.map(c => `<th scope="col" class="rq" data-rq="${esc(c.tag)}"><abbr title="${esc(c.label)}">${esc(c.short)}</abbr></th>`).join("") +
-      `<th></th><th></th>`);
+      `<th></th><th class="cite-h"></th><th></th>`);
   }
 
   // ---- Table
   function refLine(m) {
     if (!m.year) return `<div class="mref">Citation pending</div>`;
-    return `<div class="mref">${esc(m.first_author)} ${m.year}${m.journal ? `, <i>${esc(m.journal)}</i>` : ""}<span class="lg"> · ${esc(m.languages.join(", "))}</span></div>`;
+    return `<div class="mref">${esc(m.first_author)} ${m.year}${m.journal ? `, <i>${esc(m.journal)}</i>` : ""}<span class="lg"> · ${esc(m.languages.join(", "))}${m.citations != null ? ` · ${fmtN(m.citations)} citations` : ""}</span></div>`;
   }
   function row(m) {
     const miss = state.have.size ? missing(m) : [];
@@ -148,14 +149,16 @@
       <td class="core"><span class="ct"><span class="pd p-${PCLS[m.paradigm] || "x"}" title="${esc(m.paradigm)}"></span>${hl(m.core_method)}</span></td>
       ${dots}
       <td class="reqs-m">${reqsM}</td>
-      <td class="yr">${m.year || "–"}<span class="sub">${esc(m.languages.join(", "))}</span></td>
+      <td class="yr">${m.year || "–"}<span class="sub">${esc(m.languages.join(", "))}</span>${m.citations != null ? `<span class="sub cite-sub">${fmtN(m.citations)} cited</span>` : ""}</td>
+      <td class="cite">${m.citations != null ? fmtN(m.citations) : "–"}</td>
       <td class="links">${paper}${code}${!paper && !code ? `<span class="none">–</span>` : ""}</td>
     </tr>`;
     if (open) {
-      html += `<tr class="detail" id="d-${esc(m.id)}"><td colspan="12"><dl class="detail-body">
+      html += `<tr class="detail" id="d-${esc(m.id)}"><td colspan="13"><dl class="detail-body">
         <div class="wide"><dt>Paper</dt><dd>${m.title ? esc(m.title) : "Citation pending"}${m.journal ? `. <i>${esc(m.journal)}</i>` : ""}${m.year ? `, ${m.year}` : ""}.
           ${m.doi ? ` <a href="https://doi.org/${esc(m.doi)}" target="_blank" rel="noopener">doi:${esc(m.doi)}</a>` : ""}</dd></div>
         <div><dt>Input (as published)</dt><dd>${esc(m.input)}</dd></div>
+        <div><dt>Cited by</dt><dd>${m.citations != null ? `${fmtN(m.citations)}${CATALOG_ASOF ? ` (as of ${esc(CATALOG_ASOF)})` : ""}` : "Not available"}</dd></div>
         <div><dt>Model family</dt><dd>${esc(m.paradigm)}${m.model_tags.length ? `: ${esc(m.model_tags.join(", "))}` : ""}</dd></div>
         <div><dt>Listed under</dt><dd>${esc(m.categories.join("; "))} · ${esc(m.language)}</dd></div>
         <div><dt>Source</dt><dd>${m.source === "review" ? "Discussed in the review" : `Added after the review${m.added_on ? ` on ${esc(m.added_on)}` : ""}`}</dd></div>
@@ -164,15 +167,17 @@
     return html;
   }
 
+  const fmtN = n => Number(n).toLocaleString("en-US");
   function sorted(list) {
     const s = [...list];
     const [key, dir] = (state.sort || "").split("-");
     if (key === "method") s.sort((a, b) => a.method.localeCompare(b.method, undefined, { sensitivity: "base" }) * (dir === "desc" ? -1 : 1));
+    else if (key === "citations") s.sort((a, b) => (a.citations == null) - (b.citations == null) || ((a.citations ?? 0) - (b.citations ?? 0)) * (dir === "asc" ? 1 : -1) || a._i - b._i);
     else if (key === "year") s.sort((a, b) => ((a.year || 0) - (b.year || 0)) * (dir === "asc" ? 1 : -1) || a._i - b._i);
     else s.sort((a, b) => a._i - b._i);
     return s;
   }
-  const grp = (title, n, cls = "") => `<tr class="grp ${cls}"><td colspan="12"><h3>${esc(title)}<span class="gn">${n}</span></h3></td></tr>`;
+  const grp = (title, n, cls = "") => `<tr class="grp ${cls}"><td colspan="13"><h3>${esc(title)}<span class="gn">${n}</span></h3></td></tr>`;
 
   function renderTable() {
     const hits = DATA.filter(m => passes(m));
@@ -199,9 +204,10 @@
     if (!hits.length) renderEmpty();
     document.querySelectorAll("#req-labels .rq").forEach(th => th.classList.toggle("have-on", state.have.has(th.dataset.rq)));
     document.querySelectorAll("th[aria-sort]").forEach(th => {
-      const k = th.querySelector(".sortbtn").dataset.sort;
       const [key, dir] = (state.sort || "").split("-");
+      const k = [...th.querySelectorAll(".sortbtn")].map(b => b.dataset.sort).find(s => s === key) || th.querySelector(".sortbtn").dataset.sort;
       th.setAttribute("aria-sort", key === k ? (dir === "asc" ? "ascending" : "descending") : "none");
+      th.querySelectorAll(".sortbtn").forEach(b => b.classList.toggle("on", b.dataset.sort === key));
     });
   }
 
@@ -260,7 +266,7 @@
     else if (b.dataset.open !== undefined) { const id = b.dataset.open; state.open.has(id) ? state.open.delete(id) : state.open.add(id); renderTable(); document.querySelector(`[data-open="${CSS.escape(id)}"]`)?.focus(); }
     else if (b.dataset.sort !== undefined) {
       const k = b.dataset.sort, [key, dir] = state.sort.split("-");
-      const first = k === "year" ? "desc" : "asc", second = first === "asc" ? "desc" : "asc";
+      const first = k === "year" || k === "citations" ? "desc" : "asc", second = first === "asc" ? "desc" : "asc";
       state.sort = key !== k ? `${k}-${first}` : dir === first ? `${k}-${second}` : "";
       render(true);
     }
@@ -298,6 +304,7 @@
     a.insertAdjacentHTML("beforeend", ` <span class="edn">${a.dataset.ed === "review" ? nReview : ALL.length}</span>`);
   });
   $("updated").textContent = (window.CATALOG && window.CATALOG.updated) || "";
+  if (CATALOG_ASOF && $("cites-asof")) $("cites-asof").textContent = `, as of ${CATALOG_ASOF}`;
   if (CONFIG.repoUrl) {
     const issue = CONFIG.repoUrl.replace(/\/$/, "") + "/issues/new";
     $("suggest").href = issue; $("suggest").removeAttribute("aria-disabled"); $("suggest").target = "_blank";

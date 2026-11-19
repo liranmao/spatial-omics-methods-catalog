@@ -204,7 +204,7 @@ svg { width: 14px; height: 14px; flex: none; }
 /* Table */
 .table-shell { overflow: clip; overflow-clip-margin: 0; }
 .grid { width: 100%; border-collapse: separate; border-spacing: 0; font-size: 14px; letter-spacing: -.01em; }
-.col-m { width: 16%; } .col-task { width: 15%; } .col-core { width: auto; } .col-req { width: 3.1rem; } .col-lang { width: 4.6rem; } .col-links { width: 5.8rem; }
+.col-m { width: 16%; } .col-task { width: 15%; } .col-core { width: auto; } .col-req { width: 3.1rem; } .col-lang { width: 4.6rem; } .col-cite { width: 5.6rem; } .col-links { width: 5.8rem; }
 .grid thead th { position: sticky; z-index: 2; background: color-mix(in srgb, var(--card) 88%, transparent);
   -webkit-backdrop-filter: saturate(180%) blur(20px); backdrop-filter: saturate(180%) blur(20px);
   text-align: left; font-size: 12px; font-weight: 600; color: var(--faint); padding: 10px 14px; white-space: nowrap; }
@@ -216,8 +216,8 @@ svg { width: 14px; height: 14px; flex: none; }
 .req-labels abbr { text-decoration: none; cursor: help; }
 .sortbtn { font: inherit; color: inherit; border: 0; background: none; padding: 0; cursor: pointer; display: inline-flex; align-items: center; gap: 4px; }
 .sortbtn svg { width: 12px; height: 12px; opacity: .5; }
-th[aria-sort="ascending"] .sortbtn, th[aria-sort="descending"] .sortbtn { color: var(--text); }
-th[aria-sort="ascending"] .sortbtn svg, th[aria-sort="descending"] .sortbtn svg { opacity: 1; color: var(--accent); }
+.sortbtn.on { color: var(--text); }
+.sortbtn.on svg { opacity: 1; color: var(--accent); }
 
 .grid tbody td { padding: 14px 14px; border-bottom: 1px solid var(--hair); vertical-align: top; }
 .grid tbody tr:last-child td { border-bottom: 0; }
@@ -251,6 +251,22 @@ td.req { text-align: center; padding-left: 2px !important; padding-right: 2px !i
 .dot.no { width: 4px; height: 4px; background: var(--hair-2); }
 .dot.lack { background: transparent; box-shadow: inset 0 0 0 2px var(--lack); }
 td.yr { color: var(--muted); font-size: 14px; }
+td.cite { color: var(--muted); font-size: 14px; font-variant-numeric: tabular-nums; text-align: right; padding-right: 18px; }
+.grid thead th.cite-h { text-align: right; }
+.grid thead th.cite-h .sortbtn { margin-left: auto; }
+.sortbtn.cite-alt, .cite-sub { display: none; }
+@media (min-width: 821px) and (max-width: 1239px) {
+  /* Not enough room for a separate column: fold the count into the Year cell. */
+  .col-cite, .grid th.cite-h, td.cite { display: none; }
+  .sortbtn.cite-alt { display: flex; margin-top: 4px; }
+  .grid thead th:has(.cite-alt) { white-space: normal; }
+  .col-m { width: 19%; } .col-task { width: 14%; }
+  .mname, .mref { overflow-wrap: anywhere; }
+  .yr .cite-sub { white-space: nowrap; }
+  .yr .cite-sub { display: block; }
+  .grid tbody td { padding-left: 10px; padding-right: 10px; }
+  .grid thead th { padding-left: 10px; padding-right: 10px; }
+}
 td.links { white-space: nowrap; }
 td.links a { display: flex; align-items: center; gap: 4px; font-size: 14px; color: var(--link); padding: 1px 0; }
 td.links a svg { width: 10px; height: 10px; }
@@ -328,7 +344,7 @@ mark { background: color-mix(in srgb, var(--accent) 18%, transparent); color: in
   td.m { grid-column: 1; }
   td.links { grid-column: 2; grid-row: 1; }
   td.task, td.core { grid-column: 1 / -1; margin-top: 8px; }
-  td.yr, td.req { display: none !important; }
+  td.yr, td.cite, td.req { display: none !important; }
   td.reqs-m { display: flex !important; grid-column: 1 / -1; flex-wrap: wrap; gap: 4px 14px; margin-top: 10px; font-size: 13px; color: var(--muted); }
   .mref .lg { display: inline; }
   tr.grp { display: block; }

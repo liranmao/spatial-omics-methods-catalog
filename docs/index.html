@@ -34,7 +34,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/style.css?v=20261119130030">
+<link rel="stylesheet" href="assets/style.css?v=20261119155021">
 </head>
 <body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -178,7 +178,7 @@
       <table class="grid" id="grid">
         <colgroup>
           <col class="col-m"><col class="col-task"><col class="col-core">
-          <col class="col-req" span="7"><col class="col-lang"><col class="col-links">
+          <col class="col-req" span="7"><col class="col-lang"><col class="col-cite"><col class="col-links">
         </colgroup>
         <thead>
           <tr>
@@ -186,7 +186,8 @@
             <th scope="col">Task</th>
             <th scope="col">Core method</th>
             <th scope="colgroup" colspan="7" class="req-group">Requires</th>
-            <th scope="col" aria-sort="none"><button type="button" class="sortbtn" data-sort="year">Year<svg aria-hidden="true"><use href="#i-sort"/></svg></button></th>
+            <th scope="col" aria-sort="none"><button type="button" class="sortbtn" data-sort="year">Year<svg aria-hidden="true"><use href="#i-sort"/></svg></button><button type="button" class="sortbtn cite-alt" data-sort="citations" title="Sort by citation count">Cited<svg aria-hidden="true"><use href="#i-sort"/></svg></button></th>
+            <th scope="col" aria-sort="none" class="cite-h"><button type="button" class="sortbtn" data-sort="citations" title="Citation count of the method's paper (Semantic Scholar)">Cited by<svg aria-hidden="true"><use href="#i-sort"/></svg></button></th>
             <th scope="col"><span class="sr">Links</span></th>
           </tr>
           <tr class="req-labels" id="req-labels">
@@ -246,14 +247,14 @@
           correction, see <a href="#contribute">Suggest a method</a>.</p>
       </section>
     </div>
-    <p>Data updated <span id="updated"></span>.</p>
+    <p>Data updated <span id="updated"></span>. Citation counts from Semantic Scholar (Crossref where missing)<span id="cites-asof"></span>.</p>
     <p class="copyright">&copy; Copyright Mingyao Li Lab, 2026.</p>
   </div>
 </footer>
 
-<script src="data/methods.js?v=20261119130030"></script>
-<script src="assets/app.js?v=20261119130030"></script>
-<script src="assets/hero.js?v=20261119130030"></script>
-<script src="assets/cover.js?v=20261119130030"></script>
+<script src="data/methods.js?v=20261119155021"></script>
+<script src="assets/app.js?v=20261119155021"></script>
+<script src="assets/hero.js?v=20261119155021"></script>
+<script src="assets/cover.js?v=20261119155021"></script>
 </body>
 </html>
