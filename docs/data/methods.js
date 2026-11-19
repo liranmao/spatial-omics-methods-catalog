@@ -3894,6 +3894,6918 @@ window.CATALOG = {
     "Optimal transport"
    ],
    "paradigm": "Statistical / classical ML"
+  },
+  {
+   "id": "imspire",
+   "method": "ImSpiRE",
+   "categories": [
+    "Spatial gene expression prediction"
+   ],
+   "subtype": "From histology",
+   "task": "Spatial resolution enhancement + unmeasured-region imputation",
+   "input": "ST count matrix + H&E image",
+   "language": "Python",
+   "core_method": "Optimal transport redistributing spot expression to sub-spots guided by histological image features",
+   "year": 2024,
+   "first_author": "Hua et al.",
+   "title": "ImSpiRE: image feature-aided spatial resolution enhancement method",
+   "journal": "Science China Life Sciences",
+   "doi": "10.1007/s11427-023-2636-9",
+   "paper_url": "https://doi.org/10.1007/s11427-023-2636-9",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "H&E image"
+   ],
+   "model_tags": [
+    "Optimal transport"
+   ],
+   "paradigm": "Statistical / classical ML"
+  },
+  {
+   "id": "gsg",
+   "method": "GSG",
+   "categories": [
+    "Spatial gene expression prediction",
+    "Multi-sample & multi-modal integration"
+   ],
+   "subtype": "From ST alone (imputation / super-resolution)",
+   "task": "Expression denoising/imputation + multi-dataset integration + domain detection",
+   "input": "ST count matrix + spatial coords",
+   "language": "Python",
+   "core_method": "Generative self-supervised graph neural network (graph autoencoder) learning joint embedding of spatial locations and gene expression",
+   "year": 2024,
+   "first_author": "Guan et al.",
+   "title": "Generative Self-Supervised Graphs Enhance Integration, Imputation and Domains Identification of Spatial Transcriptomics",
+   "journal": "Research Square",
+   "doi": "10.21203/rs.3.rs-3583635/v1",
+   "paper_url": "https://doi.org/10.21203/rs.3.rs-3583635/v1",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph"
+   ],
+   "model_tags": [
+    "Graph neural network",
+    "VAE / autoencoder / generative"
+   ],
+   "paradigm": "Deep learning"
+  },
+  {
+   "id": "adept",
+   "method": "ADEPT",
+   "categories": [
+    "Spatial gene expression prediction"
+   ],
+   "subtype": "From ST alone (imputation / super-resolution)",
+   "task": "Imputation of DE genes for robust domain clustering",
+   "input": "ST count matrix + spatial coords",
+   "language": "Python",
+   "core_method": "Graph autoencoder backbone with iterative clustering on imputed, differentially expressed gene-based matrices",
+   "year": 2023,
+   "first_author": "Hu et al.",
+   "title": "ADEPT: Autoencoder with differentially expressed genes and imputation for robust spatial transcriptomics clustering",
+   "journal": "iScience",
+   "doi": "10.1016/j.isci.2023.106792",
+   "paper_url": "https://doi.org/10.1016/j.isci.2023.106792",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph"
+   ],
+   "model_tags": [
+    "VAE / autoencoder / generative"
+   ],
+   "paradigm": "Deep learning"
+  },
+  {
+   "id": "stmcdi",
+   "method": "stMCDI",
+   "categories": [
+    "Spatial gene expression prediction"
+   ],
+   "subtype": "From ST alone (imputation / super-resolution)",
+   "task": "Missing value imputation",
+   "input": "ST count matrix + spatial coords",
+   "language": "Python",
+   "core_method": "Masked conditional diffusion model with graph neural network (GNN) denoising network",
+   "year": 2024,
+   "first_author": "Li et al.",
+   "title": "stMCDI: Masked Conditional Diffusion Model with Graph Neural Network for Spatial Transcriptomics Data Imputation",
+   "journal": "arXiv",
+   "doi": "10.48550/arxiv.2403.10863",
+   "paper_url": "https://doi.org/10.48550/arxiv.2403.10863",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph"
+   ],
+   "model_tags": [
+    "Graph neural network",
+    "Diffusion / flow matching"
+   ],
+   "paradigm": "Deep learning"
+  },
+  {
+   "id": "stimpute",
+   "method": "stImpute",
+   "categories": [
+    "Spatial gene expression prediction"
+   ],
+   "subtype": "From scRNA-seq reference (imputation)",
+   "task": "Missing gene imputation",
+   "input": "ST count matrix + scRNA-seq reference",
+   "language": "Python",
+   "core_method": "Autoencoder embeddings + nearest neighbor (k-NN) cell matching, with gene network from protein language model ESM-2",
+   "year": 2024,
+   "first_author": "Zeng et al.",
+   "title": "Imputing spatial transcriptomics through gene network constructed from protein language model",
+   "journal": "Communications Biology",
+   "doi": "10.1038/s42003-024-06964-2",
+   "paper_url": "https://doi.org/10.1038/s42003-024-06964-2",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "scRNA-seq reference"
+   ],
+   "model_tags": [
+    "Classical ML (k-NN, forests, SOM, ensembles)",
+    "VAE / autoencoder / generative",
+    "Foundation model / LLM"
+   ],
+   "paradigm": "Hybrid"
+  },
+  {
+   "id": "soscope",
+   "method": "soScope",
+   "categories": [
+    "Spatial gene expression prediction",
+    "Multi-sample & multi-modal integration"
+   ],
+   "subtype": "From histology",
+   "task": "Spatial resolution enhancement across omics types",
+   "input": "ST + multi-omics + spatial coords + H&E image",
+   "language": "Python",
+   "core_method": "Deep generative model (variational) integrating omics, spatial relations and images with omics-specific distribution priors",
+   "year": 2024,
+   "first_author": "Li et al.",
+   "title": "Tissue characterization at an enhanced resolution across spatial omics platforms with deep generative model",
+   "journal": "Nature Communications",
+   "doi": "10.1038/s41467-024-50837-5",
+   "paper_url": "https://doi.org/10.1038/s41467-024-50837-5",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph",
+    "H&E image",
+    "Multi-omics (ATAC / protein)"
+   ],
+   "model_tags": [
+    "VAE / autoencoder / generative"
+   ],
+   "paradigm": "Deep learning"
+  },
+  {
+   "id": "st2cell",
+   "method": "St2cell",
+   "categories": [
+    "Spatial gene expression prediction"
+   ],
+   "subtype": "From histology",
+   "task": "Single-cell resolution reconstruction from histology",
+   "input": "ST count matrix + H&E image",
+   "language": "Python",
+   "core_method": "Deep learning (CNN) cell segmentation from high-resolution histology + convex quadratic programming assignment of transcriptomes",
+   "year": 2022,
+   "first_author": "Hou et al.",
+   "title": "St2cell: Reconstruction of in situ single-cell spatial transcriptomics by integrating high-resolution histological image",
+   "journal": "bioRxiv",
+   "doi": "10.1101/2022.10.13.512059",
+   "paper_url": "https://doi.org/10.1101/2022.10.13.512059",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "H&E image"
+   ],
+   "model_tags": [
+    "CNN"
+   ],
+   "paradigm": "Deep learning"
+  },
+  {
+   "id": "chrysalis",
+   "method": "Chrysalis",
+   "categories": [
+    "Spatially variable gene identification"
+   ],
+   "subtype": "Overall SVG",
+   "task": "SVG detection + tissue compartment identification",
+   "input": "ST count matrix + spatial coords",
+   "language": "Python",
+   "core_method": "SVG detection followed by archetypal analysis (matrix factorization) of tissue compartments",
+   "year": 2024,
+   "first_author": "Túrós et al.",
+   "title": "Chrysalis: decoding tissue compartments in spatial transcriptomics with archetypal analysis",
+   "journal": "Communications Biology",
+   "doi": "10.1038/s42003-024-07165-7",
+   "paper_url": "https://doi.org/10.1038/s42003-024-07165-7",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph"
+   ],
+   "model_tags": [
+    "Matrix factorization / factor analysis"
+   ],
+   "paradigm": "Statistical / classical ML"
+  },
+  {
+   "id": "niche-de",
+   "method": "Niche-DE",
+   "categories": [
+    "Spatially variable gene identification",
+    "Cell communication & interpretable models"
+   ],
+   "subtype": "Cell-type-specific SVG",
+   "task": "Cell-type-specific niche-differential gene detection + ligand-receptor inference",
+   "input": "ST count matrix + cell-type deconvolution + spatial coords",
+   "language": "R",
+   "core_method": "Negative binomial regression (GLM) of cell-type-specific expression on niche composition with FDR control",
+   "year": 2023,
+   "first_author": "Mason et al.",
+   "title": "Niche differential gene expression analysis in spatial transcriptomics data identifies context-dependent cell-cell interactions",
+   "journal": "bioRxiv",
+   "doi": "10.1101/2023.01.03.522646",
+   "paper_url": "https://doi.org/10.1101/2023.01.03.522646",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "R"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph"
+   ],
+   "model_tags": [
+    "Regression / GLM / mixed model",
+    "Bayesian / probabilistic model"
+   ],
+   "paradigm": "Statistical / classical ML"
+  },
+  {
+   "id": "prost",
+   "method": "PROST",
+   "categories": [
+    "Spatially variable gene identification"
+   ],
+   "subtype": "Overall SVG",
+   "task": "Tissue-wide SVG detection + domain detection",
+   "input": "ST count matrix + spatial coords",
+   "language": "Python",
+   "core_method": "PROST Index quantifying spatial expression patterns + self-attention graph neural network clustering of domains",
+   "year": 2024,
+   "first_author": "Liang et al.",
+   "title": "PROST: quantitative identification of spatially variable genes and domain detection in spatial transcriptomics",
+   "journal": "Nature Communications",
+   "doi": "10.1038/s41467-024-44835-w",
+   "paper_url": "https://doi.org/10.1038/s41467-024-44835-w",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph"
+   ],
+   "model_tags": [
+    "Graph neural network",
+    "Transformer / ViT"
+   ],
+   "paradigm": "Deep learning"
+  },
+  {
+   "id": "std-nb",
+   "method": "std-nb",
+   "categories": [
+    "Cell-type deconvolution",
+    "Multi-sample & multi-modal integration"
+   ],
+   "subtype": "",
+   "task": "Reference-free spatial transcriptome decomposition (deconvolution) across samples",
+   "input": "ST count matrices + spatial coords (multiple slices)",
+   "language": "C++",
+   "core_method": "Bayesian probabilistic convolved negative binomial regression for unsupervised pattern (factor) discovery",
+   "year": 2018,
+   "first_author": "Maaskola et al.",
+   "title": "Charting Tissue Expression Anatomy by Spatial Transcriptome Decomposition",
+   "journal": "bioRxiv",
+   "doi": "10.1101/362624",
+   "paper_url": "https://doi.org/10.1101/362624",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "C++"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph",
+    "Multiple slices / samples"
+   ],
+   "model_tags": [
+    "Regression / GLM / mixed model",
+    "Bayesian / probabilistic model"
+   ],
+   "paradigm": "Statistical / classical ML"
+  },
+  {
+   "id": "svgbit",
+   "method": "SVGbit",
+   "categories": [
+    "Spatially variable gene identification"
+   ],
+   "subtype": "Domain-marker SVG",
+   "task": "Ranking individual and combinatorial region-marker SVGs",
+   "input": "ST count matrix + spatial coords",
+   "language": "Python",
+   "core_method": "Ranking and clustering scheme for individual and combinatorial SVGs (spatial autocorrelation-based)",
+   "year": 2023,
+   "first_author": "Hong et al.",
+   "title": "The spatiotemporal dynamics of spatially variable genes in developing mouse brain revealed by a novel computational scheme",
+   "journal": "Cell Death Discovery",
+   "doi": "10.1038/s41420-023-01569-w",
+   "paper_url": "https://doi.org/10.1038/s41420-023-01569-w",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph"
+   ],
+   "model_tags": [
+    "Spatial autocorrelation / kernel test"
+   ],
+   "paradigm": "Statistical / classical ML"
+  },
+  {
+   "id": "trendsceek",
+   "method": "trendsceek",
+   "categories": [
+    "Spatially variable gene identification"
+   ],
+   "subtype": "Overall SVG",
+   "task": "Tissue-wide SVG detection",
+   "input": "ST count matrix + spatial coords",
+   "language": "R",
+   "core_method": "Marked point process with permutation-based significance testing for spatial expression trends",
+   "year": 2018,
+   "first_author": "Edsgärd et al.",
+   "title": "Identification of spatial expression trends in single-cell gene expression data",
+   "journal": "Nature Methods",
+   "doi": "10.1038/nmeth.4634",
+   "paper_url": "https://doi.org/10.1038/nmeth.4634",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "R"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph"
+   ],
+   "model_tags": [
+    "Bayesian / probabilistic model",
+    "Spatial autocorrelation / kernel test"
+   ],
+   "paradigm": "Statistical / classical ML"
+  },
+  {
+   "id": "stareg",
+   "method": "STAREG",
+   "categories": [
+    "Spatially variable gene identification"
+   ],
+   "subtype": "Overall SVG",
+   "task": "Replicable SVG detection across studies",
+   "input": "SVG p-values from multiple ST studies",
+   "language": "R",
+   "core_method": "Mixture model of joint p-value distribution across studies fitted by EM + PAVA, with FDR control",
+   "year": 2024,
+   "first_author": "Li et al.",
+   "title": "STAREG: Statistical replicability analysis of high throughput experiments with applications to spatial transcriptomic studies",
+   "journal": "PLOS Genetics",
+   "doi": "10.1371/journal.pgen.1011423",
+   "paper_url": "https://doi.org/10.1371/journal.pgen.1011423",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "R"
+   ],
+   "input_tags": [
+    "ST expression"
+   ],
+   "model_tags": [
+    "Bayesian / probabilistic model"
+   ],
+   "paradigm": "Statistical / classical ML"
+  },
+  {
+   "id": "spagft",
+   "method": "SpaGFT",
+   "categories": [
+    "Spatially variable gene identification"
+   ],
+   "subtype": "Overall SVG",
+   "task": "Tissue-wide SVG detection + tissue module inference",
+   "input": "ST count matrix + spatial coords",
+   "language": "Python",
+   "core_method": "Graph Fourier transform on k-NN spatial graph; Fourier coefficients represent spatial patterns",
+   "year": 2022,
+   "first_author": "Chang et al.",
+   "title": "Spatial omics representation and functional tissue module inference using graph Fourier transform",
+   "journal": "bioRxiv",
+   "doi": "10.1101/2022.12.10.519929",
+   "paper_url": "https://doi.org/10.1101/2022.12.10.519929",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph"
+   ],
+   "model_tags": [
+    "Classical ML (k-NN, forests, SOM, ensembles)"
+   ],
+   "paradigm": "Statistical / classical ML"
+  },
+  {
+   "id": "spagene",
+   "method": "SpaGene",
+   "categories": [
+    "Spatially variable gene identification",
+    "Cell communication & interpretable models"
+   ],
+   "subtype": "Overall SVG",
+   "task": "Tissue-wide SVG detection + ligand-receptor colocalization",
+   "input": "ST count matrix + spatial coords",
+   "language": "R",
+   "core_method": "Model-free spatial pattern detection based on connectivity of high-expressing spots in a nearest neighbor graph",
+   "year": 2022,
+   "first_author": "Liu et al.",
+   "title": "Scalable and model-free detection of spatial patterns and colocalization",
+   "journal": "Genome Research",
+   "doi": "10.1101/gr.276851.122",
+   "paper_url": "https://doi.org/10.1101/gr.276851.122",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "R"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph"
+   ],
+   "model_tags": [
+    "Classical ML (k-NN, forests, SOM, ensembles)"
+   ],
+   "paradigm": "Statistical / classical ML"
+  },
+  {
+   "id": "spafoundation",
+   "method": "SpaFoundation",
+   "categories": [
+    "Foundation models",
+    "Spatial gene expression prediction"
+   ],
+   "subtype": "From histology",
+   "task": "Spatial gene expression prediction from histology",
+   "input": "H&E image (+ ST for training)",
+   "language": "Python",
+   "core_method": "Histology foundation model: teacher-student Vision Transformer (ViT) with self-distillation",
+   "year": 2025,
+   "first_author": "Zhang et al.",
+   "title": "Inferring spatial gene expression from tissue images using large-scale histology foundation model with SpaFoundation",
+   "journal": "bioRxiv",
+   "doi": "10.1101/2025.08.07.669202",
+   "paper_url": "https://doi.org/10.1101/2025.08.07.669202",
+   "code_url": "https://github.com/NingZhangCSUBio/SpaFoundation",
+   "code_source": "paper abstract",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "H&E image"
+   ],
+   "model_tags": [
+    "Transformer / ViT",
+    "Foundation model / LLM"
+   ],
+   "paradigm": "Deep learning"
+  },
+  {
+   "id": "insitucor",
+   "method": "InSituCor",
+   "categories": [
+    "Gene regulatory networks"
+   ],
+   "subtype": "",
+   "task": "Discovery of spatially correlated gene modules",
+   "input": "ST count matrix + spatial coords + cell types",
+   "language": "R",
+   "core_method": "Spatial correlation of genes conditioned on cell-type landscape (regression-adjusted) for module discovery",
+   "year": 2023,
+   "first_author": "Danaher et al.",
+   "title": "InSituCor: a toolkit for discovering non-trivial spatial correlations in spatial transcriptomics",
+   "journal": "bioRxiv",
+   "doi": "10.1101/2023.09.19.558514",
+   "paper_url": "https://doi.org/10.1101/2023.09.19.558514",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "R"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph"
+   ],
+   "model_tags": [
+    "Regression / GLM / mixed model"
+   ],
+   "paradigm": "Statistical / classical ML"
+  },
+  {
+   "id": "spatial-id",
+   "method": "Spatial-ID",
+   "categories": [
+    "Cell-type deconvolution"
+   ],
+   "subtype": "",
+   "task": "Cell-type annotation via reference transfer",
+   "input": "ST count matrix + scRNA-seq reference + spatial coords",
+   "language": "Python",
+   "core_method": "Transfer learning deep neural network trained on scRNA-seq + graph autoencoder spatial embedding",
+   "year": 2022,
+   "first_author": "Shen et al.",
+   "title": "Spatial-ID: a cell typing method for spatially resolved transcriptomics via transfer learning and spatial embedding",
+   "journal": "Nature Communications",
+   "doi": "10.1038/s41467-022-35288-0",
+   "paper_url": "https://doi.org/10.1038/s41467-022-35288-0",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph",
+    "scRNA-seq reference"
+   ],
+   "model_tags": [
+    "Classical ML (k-NN, forests, SOM, ensembles)",
+    "VAE / autoencoder / generative"
+   ],
+   "paradigm": "Hybrid"
+  },
+  {
+   "id": "deepsc",
+   "method": "DEEPsc",
+   "categories": [
+    "Spatial gene expression prediction"
+   ],
+   "subtype": "From scRNA-seq reference (imputation)",
+   "task": "scRNA-seq-to-space mapping using a spatial reference atlas",
+   "input": "scRNA-seq + ST count matrices",
+   "language": "MATLAB",
+   "core_method": "Deep learning (neural network) mapping of single cells to spatial positions",
+   "year": 2021,
+   "first_author": "Maseda et al.",
+   "title": "DEEPsc: A Deep Learning-Based Map Connecting Single-Cell Transcriptomics and Spatial Imaging Data",
+   "journal": "Frontiers in Genetics",
+   "doi": "10.3389/fgene.2021.636743",
+   "paper_url": "https://doi.org/10.3389/fgene.2021.636743",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "MATLAB"
+   ],
+   "input_tags": [
+    "ST expression",
+    "scRNA-seq reference"
+   ],
+   "model_tags": [
+    "Other deep learning"
+   ],
+   "paradigm": "Deep learning"
+  },
+  {
+   "id": "spotiphy",
+   "method": "Spotiphy",
+   "categories": [
+    "Cell-type deconvolution",
+    "Spatial gene expression prediction"
+   ],
+   "subtype": "From histology",
+   "task": "Deconvolution + pseudo-single-cell whole-transcriptome imaging",
+   "input": "ST count matrix + scRNA-seq reference + H&E image",
+   "language": "Python",
+   "core_method": "Reference-based cell-type deconvolution combined with histology image segmentation to infer single-cell profiles",
+   "year": 2025,
+   "first_author": "Yang et al.",
+   "title": "Spotiphy enables single-cell spatial whole transcriptomics across an entire section",
+   "journal": "Nature Methods",
+   "doi": "10.1038/s41592-025-02622-5",
+   "paper_url": "https://doi.org/10.1038/s41592-025-02622-5",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "H&E image",
+    "scRNA-seq reference"
+   ],
+   "model_tags": [
+    "Other deep learning"
+   ],
+   "paradigm": "Deep learning"
+  },
+  {
+   "id": "celloscope",
+   "method": "Celloscope",
+   "categories": [
+    "Cell-type deconvolution"
+   ],
+   "subtype": "",
+   "task": "Marker-based deconvolution",
+   "input": "ST count matrix + marker genes",
+   "language": "R / Python",
+   "core_method": "Bayesian probabilistic model using prior marker-gene knowledge",
+   "year": 2023,
+   "first_author": "Geras et al.",
+   "title": "Celloscope: a probabilistic model for marker-gene-driven cell type deconvolution in spatial transcriptomics data",
+   "journal": "Genome Biology",
+   "doi": "10.1186/s13059-023-02951-8",
+   "paper_url": "https://doi.org/10.1186/s13059-023-02951-8",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "R",
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression"
+   ],
+   "model_tags": [
+    "Bayesian / probabilistic model"
+   ],
+   "paradigm": "Statistical / classical ML"
+  },
+  {
+   "id": "sonar",
+   "method": "SONAR",
+   "categories": [
+    "Cell-type deconvolution"
+   ],
+   "subtype": "",
+   "task": "Deconvolution",
+   "input": "ST count matrix + scRNA-seq reference + spatial coords",
+   "language": "R",
+   "core_method": "Spatially weighted Poisson-Gamma regression (geographically weighted regression) with elastic weighting",
+   "year": 2023,
+   "first_author": "Liu et al.",
+   "title": "SONAR enables cell type deconvolution with spatially weighted Poisson-Gamma model for spatial transcriptomics",
+   "journal": "Nature Communications",
+   "doi": "10.1038/s41467-023-40458-9",
+   "paper_url": "https://doi.org/10.1038/s41467-023-40458-9",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "R"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph",
+    "scRNA-seq reference"
+   ],
+   "model_tags": [
+    "Regression / GLM / mixed model",
+    "Bayesian / probabilistic model"
+   ],
+   "paradigm": "Statistical / classical ML"
+  },
+  {
+   "id": "cellsfromspace",
+   "method": "CellsFromSpace",
+   "categories": [
+    "Cell-type deconvolution"
+   ],
+   "subtype": "",
+   "task": "Reference-free deconvolution",
+   "input": "ST count matrix",
+   "language": "R",
+   "core_method": "Independent component analysis (matrix factorization) decomposing ST into cell-type components",
+   "year": 2024,
+   "first_author": "Thuilliez et al.",
+   "title": "CellsFromSpace: a fast, accurate, and reference-free tool to deconvolve and annotate spatially distributed omics data",
+   "journal": "Bioinformatics Advances",
+   "doi": "10.1093/bioadv/vbae081",
+   "paper_url": "https://doi.org/10.1093/bioadv/vbae081",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "R"
+   ],
+   "input_tags": [
+    "ST expression"
+   ],
+   "model_tags": [
+    "Matrix factorization / factor analysis"
+   ],
+   "paradigm": "Statistical / classical ML"
+  },
+  {
+   "id": "stride",
+   "method": "STRIDE",
+   "categories": [
+    "Cell-type deconvolution",
+    "Spatial alignment"
+   ],
+   "subtype": "",
+   "task": "Deconvolution + 3D reconstruction from successive sections",
+   "input": "ST count matrix + scRNA-seq reference",
+   "language": "Python",
+   "core_method": "Topic modeling (Bayesian probabilistic LDA) trained on scRNA-seq to decompose spot mixtures",
+   "year": 2022,
+   "first_author": "Sun et al.",
+   "title": "STRIDE: accurately decomposing and integrating spatial transcriptomics using single-cell RNA sequencing",
+   "journal": "Nucleic Acids Research",
+   "doi": "10.1093/nar/gkac150",
+   "paper_url": "https://doi.org/10.1093/nar/gkac150",
+   "code_url": "https://github.com/wanglabtongji/STRIDE",
+   "code_source": "paper abstract",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "scRNA-seq reference"
+   ],
+   "model_tags": [
+    "Bayesian / probabilistic model"
+   ],
+   "paradigm": "Statistical / classical ML"
+  },
+  {
+   "id": "spatialdecon",
+   "method": "SpatialDecon",
+   "categories": [
+    "Cell-type deconvolution"
+   ],
+   "subtype": "",
+   "task": "Deconvolution",
+   "input": "ST count matrix + scRNA-seq reference",
+   "language": "R",
+   "core_method": "Log-normal regression with background modelling (vs classical least squares)",
+   "year": 2022,
+   "first_author": "Danaher et al.",
+   "title": "Advances in mixed cell deconvolution enable quantification of cell types in spatial transcriptomic data",
+   "journal": "Nature Communications",
+   "doi": "10.1038/s41467-022-28020-5",
+   "paper_url": "https://doi.org/10.1038/s41467-022-28020-5",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "R"
+   ],
+   "input_tags": [
+    "ST expression",
+    "scRNA-seq reference"
+   ],
+   "model_tags": [
+    "Regression / GLM / mixed model"
+   ],
+   "paradigm": "Statistical / classical ML"
+  },
+  {
+   "id": "macd",
+   "method": "MACD",
+   "categories": [
+    "Cell-type deconvolution"
+   ],
+   "subtype": "",
+   "task": "Deconvolution",
+   "input": "ST count matrix + scRNA-seq reference",
+   "language": "Python",
+   "core_method": "Masked adversarial neural network (autoencoder) aligning real and simulated ST in a latent space",
+   "year": 2024,
+   "first_author": "Huang et al.",
+   "title": "Masked adversarial neural network for cell type deconvolution in spatial transcriptomics",
+   "journal": "arXiv",
+   "doi": "10.48550/arxiv.2408.05065",
+   "paper_url": "https://doi.org/10.48550/arxiv.2408.05065",
+   "code_url": "https://github.com/wenwenmin/MACD",
+   "code_source": "paper abstract",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "scRNA-seq reference"
+   ],
+   "model_tags": [
+    "VAE / autoencoder / generative"
+   ],
+   "paradigm": "Deep learning"
+  },
+  {
+   "id": "clpls",
+   "method": "CLPLS",
+   "categories": [
+    "Cell-type deconvolution",
+    "Multi-sample & multi-modal integration"
+   ],
+   "subtype": "",
+   "task": "Deconvolution + integration with single-cell multi-omics",
+   "input": "ST count matrix + scRNA-seq reference + spatial coords",
+   "language": "Python",
+   "core_method": "Graph contrastive learning + partial least squares regression",
+   "year": 2024,
+   "first_author": "Mo et al.",
+   "title": "Deconvolution of spatial transcriptomics data via graph contrastive learning and partial least square regression",
+   "journal": "Briefings in Bioinformatics",
+   "doi": "10.1093/bib/bbaf052",
+   "paper_url": "https://doi.org/10.1093/bib/bbaf052",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph",
+    "scRNA-seq reference"
+   ],
+   "model_tags": [
+    "Regression / GLM / mixed model",
+    "Contrastive learning"
+   ],
+   "paradigm": "Hybrid"
+  },
+  {
+   "id": "polaris",
+   "method": "POLARIS",
+   "categories": [
+    "Cell-type deconvolution",
+    "Spatially variable gene identification"
+   ],
+   "subtype": "Domain-marker SVG",
+   "task": "Deconvolution + layer-wise DE genes + histology-based composition inference",
+   "input": "ST count matrix + scRNA-seq reference + H&E image",
+   "language": "Python",
+   "core_method": "Regression-based deconvolution with layer-specific effects; image-based cell composition inference",
+   "year": 2023,
+   "first_author": "Chen et al.",
+   "title": "Cell composition inference and identification of layer-specific spatial transcriptional profiles with POLARIS",
+   "journal": "Science Advances",
+   "doi": "10.1126/sciadv.add9818",
+   "paper_url": "https://doi.org/10.1126/sciadv.add9818",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "H&E image",
+    "scRNA-seq reference"
+   ],
+   "model_tags": [
+    "Regression / GLM / mixed model"
+   ],
+   "paradigm": "Statistical / classical ML"
+  },
+  {
+   "id": "gnndeconvolver",
+   "method": "GNNDeconvolver",
+   "categories": [
+    "Cell-type deconvolution"
+   ],
+   "subtype": "",
+   "task": "Deconvolution",
+   "input": "ST count matrix + spatial reference (SpatialCTD)",
+   "language": "Python",
+   "core_method": "Graph neural network (GNN) deconvolution using location-aware reference",
+   "year": 2024,
+   "first_author": "Ding et al.",
+   "title": "SpatialCTD: A Large-Scale Tumor Microenvironment Spatial Transcriptomic Dataset to Evaluate Cell Type Deconvolution for Immuno-Oncology",
+   "journal": "Journal of Computational Biology",
+   "doi": "10.1089/cmb.2024.0532",
+   "paper_url": "https://doi.org/10.1089/cmb.2024.0532",
+   "code_url": "https://github.com/OmicsML/SpatialCTD",
+   "code_source": "paper abstract",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression"
+   ],
+   "model_tags": [
+    "Graph neural network"
+   ],
+   "paradigm": "Deep learning"
+  },
+  {
+   "id": "stdgcn",
+   "method": "STdGCN",
+   "categories": [
+    "Cell-type deconvolution"
+   ],
+   "subtype": "",
+   "task": "Deconvolution",
+   "input": "ST count matrix + scRNA-seq reference + spatial coords",
+   "language": "Python",
+   "core_method": "Graph convolutional network (GCN)",
+   "year": 2023,
+   "first_author": "Li et al.",
+   "title": "Spatial Transcriptomic Cell-type Deconvolution Using Graph Neural Networks",
+   "journal": "bioRxiv",
+   "doi": "10.1101/2023.03.10.532112",
+   "paper_url": "https://doi.org/10.1101/2023.03.10.532112",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph",
+    "scRNA-seq reference"
+   ],
+   "model_tags": [
+    "Graph neural network"
+   ],
+   "paradigm": "Deep learning"
+  },
+  {
+   "id": "cottrazm",
+   "method": "Cottrazm",
+   "categories": [
+    "Cell-type deconvolution"
+   ],
+   "subtype": "",
+   "task": "Tumor boundary delineation + deconvolution + sub-spot expression reconstruction",
+   "input": "ST count matrix + scRNA-seq reference + H&E image",
+   "language": "R",
+   "core_method": "Integration of ST, histology morphology and scRNA-seq for boundary detection and deconvolution",
+   "year": 2023,
+   "first_author": "Xun et al.",
+   "title": "Reconstruction of the tumor spatial microenvironment along the malignant-boundary-nonmalignant axis",
+   "journal": "Nature Communications",
+   "doi": "10.1038/s41467-023-36560-7",
+   "paper_url": "https://doi.org/10.1038/s41467-023-36560-7",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "R"
+   ],
+   "input_tags": [
+    "ST expression",
+    "H&E image",
+    "scRNA-seq reference"
+   ],
+   "model_tags": [],
+   "paradigm": "Other"
+  },
+  {
+   "id": "scresolve",
+   "method": "scResolve",
+   "categories": [
+    "Cell-type deconvolution",
+    "Spatial gene expression prediction"
+   ],
+   "subtype": "From ST alone (imputation / super-resolution)",
+   "task": "Single-cell expression recovery from multi-cellular spots",
+   "input": "ST count matrix + spatial coords",
+   "language": "Python",
+   "core_method": "Recovery of single-cell expression profiles at cell locations from multi-cellular spot measurements",
+   "year": 2023,
+   "first_author": "Chen et al.",
+   "title": "scResolve: Recovering single cell expression profiles from multi-cellular spatial transcriptomics",
+   "journal": "bioRxiv",
+   "doi": "10.1101/2023.12.18.572269",
+   "paper_url": "https://doi.org/10.1101/2023.12.18.572269",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph"
+   ],
+   "model_tags": [],
+   "paradigm": "Other"
+  },
+  {
+   "id": "stie",
+   "method": "STIE",
+   "categories": [
+    "Cell-type deconvolution"
+   ],
+   "subtype": "",
+   "task": "Single-cell-level deconvolution + clustering",
+   "input": "ST count matrix + H&E image",
+   "language": "R",
+   "core_method": "Expectation-maximization (maximum likelihood) aligning ST to histology nuclear morphology",
+   "year": 2024,
+   "first_author": "Zhu et al.",
+   "title": "STIE: Single-cell level deconvolution, convolution, and clustering in in situ capturing-based spatial transcriptomics",
+   "journal": "Nature Communications",
+   "doi": "10.1038/s41467-024-51728-5",
+   "paper_url": "https://doi.org/10.1038/s41467-024-51728-5",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "R"
+   ],
+   "input_tags": [
+    "ST expression",
+    "H&E image"
+   ],
+   "model_tags": [
+    "Bayesian / probabilistic model"
+   ],
+   "paradigm": "Statistical / classical ML"
+  },
+  {
+   "id": "ocelloc",
+   "method": "oCELLoc",
+   "categories": [
+    "Cell-type deconvolution"
+   ],
+   "subtype": "",
+   "task": "Reference cell-type selection for cell-type prediction",
+   "input": "ST count matrix + scRNA-seq reference",
+   "language": "R",
+   "core_method": "Regularized regression with cross-validation on pseudobulk vs broad reference atlas",
+   "year": 2025,
+   "first_author": "Zainab et al.",
+   "title": "oCELLoc: Automated Cell Type Assignment in Transcriptomics Data Using Reference Filtering",
+   "journal": "bioRxiv",
+   "doi": "10.64898/2025.12.11.693812",
+   "paper_url": "https://doi.org/10.64898/2025.12.11.693812",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "R"
+   ],
+   "input_tags": [
+    "ST expression",
+    "scRNA-seq reference"
+   ],
+   "model_tags": [
+    "Regression / GLM / mixed model"
+   ],
+   "paradigm": "Statistical / classical ML"
+  },
+  {
+   "id": "holonet",
+   "method": "HoloNet",
+   "categories": [
+    "Cell communication & interpretable models"
+   ],
+   "subtype": "",
+   "task": "Functional CCC event and target-gene decoding",
+   "input": "ST count matrix + spatial coords + cell types",
+   "language": "Python",
+   "core_method": "Multi-view graph attention network modelling ligand-receptor communication networks",
+   "year": 2023,
+   "first_author": "Li et al.",
+   "title": "Decoding functional cell–cell communication events by multi-view graph learning on spatial transcriptomics",
+   "journal": "Briefings in Bioinformatics",
+   "doi": "10.1093/bib/bbad359",
+   "paper_url": "https://doi.org/10.1093/bib/bbad359",
+   "code_url": "https://github.com/lhc17/HoloNet",
+   "code_source": "paper abstract",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph"
+   ],
+   "model_tags": [
+    "Graph neural network",
+    "Transformer / ViT"
+   ],
+   "paradigm": "Deep learning"
+  },
+  {
+   "id": "stereosite",
+   "method": "StereoSiTE",
+   "categories": [
+    "Cell communication & interpretable models"
+   ],
+   "subtype": "",
+   "task": "Cellular neighborhood + spatial CCC intensity inference",
+   "input": "ST count matrix + spatial coords + cell types",
+   "language": "Python",
+   "core_method": "Cellular neighborhood clustering + SCII algorithm quantifying ligand-receptor interaction intensity",
+   "year": 2024,
+   "first_author": "Liu et al.",
+   "title": "StereoSiTE: a framework to spatially and quantitatively profile the cellular neighborhood organized iTME",
+   "journal": "GigaScience",
+   "doi": "10.1093/gigascience/giae078",
+   "paper_url": "https://doi.org/10.1093/gigascience/giae078",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph"
+   ],
+   "model_tags": [],
+   "paradigm": "Other"
+  },
+  {
+   "id": "stvea",
+   "method": "STvEA",
+   "categories": [
+    "Spatial gene expression prediction"
+   ],
+   "subtype": "From scRNA-seq reference (imputation)",
+   "task": "Transcriptome mapping onto multiplexed protein images",
+   "input": "CODEX protein data + CITE-seq",
+   "language": "R",
+   "core_method": "Nearest neighbor mapping of CITE-seq to CODEX on shared antigens; Adjacency Score for colocalization",
+   "year": 2021,
+   "first_author": "Govek et al.",
+   "title": "Single-cell transcriptomic analysis of mIHC images via antigen mapping",
+   "journal": "Science Advances",
+   "doi": "10.1126/sciadv.abc5464",
+   "paper_url": "https://doi.org/10.1126/sciadv.abc5464",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "R"
+   ],
+   "input_tags": [
+    "Multi-omics (ATAC / protein)"
+   ],
+   "model_tags": [
+    "Classical ML (k-NN, forests, SOM, ensembles)"
+   ],
+   "paradigm": "Statistical / classical ML"
+  },
+  {
+   "id": "nichecompass",
+   "method": "NicheCompass",
+   "categories": [
+    "Cell communication & interpretable models",
+    "Multi-sample & multi-modal integration"
+   ],
+   "subtype": "",
+   "task": "Niche identification + interpretable CCC programs + integration",
+   "input": "ST count matrices + spatial coords (multiple slices)",
+   "language": "Python",
+   "core_method": "Interpretable graph neural network (variational graph autoencoder) with prior-knowledge gene programs",
+   "year": 2024,
+   "first_author": "Birk et al.",
+   "title": "Quantitative characterization of cell niches in spatial atlases",
+   "journal": "bioRxiv",
+   "doi": "10.1101/2024.02.21.581428",
+   "paper_url": "https://doi.org/10.1101/2024.02.21.581428",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph",
+    "Multiple slices / samples"
+   ],
+   "model_tags": [
+    "Graph neural network",
+    "VAE / autoencoder / generative"
+   ],
+   "paradigm": "Deep learning"
+  },
+  {
+   "id": "messi",
+   "method": "MESSI",
+   "categories": [
+    "Cell communication & interpretable models"
+   ],
+   "subtype": "",
+   "task": "Signaling gene identification",
+   "input": "ST count matrix + spatial coords + cell types",
+   "language": "Python",
+   "core_method": "Mixture of experts with multi-task regression using neighboring cells",
+   "year": 2020,
+   "first_author": "Li et al.",
+   "title": "Identifying signaling genes in spatial single-cell expression data",
+   "journal": "Bioinformatics",
+   "doi": "10.1093/bioinformatics/btaa769",
+   "paper_url": "https://doi.org/10.1093/bioinformatics/btaa769",
+   "code_url": "https://github.com/doraadong/MESSI",
+   "code_source": "paper abstract",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph"
+   ],
+   "model_tags": [
+    "Regression / GLM / mixed model",
+    "Other deep learning"
+   ],
+   "paradigm": "Hybrid"
+  },
+  {
+   "id": "igan",
+   "method": "IGAN",
+   "categories": [
+    "Cell communication & interpretable models",
+    "Gene regulatory networks"
+   ],
+   "subtype": "",
+   "task": "CCC pathway inference via intercellular gene networks",
+   "input": "ST count matrix + spatial coords",
+   "language": "R",
+   "core_method": "Intercellular gene association network estimated between adjacent cells",
+   "year": 2024,
+   "first_author": "Zhu et al.",
+   "title": "Revealing cell–cell communication pathways with their spatially coupled gene programs",
+   "journal": "Briefings in Bioinformatics",
+   "doi": "10.1093/bib/bbae202",
+   "paper_url": "https://doi.org/10.1093/bib/bbae202",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "R"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph"
+   ],
+   "model_tags": [],
+   "paradigm": "Other"
+  },
+  {
+   "id": "dialogue",
+   "method": "DIALOGUE",
+   "categories": [
+    "Cell communication & interpretable models"
+   ],
+   "subtype": "",
+   "task": "Multicellular program discovery",
+   "input": "ST count matrix (or scRNA-seq) + cell types",
+   "language": "R",
+   "core_method": "Multi-cell-type penalized matrix factorization (multi-CCA) + mixed model",
+   "year": 2022,
+   "first_author": "Jerby-Arnon et al.",
+   "title": "DIALOGUE maps multicellular programs in tissue from single-cell or spatial transcriptomics data",
+   "journal": "Nature Biotechnology",
+   "doi": "10.1038/s41587-022-01288-0",
+   "paper_url": "https://doi.org/10.1038/s41587-022-01288-0",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "R"
+   ],
+   "input_tags": [
+    "ST expression",
+    "scRNA-seq reference"
+   ],
+   "model_tags": [
+    "Regression / GLM / mixed model",
+    "Matrix factorization / factor analysis"
+   ],
+   "paradigm": "Statistical / classical ML"
+  },
+  {
+   "id": "neuronchat",
+   "method": "NeuronChat",
+   "categories": [
+    "Cell communication & interpretable models"
+   ],
+   "subtype": "",
+   "task": "Neural-specific CCC inference",
+   "input": "scRNA-seq or ST count matrix + cell groups",
+   "language": "R",
+   "core_method": "Curated neural signaling interaction database scoring with permutation test",
+   "year": 2023,
+   "first_author": "Zhao et al.",
+   "title": "Inferring neuron-neuron communications from single-cell transcriptomics through NeuronChat",
+   "journal": "Nature Communications",
+   "doi": "10.1038/s41467-023-36800-w",
+   "paper_url": "https://doi.org/10.1038/s41467-023-36800-w",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "R"
+   ],
+   "input_tags": [
+    "ST expression",
+    "scRNA-seq reference"
+   ],
+   "model_tags": [
+    "Spatial autocorrelation / kernel test"
+   ],
+   "paradigm": "Statistical / classical ML"
+  },
+  {
+   "id": "cell2cell",
+   "method": "cell2cell",
+   "categories": [
+    "Cell communication & interpretable models"
+   ],
+   "subtype": "",
+   "task": "Ligand-receptor-mediated CCC inference + spatial code",
+   "input": "scRNA-seq + 3D cell atlas",
+   "language": "Python",
+   "core_method": "Ligand-receptor coexpression scores + genetic algorithm for spatial code",
+   "year": 2022,
+   "first_author": "Armingol et al.",
+   "title": "Inferring a spatial code of cell-cell interactions across a whole animal body",
+   "journal": "PLOS Computational Biology",
+   "doi": "10.1371/journal.pcbi.1010715",
+   "paper_url": "https://doi.org/10.1371/journal.pcbi.1010715",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "scRNA-seq reference"
+   ],
+   "model_tags": [
+    "Classical ML (k-NN, forests, SOM, ensembles)"
+   ],
+   "paradigm": "Statistical / classical ML"
+  },
+  {
+   "id": "spacenet",
+   "method": "SpaCeNet",
+   "categories": [
+    "Gene regulatory networks",
+    "Cell communication & interpretable models"
+   ],
+   "subtype": "",
+   "task": "Intra- and intercellular molecular network inference",
+   "input": "ST count matrix + spatial coords",
+   "language": "Python",
+   "core_method": "Probabilistic graphical model estimating conditional independence within and between cells",
+   "year": 2022,
+   "first_author": "Schrod et al.",
+   "title": "SpaCeNet: Spatial Cellular Networks from omics data",
+   "journal": "bioRxiv",
+   "doi": "10.1101/2022.09.01.506219",
+   "paper_url": "https://doi.org/10.1101/2022.09.01.506219",
+   "code_url": "https://github.com/sschrod/SpaCeNet",
+   "code_source": "paper abstract",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph"
+   ],
+   "model_tags": [
+    "Bayesian / probabilistic model"
+   ],
+   "paradigm": "Statistical / classical ML"
+  },
+  {
+   "id": "miaaim",
+   "method": "MIAAIM",
+   "categories": [
+    "Spatial alignment",
+    "Multi-sample & multi-modal integration"
+   ],
+   "subtype": "",
+   "task": "Multi-omics image alignment and integration",
+   "input": "Multiplexed imaging + mass spectrometry + histology images",
+   "language": "Python",
+   "core_method": "Manifold learning image registration, topological data analysis and cobordism learning",
+   "year": 2021,
+   "first_author": "Hess et al.",
+   "title": "MIAAIM: Multi-omics image integration and tissue state mapping using topological data analysis and cobordism learning",
+   "journal": "bioRxiv",
+   "doi": "10.1101/2021.12.20.472858",
+   "paper_url": "https://doi.org/10.1101/2021.12.20.472858",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [],
+   "model_tags": [
+    "Classical ML (k-NN, forests, SOM, ensembles)"
+   ],
+   "paradigm": "Statistical / classical ML"
+  },
+  {
+   "id": "lloki",
+   "method": "LLOKI",
+   "categories": [
+    "Multi-sample & multi-modal integration"
+   ],
+   "subtype": "",
+   "task": "Cross-platform ST integration without shared gene panels",
+   "input": "ST count matrices + spatial coords (multiple slices)",
+   "language": "Python",
+   "core_method": "Optimal transport-guided graph feature propagation + scGPT foundation model features + conditional autoencoder batch alignment",
+   "year": 2025,
+   "first_author": "Haber et al.",
+   "title": "Unified integration of spatial transcriptomics across platforms with LLOKI",
+   "journal": "Genome Research",
+   "doi": "10.1101/gr.280803.125",
+   "paper_url": "https://doi.org/10.1101/gr.280803.125",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph",
+    "Multiple slices / samples"
+   ],
+   "model_tags": [
+    "Optimal transport",
+    "VAE / autoencoder / generative",
+    "Foundation model / LLM"
+   ],
+   "paradigm": "Hybrid"
+  },
+  {
+   "id": "step",
+   "method": "STEP",
+   "categories": [
+    "Multi-sample & multi-modal integration"
+   ],
+   "subtype": "",
+   "task": "Multi-sample integration + cell type and domain identification",
+   "input": "ST count matrices + spatial coords (multiple slices)",
+   "language": "Python",
+   "core_method": "Transformer + beta-VAE backbone with batch-effect model and graph convolutional network (GCN) spatial model",
+   "year": 2024,
+   "first_author": "Li et al.",
+   "title": "STEP: Spatial Transcriptomics Embedding Procedure for Multi-scale Biological Heterogeneities Revelation in Multiple Samples",
+   "journal": "bioRxiv",
+   "doi": "10.1101/2024.04.15.589470",
+   "paper_url": "https://doi.org/10.1101/2024.04.15.589470",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph",
+    "Multiple slices / samples"
+   ],
+   "model_tags": [
+    "Graph neural network",
+    "Transformer / ViT",
+    "VAE / autoencoder / generative"
+   ],
+   "paradigm": "Deep learning"
+  },
+  {
+   "id": "resst",
+   "method": "ResST",
+   "categories": [
+    "Multi-sample & multi-modal integration"
+   ],
+   "subtype": "",
+   "task": "Multi-sample integration (batch correction) + domain detection",
+   "input": "ST count matrices + spatial coords (multiple slices)",
+   "language": "Python",
+   "core_method": "Graph self-supervised residual learning (GNN) + Margin Disparity Discrepancy alignment",
+   "year": 2024,
+   "first_author": "Huang et al.",
+   "title": "A graph self-supervised residual learning framework for domain identification and data integration of spatial transcriptomics",
+   "journal": "Communications Biology",
+   "doi": "10.1038/s42003-024-06814-1",
+   "paper_url": "https://doi.org/10.1038/s42003-024-06814-1",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph",
+    "Multiple slices / samples"
+   ],
+   "model_tags": [
+    "Graph neural network"
+   ],
+   "paradigm": "Deep learning"
+  },
+  {
+   "id": "stitch3d",
+   "method": "STitch3D",
+   "categories": [
+    "Multi-sample & multi-modal integration",
+    "Cell-type deconvolution"
+   ],
+   "subtype": "",
+   "task": "3D multi-slice integration + 3D cell-type deconvolution",
+   "input": "ST count matrices + scRNA-seq reference + spatial coords (multiple slices)",
+   "language": "Python",
+   "core_method": "Deep learning (neural network) joint probabilistic modelling of multiple slices with scRNA-seq reference",
+   "year": 2023,
+   "first_author": "Wang et al.",
+   "title": "Construction of a 3D whole organism spatial atlas by joint modelling of multiple slices with deep neural networks",
+   "journal": "Nature Machine Intelligence",
+   "doi": "10.1038/s42256-023-00734-1",
+   "paper_url": "https://doi.org/10.1038/s42256-023-00734-1",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph",
+    "scRNA-seq reference",
+    "Multiple slices / samples"
+   ],
+   "model_tags": [
+    "Bayesian / probabilistic model",
+    "Other deep learning"
+   ],
+   "paradigm": "Hybrid"
+  },
+  {
+   "id": "inspire",
+   "method": "INSPIRE",
+   "categories": [
+    "Multi-sample & multi-modal integration"
+   ],
+   "subtype": "",
+   "task": "Multi-sample integration + interpretable spatial factors",
+   "input": "ST count matrices + spatial coords (multiple slices)",
+   "language": "Python",
+   "core_method": "Graph neural network + adversarial learning + non-negative matrix factorization (NMF)",
+   "year": 2026,
+   "first_author": "Zhao et al.",
+   "title": "Interpretable, flexible and spatially aware integration of multiple spatial transcriptomics datasets from diverse sources",
+   "journal": "Nature Genetics",
+   "doi": "10.1038/s41588-026-02579-x",
+   "paper_url": "https://doi.org/10.1038/s41588-026-02579-x",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph",
+    "Multiple slices / samples"
+   ],
+   "model_tags": [
+    "Matrix factorization / factor analysis",
+    "Graph neural network",
+    "VAE / autoencoder / generative"
+   ],
+   "paradigm": "Hybrid"
+  },
+  {
+   "id": "spabatch",
+   "method": "SpaBatch",
+   "categories": [
+    "Multi-sample & multi-modal integration"
+   ],
+   "subtype": "",
+   "task": "Cross-slice integration + 3D domain detection",
+   "input": "ST count matrices + spatial coords (multiple slices)",
+   "language": "Python",
+   "core_method": "Deep learning (neural network) multi-slice integration with batch correction",
+   "year": 2025,
+   "first_author": "Niu et al.",
+   "title": "SpaBatch: Deep Learning‐Based Cross‐Slice Integration and 3D Spatial Domain Identification in Spatial Transcriptomics",
+   "journal": "Advanced Science",
+   "doi": "10.1002/advs.202509090",
+   "paper_url": "https://doi.org/10.1002/advs.202509090",
+   "code_url": "https://github.com/wenwenmin/SpaBatch",
+   "code_source": "paper abstract",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph",
+    "Multiple slices / samples"
+   ],
+   "model_tags": [
+    "Other deep learning"
+   ],
+   "paradigm": "Deep learning"
+  },
+  {
+   "id": "envi",
+   "method": "ENVI",
+   "categories": [
+    "Spatial gene expression prediction"
+   ],
+   "subtype": "From scRNA-seq reference (imputation)",
+   "task": "Missing gene imputation + spatial context projection onto scRNA-seq",
+   "input": "ST count matrix + scRNA-seq reference + spatial coords",
+   "language": "Python",
+   "core_method": "Conditional variational autoencoder (VAE) jointly embedding ST and scRNA-seq; COVET niche covariance representation with optimal transport distance",
+   "year": 2024,
+   "first_author": "Haviv et al.",
+   "title": "The covariance environment defines cellular niches for spatial inference",
+   "journal": "Nature Biotechnology",
+   "doi": "10.1038/s41587-024-02193-4",
+   "paper_url": "https://doi.org/10.1038/s41587-024-02193-4",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph",
+    "scRNA-seq reference"
+   ],
+   "model_tags": [
+    "Optimal transport",
+    "VAE / autoencoder / generative"
+   ],
+   "paradigm": "Hybrid"
+  },
+  {
+   "id": "sprite",
+   "method": "SPRITE",
+   "categories": [
+    "Spatial gene expression prediction"
+   ],
+   "subtype": "From scRNA-seq reference (imputation)",
+   "task": "Post-processing refinement of imputed gene expression",
+   "input": "ST count matrix + spatial coords + predicted expression from existing imputation methods",
+   "language": "Python",
+   "core_method": "Meta-algorithm propagating predictions over gene correlation networks and spatial neighborhood graphs (graph smoothing)",
+   "year": 2024,
+   "first_author": "Sun et al.",
+   "title": "SPRITE: improving spatial gene expression imputation with gene and cell networks",
+   "journal": "Bioinformatics",
+   "doi": "10.1093/bioinformatics/btae253",
+   "paper_url": "https://doi.org/10.1093/bioinformatics/btae253",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph"
+   ],
+   "model_tags": [
+    "Classical ML (k-NN, forests, SOM, ensembles)"
+   ],
+   "paradigm": "Statistical / classical ML"
+  },
+  {
+   "id": "ispatial",
+   "method": "iSpatial",
+   "categories": [
+    "Spatial gene expression prediction"
+   ],
+   "subtype": "From scRNA-seq reference (imputation)",
+   "task": "Genome-wide spatial expression inference",
+   "input": "ST count matrix + scRNA-seq reference",
+   "language": "R",
+   "core_method": "Integration of ST and scRNA-seq data to infer genome-wide spatial expression and reduce false-positive/negative signals",
+   "year": 2022,
+   "first_author": "Zhang et al.",
+   "title": "Accurate inference of genome-wide spatial expression with iSpatial",
+   "journal": "Science Advances",
+   "doi": "10.1126/sciadv.abq0990",
+   "paper_url": "https://doi.org/10.1126/sciadv.abq0990",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "R"
+   ],
+   "input_tags": [
+    "ST expression",
+    "scRNA-seq reference"
+   ],
+   "model_tags": [],
+   "paradigm": "Other"
+  },
+  {
+   "id": "dist",
+   "method": "DIST",
+   "categories": [
+    "Spatial gene expression prediction"
+   ],
+   "subtype": "From ST alone (imputation / super-resolution)",
+   "task": "Imputation at unmeasured locations + expression enhancement",
+   "input": "ST count matrix + spatial coords",
+   "language": "Python",
+   "core_method": "Deep learning with self-supervised learning and transfer learning (neural network)",
+   "year": 2023,
+   "first_author": "Zhao et al.",
+   "title": "DIST: spatial transcriptomics enhancement using deep learning",
+   "journal": "Briefings in Bioinformatics",
+   "doi": "10.1093/bib/bbad013",
+   "paper_url": "https://doi.org/10.1093/bib/bbad013",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph"
+   ],
+   "model_tags": [
+    "Classical ML (k-NN, forests, SOM, ensembles)",
+    "Other deep learning"
+   ],
+   "paradigm": "Hybrid"
+  },
+  {
+   "id": "asign",
+   "method": "ASIGN",
+   "categories": [
+    "Spatial gene expression prediction"
+   ],
+   "subtype": "From histology",
+   "task": "3D ST imputation from 3D histology + single 2D ST slide",
+   "input": "H&E image (3D WSI sections) + single 2D ST slide",
+   "language": "Python",
+   "core_method": "Anatomy-aware graph neural network (GNN) for 3D spatial imputation from histology",
+   "year": 2024,
+   "first_author": "Zhu et al.",
+   "title": "ASIGN: An Anatomy-aware Spatial Imputation Graphic Network for 3D Spatial Transcriptomics",
+   "journal": "arXiv",
+   "doi": "10.48550/arxiv.2412.03026",
+   "paper_url": "https://doi.org/10.48550/arxiv.2412.03026",
+   "code_url": "https://github.com/hrlblab/ASIGN",
+   "code_source": "paper abstract",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "H&E image"
+   ],
+   "model_tags": [
+    "Graph neural network"
+   ],
+   "paradigm": "Deep learning"
+  },
+  {
+   "id": "tesla",
+   "method": "TESLA",
+   "categories": [
+    "Spatial gene expression prediction"
+   ],
+   "subtype": "From histology",
+   "task": "Pixel-level super-resolution expression + tissue annotation",
+   "input": "ST count matrix + H&E image",
+   "language": "Python",
+   "core_method": "Machine learning framework integrating histology with gene expression for pixel-level super-resolution and tissue annotation",
+   "year": 2023,
+   "first_author": "Hu et al.",
+   "title": "Deciphering tumor ecosystems at super resolution from spatial transcriptomics with TESLA",
+   "journal": "Cell Systems",
+   "doi": "10.1016/j.cels.2023.03.008",
+   "paper_url": "https://doi.org/10.1016/j.cels.2023.03.008",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "H&E image"
+   ],
+   "model_tags": [
+    "Classical ML (k-NN, forests, SOM, ensembles)"
+   ],
+   "paradigm": "Statistical / classical ML"
+  },
+  {
+   "id": "histosge",
+   "method": "HisToSGE",
+   "categories": [
+    "Spatial gene expression prediction"
+   ],
+   "subtype": "From histology",
+   "task": "High-resolution expression prediction from histology",
+   "input": "H&E image + low-resolution ST",
+   "language": "Python",
+   "core_method": "Pathology image large model (foundation model) features + feature learning module (transformer, deep learning)",
+   "year": 2024,
+   "first_author": "Shi et al.",
+   "title": "High-Resolution Spatial Transcriptomics from Histology Images using HisToSGE",
+   "journal": "arXiv",
+   "doi": "10.48550/arxiv.2407.20518",
+   "paper_url": "https://doi.org/10.48550/arxiv.2407.20518",
+   "code_url": "https://github.com/wenwenmin/HisToSGE",
+   "code_source": "paper abstract",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "H&E image"
+   ],
+   "model_tags": [
+    "Transformer / ViT",
+    "Foundation model / LLM"
+   ],
+   "paradigm": "Deep learning"
+  },
+  {
+   "id": "bsp",
+   "method": "BSP",
+   "categories": [
+    "Spatially variable gene identification"
+   ],
+   "subtype": "Overall SVG",
+   "task": "Tissue-wide SVG detection (2D/3D)",
+   "input": "ST count matrix + spatial coords",
+   "language": "R",
+   "core_method": "Non-parametric big-small patch model comparing expression variability at two spatial granularities",
+   "year": 2023,
+   "first_author": "Wang et al.",
+   "title": "Dimension-agnostic and granularity-based spatially variable gene identification using BSP",
+   "journal": "Nature Communications",
+   "doi": "10.1038/s41467-023-43256-5",
+   "paper_url": "https://doi.org/10.1038/s41467-023-43256-5",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "R"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph"
+   ],
+   "model_tags": [
+    "Spatial autocorrelation / kernel test"
+   ],
+   "paradigm": "Statistical / classical ML"
+  },
+  {
+   "id": "maxspin",
+   "method": "Maxspin",
+   "categories": [
+    "Spatially variable gene identification"
+   ],
+   "subtype": "Overall SVG",
+   "task": "Tissue-wide SVG detection",
+   "input": "ST count matrix + spatial coords",
+   "language": "Python",
+   "core_method": "Information-theoretic: maximization of approximated mutual information between nearby expression measurements",
+   "year": 2023,
+   "first_author": "Jones et al.",
+   "title": "An information theoretic approach to detecting spatially varying genes",
+   "journal": "Cell Reports Methods",
+   "doi": "10.1016/j.crmeth.2023.100507",
+   "paper_url": "https://doi.org/10.1016/j.crmeth.2023.100507",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph"
+   ],
+   "model_tags": [
+    "Spatial autocorrelation / kernel test"
+   ],
+   "paradigm": "Statistical / classical ML"
+  },
+  {
+   "id": "costa",
+   "method": "CoSTA",
+   "categories": [
+    "Spatially variable gene identification"
+   ],
+   "subtype": "Overall SVG",
+   "task": "Spatial gene pattern similarity / clustering",
+   "input": "ST count matrix + spatial coords",
+   "language": "R / Python",
+   "core_method": "Unsupervised convolutional neural network (CNN, ConvNet) clustering of gene expression images",
+   "year": 2021,
+   "first_author": "Xu et al.",
+   "title": "CoSTA: unsupervised convolutional neural network learning for spatial transcriptomics analysis",
+   "journal": "BMC Bioinformatics",
+   "doi": "10.1186/s12859-021-04314-1",
+   "paper_url": "https://doi.org/10.1186/s12859-021-04314-1",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "R",
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph"
+   ],
+   "model_tags": [
+    "CNN"
+   ],
+   "paradigm": "Deep learning"
+  },
+  {
+   "id": "sc2spa",
+   "method": "SC2Spa",
+   "categories": [
+    "Spatial gene expression prediction",
+    "Spatially variable gene identification"
+   ],
+   "subtype": "From scRNA-seq reference (imputation)",
+   "task": "Mapping scRNA-seq cells to spatial coordinates; SVG suggestion",
+   "input": "scRNA-seq + ST count matrices",
+   "language": "Python",
+   "core_method": "Deep learning (neural network) predicting spatial coordinates from transcriptome",
+   "year": 2025,
+   "first_author": "Liao et al.",
+   "title": "SC2Spa: a deep learning based approach to map transcriptome to spatial origins at cellular resolution",
+   "journal": "BMC Bioinformatics",
+   "doi": "10.1186/s12859-025-06173-6",
+   "paper_url": "https://doi.org/10.1186/s12859-025-06173-6",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "scRNA-seq reference"
+   ],
+   "model_tags": [
+    "Other deep learning"
+   ],
+   "paradigm": "Deep learning"
+  },
+  {
+   "id": "cellneighborex",
+   "method": "CellNeighborEX",
+   "categories": [
+    "Cell communication & interpretable models",
+    "Spatially variable gene identification"
+   ],
+   "subtype": "Cell-type-specific SVG",
+   "task": "Neighbor-dependent gene expression detection",
+   "input": "ST count matrix + spatial coords + cell-type annotations",
+   "language": "Python",
+   "core_method": "Categorizes cells by neighboring cell types (direct location or spot mixtures) and tests differential expression of neighbor-dependent genes",
+   "year": 2023,
+   "first_author": "Kim et al.",
+   "title": "CellNeighborEX: deciphering neighbor‐dependent gene expression from spatial transcriptomics data",
+   "journal": "Molecular Systems Biology",
+   "doi": "10.15252/msb.202311670",
+   "paper_url": "https://doi.org/10.15252/msb.202311670",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph"
+   ],
+   "model_tags": [],
+   "paradigm": "Other"
+  },
+  {
+   "id": "heartsvg",
+   "method": "HEARTSVG",
+   "categories": [
+    "Spatially variable gene identification"
+   ],
+   "subtype": "Overall SVG",
+   "task": "Tissue-wide SVG detection",
+   "input": "ST count matrix + spatial coords",
+   "language": "R",
+   "core_method": "Distribution-free, test-based statistical method for SVG detection without prespecified spatial patterns",
+   "year": 2024,
+   "first_author": "Yuan et al.",
+   "title": "HEARTSVG: a fast and accurate method for identifying spatially variable genes in large-scale spatial transcriptomics",
+   "journal": "Nature Communications",
+   "doi": "10.1038/s41467-024-49846-1",
+   "paper_url": "https://doi.org/10.1038/s41467-024-49846-1",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "R"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph"
+   ],
+   "model_tags": [
+    "Spatial autocorrelation / kernel test"
+   ],
+   "paradigm": "Statistical / classical ML"
+  },
+  {
+   "id": "boost-gp",
+   "method": "BOOST-GP",
+   "categories": [
+    "Spatially variable gene identification"
+   ],
+   "subtype": "Overall SVG",
+   "task": "Tissue-wide SVG detection",
+   "input": "ST count matrix + spatial coords",
+   "language": "R",
+   "core_method": "Bayesian hierarchical zero-inflated negative binomial model with Gaussian process spatial kernel",
+   "year": 2021,
+   "first_author": "Li et al.",
+   "title": "Bayesian modeling of spatial molecular profiling data via Gaussian process",
+   "journal": "Bioinformatics",
+   "doi": "10.1093/bioinformatics/btab455",
+   "paper_url": "https://doi.org/10.1093/bioinformatics/btab455",
+   "code_url": "https://github.com/Minzhe/BOOST-GP",
+   "code_source": "paper abstract",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "R"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph"
+   ],
+   "model_tags": [
+    "Gaussian process",
+    "Bayesian / probabilistic model"
+   ],
+   "paradigm": "Statistical / classical ML"
+  },
+  {
+   "id": "rayleighselection",
+   "method": "RayleighSelection",
+   "categories": [
+    "Spatially variable gene identification"
+   ],
+   "subtype": "Overall SVG",
+   "task": "Clustering-independent feature selection incl. spatial gene detection",
+   "input": "ST count matrix + spatial coords",
+   "language": "R",
+   "core_method": "Spectral simplicial theory: combinatorial Laplacian scores (topological data analysis) for feature ranking",
+   "year": 2019,
+   "first_author": "Govek et al.",
+   "title": "Clustering-independent analysis of genomic data using spectral simplicial theory",
+   "journal": "PLOS Computational Biology",
+   "doi": "10.1371/journal.pcbi.1007509",
+   "paper_url": "https://doi.org/10.1371/journal.pcbi.1007509",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "R"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph"
+   ],
+   "model_tags": [
+    "Classical ML (k-NN, forests, SOM, ensembles)"
+   ],
+   "paradigm": "Statistical / classical ML"
+  },
+  {
+   "id": "sinfonia",
+   "method": "SINFONIA",
+   "categories": [
+    "Spatially variable gene identification"
+   ],
+   "subtype": "Overall SVG",
+   "task": "Scalable SVG detection for spatial domain deciphering",
+   "input": "ST count matrix + spatial coords",
+   "language": "Python",
+   "core_method": "Ensemble strategy for scalable SVG identification",
+   "year": 2023,
+   "first_author": "Jiang et al.",
+   "title": "SINFONIA: Scalable Identification of Spatially Variable Genes for Deciphering Spatial Domains",
+   "journal": "Cells",
+   "doi": "10.3390/cells12040604",
+   "paper_url": "https://doi.org/10.3390/cells12040604",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph"
+   ],
+   "model_tags": [
+    "Classical ML (k-NN, forests, SOM, ensembles)"
+   ],
+   "paradigm": "Statistical / classical ML"
+  },
+  {
+   "id": "coda",
+   "method": "CODA",
+   "categories": [
+    "Spatial alignment",
+    "Multi-sample & multi-modal integration"
+   ],
+   "subtype": "",
+   "task": "Cross-sample nonlinear alignment + common domain detection + spatially differential gene analysis",
+   "input": "ST count matrices + spatial coords (multiple slices)",
+   "language": "Python",
+   "core_method": "Shared latent space; global rigid alignment, transformer-based feature matching, and LDDMM diffeomorphic nonlinear refinement",
+   "year": 2025,
+   "first_author": "Tan et al.",
+   "title": "Integrative cross-sample alignment and spatially differential gene analysis for spatial transcriptomics",
+   "journal": "bioRxiv",
+   "doi": "10.1101/2025.06.05.653933",
+   "paper_url": "https://doi.org/10.1101/2025.06.05.653933",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph",
+    "Multiple slices / samples"
+   ],
+   "model_tags": [
+    "Transformer / ViT"
+   ],
+   "paradigm": "Deep learning"
+  },
+  {
+   "id": "clarify",
+   "method": "CLARIFY",
+   "categories": [
+    "Cell communication & interpretable models",
+    "Gene regulatory networks"
+   ],
+   "subtype": "",
+   "task": "Joint CCI inference + cell-specific GRN refinement",
+   "input": "ST count matrix + spatial coords + prior GRN",
+   "language": "Python",
+   "core_method": "Multi-level graph autoencoder (GNN)",
+   "year": 2023,
+   "first_author": "Bafna et al.",
+   "title": "CLARIFY: cell–cell interaction and gene regulatory network refinement from spatially resolved transcriptomics",
+   "journal": "Bioinformatics",
+   "doi": "10.1093/bioinformatics/btad269",
+   "paper_url": "https://doi.org/10.1093/bioinformatics/btad269",
+   "code_url": "https://github.com/MihirBafna/CLARIFY",
+   "code_source": "paper abstract",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph"
+   ],
+   "model_tags": [
+    "Graph neural network",
+    "VAE / autoencoder / generative"
+   ],
+   "paradigm": "Deep learning"
+  },
+  {
+   "id": "nico",
+   "method": "NiCo",
+   "categories": [
+    "Cell communication & interpretable models"
+   ],
+   "subtype": "",
+   "task": "Niche-driven cell state modulation inference",
+   "input": "ST count matrix + scRNA-seq reference + spatial coords",
+   "language": "Python",
+   "core_method": "Annotation transfer from scRNA-seq reference + covariation analysis of latent cell-state factors between neighboring cell types (regression)",
+   "year": 2024,
+   "first_author": "Agrawal et al.",
+   "title": "NiCo identifies extrinsic drivers of cell state modulation by niche covariation analysis",
+   "journal": "Nature Communications",
+   "doi": "10.1038/s41467-024-54973-w",
+   "paper_url": "https://doi.org/10.1038/s41467-024-54973-w",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph",
+    "scRNA-seq reference"
+   ],
+   "model_tags": [
+    "Regression / GLM / mixed model"
+   ],
+   "paradigm": "Statistical / classical ML"
+  },
+  {
+   "id": "antisplodge",
+   "method": "AntiSplodge",
+   "categories": [
+    "Cell-type deconvolution"
+   ],
+   "subtype": "",
+   "task": "Deconvolution",
+   "input": "ST count matrix + scRNA-seq reference",
+   "language": "Python",
+   "core_method": "Feed-forward neural network trained on synthetic spots from scRNA-seq (deep learning)",
+   "year": 2022,
+   "first_author": "Lund et al.",
+   "title": "AntiSplodge: a neural-network-based RNA-profile deconvolution pipeline designed for spatial transcriptomics",
+   "journal": "NAR Genomics and Bioinformatics",
+   "doi": "10.1093/nargab/lqac073",
+   "paper_url": "https://doi.org/10.1093/nargab/lqac073",
+   "code_url": "https://github.com/HealthML/AntiSplodge/",
+   "code_source": "paper abstract",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "scRNA-seq reference"
+   ],
+   "model_tags": [
+    "Other deep learning"
+   ],
+   "paradigm": "Deep learning"
+  },
+  {
+   "id": "stvae",
+   "method": "stVAE",
+   "categories": [
+    "Cell-type deconvolution"
+   ],
+   "subtype": "",
+   "task": "Deconvolution (cellular-resolution ST)",
+   "input": "ST count matrix + scRNA-seq reference",
+   "language": "Python",
+   "core_method": "Variational autoencoder (VAE)",
+   "year": 2023,
+   "first_author": "Li et al.",
+   "title": "stVAE deconvolves cell-type composition in large-scale cellular resolution spatial transcriptomics",
+   "journal": "Bioinformatics",
+   "doi": "10.1093/bioinformatics/btad642",
+   "paper_url": "https://doi.org/10.1093/bioinformatics/btad642",
+   "code_url": "https://github.com/lichen2018/stVAE",
+   "code_source": "paper abstract",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "scRNA-seq reference"
+   ],
+   "model_tags": [
+    "VAE / autoencoder / generative"
+   ],
+   "paradigm": "Deep learning"
+  },
+  {
+   "id": "retrofit",
+   "method": "RETROFIT",
+   "categories": [
+    "Cell-type deconvolution"
+   ],
+   "subtype": "",
+   "task": "Reference-free deconvolution",
+   "input": "ST count matrix",
+   "language": "R",
+   "core_method": "Bayesian reference-free deconvolution (probabilistic factorization) with post hoc annotation",
+   "year": 2023,
+   "first_author": "Singh et al.",
+   "title": "RETROFIT: Reference-free deconvolution of cell-type mixtures in spatial transcriptomics",
+   "journal": "bioRxiv",
+   "doi": "10.1101/2023.06.07.544126",
+   "paper_url": "https://doi.org/10.1101/2023.06.07.544126",
+   "code_url": "https://bioconductor.org/packages/retrofit/",
+   "code_source": "paper abstract",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "R"
+   ],
+   "input_tags": [
+    "ST expression"
+   ],
+   "model_tags": [
+    "Bayesian / probabilistic model",
+    "Matrix factorization / factor analysis"
+   ],
+   "paradigm": "Statistical / classical ML"
+  },
+  {
+   "id": "spseudomap",
+   "method": "spSeudoMap",
+   "categories": [
+    "Cell-type deconvolution"
+   ],
+   "subtype": "",
+   "task": "Deconvolution with unmatched/sorted scRNA-seq",
+   "input": "ST count matrix + scRNA-seq reference",
+   "language": "Python",
+   "core_method": "Pseudo-spot generation from sorted scRNA-seq + domain adaptation neural network (adversarial)",
+   "year": 2023,
+   "first_author": "Bae et al.",
+   "title": "spSeudoMap: cell type mapping of spatial transcriptomics using unmatched single-cell RNA-seq data",
+   "journal": "Genome Medicine",
+   "doi": "10.1186/s13073-023-01168-5",
+   "paper_url": "https://doi.org/10.1186/s13073-023-01168-5",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "scRNA-seq reference"
+   ],
+   "model_tags": [
+    "VAE / autoencoder / generative"
+   ],
+   "paradigm": "Deep learning"
+  },
+  {
+   "id": "dstg",
+   "method": "DSTG",
+   "categories": [
+    "Cell-type deconvolution"
+   ],
+   "subtype": "",
+   "task": "Deconvolution",
+   "input": "ST count matrix + scRNA-seq reference",
+   "language": "R / Python",
+   "core_method": "Graph-based deep learning: graph convolutional network (GNN) on linked pseudo-ST and real ST spots",
+   "year": 2021,
+   "first_author": "Song et al.",
+   "title": "DSTG: deconvoluting spatial transcriptomics data through graph-based artificial intelligence",
+   "journal": "Briefings in Bioinformatics",
+   "doi": "10.1093/bib/bbaa414",
+   "paper_url": "https://doi.org/10.1093/bib/bbaa414",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "R",
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "scRNA-seq reference"
+   ],
+   "model_tags": [
+    "Graph neural network"
+   ],
+   "paradigm": "Deep learning"
+  },
+  {
+   "id": "spotlight",
+   "method": "SPOTlight",
+   "categories": [
+    "Cell-type deconvolution"
+   ],
+   "subtype": "",
+   "task": "Deconvolution",
+   "input": "ST count matrix + scRNA-seq reference",
+   "language": "R",
+   "core_method": "Seeded NMF regression (matrix factorization) + non-negative least squares (NNLS)",
+   "year": 2021,
+   "first_author": "Elosua-Bayes et al.",
+   "title": "SPOTlight: seeded NMF regression to deconvolute spatial transcriptomics spots with single-cell transcriptomes",
+   "journal": "Nucleic Acids Research",
+   "doi": "10.1093/nar/gkab043",
+   "paper_url": "https://doi.org/10.1093/nar/gkab043",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "R"
+   ],
+   "input_tags": [
+    "ST expression",
+    "scRNA-seq reference"
+   ],
+   "model_tags": [
+    "Regression / GLM / mixed model",
+    "Matrix factorization / factor analysis"
+   ],
+   "paradigm": "Statistical / classical ML"
+  },
+  {
+   "id": "mustang",
+   "method": "MUSTANG",
+   "categories": [
+    "Cell-type deconvolution"
+   ],
+   "subtype": "",
+   "task": "Reference-free multi-sample deconvolution",
+   "input": "ST count matrices + spatial coords (multiple slices)",
+   "language": "Python",
+   "core_method": "Reference-free multi-sample deconvolution guided by cross-sample transcriptional similarity",
+   "year": 2024,
+   "first_author": "Niyakan et al.",
+   "title": "MUSTANG: Multi-sample spatial transcriptomics data analysis with cross-sample transcriptional similarity guidance",
+   "journal": "Patterns",
+   "doi": "10.1016/j.patter.2024.100986",
+   "paper_url": "https://doi.org/10.1016/j.patter.2024.100986",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph",
+    "Multiple slices / samples"
+   ],
+   "model_tags": [],
+   "paradigm": "Other"
+  },
+  {
+   "id": "kancell",
+   "method": "KanCell",
+   "categories": [
+    "Cell-type deconvolution"
+   ],
+   "subtype": "",
+   "task": "Deconvolution",
+   "input": "ST count matrix + scRNA-seq reference",
+   "language": "Python",
+   "core_method": "Kolmogorov-Arnold network (KAN) deep learning / neural network",
+   "year": 2025,
+   "first_author": "Wang et al.",
+   "title": "KanCell: dissecting cellular heterogeneity in biological tissues through integrated single-cell and spatial transcriptomics",
+   "journal": "Journal of Genetics and Genomics",
+   "doi": "10.1016/j.jgg.2024.11.009",
+   "paper_url": "https://doi.org/10.1016/j.jgg.2024.11.009",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "scRNA-seq reference"
+   ],
+   "model_tags": [
+    "Other deep learning"
+   ],
+   "paradigm": "Deep learning"
+  },
+  {
+   "id": "st-assign",
+   "method": "ST-Assign",
+   "categories": [
+    "Cell-type deconvolution"
+   ],
+   "subtype": "",
+   "task": "Joint scRNA-seq annotation + ST deconvolution",
+   "input": "ST count matrix + scRNA-seq reference",
+   "language": "Python",
+   "core_method": "Hierarchical Bayesian probabilistic model with marker-gene priors",
+   "year": 2023,
+   "first_author": "Geras et al.",
+   "title": "Joint cell type identification in spatial transcriptomics and single-cell RNA sequencing data",
+   "journal": "bioRxiv",
+   "doi": "10.1101/2023.05.29.542559",
+   "paper_url": "https://doi.org/10.1101/2023.05.29.542559",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "scRNA-seq reference"
+   ],
+   "model_tags": [
+    "Bayesian / probabilistic model"
+   ],
+   "paradigm": "Statistical / classical ML"
+  },
+  {
+   "id": "gtad",
+   "method": "GTAD",
+   "categories": [
+    "Cell-type deconvolution"
+   ],
+   "subtype": "",
+   "task": "Deconvolution",
+   "input": "ST count matrix + scRNA-seq reference + spatial coords",
+   "language": "R / Python",
+   "core_method": "Graph attention network (GAT, GNN) on unified scRNA-seq + ST graph",
+   "year": 2023,
+   "first_author": "Zhang et al.",
+   "title": "GTAD: a graph-based approach for cell spatial composition inference from integrated scRNA-seq and ST-seq data",
+   "journal": "Briefings in Bioinformatics",
+   "doi": "10.1093/bib/bbad469",
+   "paper_url": "https://doi.org/10.1093/bib/bbad469",
+   "code_url": "https://github.com/zzhjs/GTAD",
+   "code_source": "paper abstract",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "R",
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph",
+    "scRNA-seq reference"
+   ],
+   "model_tags": [
+    "Graph neural network",
+    "Transformer / ViT"
+   ],
+   "paradigm": "Deep learning"
+  },
+  {
+   "id": "dot",
+   "method": "DOT",
+   "categories": [
+    "Cell-type deconvolution",
+    "Spatial gene expression prediction"
+   ],
+   "subtype": "From scRNA-seq reference (imputation)",
+   "task": "Deconvolution + unmeasured gene expression prediction",
+   "input": "ST count matrix + scRNA-seq reference + spatial coords",
+   "language": "R",
+   "core_method": "Multi-objective optimization using local spatial context, solved with Frank-Wolfe algorithm",
+   "year": 2024,
+   "first_author": "Rahimi et al.",
+   "title": "DOT: a flexible multi-objective optimization framework for transferring features across single-cell and spatial omics",
+   "journal": "Nature Communications",
+   "doi": "10.1038/s41467-024-48868-z",
+   "paper_url": "https://doi.org/10.1038/s41467-024-48868-z",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "R"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph",
+    "scRNA-seq reference"
+   ],
+   "model_tags": [
+    "Optimization-based mapping"
+   ],
+   "paradigm": "Statistical / classical ML"
+  },
+  {
+   "id": "nlsdeconv",
+   "method": "NLSDeconv",
+   "categories": [
+    "Cell-type deconvolution"
+   ],
+   "subtype": "",
+   "task": "Deconvolution",
+   "input": "ST count matrix + scRNA-seq reference",
+   "language": "Python",
+   "core_method": "Non-negative least squares (NNLS)",
+   "year": 2024,
+   "first_author": "Chen et al.",
+   "title": "NLSDeconv: an efficient cell-type deconvolution method for spatial transcriptomics data",
+   "journal": "bioRxiv",
+   "doi": "10.1101/2024.06.13.598922",
+   "paper_url": "https://doi.org/10.1101/2024.06.13.598922",
+   "code_url": "https://github.com/tinachentc/NLSDeconv",
+   "code_source": "paper abstract",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "scRNA-seq reference"
+   ],
+   "model_tags": [
+    "Regression / GLM / mixed model"
+   ],
+   "paradigm": "Statistical / classical ML"
+  },
+  {
+   "id": "transformerst",
+   "method": "TransformerST",
+   "categories": [
+    "Spatial gene expression prediction"
+   ],
+   "subtype": "From histology",
+   "task": "Reference-free single-cell super-resolution",
+   "input": "ST count matrix + H&E image",
+   "language": "Python",
+   "core_method": "Vision transformer encoder + adaptive graph transformer (attention) + cross-scale graph network",
+   "year": 2024,
+   "first_author": "Zhao et al.",
+   "title": "Innovative super-resolution in spatial transcriptomics: a transformer model exploiting histology images and spatial gene expression",
+   "journal": "Briefings in Bioinformatics",
+   "doi": "10.1093/bib/bbae052",
+   "paper_url": "https://doi.org/10.1093/bib/bbae052",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "H&E image"
+   ],
+   "model_tags": [
+    "Graph neural network",
+    "Transformer / ViT"
+   ],
+   "paradigm": "Deep learning"
+  },
+  {
+   "id": "spot-nmf",
+   "method": "spOT-NMF",
+   "categories": [
+    "Cell-type deconvolution"
+   ],
+   "subtype": "",
+   "task": "Reference-free deconvolution",
+   "input": "ST count matrix",
+   "language": "Python",
+   "core_method": "Optimal transport-based non-negative matrix factorization (NMF, Wasserstein distance)",
+   "year": 2025,
+   "first_author": "Abdelkareem et al.",
+   "title": "spOT-NMF: Optimal Transport-Based Matrix Factorization for Accurate Deconvolution of Spatial Transcriptomics",
+   "journal": "bioRxiv",
+   "doi": "10.1101/2025.08.02.668292",
+   "paper_url": "https://doi.org/10.1101/2025.08.02.668292",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression"
+   ],
+   "model_tags": [
+    "Matrix factorization / factor analysis",
+    "Optimal transport"
+   ],
+   "paradigm": "Statistical / classical ML"
+  },
+  {
+   "id": "space",
+   "method": "SPACE",
+   "categories": [
+    "Cell communication & interpretable models"
+   ],
+   "subtype": "",
+   "task": "Tissue module discovery + proximal cell-cell interaction network",
+   "input": "ST count matrix + spatial coords",
+   "language": "Python",
+   "core_method": "Deep learning cell embedding capturing expression and spatial-neighbor interactions (interaction-aware embedding)",
+   "year": 2024,
+   "first_author": "Li et al.",
+   "title": "Tissue module discovery in single-cell-resolution spatial transcriptomics data via cell-cell interaction-aware cell embedding",
+   "journal": "Cell Systems",
+   "doi": "10.1016/j.cels.2024.05.001",
+   "paper_url": "https://doi.org/10.1016/j.cels.2024.05.001",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph"
+   ],
+   "model_tags": [
+    "Other deep learning"
+   ],
+   "paradigm": "Deep learning"
+  },
+  {
+   "id": "deeptalk",
+   "method": "DeepTalk",
+   "categories": [
+    "Cell communication & interpretable models",
+    "Cell-type deconvolution"
+   ],
+   "subtype": "",
+   "task": "Single-cell-resolution spatial CCC inference + deconvolution",
+   "input": "ST count matrix + scRNA-seq reference + spatial coords",
+   "language": "Python",
+   "core_method": "Graph attention network (GAT) integration + subgraph-based GAT for CCC inference",
+   "year": 2024,
+   "first_author": "Yang et al.",
+   "title": "Deciphering cell–cell communication at single-cell resolution for spatial transcriptomics with subgraph-based graph attention network",
+   "journal": "Nature Communications",
+   "doi": "10.1038/s41467-024-51329-2",
+   "paper_url": "https://doi.org/10.1038/s41467-024-51329-2",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph",
+    "scRNA-seq reference"
+   ],
+   "model_tags": [
+    "Graph neural network",
+    "Transformer / ViT"
+   ],
+   "paradigm": "Deep learning"
+  },
+  {
+   "id": "spatalk",
+   "method": "SpaTalk",
+   "categories": [
+    "Cell communication & interpretable models",
+    "Cell-type deconvolution"
+   ],
+   "subtype": "",
+   "task": "Ligand-receptor-mediated CCC inference",
+   "input": "ST count matrix + scRNA-seq reference + spatial coords",
+   "language": "R",
+   "core_method": "Non-negative linear model deconvolution + graph network and knowledge graph scoring of ligand-receptor-target signaling",
+   "year": 2022,
+   "first_author": "Shao et al.",
+   "title": "Knowledge-graph-based cell-cell communication inference for spatially resolved transcriptomic data with SpaTalk",
+   "journal": "Nature Communications",
+   "doi": "10.1038/s41467-022-32111-8",
+   "paper_url": "https://doi.org/10.1038/s41467-022-32111-8",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "R"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph",
+    "scRNA-seq reference"
+   ],
+   "model_tags": [],
+   "paradigm": "Other"
+  },
+  {
+   "id": "deeplinc",
+   "method": "DeepLinc",
+   "categories": [
+    "Cell communication & interpretable models"
+   ],
+   "subtype": "",
+   "task": "De novo cell interaction network reconstruction",
+   "input": "ST count matrix + spatial coords",
+   "language": "Python",
+   "core_method": "Variational graph autoencoder (VGAE, generative)",
+   "year": 2022,
+   "first_author": "Li et al.",
+   "title": "De novo reconstruction of cell interaction landscapes from single-cell spatial transcriptome data with DeepLinc",
+   "journal": "Genome Biology",
+   "doi": "10.1186/s13059-022-02692-0",
+   "paper_url": "https://doi.org/10.1186/s13059-022-02692-0",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph"
+   ],
+   "model_tags": [
+    "VAE / autoencoder / generative"
+   ],
+   "paradigm": "Deep learning"
+  },
+  {
+   "id": "spaci",
+   "method": "spaCI",
+   "categories": [
+    "Cell communication & interpretable models"
+   ],
+   "subtype": "",
+   "task": "Ligand-receptor-mediated CCC inference",
+   "input": "ST count matrix + spatial coords",
+   "language": "Python",
+   "core_method": "Adaptive graph model with attention mechanism",
+   "year": 2022,
+   "first_author": "Tang et al.",
+   "title": "spaCI: deciphering spatial cellular communications through adaptive graph model",
+   "journal": "Briefings in Bioinformatics",
+   "doi": "10.1093/bib/bbac563",
+   "paper_url": "https://doi.org/10.1093/bib/bbac563",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph"
+   ],
+   "model_tags": [
+    "Transformer / ViT"
+   ],
+   "paradigm": "Deep learning"
+  },
+  {
+   "id": "thor",
+   "method": "Thor",
+   "categories": [
+    "Spatial gene expression prediction"
+   ],
+   "subtype": "From histology",
+   "task": "Single-cell super-resolution from spot-level ST + histology",
+   "input": "ST count matrix + H&E image",
+   "language": "Python",
+   "core_method": "Anti-shrinking Markov diffusion on cell graph combining expression and cell morphology",
+   "year": 2025,
+   "first_author": "Zhang et al.",
+   "title": "Thor: a platform for cell-level investigation of spatial transcriptomics and histology",
+   "journal": "Nature Communications",
+   "doi": "10.1038/s41467-025-62593-1",
+   "paper_url": "https://doi.org/10.1038/s41467-025-62593-1",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "H&E image"
+   ],
+   "model_tags": [
+    "Diffusion / flow matching"
+   ],
+   "paradigm": "Deep learning"
+  },
+  {
+   "id": "stt",
+   "method": "STT",
+   "categories": [
+    "Trajectory inference"
+   ],
+   "subtype": "",
+   "task": "Spatial cell-state transition / multistability inference",
+   "input": "ST count matrix (spliced/unspliced) + spatial coords",
+   "language": "Python",
+   "core_method": "Multiscale dynamical model (RNA velocity) learning four-dimensional transition tensor + spatial-constrained random walk",
+   "year": 2024,
+   "first_author": "Zhou et al.",
+   "title": "Spatial transition tensor of single cells",
+   "journal": "Nature Methods",
+   "doi": "10.1038/s41592-024-02266-x",
+   "paper_url": "https://doi.org/10.1038/s41592-024-02266-x",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph"
+   ],
+   "model_tags": [
+    "Classical ML (k-NN, forests, SOM, ensembles)"
+   ],
+   "paradigm": "Statistical / classical ML"
+  },
+  {
+   "id": "santo",
+   "method": "SANTO",
+   "categories": [
+    "Spatial alignment"
+   ],
+   "subtype": "",
+   "task": "Cross-slide spatial alignment and stitching",
+   "input": "ST count matrices + spatial coords (multiple slices)",
+   "language": "Python",
+   "core_method": "Coarse-to-fine alignment: rapid rigid positioning and overlap detection, then refinement using spatial and omics patterns",
+   "year": 2024,
+   "first_author": "Li et al.",
+   "title": "SANTO: a coarse-to-fine alignment and stitching method for spatial omics",
+   "journal": "Nature Communications",
+   "doi": "10.1038/s41467-024-50308-x",
+   "paper_url": "https://doi.org/10.1038/s41467-024-50308-x",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph",
+    "Multiple slices / samples"
+   ],
+   "model_tags": [],
+   "paradigm": "Other"
+  },
+  {
+   "id": "gpsa",
+   "method": "GPSA",
+   "categories": [
+    "Spatial alignment"
+   ],
+   "subtype": "",
+   "task": "Alignment to common coordinate system",
+   "input": "ST count matrices + spatial coords (multiple slices)",
+   "language": "Python",
+   "core_method": "Two-layer deep Gaussian process mapping locations to a common coordinate system",
+   "year": 2023,
+   "first_author": "Jones et al.",
+   "title": "Alignment of spatial genomics data using deep Gaussian processes",
+   "journal": "Nature Methods",
+   "doi": "10.1038/s41592-023-01972-2",
+   "paper_url": "https://doi.org/10.1038/s41592-023-01972-2",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph",
+    "Multiple slices / samples"
+   ],
+   "model_tags": [
+    "Gaussian process"
+   ],
+   "paradigm": "Statistical / classical ML"
+  },
+  {
+   "id": "splotch",
+   "method": "Splotch",
+   "categories": [
+    "Multi-sample & multi-modal integration",
+    "Spatial alignment"
+   ],
+   "subtype": "",
+   "task": "Multi-section/timepoint aligned expression estimation",
+   "input": "ST count matrices + spatial coords (multiple slices)",
+   "language": "Python",
+   "core_method": "Hierarchical Bayesian generative probabilistic model",
+   "year": 2019,
+   "first_author": "Äijö et al.",
+   "title": "Splotch: Robust estimation of aligned spatial temporal gene expression data",
+   "journal": "bioRxiv",
+   "doi": "10.1101/757096",
+   "paper_url": "https://doi.org/10.1101/757096",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph",
+    "Multiple slices / samples"
+   ],
+   "model_tags": [
+    "Bayesian / probabilistic model",
+    "VAE / autoencoder / generative"
+   ],
+   "paradigm": "Hybrid"
+  },
+  {
+   "id": "stim",
+   "method": "STIM",
+   "categories": [
+    "Spatial alignment"
+   ],
+   "subtype": "",
+   "task": "Cross-slide image-based registration",
+   "input": "ST count matrices + spatial coords (multiple slices)",
+   "language": "Java",
+   "core_method": "Image-based representation of ST with computer-vision registration of serial sections (ImgLib2/BigDataViewer)",
+   "year": 2025,
+   "first_author": "Preibisch et al.",
+   "title": "Scalable image-based visualization and alignment of spatial transcriptomics datasets",
+   "journal": "Cell Systems",
+   "doi": "10.1016/j.cels.2025.101264",
+   "paper_url": "https://doi.org/10.1016/j.cels.2025.101264",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Java"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph",
+    "Multiple slices / samples"
+   ],
+   "model_tags": [],
+   "paradigm": "Other"
+  },
+  {
+   "id": "stmsa",
+   "method": "stMSA",
+   "categories": [
+    "Multi-sample & multi-modal integration",
+    "Spatial alignment"
+   ],
+   "subtype": "",
+   "task": "Multi-slice integration + domain matching + alignment",
+   "input": "ST count matrices + spatial coords (multiple slices)",
+   "language": "Python",
+   "core_method": "Deep graph contrastive learning with graph autoencoder",
+   "year": 2025,
+   "first_author": "Shu et al.",
+   "title": "Efficient integration of spatial omics data for joint domain detection, matching, and alignment with stMSA",
+   "journal": "Genome Research",
+   "doi": "10.1101/gr.280584.125",
+   "paper_url": "https://doi.org/10.1101/gr.280584.125",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph",
+    "Multiple slices / samples"
+   ],
+   "model_tags": [
+    "Contrastive learning",
+    "VAE / autoencoder / generative"
+   ],
+   "paradigm": "Deep learning"
+  },
+  {
+   "id": "graspot",
+   "method": "Graspot",
+   "categories": [
+    "Multi-sample & multi-modal integration",
+    "Spatial alignment"
+   ],
+   "subtype": "",
+   "task": "Multi-slice integration + partial alignment",
+   "input": "ST count matrices + spatial coords (multiple slices)",
+   "language": "Python",
+   "core_method": "Graph attention network (GAT) + unbalanced optimal transport",
+   "year": 2024,
+   "first_author": "Gao et al.",
+   "title": "Graspot: a graph attention network for spatial transcriptomics data integration with optimal transport",
+   "journal": "Bioinformatics",
+   "doi": "10.1093/bioinformatics/btae394",
+   "paper_url": "https://doi.org/10.1093/bioinformatics/btae394",
+   "code_url": "https://github.com/zhan009/Graspot",
+   "code_source": "paper abstract",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph",
+    "Multiple slices / samples"
+   ],
+   "model_tags": [
+    "Optimal transport",
+    "Graph neural network",
+    "Transformer / ViT"
+   ],
+   "paradigm": "Hybrid"
+  },
+  {
+   "id": "stair",
+   "method": "STAIR",
+   "categories": [
+    "Multi-sample & multi-modal integration",
+    "Spatial alignment"
+   ],
+   "subtype": "",
+   "task": "Alignment, integration and de novo 3D reconstruction",
+   "input": "ST count matrices + spatial coords (multiple slices)",
+   "language": "Python",
+   "core_method": "Heterogeneous graph attention network with spot- and slice-level attention",
+   "year": 2024,
+   "first_author": "Yu et al.",
+   "title": "Spatial Transcriptomic Alignment, Integration, and de novo 3D Reconstruction by STAIR",
+   "journal": "Research Square",
+   "doi": "10.21203/rs.3.rs-3939678/v1",
+   "paper_url": "https://doi.org/10.21203/rs.3.rs-3939678/v1",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph",
+    "Multiple slices / samples"
+   ],
+   "model_tags": [
+    "Graph neural network",
+    "Transformer / ViT"
+   ],
+   "paradigm": "Deep learning"
+  },
+  {
+   "id": "harreman",
+   "method": "Harreman",
+   "categories": [
+    "Cell communication & interpretable models"
+   ],
+   "subtype": "",
+   "task": "Metabolic cell-cell communication inference",
+   "input": "ST count matrix + spatial coords",
+   "language": "Python",
+   "core_method": "Spatial correlation (spatial autocorrelation) tests on co-localized metabolite transporter expression",
+   "year": 2025,
+   "first_author": "Etxezarreta Arrastoa et al.",
+   "title": "Metabolic zonation and characterization of tissue slices with spatial transcriptomics",
+   "journal": "bioRxiv",
+   "doi": "10.1101/2025.11.11.687271",
+   "paper_url": "https://doi.org/10.1101/2025.11.11.687271",
+   "code_url": "https://github.com/YosefLab/Harreman",
+   "code_source": "paper abstract",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph"
+   ],
+   "model_tags": [
+    "Spatial autocorrelation / kernel test"
+   ],
+   "paradigm": "Statistical / classical ML"
+  },
+  {
+   "id": "fist-nd",
+   "method": "FIST-nD",
+   "categories": [
+    "Spatial gene expression prediction"
+   ],
+   "subtype": "From ST alone (imputation / super-resolution)",
+   "task": "Missing gene imputation (2D/3D)",
+   "input": "ST count matrix + spatial coords",
+   "language": "Python",
+   "core_method": "Graph-regularized tensor completion / tensor decomposition using spatial and gene functional graphs",
+   "year": 2022,
+   "first_author": "Atkins et al.",
+   "title": "FIST-nD: A tool for n-dimensional spatial transcriptomics data imputation via graph-regularized tensor completion",
+   "journal": "bioRxiv",
+   "doi": "10.1101/2022.10.12.511928",
+   "paper_url": "https://doi.org/10.1101/2022.10.12.511928",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph"
+   ],
+   "model_tags": [
+    "Matrix factorization / factor analysis"
+   ],
+   "paradigm": "Statistical / classical ML"
+  },
+  {
+   "id": "gntd",
+   "method": "GNTD",
+   "categories": [
+    "Spatial gene expression prediction"
+   ],
+   "subtype": "From ST alone (imputation / super-resolution)",
+   "task": "Missing gene imputation",
+   "input": "ST count matrix + spatial coords + gene network",
+   "language": "Python",
+   "core_method": "Graph-guided neural tensor decomposition: hierarchical nonlinear tensor decomposition in a three-layer neural network regularized by spatial and gene functional graphs",
+   "year": 2023,
+   "first_author": "Song et al.",
+   "title": "GNTD: reconstructing spatial transcriptomes with graph-guided neural tensor decomposition informed by spatial and functional relations",
+   "journal": "Nature Communications",
+   "doi": "10.1038/s41467-023-44017-0",
+   "paper_url": "https://doi.org/10.1038/s41467-023-44017-0",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph"
+   ],
+   "model_tags": [
+    "Matrix factorization / factor analysis",
+    "Other deep learning"
+   ],
+   "paradigm": "Hybrid"
+  },
+  {
+   "id": "spcs",
+   "method": "SPCS",
+   "categories": [
+    "Spatial gene expression prediction"
+   ],
+   "subtype": "From ST alone (imputation / super-resolution)",
+   "task": "Expression smoothing / denoising",
+   "input": "ST count matrix + spatial coords",
+   "language": "R",
+   "core_method": "Two-factor k-nearest neighbor (k-NN) smoothing combining transcriptome-pattern and spatial neighbors",
+   "year": 2022,
+   "first_author": "Liu et al.",
+   "title": "SPCS: a spatial and pattern combined smoothing method for spatial transcriptomic expression",
+   "journal": "Briefings in Bioinformatics",
+   "doi": "10.1093/bib/bbac116",
+   "paper_url": "https://doi.org/10.1093/bib/bbac116",
+   "code_url": "https://github.com/Usos/SPCS",
+   "code_source": "paper abstract",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "R"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph"
+   ],
+   "model_tags": [
+    "Classical ML (k-NN, forests, SOM, ensembles)"
+   ],
+   "paradigm": "Statistical / classical ML"
+  },
+  {
+   "id": "denoisest",
+   "method": "DenoiseST",
+   "categories": [
+    "Spatial gene expression prediction"
+   ],
+   "subtype": "From ST alone (imputation / super-resolution)",
+   "task": "Denoising / imputation + domain detection",
+   "input": "ST count matrix + spatial coords",
+   "language": "Python",
+   "core_method": "Dual-channel unsupervised graph convolutional network (GCN) deep learning with joint representation learning",
+   "year": 2024,
+   "first_author": "Cui et al.",
+   "title": "DenoiseST: A dual-channel unsupervised deep learning-based denoising method to identify spatial domains and functionally variable genes in spatial transcriptomics",
+   "journal": "bioRxiv",
+   "doi": "10.1101/2024.03.04.583438",
+   "paper_url": "https://doi.org/10.1101/2024.03.04.583438",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph"
+   ],
+   "model_tags": [
+    "Graph neural network"
+   ],
+   "paradigm": "Deep learning"
+  },
+  {
+   "id": "stgat",
+   "method": "STGAT",
+   "categories": [
+    "Spatial gene expression prediction"
+   ],
+   "subtype": "From histology",
+   "task": "Spot-level expression prediction from WSI + bulk RNA-seq",
+   "input": "H&E image + bulk RNA-seq (trained on ST)",
+   "language": "Python",
+   "core_method": "Graph attention network (GAT) over spots trained on ST data to predict spot-level gene expression and tumor status",
+   "year": 2024,
+   "first_author": "Baul et al.",
+   "title": "Integrating spatial transcriptomics and bulk RNA-seq: predicting gene expression with enhanced resolution through graph attention networks",
+   "journal": "Briefings in Bioinformatics",
+   "doi": "10.1093/bib/bbae316",
+   "paper_url": "https://doi.org/10.1093/bib/bbae316",
+   "code_url": "https://github.com/compbiolabucf/STGAT",
+   "code_source": "paper abstract",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "H&E image"
+   ],
+   "model_tags": [
+    "Graph neural network",
+    "Transformer / ViT"
+   ],
+   "paradigm": "Deep learning"
+  },
+  {
+   "id": "bayesdeep",
+   "method": "BayesDeep",
+   "categories": [
+    "Spatial gene expression prediction"
+   ],
+   "subtype": "From histology",
+   "task": "Single-cell-resolution expression reconstruction",
+   "input": "ST count matrix + H&E image",
+   "language": "R",
+   "core_method": "Bayesian hierarchical negative binomial regression on cell type and nuclei-shape features from histology, with feature selection",
+   "year": 2023,
+   "first_author": "Jiang et al.",
+   "title": "Reconstructing Spatial Transcriptomics at the Single-cell Resolution with BayesDeep",
+   "journal": "bioRxiv",
+   "doi": "10.1101/2023.12.07.570715",
+   "paper_url": "https://doi.org/10.1101/2023.12.07.570715",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "R"
+   ],
+   "input_tags": [
+    "ST expression",
+    "H&E image"
+   ],
+   "model_tags": [
+    "Regression / GLM / mixed model",
+    "Bayesian / probabilistic model",
+    "Classical ML (k-NN, forests, SOM, ensembles)"
+   ],
+   "paradigm": "Statistical / classical ML"
+  },
+  {
+   "id": "spatialcorr",
+   "method": "SpatialCorr",
+   "categories": [
+    "Spatially variable gene identification",
+    "Gene regulatory networks"
+   ],
+   "subtype": "Overall SVG",
+   "task": "Detection of gene sets with spatially varying correlation",
+   "input": "ST count matrix + spatial coords",
+   "language": "Python",
+   "core_method": "Statistical test for spatially varying gene-gene correlation structure within and between tissue regions",
+   "year": 2022,
+   "first_author": "Bernstein et al.",
+   "title": "SpatialCorr identifies gene sets with spatially varying correlation structure",
+   "journal": "Cell Reports Methods",
+   "doi": "10.1016/j.crmeth.2022.100369",
+   "paper_url": "https://doi.org/10.1016/j.crmeth.2022.100369",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph"
+   ],
+   "model_tags": [
+    "Spatial autocorrelation / kernel test"
+   ],
+   "paradigm": "Statistical / classical ML"
+  },
+  {
+   "id": "spasrl",
+   "method": "SpaSRL",
+   "categories": [
+    "Spatially variable gene identification"
+   ],
+   "subtype": "Domain-marker SVG",
+   "task": "Spatial functional gene identification + domain detection",
+   "input": "ST count matrix + spatial coords",
+   "language": "Python",
+   "core_method": "Spatially aware self-representation learning (unified model jointly enhancing spatial signals for domain detection and gene selection)",
+   "year": 2023,
+   "first_author": "Zhang et al.",
+   "title": "Spatially aware self-representation learning for tissue structure characterization and spatial functional genes identification",
+   "journal": "Briefings in Bioinformatics",
+   "doi": "10.1093/bib/bbad197",
+   "paper_url": "https://doi.org/10.1093/bib/bbad197",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph"
+   ],
+   "model_tags": [],
+   "paradigm": "Other"
+  },
+  {
+   "id": "iimpact",
+   "method": "iIMPACT",
+   "categories": [
+    "Spatially variable gene identification"
+   ],
+   "subtype": "Domain-marker SVG",
+   "task": "Histology-based domain detection + domain-specific DE genes",
+   "input": "ST count matrix + H&E image",
+   "language": "R",
+   "core_method": "Multi-stage statistical model combining AI-reconstructed histology images with spatial gene expression for domains, then domain-specific differential expression",
+   "year": 2024,
+   "first_author": "Jiang et al.",
+   "title": "iIMPACT: integrating image and molecular profiles for spatial transcriptomics analysis",
+   "journal": "Genome Biology",
+   "doi": "10.1186/s13059-024-03289-5",
+   "paper_url": "https://doi.org/10.1186/s13059-024-03289-5",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "R"
+   ],
+   "input_tags": [
+    "ST expression",
+    "H&E image"
+   ],
+   "model_tags": [],
+   "paradigm": "Other"
+  },
+  {
+   "id": "vesalius",
+   "method": "Vesalius",
+   "categories": [
+    "Spatially variable gene identification"
+   ],
+   "subtype": "Domain-marker SVG",
+   "task": "Territory detection + morphology-specific gene identification",
+   "input": "ST count matrix + spatial coords",
+   "language": "R",
+   "core_method": "Image processing / image analysis of expression embeddings to segment tissue territories, then territory-specific differential expression",
+   "year": 2022,
+   "first_author": "Martin et al.",
+   "title": "Vesalius: high‐resolution in silico anatomization of spatial transcriptomic data using image analysis",
+   "journal": "Molecular Systems Biology",
+   "doi": "10.15252/msb.202211080",
+   "paper_url": "https://doi.org/10.15252/msb.202211080",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "R"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph"
+   ],
+   "model_tags": [],
+   "paradigm": "Other"
+  },
+  {
+   "id": "spacemarkers",
+   "method": "SpaceMarkers",
+   "categories": [
+    "Spatially variable gene identification",
+    "Cell communication & interpretable models"
+   ],
+   "subtype": "Domain-marker SVG",
+   "task": "Genes associated with latent-space cell interactions",
+   "input": "ST count matrix + spatial coords (+ latent patterns)",
+   "language": "R",
+   "core_method": "Latent space analysis of ST data to detect genes changing in regions of overlapping cell-type patterns",
+   "year": 2023,
+   "first_author": "Deshpande et al.",
+   "title": "Uncovering the spatial landscape of molecular interactions within the tumor microenvironment through latent spaces",
+   "journal": "Cell Systems",
+   "doi": "10.1016/j.cels.2023.03.004",
+   "paper_url": "https://doi.org/10.1016/j.cels.2023.03.004",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "R"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph"
+   ],
+   "model_tags": [
+    "Matrix factorization / factor analysis"
+   ],
+   "paradigm": "Statistical / classical ML"
+  },
+  {
+   "id": "squidpy",
+   "method": "Squidpy",
+   "categories": [
+    "Spatially variable gene identification",
+    "Cell communication & interpretable models"
+   ],
+   "subtype": "Overall SVG",
+   "task": "Spatial omics analysis framework (spatial statistics, ligand-receptor analysis)",
+   "input": "ST count matrix + spatial coords",
+   "language": "Python",
+   "core_method": "Scalable framework combining spatial graph statistics (e.g. spatial autocorrelation) and image analysis for spatial omics",
+   "year": 2022,
+   "first_author": "Palla et al.",
+   "title": "Squidpy: a scalable framework for spatial omics analysis",
+   "journal": "Nature Methods",
+   "doi": "10.1038/s41592-021-01358-2",
+   "paper_url": "https://doi.org/10.1038/s41592-021-01358-2",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph"
+   ],
+   "model_tags": [
+    "Spatial autocorrelation / kernel test"
+   ],
+   "paradigm": "Statistical / classical ML"
+  },
+  {
+   "id": "giotto",
+   "method": "Giotto",
+   "categories": [
+    "Spatially variable gene identification",
+    "Cell communication & interpretable models"
+   ],
+   "subtype": "Overall SVG",
+   "task": "Toolbox: spatial expression patterns + cell-cell interactions",
+   "input": "ST count matrix + spatial coords",
+   "language": "R",
+   "core_method": "Toolbox of spatial analysis algorithms on spatial neighbor networks for spatial gene patterns, cell-type enrichment and cell-cell interactions",
+   "year": 2021,
+   "first_author": "Dries et al.",
+   "title": "Giotto: a toolbox for integrative analysis and visualization of spatial expression data",
+   "journal": "Genome Biology",
+   "doi": "10.1186/s13059-021-02286-2",
+   "paper_url": "https://doi.org/10.1186/s13059-021-02286-2",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "R"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph"
+   ],
+   "model_tags": [],
+   "paradigm": "Other"
+  },
+  {
+   "id": "spanve",
+   "method": "Spanve",
+   "categories": [
+    "Spatially variable gene identification"
+   ],
+   "subtype": "Overall SVG",
+   "task": "Tissue-wide SVG detection",
+   "input": "ST count matrix + spatial coords",
+   "language": "Python",
+   "core_method": "Nonparametric test of expression differences between spots and spatial neighbours (k-NN / nearest neighbor graph)",
+   "year": 2023,
+   "first_author": "Cai et al.",
+   "title": "Spanve: A Statistical Method for Detecting Downstream-Friendly Spatially Variable Genes in Large-Scale Spatial Transcriptomic Data",
+   "journal": "bioRxiv",
+   "doi": "10.1101/2023.02.08.527623",
+   "paper_url": "https://doi.org/10.1101/2023.02.08.527623",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph"
+   ],
+   "model_tags": [
+    "Classical ML (k-NN, forests, SOM, ensembles)"
+   ],
+   "paradigm": "Statistical / classical ML"
+  },
+  {
+   "id": "gpcounts",
+   "method": "GPcounts",
+   "categories": [
+    "Spatially variable gene identification"
+   ],
+   "subtype": "Overall SVG",
+   "task": "Temporal and spatial gene expression modelling (SVG detection)",
+   "input": "ST count matrix + spatial coords",
+   "language": "Python",
+   "core_method": "Gaussian process regression with negative binomial likelihood, variational Bayesian inference and maximum likelihood dispersion",
+   "year": 2021,
+   "first_author": "BinTayyash et al.",
+   "title": "Non-parametric modelling of temporal and spatial counts data from RNA-seq experiments",
+   "journal": "Bioinformatics",
+   "doi": "10.1093/bioinformatics/btab486",
+   "paper_url": "https://doi.org/10.1093/bioinformatics/btab486",
+   "code_url": "https://github.com/ManchesterBioinference/GPcounts",
+   "code_source": "paper abstract",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph"
+   ],
+   "model_tags": [
+    "Gaussian process",
+    "Regression / GLM / mixed model",
+    "Bayesian / probabilistic model",
+    "VAE / autoencoder / generative"
+   ],
+   "paradigm": "Hybrid"
+  },
+  {
+   "id": "boost-hmi",
+   "method": "BOOST-HMI",
+   "categories": [
+    "Spatially variable gene identification"
+   ],
+   "subtype": "Overall SVG",
+   "task": "Tissue-wide SVG detection (imaging-based SRT)",
+   "input": "ST count matrix + spatial coords (imaging-based, single-cell)",
+   "language": "R",
+   "core_method": "Bayesian zero-inflated negative binomial mixture model + energy-based geostatistical mark interaction model, MCMC",
+   "year": 2024,
+   "first_author": "Yang et al.",
+   "title": "Bayesian hidden mark interaction model for detecting spatially variable genes in imaging-based spatially resolved transcriptomics data",
+   "journal": "Frontiers in Genetics",
+   "doi": "10.3389/fgene.2024.1356709",
+   "paper_url": "https://doi.org/10.3389/fgene.2024.1356709",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "R"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph"
+   ],
+   "model_tags": [
+    "Bayesian / probabilistic model"
+   ],
+   "paradigm": "Statistical / classical ML"
+  },
+  {
+   "id": "seagal",
+   "method": "SEAGAL",
+   "categories": [
+    "Gene regulatory networks"
+   ],
+   "subtype": "",
+   "task": "Spatial gene association / co-expression detection",
+   "input": "ST count matrix + spatial coords",
+   "language": "Python",
+   "core_method": "Lee's L bivariate spatial autocorrelation (Moran-type) for spatial gene correlations at gene and gene-set levels",
+   "year": 2023,
+   "first_author": "Wang et al.",
+   "title": "Unravelling spatial gene associations with SEAGAL: a Python package for spatial transcriptomics data analysis and visualization",
+   "journal": "Bioinformatics",
+   "doi": "10.1093/bioinformatics/btad431",
+   "paper_url": "https://doi.org/10.1093/bioinformatics/btad431",
+   "code_url": "https://pypi.org/project/seagal/",
+   "code_source": "paper abstract",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph"
+   ],
+   "model_tags": [
+    "Spatial autocorrelation / kernel test"
+   ],
+   "paradigm": "Statistical / classical ML"
+  },
+  {
+   "id": "spacex",
+   "method": "SpaceX",
+   "categories": [
+    "Gene regulatory networks"
+   ],
+   "subtype": "",
+   "task": "Spatial gene co-expression network estimation",
+   "input": "ST count matrix + spatial coords + cluster labels",
+   "language": "R",
+   "core_method": "Bayesian over-dispersed spatial Poisson model with high-dimensional factor model for shared and cluster-specific co-expression networks",
+   "year": 2022,
+   "first_author": "Acharyya et al.",
+   "title": "SpaceX: gene co-expression network estimation for spatial transcriptomics",
+   "journal": "Bioinformatics",
+   "doi": "10.1093/bioinformatics/btac645",
+   "paper_url": "https://doi.org/10.1093/bioinformatics/btac645",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "R"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph"
+   ],
+   "model_tags": [
+    "Regression / GLM / mixed model",
+    "Bayesian / probabilistic model"
+   ],
+   "paradigm": "Statistical / classical ML"
+  },
+  {
+   "id": "spann",
+   "method": "SPANN",
+   "categories": [
+    "Cell-type deconvolution"
+   ],
+   "subtype": "",
+   "task": "Cell-type annotation of single-cell ST + novel cell detection",
+   "input": "ST count matrix + scRNA-seq reference",
+   "language": "Python",
+   "core_method": "Cell-type-level alignment mapping spatial cells to scRNA-seq prototypes with novel cell-type detection",
+   "year": 2024,
+   "first_author": "Yuan et al.",
+   "title": "SPANN: annotating single-cell resolution spatial transcriptome data with scRNA-seq data",
+   "journal": "Briefings in Bioinformatics",
+   "doi": "10.1093/bib/bbad533",
+   "paper_url": "https://doi.org/10.1093/bib/bbad533",
+   "code_url": "https://github.com/ddb-qiwang/SPANN-torch",
+   "code_source": "paper abstract",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "scRNA-seq reference"
+   ],
+   "model_tags": [],
+   "paradigm": "Other"
+  },
+  {
+   "id": "pciseq",
+   "method": "pciSeq",
+   "categories": [
+    "Cell-type deconvolution"
+   ],
+   "subtype": "",
+   "task": "Probabilistic cell typing of in situ data with scRNA-seq reference",
+   "input": "In situ sequencing reads + scRNA-seq reference",
+   "language": "Python",
+   "core_method": "Probabilistic cell typing assigning in situ cells to scRNA-seq classes",
+   "year": 2019,
+   "first_author": "Qian et al.",
+   "title": "Probabilistic cell typing enables fine mapping of closely related cell types in situ",
+   "journal": "Nature Methods",
+   "doi": "10.1038/s41592-019-0631-4",
+   "paper_url": "https://doi.org/10.1038/s41592-019-0631-4",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "scRNA-seq reference"
+   ],
+   "model_tags": [
+    "Bayesian / probabilistic model"
+   ],
+   "paradigm": "Statistical / classical ML"
+  },
+  {
+   "id": "spatialddls",
+   "method": "SpatialDDLS",
+   "categories": [
+    "Cell-type deconvolution"
+   ],
+   "subtype": "",
+   "task": "Deconvolution",
+   "input": "ST count matrix + scRNA-seq reference",
+   "language": "R",
+   "core_method": "Fully connected deep neural network trained on simulated mixed profiles from scRNA-seq",
+   "year": 2024,
+   "first_author": "Mañanes et al.",
+   "title": "SpatialDDLS: an R package to deconvolute spatial transcriptomics data using neural networks",
+   "journal": "Bioinformatics",
+   "doi": "10.1093/bioinformatics/btae072",
+   "paper_url": "https://doi.org/10.1093/bioinformatics/btae072",
+   "code_url": "https://CRAN.R-project.org/package=SpatialDDLS",
+   "code_source": "paper abstract",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "R"
+   ],
+   "input_tags": [
+    "ST expression",
+    "scRNA-seq reference"
+   ],
+   "model_tags": [
+    "Other deep learning"
+   ],
+   "paradigm": "Deep learning"
+  },
+  {
+   "id": "stdecompositionadjustment",
+   "method": "STDecompositionAdjustment",
+   "categories": [
+    "Cell-type deconvolution"
+   ],
+   "subtype": "",
+   "task": "scRNA-seq reference adjustment for deconvolution",
+   "input": "ST count matrix + scRNA-seq reference",
+   "language": "R / Python",
+   "core_method": "Instance-based transfer learning to adjust scRNA-seq reference to ST distribution before decomposition",
+   "year": 2024,
+   "first_author": "Wang et al.",
+   "title": "Adjustment of scRNA-seq data to improve cell-type decomposition of spatial transcriptomics",
+   "journal": "Briefings in Bioinformatics",
+   "doi": "10.1093/bib/bbae063",
+   "paper_url": "https://doi.org/10.1093/bib/bbae063",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "R",
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "scRNA-seq reference"
+   ],
+   "model_tags": [
+    "Classical ML (k-NN, forests, SOM, ensembles)"
+   ],
+   "paradigm": "Statistical / classical ML"
+  },
+  {
+   "id": "stlearn",
+   "method": "stLearn",
+   "categories": [
+    "Trajectory inference",
+    "Cell communication & interpretable models",
+    "Spatial gene expression prediction"
+   ],
+   "subtype": "From ST alone (imputation / super-resolution)",
+   "task": "Spatial trajectory (PSTS) + CCC (SCTP) + imputation (stSME)",
+   "input": "ST count matrix + H&E image + spatial coords",
+   "language": "Python",
+   "core_method": "Spatial graph-based pseudo-time-space trajectory, spatially-constrained two-level permutation test for ligand-receptor CCC, and graph-based neural network imputation",
+   "year": 2023,
+   "first_author": "Pham et al.",
+   "title": "Robust mapping of spatiotemporal trajectories and cell–cell interactions in healthy and diseased tissues",
+   "journal": "Nature Communications",
+   "doi": "10.1038/s41467-023-43120-6",
+   "paper_url": "https://doi.org/10.1038/s41467-023-43120-6",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph",
+    "H&E image"
+   ],
+   "model_tags": [
+    "Spatial autocorrelation / kernel test",
+    "Other deep learning"
+   ],
+   "paradigm": "Hybrid"
+  },
+  {
+   "id": "redeconve",
+   "method": "Redeconve",
+   "categories": [
+    "Cell-type deconvolution"
+   ],
+   "subtype": "",
+   "task": "Single-cell-resolution deconvolution",
+   "input": "ST count matrix + scRNA-seq reference",
+   "language": "R",
+   "core_method": "Deconvolution using individual single cells (cell states) from scRNA-seq as reference",
+   "year": 2023,
+   "first_author": "Zhou et al.",
+   "title": "Spatial transcriptomics deconvolution at single-cell resolution using Redeconve",
+   "journal": "Nature Communications",
+   "doi": "10.1038/s41467-023-43600-9",
+   "paper_url": "https://doi.org/10.1038/s41467-023-43600-9",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "R"
+   ],
+   "input_tags": [
+    "ST expression",
+    "scRNA-seq reference"
+   ],
+   "model_tags": [],
+   "paradigm": "Other"
+  },
+  {
+   "id": "spatialscope",
+   "method": "SpatialScope",
+   "categories": [
+    "Cell-type deconvolution",
+    "Spatial gene expression prediction"
+   ],
+   "subtype": "From scRNA-seq reference (imputation)",
+   "task": "Single-cell-resolution deconvolution + transcriptome-wide imputation",
+   "input": "ST count matrix + scRNA-seq reference + spatial coords",
+   "language": "R / Python",
+   "core_method": "Deep generative models integrating scRNA-seq reference with ST to resolve single-cell expression",
+   "year": 2023,
+   "first_author": "Wan et al.",
+   "title": "SpatialScope: A unified approach for integrating spatial and single-cell transcriptomics data using deep generative models",
+   "journal": "bioRxiv",
+   "doi": "10.1101/2023.03.14.532529",
+   "paper_url": "https://doi.org/10.1101/2023.03.14.532529",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "R",
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph",
+    "scRNA-seq reference"
+   ],
+   "model_tags": [
+    "VAE / autoencoder / generative"
+   ],
+   "paradigm": "Deep learning"
+  },
+  {
+   "id": "nmfreg",
+   "method": "NMFreg",
+   "categories": [
+    "Cell-type deconvolution"
+   ],
+   "subtype": "",
+   "task": "Deconvolution",
+   "input": "ST count matrix + scRNA-seq reference",
+   "language": "Python",
+   "core_method": "Non-negative matrix factorization (NMF) regression of bead expression onto reference cell-type factors",
+   "year": 2019,
+   "first_author": "Rodriques et al.",
+   "title": "Slide-seq: A scalable technology for measuring genome-wide expression at high spatial resolution",
+   "journal": "Science",
+   "doi": "10.1126/science.aaw1219",
+   "paper_url": "https://doi.org/10.1126/science.aaw1219",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "scRNA-seq reference"
+   ],
+   "model_tags": [
+    "Regression / GLM / mixed model",
+    "Matrix factorization / factor analysis"
+   ],
+   "paradigm": "Statistical / classical ML"
+  },
+  {
+   "id": "stdeconvolve",
+   "method": "STdeconvolve",
+   "categories": [
+    "Cell-type deconvolution"
+   ],
+   "subtype": "",
+   "task": "Reference-free deconvolution",
+   "input": "ST count matrix",
+   "language": "R",
+   "core_method": "Reference-free probabilistic deconvolution recovering cell-type profiles and proportions",
+   "year": 2022,
+   "first_author": "Miller et al.",
+   "title": "Reference-free cell type deconvolution of multi-cellular pixel-resolution spatially resolved transcriptomics data",
+   "journal": "Nature Communications",
+   "doi": "10.1038/s41467-022-30033-z",
+   "paper_url": "https://doi.org/10.1038/s41467-022-30033-z",
+   "code_url": "https://github.com/JEFworks-Lab/STdeconvolve",
+   "code_source": "paper abstract",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "R"
+   ],
+   "input_tags": [
+    "ST expression"
+   ],
+   "model_tags": [
+    "Bayesian / probabilistic model"
+   ],
+   "paradigm": "Statistical / classical ML"
+  },
+  {
+   "id": "qr-side",
+   "method": "QR-SIDE",
+   "categories": [
+    "Cell-type deconvolution"
+   ],
+   "subtype": "",
+   "task": "Deconvolution + domain detection",
+   "input": "ST count matrix + marker genes + spatial coords",
+   "language": "R / Python",
+   "core_method": "Spatially-informed deconvolution with qualitative marker reference and Potts model (Markov random field) for spatial clustering",
+   "year": 2025,
+   "first_author": "Dong et al.",
+   "title": "Robust Spatial Cell‐Type Deconvolution with Qualitative Reference for Spatial Transcriptomics",
+   "journal": "Small Methods",
+   "doi": "10.1002/smtd.202401145",
+   "paper_url": "https://doi.org/10.1002/smtd.202401145",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "R",
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph"
+   ],
+   "model_tags": [
+    "Bayesian / probabilistic model"
+   ],
+   "paradigm": "Statistical / classical ML"
+  },
+  {
+   "id": "spall",
+   "method": "Spall",
+   "categories": [
+    "Cell-type deconvolution"
+   ],
+   "subtype": "",
+   "task": "Deconvolution",
+   "input": "ST count matrix + scRNA-seq reference + spatial coords",
+   "language": "Python",
+   "core_method": "Graph attention network (GATv2) decomposition network with skip connections",
+   "year": 2024,
+   "first_author": "Jiang et al.",
+   "title": "Spall: accurate and robust unveiling cellular landscapes from spatially resolved transcriptomics data using a decomposition network",
+   "journal": "BMC Bioinformatics",
+   "doi": "10.1186/s12859-024-06003-1",
+   "paper_url": "https://doi.org/10.1186/s12859-024-06003-1",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph",
+    "scRNA-seq reference"
+   ],
+   "model_tags": [
+    "Graph neural network",
+    "Transformer / ViT"
+   ],
+   "paradigm": "Deep learning"
+  },
+  {
+   "id": "endecon",
+   "method": "EnDecon",
+   "categories": [
+    "Cell-type deconvolution"
+   ],
+   "subtype": "",
+   "task": "Deconvolution (ensemble)",
+   "input": "ST count matrix + scRNA-seq reference",
+   "language": "R",
+   "core_method": "Weighted ensemble of base deconvolution methods via weighted optimization model",
+   "year": 2022,
+   "first_author": "Tu et al.",
+   "title": "EnDecon: cell type deconvolution of spatially resolved transcriptomics data via ensemble learning",
+   "journal": "Bioinformatics",
+   "doi": "10.1093/bioinformatics/btac825",
+   "paper_url": "https://doi.org/10.1093/bioinformatics/btac825",
+   "code_url": "https://github.com/Zhangxf-ccnu/EnDecon",
+   "code_source": "paper abstract",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "R"
+   ],
+   "input_tags": [
+    "ST expression",
+    "scRNA-seq reference"
+   ],
+   "model_tags": [
+    "Classical ML (k-NN, forests, SOM, ensembles)"
+   ],
+   "paradigm": "Statistical / classical ML"
+  },
+  {
+   "id": "letsmix",
+   "method": "LETSmix",
+   "categories": [
+    "Cell-type deconvolution"
+   ],
+   "subtype": "",
+   "task": "Deconvolution",
+   "input": "ST count matrix + scRNA-seq reference + H&E image + spatial coords",
+   "language": "Python",
+   "core_method": "Spatial LETS filter + mixup-augmented domain adaptation deep learning (neural network)",
+   "year": 2025,
+   "first_author": "Zhan et al.",
+   "title": "LETSmix: a spatially informed and learning-based domain adaptation method for cell-type deconvolution in spatial transcriptomics",
+   "journal": "Genome Medicine",
+   "doi": "10.1186/s13073-025-01442-8",
+   "paper_url": "https://doi.org/10.1186/s13073-025-01442-8",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph",
+    "H&E image",
+    "scRNA-seq reference"
+   ],
+   "model_tags": [
+    "Other deep learning"
+   ],
+   "paradigm": "Deep learning"
+  },
+  {
+   "id": "scdot",
+   "method": "scDOT",
+   "categories": [
+    "Cell-type deconvolution"
+   ],
+   "subtype": "",
+   "task": "Single-cell mapping + deconvolution",
+   "input": "ST count matrix + scRNA-seq reference + spatial coords",
+   "language": "Python",
+   "core_method": "Optimal transport combined with expression deconvolution to learn cell-spot couplings",
+   "year": 2024,
+   "first_author": "Nguyen et al.",
+   "title": "scDOT: optimal transport for mapping senescent cells in spatial transcriptomics",
+   "journal": "Genome Biology",
+   "doi": "10.1186/s13059-024-03426-0",
+   "paper_url": "https://doi.org/10.1186/s13059-024-03426-0",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph",
+    "scRNA-seq reference"
+   ],
+   "model_tags": [
+    "Optimal transport"
+   ],
+   "paradigm": "Statistical / classical ML"
+  },
+  {
+   "id": "spacet",
+   "method": "SpaCET",
+   "categories": [
+    "Cell-type deconvolution"
+   ],
+   "subtype": "",
+   "task": "Tumor deconvolution (cancer + immune/stromal lineages)",
+   "input": "ST count matrix",
+   "language": "R",
+   "core_method": "Malignant cell estimation from CNA/expression dictionary + constrained regression for cell lineage fractions",
+   "year": 2023,
+   "first_author": "Ru et al.",
+   "title": "Estimation of cell lineages in tumors from spatial transcriptomics data",
+   "journal": "Nature Communications",
+   "doi": "10.1038/s41467-023-36062-6",
+   "paper_url": "https://doi.org/10.1038/s41467-023-36062-6",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "R"
+   ],
+   "input_tags": [
+    "ST expression"
+   ],
+   "model_tags": [
+    "Regression / GLM / mixed model"
+   ],
+   "paradigm": "Statistical / classical ML"
+  },
+  {
+   "id": "cellpie",
+   "method": "CellPie",
+   "categories": [
+    "Cell-type deconvolution"
+   ],
+   "subtype": "",
+   "task": "Reference-free factor discovery",
+   "input": "ST count matrix + H&E image",
+   "language": "Python",
+   "core_method": "Joint non-negative matrix factorization (NMF) of transcripts and histology image features, hierarchical alternating least squares",
+   "year": 2025,
+   "first_author": "Georgaka et al.",
+   "title": "CellPie : a scalable spatial transcriptomics factor discovery method via joint non-negative matrix factorization",
+   "journal": "Nucleic Acids Research",
+   "doi": "10.1093/nar/gkaf251",
+   "paper_url": "https://doi.org/10.1093/nar/gkaf251",
+   "code_url": "https://github.com/ManchesterBioinference/CellPie",
+   "code_source": "paper abstract",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "H&E image"
+   ],
+   "model_tags": [
+    "Regression / GLM / mixed model",
+    "Matrix factorization / factor analysis"
+   ],
+   "paradigm": "Statistical / classical ML"
+  },
+  {
+   "id": "cssingle",
+   "method": "CSsingle",
+   "categories": [
+    "Cell-type deconvolution"
+   ],
+   "subtype": "",
+   "task": "Bulk and spatial deconvolution with cell-size correction",
+   "input": "ST count matrix + scRNA-seq reference",
+   "language": "R",
+   "core_method": "Deconvolution with ERCC spike-in-based cell size correction across diverse scRNA-seq references",
+   "year": 2026,
+   "first_author": "Shen et al.",
+   "title": "CSsingle: a unified tool for robust decomposition of bulk and spatial transcriptomic data across diverse single-cell references",
+   "journal": "Nucleic Acids Research",
+   "doi": "10.1093/nar/gkag410",
+   "paper_url": "https://doi.org/10.1093/nar/gkag410",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "R"
+   ],
+   "input_tags": [
+    "ST expression",
+    "scRNA-seq reference"
+   ],
+   "model_tags": [],
+   "paradigm": "Other"
+  },
+  {
+   "id": "commot",
+   "method": "COMMOT",
+   "categories": [
+    "Cell communication & interpretable models"
+   ],
+   "subtype": "",
+   "task": "Ligand-receptor-mediated CCC inference",
+   "input": "ST count matrix + spatial coords",
+   "language": "Python",
+   "core_method": "Collective optimal transport with spatial distance constraints and competition among ligand/receptor species",
+   "year": 2023,
+   "first_author": "Cang et al.",
+   "title": "Screening cell–cell communication in spatial transcriptomics via collective optimal transport",
+   "journal": "Nature Methods",
+   "doi": "10.1038/s41592-022-01728-4",
+   "paper_url": "https://doi.org/10.1038/s41592-022-01728-4",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph"
+   ],
+   "model_tags": [
+    "Optimal transport"
+   ],
+   "paradigm": "Statistical / classical ML"
+  },
+  {
+   "id": "deepcolor",
+   "method": "DeepCOLOR",
+   "categories": [
+    "Cell communication & interpretable models"
+   ],
+   "subtype": "",
+   "task": "Single-cell colocalization analysis",
+   "input": "scRNA-seq + ST count matrices",
+   "language": "Python",
+   "core_method": "Deep generative model mapping single cells onto ST to infer colocalization",
+   "year": 2024,
+   "first_author": "Kojima et al.",
+   "title": "Single-cell colocalization analysis using a deep generative model",
+   "journal": "Cell Systems",
+   "doi": "10.1016/j.cels.2024.01.007",
+   "paper_url": "https://doi.org/10.1016/j.cels.2024.01.007",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "scRNA-seq reference"
+   ],
+   "model_tags": [
+    "VAE / autoencoder / generative"
+   ],
+   "paradigm": "Deep learning"
+  },
+  {
+   "id": "meti",
+   "method": "METI",
+   "categories": [
+    "Cell communication & interpretable models"
+   ],
+   "subtype": "",
+   "task": "Tumor microenvironment mapping + cell co-localization analysis",
+   "input": "ST count matrix + H&E image + gene signatures",
+   "language": "Python",
+   "core_method": "Integration of histology cell morphology features, ST and curated gene signatures for cell-type stratification and co-localization",
+   "year": 2024,
+   "first_author": "Jiang et al.",
+   "title": "METI: deep profiling of tumor ecosystems by integrating cell morphology and spatial transcriptomics",
+   "journal": "Nature Communications",
+   "doi": "10.1038/s41467-024-51708-9",
+   "paper_url": "https://doi.org/10.1038/s41467-024-51708-9",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "H&E image"
+   ],
+   "model_tags": [],
+   "paradigm": "Other"
+  },
+  {
+   "id": "spacia",
+   "method": "Spacia",
+   "categories": [
+    "Cell communication & interpretable models"
+   ],
+   "subtype": "",
+   "task": "Cell-cell communication inference (multi-sender to one receiver)",
+   "input": "Single-cell ST count matrix + spatial coords",
+   "language": "R / Python",
+   "core_method": "Bayesian multiple-instance learning model",
+   "year": 2024,
+   "first_author": "Zhu et al.",
+   "title": "Mapping cellular interactions from spatially resolved transcriptomics data",
+   "journal": "Nature Methods",
+   "doi": "10.1038/s41592-024-02408-1",
+   "paper_url": "https://doi.org/10.1038/s41592-024-02408-1",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "R",
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph"
+   ],
+   "model_tags": [
+    "Bayesian / probabilistic model"
+   ],
+   "paradigm": "Statistical / classical ML"
+  },
+  {
+   "id": "svca",
+   "method": "SVCA",
+   "categories": [
+    "Cell communication & interpretable models"
+   ],
+   "subtype": "",
+   "task": "Quantifying cell-cell interaction effects on gene expression",
+   "input": "Single-cell spatial expression + spatial coords",
+   "language": "Python",
+   "core_method": "Spatial variance component analysis quantifying spatial and cell-cell interaction effects on expression",
+   "year": 2019,
+   "first_author": "Arnol et al.",
+   "title": "Modeling Cell-Cell Interactions from Spatial Molecular Data with Spatial Variance Component Analysis",
+   "journal": "Cell Reports",
+   "doi": "10.1016/j.celrep.2019.08.077",
+   "paper_url": "https://doi.org/10.1016/j.celrep.2019.08.077",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "Spatial coordinates / graph"
+   ],
+   "model_tags": [
+    "Bayesian / probabilistic model"
+   ],
+   "paradigm": "Statistical / classical ML"
+  },
+  {
+   "id": "sper",
+   "method": "SPER",
+   "categories": [
+    "Cell communication & interpretable models"
+   ],
+   "subtype": "",
+   "task": "Paracrine regulators of cell-type composition",
+   "input": "ST count matrix + cell-type proportions + spatial coords",
+   "language": "R",
+   "core_method": "Spatial Paired Expression Ratio statistic for spatial dependence between transcripts and cell-type proportions",
+   "year": 2026,
+   "first_author": "Zhao et al.",
+   "title": "Discovering paracrine regulators of cell type composition from spatial transcriptomics using SPER",
+   "journal": "Bioinformatics Advances",
+   "doi": "10.1093/bioadv/vbag011",
+   "paper_url": "https://doi.org/10.1093/bioadv/vbag011",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "R"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph",
+    "Annotations / covariates"
+   ],
+   "model_tags": [],
+   "paradigm": "Other"
+  },
+  {
+   "id": "bulksignalr",
+   "method": "BulkSignalR",
+   "categories": [
+    "Cell communication & interpretable models"
+   ],
+   "subtype": "",
+   "task": "Ligand-receptor network inference",
+   "input": "ST count matrix + spatial coords",
+   "language": "R",
+   "core_method": "Statistical ligand-receptor and downstream pathway correlation model with significance estimation",
+   "year": 2023,
+   "first_author": "Villemin et al.",
+   "title": "Inferring ligand-receptor cellular networks from bulk and spatial transcriptomic datasets with BulkSignalR",
+   "journal": "Nucleic Acids Research",
+   "doi": "10.1093/nar/gkad352",
+   "paper_url": "https://doi.org/10.1093/nar/gkad352",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "R"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph"
+   ],
+   "model_tags": [],
+   "paradigm": "Other"
+  },
+  {
+   "id": "niches",
+   "method": "NICHES",
+   "categories": [
+    "Cell communication & interpretable models"
+   ],
+   "subtype": "",
+   "task": "Single-cell-level ligand-receptor signaling",
+   "input": "ST count matrix + spatial coords",
+   "language": "R",
+   "core_method": "Per-cell(-pair) ligand-receptor signal proxies built from neighbor expression",
+   "year": 2022,
+   "first_author": "Raredon et al.",
+   "title": "Comprehensive visualization of cell–cell interactions in single-cell and spatial transcriptomics with NICHES",
+   "journal": "Bioinformatics",
+   "doi": "10.1093/bioinformatics/btac775",
+   "paper_url": "https://doi.org/10.1093/bioinformatics/btac775",
+   "code_url": "https://msraredon.github.io/NICHES/",
+   "code_source": "paper abstract",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "R"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph"
+   ],
+   "model_tags": [],
+   "paradigm": "Other"
+  },
+  {
+   "id": "gcng",
+   "method": "GCNG",
+   "categories": [
+    "Cell communication & interpretable models"
+   ],
+   "subtype": "",
+   "task": "Extracellular gene-gene interaction inference",
+   "input": "ST count matrix + spatial coords",
+   "language": "Python",
+   "core_method": "Supervised graph convolutional network (GCN) on spatial graph",
+   "year": 2020,
+   "first_author": "Yuan et al.",
+   "title": "GCNG: graph convolutional networks for inferring gene interaction from spatial transcriptomics data",
+   "journal": "Genome Biology",
+   "doi": "10.1186/s13059-020-02214-w",
+   "paper_url": "https://doi.org/10.1186/s13059-020-02214-w",
+   "code_url": "https://github.com/xiaoyeye/GCNG",
+   "code_source": "paper abstract",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph"
+   ],
+   "model_tags": [
+    "Graph neural network"
+   ],
+   "paradigm": "Deep learning"
+  },
+  {
+   "id": "spatialdm",
+   "method": "SpatialDM",
+   "categories": [
+    "Cell communication & interpretable models"
+   ],
+   "subtype": "",
+   "task": "Ligand-receptor-mediated CCC inference",
+   "input": "ST count matrix + spatial coords",
+   "language": "Python",
+   "core_method": "Bivariate Moran / spatial autocorrelation statistic with analytical null",
+   "year": 2023,
+   "first_author": "Li et al.",
+   "title": "SpatialDM for rapid identification of spatially co-expressed ligand–receptor and revealing cell–cell communication patterns",
+   "journal": "Nature Communications",
+   "doi": "10.1038/s41467-023-39608-w",
+   "paper_url": "https://doi.org/10.1038/s41467-023-39608-w",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph"
+   ],
+   "model_tags": [
+    "Spatial autocorrelation / kernel test"
+   ],
+   "paradigm": "Statistical / classical ML"
+  },
+  {
+   "id": "spatrack",
+   "method": "spaTrack",
+   "categories": [
+    "Trajectory inference"
+   ],
+   "subtype": "",
+   "task": "Spatial trajectory inference",
+   "input": "ST count matrix + spatial coords",
+   "language": "Python",
+   "core_method": "Optimal transport with transition costs combining expression and spatial position",
+   "year": 2025,
+   "first_author": "Shen et al.",
+   "title": "Inferring cell trajectories of spatial transcriptomics via optimal transport analysis",
+   "journal": "Cell Systems",
+   "doi": "10.1016/j.cels.2025.101194",
+   "paper_url": "https://doi.org/10.1016/j.cels.2025.101194",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph"
+   ],
+   "model_tags": [
+    "Optimal transport"
+   ],
+   "paradigm": "Statistical / classical ML"
+  },
+  {
+   "id": "spvelo",
+   "method": "spVelo",
+   "categories": [
+    "Trajectory inference",
+    "Multi-sample & multi-modal integration"
+   ],
+   "subtype": "",
+   "task": "RNA velocity inference (multi-batch)",
+   "input": "Spliced/unspliced ST counts + spatial coords (multiple batches)",
+   "language": "Python",
+   "core_method": "Scalable RNA velocity model using spatial graphs and MNN graphs between batches with uncertainty quantification",
+   "year": 2025,
+   "first_author": "Long et al.",
+   "title": "spVelo: RNA velocity inference for multi-batch spatial transcriptomics data",
+   "journal": "bioRxiv",
+   "doi": "10.1101/2025.03.06.641905",
+   "paper_url": "https://doi.org/10.1101/2025.03.06.641905",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph"
+   ],
+   "model_tags": [],
+   "paradigm": "Other"
+  },
+  {
+   "id": "sirv",
+   "method": "SIRV",
+   "categories": [
+    "Trajectory inference"
+   ],
+   "subtype": "",
+   "task": "Spatial RNA velocity inference",
+   "input": "ST count matrix + scRNA-seq reference + spatial coords",
+   "language": "Python",
+   "core_method": "Enrichment of ST with spliced/unspliced counts from reference scRNA-seq, then RNA velocity",
+   "year": 2024,
+   "first_author": "Abdelaal et al.",
+   "title": "SIRV: spatial inference of RNA velocity at the single-cell resolution",
+   "journal": "NAR Genomics and Bioinformatics",
+   "doi": "10.1093/nargab/lqae100",
+   "paper_url": "https://doi.org/10.1093/nargab/lqae100",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph",
+    "scRNA-seq reference"
+   ],
+   "model_tags": [],
+   "paradigm": "Other"
+  },
+  {
+   "id": "mucst",
+   "method": "MuCST",
+   "categories": [
+    "Multi-sample & multi-modal integration"
+   ],
+   "subtype": "",
+   "task": "Multi-modal image + ST integration / denoising",
+   "input": "ST count matrix + H&E image",
+   "language": "Python",
+   "core_method": "Multi-modal contrastive learning",
+   "year": 2025,
+   "first_author": "Wang et al.",
+   "title": "MuCST: restoring and integrating heterogeneous morphology images and spatial transcriptomics data with contrastive learning",
+   "journal": "Genome Medicine",
+   "doi": "10.1186/s13073-025-01449-1",
+   "paper_url": "https://doi.org/10.1186/s13073-025-01449-1",
+   "code_url": "https://github.com/xkmaxidian/MuCST",
+   "code_source": "paper abstract",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "H&E image"
+   ],
+   "model_tags": [
+    "Contrastive learning"
+   ],
+   "paradigm": "Deep learning"
+  },
+  {
+   "id": "spatialign",
+   "method": "spatiAlign",
+   "categories": [
+    "Multi-sample & multi-modal integration"
+   ],
+   "subtype": "",
+   "task": "Multi-slice integration / batch correction",
+   "input": "ST count matrices + spatial coords (multiple slices)",
+   "language": "Python",
+   "core_method": "Unsupervised contrastive learning",
+   "year": 2024,
+   "first_author": "Zhang et al.",
+   "title": "spatiAlign: an unsupervised contrastive learning model for data integration of spatially resolved transcriptomics",
+   "journal": "GigaScience",
+   "doi": "10.1093/gigascience/giae042",
+   "paper_url": "https://doi.org/10.1093/gigascience/giae042",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph",
+    "Multiple slices / samples"
+   ],
+   "model_tags": [
+    "Contrastive learning"
+   ],
+   "paradigm": "Deep learning"
+  },
+  {
+   "id": "staig",
+   "method": "STAIG",
+   "categories": [
+    "Multi-sample & multi-modal integration"
+   ],
+   "subtype": "",
+   "task": "Domain detection + alignment-free multi-slice integration",
+   "input": "ST count matrices + H&E images + spatial coords (multiple slices)",
+   "language": "Python",
+   "core_method": "Image-aided graph contrastive learning",
+   "year": 2025,
+   "first_author": "Yang et al.",
+   "title": "STAIG: Spatial transcriptomics analysis via image-aided graph contrastive learning for domain exploration and alignment-free integration",
+   "journal": "Nature Communications",
+   "doi": "10.1038/s41467-025-56276-0",
+   "paper_url": "https://doi.org/10.1038/s41467-025-56276-0",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph",
+    "H&E image",
+    "Multiple slices / samples"
+   ],
+   "model_tags": [
+    "Contrastive learning"
+   ],
+   "paradigm": "Deep learning"
+  },
+  {
+   "id": "spiral",
+   "method": "SPIRAL",
+   "categories": [
+    "Multi-sample & multi-modal integration",
+    "Spatial alignment"
+   ],
+   "subtype": "",
+   "task": "Multi-slice integration + cross-slide spatial alignment",
+   "input": "ST count matrices + spatial coords (multiple slices)",
+   "language": "Python",
+   "core_method": "Graph domain adaptation for integration + cluster-aware optimal transport for coordinate alignment",
+   "year": 2023,
+   "first_author": "Guo et al.",
+   "title": "SPIRAL: integrating and aligning spatially resolved transcriptomics data across different experiments, conditions, and technologies",
+   "journal": "Genome Biology",
+   "doi": "10.1186/s13059-023-03078-6",
+   "paper_url": "https://doi.org/10.1186/s13059-023-03078-6",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph",
+    "Multiple slices / samples"
+   ],
+   "model_tags": [
+    "Optimal transport"
+   ],
+   "paradigm": "Statistical / classical ML"
+  },
+  {
+   "id": "fast-profast",
+   "method": "FAST (ProFAST)",
+   "categories": [
+    "Multi-sample & multi-modal integration"
+   ],
+   "subtype": "",
+   "task": "Multi-section spatially aware dimension reduction",
+   "input": "ST count matrices + spatial coords (multiple slices)",
+   "language": "R",
+   "core_method": "Probabilistic factor analysis with count model and local spatial dependence",
+   "year": 2023,
+   "first_author": "Liu et al.",
+   "title": "FAST: a fast and scalable factor analysis for spatially aware dimension reduction of multi-section spatial transcriptomics data",
+   "journal": "bioRxiv",
+   "doi": "10.1101/2023.07.11.548486",
+   "paper_url": "https://doi.org/10.1101/2023.07.11.548486",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "R"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph",
+    "Multiple slices / samples"
+   ],
+   "model_tags": [
+    "Bayesian / probabilistic model",
+    "Matrix factorization / factor analysis"
+   ],
+   "paradigm": "Statistical / classical ML"
+  },
+  {
+   "id": "eags",
+   "method": "EAGS",
+   "categories": [
+    "Spatial gene expression prediction"
+   ],
+   "subtype": "From ST alone (imputation / super-resolution)",
+   "task": "Imputation / denoising of high-resolution ST",
+   "input": "ST count matrix + spatial coords",
+   "language": "Python",
+   "core_method": "Adaptive two-factor Gaussian smoothing using spatial and expression similarity to restore gene expression",
+   "year": 2024,
+   "first_author": "Lv et al.",
+   "title": "EAGS: efficient and adaptive Gaussian smoothing applied to high-resolved spatial transcriptomics",
+   "journal": "GigaScience",
+   "doi": "10.1093/gigascience/giad097",
+   "paper_url": "https://doi.org/10.1093/gigascience/giad097",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph"
+   ],
+   "model_tags": [
+    "Classical ML (k-NN, forests, SOM, ensembles)"
+   ],
+   "paradigm": "Statistical / classical ML"
+  },
+  {
+   "id": "spin",
+   "method": "SPIN",
+   "categories": [
+    "Multi-sample & multi-modal integration"
+   ],
+   "subtype": "",
+   "task": "Multi-sample tissue region identification and alignment",
+   "input": "ST count matrices + spatial coords (multiple slices)",
+   "language": "Python",
+   "core_method": "Random neighbor subsampling before spatial smoothing to reduce spatial autocorrelation, followed by conventional single-cell toolkit (clustering, DE, trajectory)",
+   "year": 2023,
+   "first_author": "Maher et al.",
+   "title": "Mitigating autocorrelation during spatially resolved transcriptomics data analysis",
+   "journal": "bioRxiv",
+   "doi": "10.1101/2023.06.30.547258",
+   "paper_url": "https://doi.org/10.1101/2023.06.30.547258",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph",
+    "Multiple slices / samples"
+   ],
+   "model_tags": [
+    "Spatial autocorrelation / kernel test"
+   ],
+   "paradigm": "Statistical / classical ML"
+  },
+  {
+   "id": "spadit",
+   "method": "SpaDiT",
+   "categories": [
+    "Spatial gene expression prediction"
+   ],
+   "subtype": "From scRNA-seq reference (imputation)",
+   "task": "Missing gene imputation",
+   "input": "ST count matrix + scRNA-seq reference",
+   "language": "Python",
+   "core_method": "Diffusion transformer generative model conditioned on scRNA-seq data (deep learning)",
+   "year": 2024,
+   "first_author": "Li et al.",
+   "title": "SpaDiT: diffusion transformer for spatial gene expression prediction using scRNA-seq",
+   "journal": "Briefings in Bioinformatics",
+   "doi": "10.1093/bib/bbae571",
+   "paper_url": "https://doi.org/10.1093/bib/bbae571",
+   "code_url": "https://github.com/wenwenmin/SpaDiT",
+   "code_source": "paper abstract",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "scRNA-seq reference"
+   ],
+   "model_tags": [
+    "Transformer / ViT",
+    "VAE / autoencoder / generative",
+    "Diffusion / flow matching"
+   ],
+   "paradigm": "Deep learning"
+  },
+  {
+   "id": "c2-sti",
+   "method": "C2-STi",
+   "categories": [
+    "Spatial gene expression prediction"
+   ],
+   "subtype": "From ST alone (imputation / super-resolution)",
+   "task": "Intermediate ST slice interpolation",
+   "input": "ST count matrices + H&E image (adjacent slices)",
+   "language": "Python",
+   "core_method": "Deep learning cross-modal cross-slice model with distance-aware local structural modulation for interpolating missing ST slices",
+   "year": 2025,
+   "first_author": "Que et al.",
+   "title": "Adaptive Spatial Transcriptomics Interpolation via Cross-modal Cross-slice Modeling",
+   "journal": "arXiv",
+   "doi": "10.48550/arxiv.2505.10729",
+   "paper_url": "https://doi.org/10.48550/arxiv.2505.10729",
+   "code_url": "https://github.com/XiaofeiWang2018/C2-STi",
+   "code_source": "paper abstract",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "H&E image"
+   ],
+   "model_tags": [
+    "Other deep learning"
+   ],
+   "paradigm": "Deep learning"
+  },
+  {
+   "id": "bayesspace",
+   "method": "BayesSpace",
+   "categories": [
+    "Spatial gene expression prediction"
+   ],
+   "subtype": "From ST alone (imputation / super-resolution)",
+   "task": "Subspot resolution enhancement + spatial clustering",
+   "input": "ST count matrix + spatial coords",
+   "language": "R",
+   "core_method": "Fully Bayesian model with spatial neighborhood prior (Markov random field) for resolution enhancement and clustering",
+   "year": 2021,
+   "first_author": "Zhao et al.",
+   "title": "Spatial transcriptomics at subspot resolution with BayesSpace",
+   "journal": "Nature Biotechnology",
+   "doi": "10.1038/s41587-021-00935-2",
+   "paper_url": "https://doi.org/10.1038/s41587-021-00935-2",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "R"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph"
+   ],
+   "model_tags": [
+    "Bayesian / probabilistic model"
+   ],
+   "paradigm": "Statistical / classical ML"
+  },
+  {
+   "id": "stforte",
+   "method": "STForte",
+   "categories": [
+    "Spatial gene expression prediction"
+   ],
+   "subtype": "From ST alone (imputation / super-resolution)",
+   "task": "Spatial enhancement + domain detection",
+   "input": "ST count matrix + spatial coords",
+   "language": "Python",
+   "core_method": "Pairwise graph autoencoder matching expression profiles and spatial topology in latent space",
+   "year": 2024,
+   "first_author": "Pang et al.",
+   "title": "Enhanced spatially resolved transcriptomics analysis by matching between expression profiles and spatial topology",
+   "journal": "bioRxiv",
+   "doi": "10.1101/2024.08.16.608230",
+   "paper_url": "https://doi.org/10.1101/2024.08.16.608230",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph"
+   ],
+   "model_tags": [
+    "VAE / autoencoder / generative"
+   ],
+   "paradigm": "Deep learning"
+  },
+  {
+   "id": "stminer",
+   "method": "STMiner",
+   "categories": [
+    "Spatially variable gene identification"
+   ],
+   "subtype": "Overall SVG",
+   "task": "Gene-centric SVG detection and gene pattern discovery",
+   "input": "ST count matrix + spatial coords",
+   "language": "Python",
+   "core_method": "2D Gaussian mixture models of gene spatial distributions + optimal transport distances between genes",
+   "year": 2025,
+   "first_author": "Sun et al.",
+   "title": "STMiner: Gene-centric spatial transcriptomics for deciphering tumor tissues",
+   "journal": "Cell Genomics",
+   "doi": "10.1016/j.xgen.2025.100771",
+   "paper_url": "https://doi.org/10.1016/j.xgen.2025.100771",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph"
+   ],
+   "model_tags": [
+    "Bayesian / probabilistic model",
+    "Optimal transport"
+   ],
+   "paradigm": "Statistical / classical ML"
+  },
+  {
+   "id": "boost-mi",
+   "method": "BOOST-MI",
+   "categories": [
+    "Spatially variable gene identification"
+   ],
+   "subtype": "Overall SVG",
+   "task": "Tissue-wide SVG detection",
+   "input": "ST count matrix + spatial coords",
+   "language": "R",
+   "core_method": "Bayesian modified Ising model on discretized expression for SV gene identification",
+   "year": 2022,
+   "first_author": "Jiang et al.",
+   "title": "A Bayesian modified Ising model for identifying spatially variable genes from spatial transcriptomics data",
+   "journal": "Statistics in Medicine",
+   "doi": "10.1002/sim.9530",
+   "paper_url": "https://doi.org/10.1002/sim.9530",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "R"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph"
+   ],
+   "model_tags": [
+    "Bayesian / probabilistic model"
+   ],
+   "paradigm": "Statistical / classical ML"
+  },
+  {
+   "id": "bayestme",
+   "method": "BayesTME",
+   "categories": [
+    "Cell-type deconvolution",
+    "Spatially variable gene identification"
+   ],
+   "subtype": "Cell-type-specific SVG",
+   "task": "Reference-free deconvolution + spatial transcriptional programs",
+   "input": "ST count matrix + spatial coords",
+   "language": "Python",
+   "core_method": "End-to-end Bayesian hierarchical generative model for reference-free deconvolution and cell-type-specific spatial expression programs",
+   "year": 2023,
+   "first_author": "Zhang et al.",
+   "title": "BayesTME: An end-to-end method for multiscale spatial transcriptional profiling of the tissue microenvironment",
+   "journal": "Cell Systems",
+   "doi": "10.1016/j.cels.2023.06.003",
+   "paper_url": "https://doi.org/10.1016/j.cels.2023.06.003",
+   "code_url": "https://github.com/tansey-lab/bayestme",
+   "code_source": "paper abstract",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph"
+   ],
+   "model_tags": [
+    "Bayesian / probabilistic model",
+    "VAE / autoencoder / generative"
+   ],
+   "paradigm": "Hybrid"
+  },
+  {
+   "id": "stereopy",
+   "method": "Stereopy",
+   "categories": [
+    "Multi-sample & multi-modal integration",
+    "Spatially variable gene identification",
+    "Cell communication & interpretable models"
+   ],
+   "subtype": "Overall SVG",
+   "task": "Multi-sample comparative/spatiotemporal analysis, gene pattern detection, 3D cell-gene interaction networks",
+   "input": "ST count matrices + spatial coords (multiple slices)",
+   "language": "Python",
+   "core_method": "Multi-sample framework with integrative transformer for multimodal data plus in-house algorithms for spatiotemporal gene patterns and niche-based cell-gene interaction networks",
+   "year": 2025,
+   "first_author": "Fang et al.",
+   "title": "Stereopy: modeling comparative and spatiotemporal cellular heterogeneity via multi-sample spatial transcriptomics",
+   "journal": "Nature Communications",
+   "doi": "10.1038/s41467-025-58079-9",
+   "paper_url": "https://doi.org/10.1038/s41467-025-58079-9",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph",
+    "Multiple slices / samples"
+   ],
+   "model_tags": [
+    "Transformer / ViT"
+   ],
+   "paradigm": "Deep learning"
+  },
+  {
+   "id": "scgco",
+   "method": "scGCO",
+   "categories": [
+    "Spatially variable gene identification"
+   ],
+   "subtype": "Overall SVG",
+   "task": "Tissue-wide SVG detection",
+   "input": "ST count matrix + spatial coords",
+   "language": "Python",
+   "core_method": "Hidden Markov random field (HMRF) optimized with graph cuts to segment gene spatial patterns",
+   "year": 2022,
+   "first_author": "Zhang et al.",
+   "title": "Identification of spatially variable genes with graph cuts",
+   "journal": "Nature Communications",
+   "doi": "10.1038/s41467-022-33182-3",
+   "paper_url": "https://doi.org/10.1038/s41467-022-33182-3",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph"
+   ],
+   "model_tags": [
+    "Bayesian / probabilistic model"
+   ],
+   "paradigm": "Statistical / classical ML"
+  },
+  {
+   "id": "smash",
+   "method": "SMASH",
+   "categories": [
+    "Spatially variable gene identification"
+   ],
+   "subtype": "Overall SVG",
+   "task": "Tissue-wide SVG detection",
+   "input": "ST count matrix + spatial coords",
+   "language": "Python",
+   "core_method": "Scalable non-parametric hypothesis test for spatial covariance of gene expression",
+   "year": 2023,
+   "first_author": "Seal et al.",
+   "title": "SMASH: Scalable Method for Analyzing Spatial Heterogeneity of genes in spatial transcriptomics data",
+   "journal": "PLOS Genetics",
+   "doi": "10.1371/journal.pgen.1010983",
+   "paper_url": "https://doi.org/10.1371/journal.pgen.1010983",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph"
+   ],
+   "model_tags": [
+    "Spatial autocorrelation / kernel test"
+   ],
+   "paradigm": "Statistical / classical ML"
+  },
+  {
+   "id": "spatialde2",
+   "method": "SpatialDE2",
+   "categories": [
+    "Spatially variable gene identification"
+   ],
+   "subtype": "Overall SVG",
+   "task": "Tissue zone mapping + SVG detection",
+   "input": "ST count matrix + spatial coords",
+   "language": "Python",
+   "core_method": "Bayesian variance component model with Poisson count noise, unifying tissue zone mapping and SVG detection",
+   "year": 2021,
+   "first_author": "Kats et al.",
+   "title": "SpatialDE2: Fast and localized variance component analysis of spatial transcriptomics",
+   "journal": "bioRxiv",
+   "doi": "10.1101/2021.10.27.466045",
+   "paper_url": "https://doi.org/10.1101/2021.10.27.466045",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph"
+   ],
+   "model_tags": [
+    "Bayesian / probabilistic model"
+   ],
+   "paradigm": "Statistical / classical ML"
+  },
+  {
+   "id": "stkeep",
+   "method": "stKeep",
+   "categories": [
+    "Gene regulatory networks",
+    "Cell communication & interpretable models"
+   ],
+   "subtype": "",
+   "task": "Cell-state-specific gene-gene relations + cell-level CCC inference",
+   "input": "ST count matrix + spatial coords + H&E image",
+   "language": "R / Python",
+   "core_method": "Heterogeneous graph (GNN) learning over cells, genes and histological regions",
+   "year": 2024,
+   "first_author": "Zuo et al.",
+   "title": "Dissecting tumor microenvironment from spatially resolved transcriptomics data by heterogeneous graph learning",
+   "journal": "Nature Communications",
+   "doi": "10.1038/s41467-024-49171-7",
+   "paper_url": "https://doi.org/10.1038/s41467-024-49171-7",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "R",
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph",
+    "H&E image"
+   ],
+   "model_tags": [
+    "Graph neural network"
+   ],
+   "paradigm": "Deep learning"
+  },
+  {
+   "id": "hdwgcna",
+   "method": "hdWGCNA",
+   "categories": [
+    "Gene regulatory networks"
+   ],
+   "subtype": "",
+   "task": "Co-expression network and gene module identification",
+   "input": "ST count matrix",
+   "language": "R",
+   "core_method": "Weighted gene co-expression network analysis (WGCNA) for high-dimensional single-cell and spatial data",
+   "year": 2023,
+   "first_author": "Morabito et al.",
+   "title": "hdWGCNA identifies co-expression networks in high-dimensional transcriptomics data",
+   "journal": "Cell Reports Methods",
+   "doi": "10.1016/j.crmeth.2023.100498",
+   "paper_url": "https://doi.org/10.1016/j.crmeth.2023.100498",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "R"
+   ],
+   "input_tags": [
+    "ST expression"
+   ],
+   "model_tags": [
+    "Graph neural network"
+   ],
+   "paradigm": "Deep learning"
+  },
+  {
+   "id": "spatialprompt",
+   "method": "SpatialPrompt",
+   "categories": [
+    "Cell-type deconvolution"
+   ],
+   "subtype": "",
+   "task": "Deconvolution + domain detection",
+   "input": "ST count matrix + scRNA-seq reference + spatial coords",
+   "language": "Python",
+   "core_method": "Non-negative ridge regression + graph neural network (GNN) capturing local microenvironment",
+   "year": 2024,
+   "first_author": "Swain et al.",
+   "title": "SpatialPrompt: spatially aware scalable and accurate tool for spot deconvolution and domain identification in spatial transcriptomics",
+   "journal": "Communications Biology",
+   "doi": "10.1038/s42003-024-06349-5",
+   "paper_url": "https://doi.org/10.1038/s42003-024-06349-5",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph",
+    "scRNA-seq reference"
+   ],
+   "model_tags": [
+    "Regression / GLM / mixed model",
+    "Graph neural network"
+   ],
+   "paradigm": "Hybrid"
+  },
+  {
+   "id": "bulk2space",
+   "method": "Bulk2Space",
+   "categories": [
+    "Cell-type deconvolution"
+   ],
+   "subtype": "",
+   "task": "Spatial deconvolution of bulk RNA-seq at single-cell resolution",
+   "input": "Bulk RNA-seq + scRNA-seq reference + ST reference",
+   "language": "Python",
+   "core_method": "Deep learning generative framework deconvolving bulk data into single cells then mapping them to spatial references",
+   "year": 2022,
+   "first_author": "Liao et al.",
+   "title": "De novo analysis of bulk RNA-seq data at spatially resolved single-cell resolution",
+   "journal": "Nature Communications",
+   "doi": "10.1038/s41467-022-34271-z",
+   "paper_url": "https://doi.org/10.1038/s41467-022-34271-z",
+   "code_url": "https://github.com/ZJUFanLab/bulk2space",
+   "code_source": "paper abstract",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "scRNA-seq reference"
+   ],
+   "model_tags": [
+    "VAE / autoencoder / generative"
+   ],
+   "paradigm": "Deep learning"
+  },
+  {
+   "id": "cytospace",
+   "method": "CytoSPACE",
+   "categories": [
+    "Cell-type deconvolution"
+   ],
+   "subtype": "",
+   "task": "Single-cell-to-spot assignment",
+   "input": "ST count matrix + scRNA-seq reference",
+   "language": "R / Python",
+   "core_method": "Correlation-based cost minimization solved by shortest augmenting path (linear assignment) optimization",
+   "year": 2023,
+   "first_author": "Vahid et al.",
+   "title": "High-resolution alignment of single-cell and spatial transcriptomes with CytoSPACE",
+   "journal": "Nature Biotechnology",
+   "doi": "10.1038/s41587-023-01697-9",
+   "paper_url": "https://doi.org/10.1038/s41587-023-01697-9",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "R",
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "scRNA-seq reference"
+   ],
+   "model_tags": [
+    "Optimization-based mapping"
+   ],
+   "paradigm": "Statistical / classical ML"
+  },
+  {
+   "id": "spatopic",
+   "method": "SpaTopic",
+   "categories": [
+    "Cell-type deconvolution"
+   ],
+   "subtype": "",
+   "task": "Deconvolution + domain detection",
+   "input": "ST count matrix + scRNA-seq reference + spatial coords",
+   "language": "R",
+   "core_method": "Probabilistic topic modeling harmonizing spot clustering and cell-type deconvolution",
+   "year": 2024,
+   "first_author": "Zhang et al.",
+   "title": "SpaTopic: A statistical learning framework for exploring tumor spatial architecture from spatially resolved transcriptomic data",
+   "journal": "Science Advances",
+   "doi": "10.1126/sciadv.adp4942",
+   "paper_url": "https://doi.org/10.1126/sciadv.adp4942",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "R"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph",
+    "scRNA-seq reference"
+   ],
+   "model_tags": [
+    "Bayesian / probabilistic model"
+   ],
+   "paradigm": "Statistical / classical ML"
+  },
+  {
+   "id": "sd2",
+   "method": "SD2",
+   "categories": [
+    "Cell-type deconvolution"
+   ],
+   "subtype": "",
+   "task": "Deconvolution",
+   "input": "ST count matrix + scRNA-seq reference + spatial coords",
+   "language": "R / Python",
+   "core_method": "Dropout-based gene selection (Michaelis-Menten fit) + autoencoder on real/pseudo spots + graph convolutional network",
+   "year": 2022,
+   "first_author": "Li et al.",
+   "title": "SD2: spatially resolved transcriptomics deconvolution through integration of dropout and spatial information",
+   "journal": "Bioinformatics",
+   "doi": "10.1093/bioinformatics/btac605",
+   "paper_url": "https://doi.org/10.1093/bioinformatics/btac605",
+   "code_url": "https://github.com/leihouyeung/SD2",
+   "code_source": "paper abstract",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "R",
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph",
+    "scRNA-seq reference"
+   ],
+   "model_tags": [
+    "Graph neural network",
+    "VAE / autoencoder / generative"
+   ],
+   "paradigm": "Deep learning"
+  },
+  {
+   "id": "stereoscope",
+   "method": "stereoscope",
+   "categories": [
+    "Cell-type deconvolution"
+   ],
+   "subtype": "",
+   "task": "Deconvolution",
+   "input": "ST count matrix + scRNA-seq reference",
+   "language": "Python",
+   "core_method": "Probabilistic model-based deconvolution using scRNA-seq-derived cell-type expression profiles",
+   "year": 2020,
+   "first_author": "Andersson et al.",
+   "title": "Single-cell and spatial transcriptomics enables probabilistic inference of cell type topography",
+   "journal": "Communications Biology",
+   "doi": "10.1038/s42003-020-01247-y",
+   "paper_url": "https://doi.org/10.1038/s42003-020-01247-y",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "scRNA-seq reference"
+   ],
+   "model_tags": [
+    "Bayesian / probabilistic model"
+   ],
+   "paradigm": "Statistical / classical ML"
+  },
+  {
+   "id": "smart",
+   "method": "SMART",
+   "categories": [
+    "Cell-type deconvolution"
+   ],
+   "subtype": "",
+   "task": "Marker-assisted deconvolution + cell-type-specific DE",
+   "input": "ST count matrix + marker gene list",
+   "language": "R",
+   "core_method": "Marker-gene-assisted topic model jointly inferring cell-type expression profiles and spot composition, with covariate model",
+   "year": 2024,
+   "first_author": "Yang et al.",
+   "title": "SMART: spatial transcriptomics deconvolution using marker-gene-assisted topic model",
+   "journal": "Genome Biology",
+   "doi": "10.1186/s13059-024-03441-1",
+   "paper_url": "https://doi.org/10.1186/s13059-024-03441-1",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "R"
+   ],
+   "input_tags": [
+    "ST expression"
+   ],
+   "model_tags": [
+    "Bayesian / probabilistic model"
+   ],
+   "paradigm": "Statistical / classical ML"
+  },
+  {
+   "id": "mast-decon",
+   "method": "MAST-Decon",
+   "categories": [
+    "Cell-type deconvolution"
+   ],
+   "subtype": "",
+   "task": "Smooth deconvolution",
+   "input": "ST count matrix + scRNA-seq reference + spatial coords + H&E image",
+   "language": "Other",
+   "core_method": "Weighted likelihood approach with multiscale kernel functions over spatial neighborhood and H&E image features",
+   "year": 2024,
+   "first_author": "Luo et al.",
+   "title": "MAST-Decon: Smooth Cell-type Deconvolution Method for Spatial Transcriptomics Data",
+   "journal": "bioRxiv",
+   "doi": "10.1101/2024.05.10.593595",
+   "paper_url": "https://doi.org/10.1101/2024.05.10.593595",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Other"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph",
+    "H&E image",
+    "scRNA-seq reference"
+   ],
+   "model_tags": [
+    "Bayesian / probabilistic model"
+   ],
+   "paradigm": "Statistical / classical ML"
+  },
+  {
+   "id": "celldart",
+   "method": "CellDART",
+   "categories": [
+    "Cell-type deconvolution"
+   ],
+   "subtype": "",
+   "task": "Deconvolution",
+   "input": "ST count matrix + scRNA-seq reference",
+   "language": "Python",
+   "core_method": "Adversarial domain adaptation neural network trained on pseudospots",
+   "year": 2022,
+   "first_author": "Bae et al.",
+   "title": "CellDART: cell type inference by domain adaptation of single-cell and spatial transcriptomic data",
+   "journal": "Nucleic Acids Research",
+   "doi": "10.1093/nar/gkac084",
+   "paper_url": "https://doi.org/10.1093/nar/gkac084",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "scRNA-seq reference"
+   ],
+   "model_tags": [
+    "VAE / autoencoder / generative"
+   ],
+   "paradigm": "Deep learning"
+  },
+  {
+   "id": "spatialcogcn",
+   "method": "SpatialcoGCN",
+   "categories": [
+    "Cell-type deconvolution"
+   ],
+   "subtype": "",
+   "task": "Deconvolution + spatially aware ST simulation",
+   "input": "ST count matrix + scRNA-seq reference + spatial coords",
+   "language": "Python",
+   "core_method": "Self-supervised co-graph convolutional network (GCN) deep graph co-embedding",
+   "year": 2024,
+   "first_author": "Yin et al.",
+   "title": "SpatialcoGCN: deconvolution and spatial information–aware simulation of spatial transcriptomics data via deep graph co-embedding",
+   "journal": "Briefings in Bioinformatics",
+   "doi": "10.1093/bib/bbae130",
+   "paper_url": "https://doi.org/10.1093/bib/bbae130",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph",
+    "scRNA-seq reference"
+   ],
+   "model_tags": [
+    "Graph neural network"
+   ],
+   "paradigm": "Deep learning"
+  },
+  {
+   "id": "adroit",
+   "method": "AdRoit",
+   "categories": [
+    "Cell-type deconvolution"
+   ],
+   "subtype": "",
+   "task": "Deconvolution (spatial and bulk)",
+   "input": "ST count matrix + scRNA-seq reference",
+   "language": "R / Python",
+   "core_method": "Reference-based deconvolution with adaptive learning to correct platform differences between single-cell and bulk/spatial data",
+   "year": 2021,
+   "first_author": "Yang et al.",
+   "title": "AdRoit is an accurate and robust method to infer complex transcriptome composition",
+   "journal": "Communications Biology",
+   "doi": "10.1038/s42003-021-02739-1",
+   "paper_url": "https://doi.org/10.1038/s42003-021-02739-1",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "R",
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "scRNA-seq reference"
+   ],
+   "model_tags": [],
+   "paradigm": "Other"
+  },
+  {
+   "id": "spade",
+   "method": "SPADE",
+   "categories": [
+    "Cell-type deconvolution"
+   ],
+   "subtype": "",
+   "task": "Domain-specific deconvolution",
+   "input": "ST count matrix + scRNA-seq reference + spatial coords + H&E image",
+   "language": "Other",
+   "core_method": "Spatially informed deconvolution integrating scRNA-seq reference, spatial patterns and histology",
+   "year": 2024,
+   "first_author": "Lu et al.",
+   "title": "SPADE: spatial deconvolution for domain specific cell-type estimation",
+   "journal": "Communications Biology",
+   "doi": "10.1038/s42003-024-06172-y",
+   "paper_url": "https://doi.org/10.1038/s42003-024-06172-y",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Other"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph",
+    "H&E image",
+    "scRNA-seq reference"
+   ],
+   "model_tags": [],
+   "paradigm": "Other"
+  },
+  {
+   "id": "fast",
+   "method": "FAST",
+   "categories": [
+    "Cell-type deconvolution"
+   ],
+   "subtype": "",
+   "task": "Reference-free deconvolution",
+   "input": "ST count matrix + spatial coords + H&E image",
+   "language": "R",
+   "core_method": "Regularized non-negative matrix factorization (NMF) incorporating spatial and histology information",
+   "year": 2025,
+   "first_author": "Zhang et al.",
+   "title": "Flexible analysis of spatial transcriptomics data (FAST): a deconvolution approach",
+   "journal": "BMC Bioinformatics",
+   "doi": "10.1186/s12859-025-06054-y",
+   "paper_url": "https://doi.org/10.1186/s12859-025-06054-y",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "R"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph",
+    "H&E image"
+   ],
+   "model_tags": [
+    "Matrix factorization / factor analysis"
+   ],
+   "paradigm": "Statistical / classical ML"
+  },
+  {
+   "id": "flashdeconv",
+   "method": "FlashDeconv",
+   "categories": [
+    "Cell-type deconvolution"
+   ],
+   "subtype": "",
+   "task": "Scalable deconvolution for atlas-scale / Visium HD data",
+   "input": "ST count matrix + scRNA-seq reference + spatial coords",
+   "language": "Python",
+   "core_method": "Leverage-score importance sampling + sparse spatial regularization with fast linear algebra (regression-based deconvolution)",
+   "year": 2025,
+   "first_author": "Yang et al.",
+   "title": "FlashDeconv reveals resolution horizons in atlas-scale spatial transcriptomics",
+   "journal": "bioRxiv",
+   "doi": "10.64898/2025.12.22.696108",
+   "paper_url": "https://doi.org/10.64898/2025.12.22.696108",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph",
+    "scRNA-seq reference"
+   ],
+   "model_tags": [
+    "Regression / GLM / mixed model"
+   ],
+   "paradigm": "Statistical / classical ML"
+  },
+  {
+   "id": "strish",
+   "method": "STRISH",
+   "categories": [
+    "Cell communication & interpretable models"
+   ],
+   "subtype": "",
+   "task": "Local co-expression-based cell-cell interaction detection",
+   "input": "Multiplexed RNA ISH / protein imaging data",
+   "language": "Python",
+   "core_method": "Whole-section window scanning of local marker co-expression to estimate probability of ligand-receptor interaction",
+   "year": 2022,
+   "first_author": "Tran et al.",
+   "title": "A robust experimental and computational analysis framework at multiple resolutions, modalities and coverages",
+   "journal": "Frontiers in Immunology",
+   "doi": "10.3389/fimmu.2022.911873",
+   "paper_url": "https://doi.org/10.3389/fimmu.2022.911873",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "Multi-omics (ATAC / protein)"
+   ],
+   "model_tags": [],
+   "paradigm": "Other"
+  },
+  {
+   "id": "monkeybread",
+   "method": "Monkeybread",
+   "categories": [
+    "Cell communication & interpretable models"
+   ],
+   "subtype": "",
+   "task": "Cellular niche and intercellular communication analysis",
+   "input": "Single-cell-resolution ST count matrix + spatial coords + cell types",
+   "language": "Python",
+   "core_method": "Toolkit for niche identification, cell-type colocalization and intercellular communication statistics",
+   "year": 2023,
+   "first_author": "Bernstein et al.",
+   "title": "Monkeybread: A Python toolkit for the analysis of cellular niches in single-cell resolution spatial transcriptomics data",
+   "journal": "bioRxiv",
+   "doi": "10.1101/2023.09.14.557736",
+   "paper_url": "https://doi.org/10.1101/2023.09.14.557736",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph"
+   ],
+   "model_tags": [],
+   "paradigm": "Other"
+  },
+  {
+   "id": "stopover",
+   "method": "STopover",
+   "categories": [
+    "Cell communication & interpretable models"
+   ],
+   "subtype": "",
+   "task": "Spatial colocalization and cell-cell interaction mapping",
+   "input": "ST count matrix + spatial coords",
+   "language": "Python",
+   "core_method": "Topological analysis extracting connected components across thresholds with local/global Jaccard overlap between features",
+   "year": 2025,
+   "first_author": "Bae et al.",
+   "title": "STopover captures spatial colocalization and interaction in the tumor microenvironment using topological analysis in spatial transcriptomics data",
+   "journal": "Genome Medicine",
+   "doi": "10.1186/s13073-025-01457-1",
+   "paper_url": "https://doi.org/10.1186/s13073-025-01457-1",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph"
+   ],
+   "model_tags": [
+    "Classical ML (k-NN, forests, SOM, ensembles)"
+   ],
+   "paradigm": "Statistical / classical ML"
+  },
+  {
+   "id": "cellphonedb-v5",
+   "method": "CellPhoneDB v5",
+   "categories": [
+    "Cell communication & interpretable models"
+   ],
+   "subtype": "",
+   "task": "Ligand-receptor-mediated CCC inference",
+   "input": "scRNA-seq / ST count matrix + cell annotations",
+   "language": "Python",
+   "core_method": "Curated multimeric ligand-receptor database + statistical permutation and DE-based methods, with spatial/TF-informed prioritization",
+   "year": 2023,
+   "first_author": "Troulé et al.",
+   "title": "CellPhoneDB v5: inferring cell-cell communication from single-cell multiomics data",
+   "journal": "arXiv",
+   "doi": "10.48550/arxiv.2311.04567",
+   "paper_url": "https://doi.org/10.48550/arxiv.2311.04567",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "scRNA-seq reference"
+   ],
+   "model_tags": [
+    "Spatial autocorrelation / kernel test"
+   ],
+   "paradigm": "Statistical / classical ML"
+  },
+  {
+   "id": "sparc",
+   "method": "spARC",
+   "categories": [
+    "Spatial gene expression prediction",
+    "Cell communication & interpretable models"
+   ],
+   "subtype": "From ST alone (imputation / super-resolution)",
+   "task": "Denoising + in silico signaling interaction simulation",
+   "input": "ST count matrix + spatial coords",
+   "language": "Python",
+   "core_method": "Data diffusion-based graph filtering over combined spatial and expression affinity graphs",
+   "year": 2022,
+   "first_author": "Kuchroo et al.",
+   "title": "spARC recovers human glioma spatial signaling networks with graph filtering",
+   "journal": "bioRxiv",
+   "doi": "10.1101/2022.08.24.505139",
+   "paper_url": "https://doi.org/10.1101/2022.08.24.505139",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph"
+   ],
+   "model_tags": [
+    "Diffusion / flow matching"
+   ],
+   "paradigm": "Deep learning"
+  },
+  {
+   "id": "spaccc",
+   "method": "SpaCCC",
+   "categories": [
+    "Cell communication & interpretable models"
+   ],
+   "subtype": "",
+   "task": "Ligand-receptor-mediated CCC inference (2D/3D)",
+   "input": "ST count matrix + spatial coords",
+   "language": "Other",
+   "core_method": "Large language model (LLM)-based embedding for cell-cell communication inference",
+   "year": 2024,
+   "first_author": "Ji et al.",
+   "title": "SpaCCC: Large Language Model-Based Cell-Cell Communication Inference for Spatially Resolved Transcriptomic Data",
+   "journal": "Big Data Mining and Analytics",
+   "doi": "10.26599/bdma.2024.9020056",
+   "paper_url": "https://doi.org/10.26599/bdma.2024.9020056",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Other"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph"
+   ],
+   "model_tags": [
+    "Foundation model / LLM"
+   ],
+   "paradigm": "Deep learning"
+  },
+  {
+   "id": "ccpls",
+   "method": "CCPLS",
+   "categories": [
+    "Cell communication & interpretable models"
+   ],
+   "subtype": "",
+   "task": "Neighboring cell-type effects on HVG expression variability",
+   "input": "Single-cell ST count matrix + spatial coords + cell types",
+   "language": "R",
+   "core_method": "Multiple-input multiple-output partial least squares regression of HVG expression on neighboring cell-type composition",
+   "year": 2022,
+   "first_author": "Tsuchiya et al.",
+   "title": "CCPLS reveals cell-type-specific spatial dependence of transcriptomes in single cells",
+   "journal": "Bioinformatics",
+   "doi": "10.1093/bioinformatics/btac599",
+   "paper_url": "https://doi.org/10.1093/bioinformatics/btac599",
+   "code_url": "https://github.com/bioinfo-tsukuba/CCPLS",
+   "code_source": "paper abstract",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "R"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph"
+   ],
+   "model_tags": [
+    "Regression / GLM / mixed model"
+   ],
+   "paradigm": "Statistical / classical ML"
+  },
+  {
+   "id": "renoir",
+   "method": "Renoir",
+   "categories": [
+    "Cell communication & interpretable models"
+   ],
+   "subtype": "",
+   "task": "Spatial ligand-target activity and communication niche mapping",
+   "input": "ST count matrix + scRNA-seq reference + spatial coords",
+   "language": "Python",
+   "core_method": "Ligand-target activity scoring across spatial locations informed by cell-type composition, with niche and pathway-level analysis",
+   "year": 2026,
+   "first_author": "Rao et al.",
+   "title": "Charting spatial ligand-target activity using Renoir",
+   "journal": "Nature Communications",
+   "doi": "10.1038/s41467-026-72388-7",
+   "paper_url": "https://doi.org/10.1038/s41467-026-72388-7",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph",
+    "scRNA-seq reference"
+   ],
+   "model_tags": [],
+   "paradigm": "Other"
+  },
+  {
+   "id": "liana",
+   "method": "LIANA+",
+   "categories": [
+    "Cell communication & interpretable models"
+   ],
+   "subtype": "",
+   "task": "Ligand-receptor-mediated CCC inference (single-cell and spatial, multi-condition)",
+   "input": "scRNA-seq / ST count matrix + spatial coords",
+   "language": "Python",
+   "core_method": "Unified framework of ligand-receptor scoring methods with knowledge base, multi-view and factor analysis components",
+   "year": 2024,
+   "first_author": "Dimitrov et al.",
+   "title": "LIANA+ provides an all-in-one framework for cell–cell communication inference",
+   "journal": "Nature Cell Biology",
+   "doi": "10.1038/s41556-024-01469-w",
+   "paper_url": "https://doi.org/10.1038/s41556-024-01469-w",
+   "code_url": "https://github.com/saezlab/liana-py",
+   "code_source": "paper abstract",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph",
+    "scRNA-seq reference"
+   ],
+   "model_tags": [
+    "Matrix factorization / factor analysis"
+   ],
+   "paradigm": "Statistical / classical ML"
+  },
+  {
+   "id": "spaceflow",
+   "method": "SpaceFlow",
+   "categories": [
+    "Trajectory inference"
+   ],
+   "subtype": "",
+   "task": "Spatiotemporal pseudotime (pSM) + domain segmentation",
+   "input": "ST count matrix + spatial coords",
+   "language": "Python",
+   "core_method": "Spatially regularized deep graph neural network (GNN) embedding + pseudo-Spatiotemporal Map",
+   "year": 2022,
+   "first_author": "Ren et al.",
+   "title": "Identifying multicellular spatiotemporal organization of cells with SpaceFlow",
+   "journal": "Nature Communications",
+   "doi": "10.1038/s41467-022-31739-w",
+   "paper_url": "https://doi.org/10.1038/s41467-022-31739-w",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph"
+   ],
+   "model_tags": [
+    "Graph neural network"
+   ],
+   "paradigm": "Deep learning"
+  },
+  {
+   "id": "isort",
+   "method": "iSORT",
+   "categories": [
+    "Trajectory inference",
+    "Spatial gene expression prediction"
+   ],
+   "subtype": "From scRNA-seq reference (imputation)",
+   "task": "Spatial reconstruction of single cells + SpaRNA velocity",
+   "input": "scRNA-seq + ST count matrices",
+   "language": "Python",
+   "core_method": "Transfer learning neural network mapping gene expression to spatial locations using ST references",
+   "year": 2025,
+   "first_author": "Tan et al.",
+   "title": "Transfer learning of multicellular organization via single-cell and spatial transcriptomics",
+   "journal": "PLOS Computational Biology",
+   "doi": "10.1371/journal.pcbi.1012991",
+   "paper_url": "https://doi.org/10.1371/journal.pcbi.1012991",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "scRNA-seq reference"
+   ],
+   "model_tags": [
+    "Classical ML (k-NN, forests, SOM, ensembles)",
+    "Other deep learning"
+   ],
+   "paradigm": "Hybrid"
+  },
+  {
+   "id": "proust",
+   "method": "Proust",
+   "categories": [
+    "Multi-sample & multi-modal integration"
+   ],
+   "subtype": "",
+   "task": "Multi-modal spatial domain detection",
+   "input": "ST + multi-omics + spatial coords (H&E / IF images)",
+   "language": "Python",
+   "core_method": "Graph-based contrastive self-supervised learning integrating RNA, protein and image modalities",
+   "year": 2025,
+   "first_author": "Yao et al.",
+   "title": "Spatial domain detection using contrastive self-supervised learning for spatial multi-omics technologies",
+   "journal": "Genome Research",
+   "doi": "10.1101/gr.279380.124",
+   "paper_url": "https://doi.org/10.1101/gr.279380.124",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph",
+    "H&E image",
+    "Multi-omics (ATAC / protein)"
+   ],
+   "model_tags": [
+    "Contrastive learning"
+   ],
+   "paradigm": "Deep learning"
+  },
+  {
+   "id": "iris",
+   "method": "IRIS",
+   "categories": [
+    "Multi-sample & multi-modal integration"
+   ],
+   "subtype": "",
+   "task": "Reference-informed multi-slice spatial domain detection",
+   "input": "ST count matrices + scRNA-seq reference + spatial coords (multiple slices)",
+   "language": "R",
+   "core_method": "Reference-informed spatial domain model integrating multiple slices with within- and across-slice correlations",
+   "year": 2024,
+   "first_author": "Ma et al.",
+   "title": "Accurate and efficient integrative reference-informed spatial domain detection for spatial transcriptomics",
+   "journal": "Nature Methods",
+   "doi": "10.1038/s41592-024-02284-9",
+   "paper_url": "https://doi.org/10.1038/s41592-024-02284-9",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "R"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph",
+    "scRNA-seq reference",
+    "Multiple slices / samples"
+   ],
+   "model_tags": [],
+   "paradigm": "Other"
+  },
+  {
+   "id": "st-gears",
+   "method": "ST-GEARS",
+   "categories": [
+    "Spatial alignment"
+   ],
+   "subtype": "",
+   "task": "Cross-slice spatial alignment + 3D reconstruction with distortion correction",
+   "input": "ST count matrices + spatial coords (multiple slices)",
+   "language": "Python",
+   "core_method": "Anchor optimization with distributive constraints, rigid alignment and elastic field distortion correction with Gaussian denoising",
+   "year": 2024,
+   "first_author": "Xia et al.",
+   "title": "ST-GEARS: Advancing 3D downstream research through accurate spatial information recovery",
+   "journal": "Nature Communications",
+   "doi": "10.1038/s41467-024-51935-0",
+   "paper_url": "https://doi.org/10.1038/s41467-024-51935-0",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph",
+    "Multiple slices / samples"
+   ],
+   "model_tags": [
+    "Optimization-based mapping"
+   ],
+   "paradigm": "Statistical / classical ML"
+  },
+  {
+   "id": "sedr",
+   "method": "SEDR",
+   "categories": [
+    "Multi-sample & multi-modal integration"
+   ],
+   "subtype": "",
+   "task": "Spatial embedding + batch integration",
+   "input": "ST count matrix + spatial coords",
+   "language": "Python",
+   "core_method": "Deep autoencoder + variational graph autoencoder (VAE) spatial embedding",
+   "year": 2021,
+   "first_author": "Fu et al.",
+   "title": "Unsupervised Spatially Embedded Deep Representation of Spatial Transcriptomics",
+   "journal": "bioRxiv",
+   "doi": "10.1101/2021.06.15.448542",
+   "paper_url": "https://doi.org/10.1101/2021.06.15.448542",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph"
+   ],
+   "model_tags": [
+    "VAE / autoencoder / generative"
+   ],
+   "paradigm": "Deep learning"
+  },
+  {
+   "id": "spamask",
+   "method": "SpaMask",
+   "categories": [
+    "Multi-sample & multi-modal integration"
+   ],
+   "subtype": "",
+   "task": "Spatial domain detection + batch correction",
+   "input": "ST count matrices + spatial coords (multiple slices)",
+   "language": "Python",
+   "core_method": "Dual masking graph autoencoder with masked graph contrastive learning (GNN)",
+   "year": 2025,
+   "first_author": "Min et al.",
+   "title": "SpaMask: Dual masking graph autoencoder with contrastive learning for spatial transcriptomics",
+   "journal": "PLOS Computational Biology",
+   "doi": "10.1371/journal.pcbi.1012881",
+   "paper_url": "https://doi.org/10.1371/journal.pcbi.1012881",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph",
+    "Multiple slices / samples"
+   ],
+   "model_tags": [
+    "Graph neural network",
+    "Contrastive learning",
+    "VAE / autoencoder / generative"
+   ],
+   "paradigm": "Deep learning"
+  },
+  {
+   "id": "smile",
+   "method": "SMILE",
+   "categories": [
+    "Multi-sample & multi-modal integration",
+    "Cell-type deconvolution"
+   ],
+   "subtype": "",
+   "task": "Multi-slice integration + domain detection + deconvolution",
+   "input": "ST count matrices + scRNA-seq reference + spatial coords (multiple slices)",
+   "language": "Python",
+   "core_method": "Graph contrastive autoencoder + multilayer perceptron with local constraints (deep learning)",
+   "year": 2025,
+   "first_author": "Chen et al.",
+   "title": "Multiscale Dissection of Spatial Heterogeneity by Integrating Multi‐Slice Spatial and Single‐Cell Transcriptomics",
+   "journal": "Advanced Science",
+   "doi": "10.1002/advs.202413124",
+   "paper_url": "https://doi.org/10.1002/advs.202413124",
+   "code_url": "",
+   "code_source": "",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph",
+    "scRNA-seq reference",
+    "Multiple slices / samples"
+   ],
+   "model_tags": [
+    "Contrastive learning",
+    "VAE / autoencoder / generative"
+   ],
+   "paradigm": "Deep learning"
+  },
+  {
+   "id": "stinr",
+   "method": "STINR",
+   "categories": [
+    "Spatial gene expression prediction",
+    "Cell-type deconvolution"
+   ],
+   "subtype": "From ST alone (imputation / super-resolution)",
+   "task": "Gene imputation + denoising + deconvolution",
+   "input": "ST count matrices + spatial coords (multiple slices)",
+   "language": "Python",
+   "core_method": "Implicit neural representation (INR) neural network continuously modelling expression over space and slices",
+   "year": 2025,
+   "first_author": "Luo et al.",
+   "title": "STINR: Deciphering Spatial Transcriptomics via Implicit Neural Representation",
+   "journal": "CVPR",
+   "doi": "10.1109/cvpr52734.2025.02415",
+   "paper_url": "https://doi.org/10.1109/cvpr52734.2025.02415",
+   "code_url": "https://github.com/YisiLuo/STINR",
+   "code_source": "paper abstract",
+   "table3_no": "",
+   "source": "added",
+   "added_on": "2026-11-19",
+   "languages": [
+    "Python"
+   ],
+   "input_tags": [
+    "ST expression",
+    "Spatial coordinates / graph",
+    "Multiple slices / samples"
+   ],
+   "model_tags": [
+    "Other deep learning"
+   ],
+   "paradigm": "Deep learning"
   }
  ]
 };
