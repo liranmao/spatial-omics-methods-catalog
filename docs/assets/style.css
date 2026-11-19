@@ -428,3 +428,10 @@ section[id], main[id], header[id] { scroll-margin-top: var(--nav-h); }
 .sec-sub a[href="#disclaimer"]:hover { text-decoration: underline; }
 .foot .disclaimer { max-width: 92ch; line-height: 1.55; }
 .foot .disclaimer b { color: var(--muted); font-weight: 600; }
+
+/* Phone nav: keep the full brand name next to a compact button */
+@media (max-width: 480px) {
+  .brand span { overflow: hidden; text-overflow: ellipsis; font-size: 13.5px; }
+  .topnav-cta .cta-more { display: none; }
+  .topnav-cta { flex-shrink: 0; }
+}

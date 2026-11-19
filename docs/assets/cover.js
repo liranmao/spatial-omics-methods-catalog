@@ -14,13 +14,37 @@
     if (el.getBoundingClientRect().top > innerHeight) { el.classList.add("rv"); io.observe(el); }
   });
 
-  if (!cover) return;
+  // Scroll-out fade: like the cover, each block eases up, shrinks a little and fades as it leaves under the nav.
+  // The long methods table (and its status line and note) is left alone.
+  const fades = [...document.querySelectorAll(
+    ".sec-head, .stages, .pipe-grid, .sec-links, .tl-chart, .tl-note, .filters, .closing .card, .foot-inner")];
+  const navH = () => document.getElementById("topnav")?.offsetHeight || 0;
+  const fadeOut = () => {
+    const line = navH(), vh = innerHeight;
+    for (const el of fades) {
+      const r = el.getBoundingClientRect();
+      const p = Math.min(Math.max((line - 40 - r.top) / (Math.min(r.height, vh * .6) || 1), 0), 1);
+      if (p <= 0) { if (el.dataset.fx) { el.style.opacity = el.style.translate = el.style.scale = el.style.transition = el.style.filter = ""; delete el.dataset.fx; } continue; }
+      el.dataset.fx = 1;
+      el.style.transition = "none";
+      el.style.opacity = Math.max(1 - p * 1.1, 0).toFixed(3);
+      el.style.translate = `0 ${(-p * 40).toFixed(1)}px`;
+      el.style.scale = (1 - p * .04).toFixed(4);
+      el.style.filter = p > .05 ? `blur(${(p * 4).toFixed(2)}px)` : "";
+    }
+  };
+
   let ticking = false;
   const update = () => {
-    const h = cover.offsetHeight || 1;
-    cover.style.setProperty("--p", Math.min(Math.max(scrollY / (h * .8), 0), 1).toFixed(3));
+    if (cover) {
+      const h = cover.offsetHeight || 1;
+      cover.style.setProperty("--p", Math.min(Math.max(scrollY / (h * .8), 0), 1).toFixed(3));
+    }
+    fadeOut();
     ticking = false;
   };
-  addEventListener("scroll", () => { if (!ticking) { ticking = true; requestAnimationFrame(update); } }, { passive: true });
+  const req = () => { if (!ticking) { ticking = true; requestAnimationFrame(update); } };
+  addEventListener("scroll", req, { passive: true });
+  addEventListener("resize", req);
   update();
 })();
