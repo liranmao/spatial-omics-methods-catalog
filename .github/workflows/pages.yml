@@ -43,6 +43,16 @@ jobs:
             # The living edition gets its own canonical URL, title and description for search and link previews.
             python3 devsrc/scripts/make_living_meta.py _site/dev/index.html
           fi
+          # Counts for the Paper / Living switch on both editions (the root is built from main, whose data can lag).
+          python3 - <<'PY'
+          import json, os
+          src = "_site/dev/data/methods.js" if os.path.exists("_site/dev/data/methods.js") else "_site/data/methods.js"
+          t = open(src, encoding="utf-8").read()
+          data = json.loads(t[t.index("{"):t.rstrip().rstrip(";").rindex("}") + 1])["methods"]
+          counts = {"review": sum(m["source"] == "review" for m in data), "living": len(data)}
+          json.dump(counts, open("_site/edition-counts.json", "w"))
+          print("edition counts:", counts)
+          PY
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site

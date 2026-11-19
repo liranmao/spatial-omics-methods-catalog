@@ -292,11 +292,15 @@
   document.querySelectorAll(".n-all").forEach(el => { el.textContent = ALL.length; });
   document.querySelectorAll(".n-added").forEach(el => { el.textContent = nAdded; });
   document.querySelectorAll(".n-added-wrap").forEach(el => { el.hidden = !nAdded; });
-  document.querySelectorAll(".edition a").forEach(a => {
-    if (a.dataset.ed === EDITION) a.setAttribute("aria-current", "page");
-    a.querySelector(".edn")?.remove();
-    a.insertAdjacentHTML("beforeend", ` <span class="edn">${a.dataset.ed === "review" ? nReview : ALL.length}</span>`);
-  });
+  const setEditionCounts = (review, living) => {
+    document.querySelectorAll(".edition a").forEach(a => {
+      if (a.dataset.ed === EDITION) a.setAttribute("aria-current", "page");
+      a.querySelector(".edn")?.remove();
+      a.insertAdjacentHTML("beforeend", ` <span class="edn">${a.dataset.ed === "review" ? review : living}</span>`);
+    });
+    document.querySelectorAll(".n-all").forEach(el => { el.textContent = living; });
+  };
+  setEditionCounts(nReview, ALL.length);
   $("updated").textContent = (window.CATALOG && window.CATALOG.updated) || "";
   if (CONFIG.repoUrl) {
     const issue = CONFIG.repoUrl.replace(/\/$/, "") + "/issues/new";
@@ -319,6 +323,12 @@
     const qs = p.toString();
     return (LOCAL ? location.pathname : BASE + (ed === "living" ? "dev/" : "")) + (qs ? `?${qs}` : "");
   };
+  // The paper edition is built from the main branch, whose data can lag behind dev. The Pages workflow writes the
+  // real counts of both editions (from dev) to edition-counts.json at the site root.
+  if (!LOCAL) fetch(BASE + "edition-counts.json", { cache: "no-cache" })
+    .then(r => r.ok ? r.json() : null)
+    .then(c => { if (c && c.review && c.living) setEditionCounts(c.review, c.living); })
+    .catch(() => { /* keep the counts from this page's own data */ });
   document.querySelectorAll("a[data-ed]").forEach(a => {
     a.addEventListener("click", e => {
       e.preventDefault();
