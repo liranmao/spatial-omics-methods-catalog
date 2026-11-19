@@ -1,0 +1,58 @@
+# Publishes both versions of the site to GitHub Pages:
+#   main -> https://liranmao.github.io/spatial-omics-methods-catalog/       (stable)
+#   dev  -> https://liranmao.github.io/spatial-omics-methods-catalog/dev/   (development preview)
+# Runs on a push to either branch and always rebuilds both, so one never overwrites the other.
+name: Deploy site
+
+on:
+  push:
+    branches: [main, dev]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out main (stable)
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          path: stable
+      - name: Check out dev (development)
+        uses: actions/checkout@v4
+        continue-on-error: true
+        with:
+          ref: dev
+          path: devsrc
+      - name: Assemble site
+        run: |
+          mkdir _site
+          cp -R stable/docs/. _site/
+          if [ -f devsrc/docs/index.html ]; then
+            mkdir _site/dev
+            cp -R devsrc/docs/. _site/dev/
+            # Keep the preview out of search results; the stable site stays canonical.
+            sed -i 's#<meta charset="utf-8">#<meta charset="utf-8">\n<meta name="robots" content="noindex">#' _site/dev/index.html
+          fi
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
