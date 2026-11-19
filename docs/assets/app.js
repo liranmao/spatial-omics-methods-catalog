@@ -9,7 +9,12 @@
     paperDoi: "",    // AOAS DOI once published
   };
 
-  const DATA = (window.CATALOG && window.CATALOG.methods) || [];
+  // Edition (set in <head> from the URL): the paper edition keeps only methods discussed in the review.
+  const ALL = (window.CATALOG && window.CATALOG.methods) || [];
+  const EDITION = document.documentElement.dataset.edition === "living" ? "living" : "review";
+  // Keep an explicit ?edition= (local previews) in the URL when filters change.
+  const EDITION_PARAM = new URLSearchParams(location.search).get("edition") || "";
+  const DATA = EDITION === "review" ? ALL.filter(m => m.source === "review") : ALL;
 
   // Input requirements (tags come from build_site.py). The first seven get matrix columns.
   const REQS = [
@@ -137,7 +142,7 @@
     const paper = m.paper_url ? `<a href="${esc(m.paper_url)}" target="_blank" rel="noopener">Paper<svg aria-hidden="true"><use href="#i-ext"/></svg></a>` : "";
     const code = m.code_url ? `<a href="${esc(m.code_url)}" target="_blank" rel="noopener">Code<svg aria-hidden="true"><use href="#i-ext"/></svg></a>` : "";
     let html = `<tr class="m-row${miss.length ? " dim" : ""}${open ? " open" : ""}" style="view-transition-name:m-${esc(m.id)}">
-      <td class="m"><button type="button" class="mname" aria-expanded="${open}" aria-controls="d-${esc(m.id)}" data-open="${esc(m.id)}">${hl(m.method)}<svg aria-hidden="true"><use href="#i-chev"/></svg></button>${refLine(m)}
+      <td class="m"><button type="button" class="mname" aria-expanded="${open}" aria-controls="d-${esc(m.id)}" data-open="${esc(m.id)}">${hl(m.method)}<svg aria-hidden="true"><use href="#i-chev"/></svg></button>${m.source === "added" ? `<span class="badge-new" title="Added after the review${m.added_on ? ` (${esc(m.added_on)})` : ""}">New</span>` : ""}${refLine(m)}
         ${miss.length ? `<span class="missing-note">Needs ${esc(miss.map(t => (LABEL[t] || t).replace(/^([A-Z])(?=[a-z])/, c => c.toLowerCase())).join(", "))}</span>` : ""}</td>
       <td class="task">${m.subtype ? `<span class="sub">${hl(m.subtype)}</span>` : ""}${hl(m.task)}</td>
       <td class="core"><span class="ct"><span class="pd p-${PCLS[m.paradigm] || "x"}" title="${esc(m.paradigm)}"></span>${hl(m.core_method)}</span></td>
@@ -153,6 +158,7 @@
         <div><dt>Input (as published)</dt><dd>${esc(m.input)}</dd></div>
         <div><dt>Model family</dt><dd>${esc(m.paradigm)}${m.model_tags.length ? `: ${esc(m.model_tags.join(", "))}` : ""}</dd></div>
         <div><dt>Listed under</dt><dd>${esc(m.categories.join("; "))} · ${esc(m.language)}</dd></div>
+        <div><dt>Source</dt><dd>${m.source === "review" ? "Discussed in the review" : `Added after the review${m.added_on ? ` on ${esc(m.added_on)}` : ""}`}</dd></div>
       </dl></td></tr>`;
     }
     return html;
@@ -227,6 +233,7 @@
   function writeUrl() {
     const p = new URLSearchParams();
     state.have.forEach(v => p.append("have", v));
+    if (EDITION_PARAM) p.set("edition", EDITION_PARAM);
     for (const k of ["task", "paradigm", "lang", "model", "q", "sort"]) if (state[k]) p.set(k, state[k]);
     const qs = p.toString();
     try { history.replaceState(null, "", (qs ? `?${qs}` : location.pathname) + location.hash); } catch (_) { /* file:// */ }
@@ -279,7 +286,17 @@
   });
 
   // ---- Static text and release config
-  $("n-total").textContent = DATA.length;
+  const nReview = ALL.filter(m => m.source === "review").length, nAdded = ALL.length - nReview;
+  document.querySelectorAll(".n-total").forEach(el => { el.textContent = DATA.length; });
+  document.querySelectorAll(".n-review").forEach(el => { el.textContent = nReview; });
+  document.querySelectorAll(".n-all").forEach(el => { el.textContent = ALL.length; });
+  document.querySelectorAll(".n-added").forEach(el => { el.textContent = nAdded; });
+  document.querySelectorAll(".n-added-wrap").forEach(el => { el.hidden = !nAdded; });
+  document.querySelectorAll(".edition a").forEach(a => {
+    if (a.dataset.ed === EDITION) a.setAttribute("aria-current", "page");
+    a.querySelector(".edn")?.remove();
+    a.insertAdjacentHTML("beforeend", ` <span class="edn">${a.dataset.ed === "review" ? nReview : ALL.length}</span>`);
+  });
   $("updated").textContent = (window.CATALOG && window.CATALOG.updated) || "";
   if (CONFIG.repoUrl) {
     const issue = CONFIG.repoUrl.replace(/\/$/, "") + "/issues/new";
@@ -290,6 +307,27 @@
   if (CONFIG.paperDoi) { const pl = $("paper-link"); if (pl) { pl.href = `https://doi.org/${CONFIG.paperDoi}`; pl.target = "_blank"; pl.rel = "noopener"; } }
   if (CONFIG.paperDoi) $("citation").insertAdjacentHTML("beforeend", ` <a href="https://doi.org/${esc(CONFIG.paperDoi)}">doi:${esc(CONFIG.paperDoi)}</a>`);
   $("suggest").addEventListener("click", e => { if ($("suggest").getAttribute("aria-disabled") === "true") e.preventDefault(); });
+
+  // Edition links (top bar, nav switch, About). On the live site the paper edition is the root and the living edition
+  // is /dev/; on a local preview the same page switches with ?edition=. Filters and scroll position carry over.
+  const LOCAL = location.protocol === "file:" || /^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname);
+  const BASE = location.pathname.replace(/index\.html$/, "").replace(/dev\/$/, "");
+  const editionUrl = ed => {
+    const p = new URLSearchParams(location.search);
+    p.delete("edition");
+    if (LOCAL) p.set("edition", ed);
+    const qs = p.toString();
+    return (LOCAL ? location.pathname : BASE + (ed === "living" ? "dev/" : "")) + (qs ? `?${qs}` : "");
+  };
+  document.querySelectorAll("a[data-ed]").forEach(a => {
+    a.addEventListener("click", e => {
+      e.preventDefault();
+      if (a.dataset.ed === EDITION) return;
+      try { sessionStorage.setItem("edition-scroll", String(scrollY)); } catch (_) { /* storage blocked */ }
+      location.href = editionUrl(a.dataset.ed);
+    });
+  });
+  document.title = EDITION === "living" ? "Spatial Omics Methods Catalog · Living edition" : "Spatial Omics Methods Catalog · Paper edition";
 
   fillSelects();
   readUrl();
@@ -315,6 +353,14 @@
       if (btn) { btn.closest("tr").scrollIntoView({ block: "center", behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" }); btn.focus({ preventScroll: true }); }
     },
   };
+  try {
+    const y = sessionStorage.getItem("edition-scroll");
+    if (y !== null) {
+      sessionStorage.removeItem("edition-scroll");
+      const go = () => scrollTo({ top: +y, behavior: "instant" });
+      go(); addEventListener("load", () => { go(); setTimeout(go, 60); }, { once: true });
+    }
+  } catch (_) { /* storage blocked */ }
   const h1 = document.querySelector(".grid thead tr:first-child");
   if (h1) document.documentElement.style.setProperty("--h1", h1.getBoundingClientRect().height + "px");
 })();

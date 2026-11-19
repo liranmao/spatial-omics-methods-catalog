@@ -4,6 +4,10 @@
   methods.csv  ->  docs/data/methods.js   (window.METHODS = [...]; works from file:// too)
                ->  docs/data/methods.csv  (download link on the site)
 
+The "source" column decides the edition: "review" rows form the paper edition (the methods
+discussed in the review, frozen); any other value, or blank, marks a method added later and
+shown only in the living catalog.
+
 Filter tags (input data, model family, paradigm) are derived here from the free-text
 columns, so you never edit them by hand. Re-run after every edit to methods.csv:
 
@@ -75,6 +79,8 @@ def build():
             "model_tags": model_tags,
             "paradigm": paradigm,
             "year": int(r["year"]) if r["year"] else None,
+            # "review" = discussed in the AOAS review (paper edition); anything else = added later.
+            "source": "review" if r.get("source", "").strip().lower() == "review" else "added",
         })
     untagged = [o["method"] for o in out if o["paradigm"] == "Other"]
     if untagged:
@@ -97,6 +103,7 @@ def build():
     from collections import Counter
     print(f"{len(out)} methods -> {data_dir/'methods.js'}")
     print("paradigm:", dict(Counter(o["paradigm"] for o in out)))
+    print("source:", dict(Counter(o["source"] for o in out)))
 
 
 if __name__ == "__main__":
