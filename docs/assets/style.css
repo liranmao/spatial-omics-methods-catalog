@@ -470,6 +470,8 @@ section[id], main[id], header[id] { scroll-margin-top: var(--nav-h); }
 /* Methods added after the review */
 .badge-new { display: inline-block; margin: 2px 0 2px 2px; padding: 1px 7px; border-radius: 999px; vertical-align: middle;
   font: 600 10.5px/1.5 var(--font); letter-spacing: .02em; text-transform: uppercase; color: var(--hyb); background: color-mix(in srgb, var(--hyb) 14%, transparent); }
+.badge-adapted { display: inline-block; margin: 2px 0 2px 4px; padding: 1px 7px; border-radius: 999px; vertical-align: middle;
+  font: 600 10.5px/1.5 var(--font); letter-spacing: .02em; text-transform: uppercase; color: var(--muted); background: var(--fill, rgba(127,127,127,.12)); }
 .tl-pt.tl-added { stroke: var(--text); stroke-width: 1.6; }
 
 /* Edition bar (top of every page) and cover label */

@@ -55,12 +55,53 @@ MODEL_RULES = [  # (tag, paradigm, regex on the "core_method" column)
 ]
 
 
+CATEGORIES = {  # allowed category -> allowed subtypes (living edition)
+    "Spatially variable gene identification": {"Overall SVG", "Cell-type-specific SVG", "Domain-marker SVG", "Domain-marker / Differential Expression"},
+    "Cell-type deconvolution": set(),
+    "Spatial gene expression prediction": {"From histology", "From scRNA-seq reference (imputation)", "From ST alone (imputation / super-resolution)"},
+    "Spatial domain detection & integration": {"Single-sample domain detection", "Multi-sample integration", "Multi-modal integration"},
+    "Spatial niche identification": set(),
+    "Spatial alignment": set(),
+    "Cell communication & interpretable models": set(),
+    "Gene regulatory networks": set(),
+    "Trajectory inference": set(),
+    "Foundation models": set(),
+    "Uncertainty quantification": set(),
+    "Cell segmentation": {"Image-based", "Transcript-based", "Joint"},
+    "CNV inference": set(),
+    "Cell-type annotation": {"Reference-based", "Reference-free", "From histology"},
+    "Spatial statistics & co-localization": set(),
+    "Subcellular RNA localization": set(),
+    "Simulation": set(),
+    "AI agents & analysis assistants": set(),
+    "Preprocessing & quality control": {"Quality control", "Normalization", "Denoising & batch correction", "Image processing & registration", "Data formats & infrastructure"},
+}
+ALL_SUBTYPES = set().union(*CATEGORIES.values())
+
+
+def check(rows):
+    """Fail the build on unknown categories, subtypes or spatial_design values (typos would create stray filters)."""
+    bad = []
+    for r in rows:
+        for c in r["categories"].split(";"):
+            if c.strip() not in CATEGORIES:
+                bad.append(f'{r["id"]}: unknown category "{c.strip()}"')
+        for st in filter(None, (x.strip() for x in r["subtype"].split(";"))):
+            if st not in ALL_SUBTYPES:
+                bad.append(f'{r["id"]}: unknown subtype "{st}"')
+        if r.get("spatial_design", "") not in ("", "spatial-specific", "adapted"):
+            bad.append(f'{r["id"]}: bad spatial_design "{r["spatial_design"]}"')
+    if bad:
+        raise SystemExit("methods.csv check failed:\n  " + "\n  ".join(bad))
+
+
 def tags(text, rules):
     return [r[0] for r in rules if re.search(r[-1], text, re.I)]
 
 
 def build():
     rows = list(csv.DictReader(open(ROOT / "methods.csv", encoding="utf-8")))
+    check(rows)
     paradigm_of = {r[0]: r[1] for r in MODEL_RULES}
     out = []
     for r in rows:

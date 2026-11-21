@@ -13,7 +13,17 @@
     "Cell-type deconvolution": ["deconv", "Estimate the mix of cell types inside each spot."],
     "Spatial gene expression prediction": ["predict", "Predict expression from histology, or impute unmeasured genes."],
     "Spatial alignment": ["align", "Register serial or cross-platform slices into one frame."],
+    "Spatial domain detection & integration": ["integrate", "Find tissue domains, and combine samples and modalities into one representation."],
     "Multi-sample & multi-modal integration": ["integrate", "Combine samples and modalities into a shared representation."],
+    "Spatial niche identification": ["niche", "Group cells by the make-up of their neighbourhoods."],
+    "Cell segmentation": ["seg", "Draw cell boundaries and assign transcripts to cells."],
+    "CNV inference": ["cnv", "Infer copy-number changes and tumour clones across the tissue."],
+    "Preprocessing & quality control": ["qc", "Filter, normalise and clean data before analysis."],
+    "Cell-type annotation": ["annot", "Label each cell with its type, from a reference, markers or histology."],
+    "Spatial statistics & co-localization": ["colo", "Test which cell types sit together more often than chance."],
+    "Subcellular RNA localization": ["subcell", "Map where transcripts sit inside cells."],
+    "Simulation": ["sim", "Generate realistic synthetic tissue for benchmarking."],
+    "AI agents & analysis assistants": ["agent", "Let a language-model agent plan and run spatial analyses."],
     "Foundation models": ["fm", "Pretrain on large spatial atlases, then reuse across tasks."],
     "Uncertainty quantification": ["uq", "Attach calibrated uncertainty to predictions and interactions."],
     "Cell communication & interpretable models": ["network", "Model cell–cell signalling and niche effects with readable models."],
@@ -274,6 +284,149 @@
       ctx.fillStyle = "rgba(255,255,255,.4)"; ctx.font = "500 11px -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif"; ctx.textAlign = "right"; ctx.fillText("pseudotime", x1, ay - 8); ctx.textAlign = "left";
       label("cells move from early to late states");
     },
+    seg(t) {
+      // Transcripts scattered in tissue; cell boundaries grow and transcripts take their cell's colour.
+      const p = ease(((t % 6400) - 500) / 2600), cells = SEG_CELLS, cols = [PAL.a, PAL.b, PAL.c, PAL.d];
+      for (const [x, y, k] of SEG_TX) {
+        const c = cells[k], inside = Math.hypot((x - c[0]) * W, (y - c[1]) * H) < c[2] * Math.min(W, H) * p;
+        dot(x, y, 1.6, inside ? cols[k % 4] : "rgba(255,255,255,.45)", inside ? .95 : .6);
+      }
+      cells.forEach(([x, y, r], k) => {
+        if (p < .02) return;
+        ctx.beginPath();
+        for (let a = 0; a <= 6.3; a += .25) {
+          const rr = r * Math.min(W, H) * p * (1 + .12 * field(Math.cos(a) * 2 + k, Math.sin(a) * 2, k));
+          const px = x * W + Math.cos(a) * rr, py = y * H + Math.sin(a) * rr;
+          a ? ctx.lineTo(px, py) : ctx.moveTo(px, py);
+        }
+        ctx.closePath(); ctx.strokeStyle = cols[k % 4]; ctx.globalAlpha = .8; ctx.lineWidth = 1.3; ctx.stroke(); ctx.globalAlpha = 1;
+      });
+      label(p > .98 ? "every transcript assigned to a cell" : "drawing cell boundaries");
+    },
+    niche(t) {
+      // Cells coloured by type; then each cell is recoloured by the niche its neighbourhood belongs to.
+      const p = ease(((t % 6400) - 1400) / 2200), sp = hexSpots(26), r = W / 26 * .32;
+      const nicheCol = ["#3f6fd1", "#d8913a", "#9a63c9"];
+      for (const [x, y] of sp) {
+        if (!inTissue(x, y)) continue;
+        const f = [0, 2, 4].map(o => field(x * 1.1, y * 1.1, o));
+        const niche = f.indexOf(Math.max(...f));
+        const g = (field(x * 9, y * 9, 7) + 1) / 2, type = g < .33 ? PAL.a : g < .66 ? PAL.b : PAL.c;
+        if (p > .02) dot(x, y, r * 1.6, nicheCol[niche], .35 * p);
+        dot(x, y, r, type, 1 - .25 * p);
+      }
+      const hx = .5 + .2 * Math.sin(t / 1700), hy = .5 + .15 * Math.cos(t / 2100);
+      if (p < .98) ring(hx, hy, W * .07, "rgba(255,255,255,.7)");
+      label(p > .98 ? "cells grouped into niches" : "reading each cell's neighbourhood");
+    },
+    cnv(t) {
+      // Tissue spots reveal tumour clones; a genome track below shows gains and losses.
+      const p = ease(((t % 6000) - 500) / 2400), sp = hexSpots(18), r = W / 18 * .36;
+      const trackH = 46, top = H - trackH - 34;
+      for (const [x, y] of sp) {
+        const yy = y * (top - 10) / H;
+        if (!inTissue(x, y)) continue;
+        const c = (field(x * .9, y * .9, 6) + 1) / 2, clone = c > .62 ? PAL.b : c > .45 ? PAL.c : "rgba(143,184,232,.55)";
+        dot(x, yy, r, p > .02 ? clone : "rgba(255,255,255,.3)", .35 + .65 * p);
+      }
+      const n = 22, w = (W - 56) / n;
+      for (let i = 0; i < n; i++) {
+        const v = field(i * .55, 1.7, 3), h = Math.abs(v) * trackH * .5 * p, up = v > 0;
+        ctx.fillStyle = up ? "rgba(242,189,107,.85)" : "rgba(143,184,232,.85)";
+        ctx.fillRect(28 + i * w + 1, up ? top + trackH / 2 - h : top + trackH / 2, w - 2, h);
+      }
+      ctx.strokeStyle = "rgba(255,255,255,.25)"; ctx.beginPath(); ctx.moveTo(28, top + trackH / 2); ctx.lineTo(W - 28, top + trackH / 2); ctx.stroke();
+      label("copy-number gains and losses mark tumour clones");
+    },
+    qc(t) {
+      // Low-quality spots are flagged and dropped; the remaining spots are normalised to an even scale.
+      const p = ease(((t % 6000) - 500) / 2600), sp = hexSpots(16), r = W / 16 * .34;
+      for (const [x, y] of sp) {
+        if (!inTissue(x, y)) { dot(x, y, r * .4, PAL.dim); continue; }
+        const q = (field(x * 3, y * 3, 8) + 1) / 2, bad = q < .3, depth = .35 + .65 * (field(x * 2, y * 2, 1) + 1) / 2;
+        if (bad) {
+          dot(x, y, r * .8, "rgba(255,120,120,.6)", 1 - p);
+          if (p < .98) ring(x, y, r * 1.05, `rgba(255,120,120,${.9 * (1 - p)})`);
+          continue;
+        }
+        const v = depth + (0.7 - depth) * p;
+        dot(x, y, r * (.55 + .45 * v), ramp(v));
+      }
+      label(p > .98 ? "clean, normalised data" : "flagging low-quality spots");
+    },
+    annot(t) {
+      // Grey cells receive a type colour one by one, as a classifier sweeps across the tissue.
+      const sp = hexSpots(24), r = W / 24 * .34, sweep = ((t % 6000) / 4200), cols = [PAL.a, PAL.b, PAL.c, PAL.d];
+      for (const [x, y] of sp) {
+        if (!inTissue(x, y)) continue;
+        const g = (field(x * 7, y * 7, 3) + 1) / 2, k = Math.min(3, Math.floor(g * 4));
+        const done = x + .15 * field(y * 3, 1) < sweep;
+        dot(x, y, r, done ? cols[k] : "rgba(255,255,255,.28)");
+      }
+      if (sweep < 1.05) { ctx.fillStyle = "rgba(255,255,255,.5)"; ctx.fillRect(Math.min(sweep, 1) * W - 1, 0, 2, H); }
+      label(sweep > 1 ? "every cell labelled with its type" : "labelling cells one by one");
+    },
+    colo(t) {
+      // Two cell types; distance rings around type A show where type B clusters more than chance.
+      const sp = hexSpots(26), r = W / 26 * .26, R = Math.min(W, H) * (.05 + .12 * ((t % 3000) / 3000));
+      const anchors = [];
+      for (const [x, y] of sp) {
+        if (!inTissue(x, y)) continue;
+        const a = field(x * 2.2, y * 2.2, 1), b = field(x * 2.2 + .2, y * 2.2, 1.3);
+        if (a > .45) { dot(x, y, r * 1.1, PAL.b); if (anchors.length < 6 && (Math.round(x * 97) % 7 === 0)) anchors.push([x, y]); }
+        else if (b > .25) dot(x, y, r, PAL.a);
+        else dot(x, y, r * .55, "rgba(255,255,255,.22)");
+      }
+      anchors.forEach(([x, y]) => { ctx.beginPath(); ctx.arc(x * W, y * H, R, 0, Math.PI * 2); ctx.strokeStyle = "rgba(242,189,107,.55)"; ctx.lineWidth = 1.2; ctx.stroke(); });
+      label("which cell types sit together more than chance");
+    },
+    subcell(t) {
+      // One large cell: nucleus, cytoplasm, and transcripts that drift into compartments by gene.
+      const cx = W / 2, cy = H * .46, R = Math.min(W, H) * .34, p = ease(((t % 6000) - 400) / 2600);
+      ctx.beginPath(); ctx.ellipse(cx, cy, R * 1.25, R, 0, 0, Math.PI * 2); ctx.fillStyle = "rgba(255,255,255,.05)"; ctx.fill();
+      ctx.strokeStyle = "rgba(255,255,255,.3)"; ctx.lineWidth = 1.2; ctx.stroke();
+      ctx.beginPath(); ctx.ellipse(cx, cy, R * .42, R * .36, 0, 0, Math.PI * 2); ctx.fillStyle = "rgba(199,160,226,.12)"; ctx.fill(); ctx.strokeStyle = "rgba(199,160,226,.5)"; ctx.stroke();
+      for (let i = 0; i < 120; i++) {
+        const g = i % 3, a0 = i * 2.39, d0 = .2 + .75 * ((i * 37) % 100) / 100;
+        const target = g === 0 ? [.25 * Math.cos(a0), .25 * Math.sin(a0)] : g === 1 ? [.92 * Math.cos(a0), .85 * Math.sin(a0)] : [.6 + .15 * Math.cos(a0), -.3 + .2 * Math.sin(a0)];
+        const sx = d0 * Math.cos(a0) * .95, sy = d0 * Math.sin(a0) * .85;
+        const x = sx + (target[0] - sx) * p, y = sy + (target[1] - sy) * p;
+        pdot(cx + x * R * 1.2, cy + y * R, 2.1, [PAL.c, PAL.a, PAL.b][g], .9);
+      }
+      label(p > .98 ? "each gene has its place in the cell" : "transcripts settle into compartments");
+    },
+    sim(t) {
+      // A synthetic tissue is generated tile by tile next to a real one.
+      const sp = hexSpots(18), r = W / 18 * .32, p = ((t % 6500) / 4500);
+      for (const [x, y] of sp) {
+        const xl = x * .46, xr = .54 + x * .46;
+        if (!inTissue(x, y)) continue;
+        const v = (field(x, y, 2) + 1) / 2;
+        dot(xl, y, r * .9, ramp(v));
+        if (x + .1 * field(y * 4, 2) < p) dot(xr, y, r * .9, ramp(Math.min(1, Math.max(0, v + .12 * field(x * 6, y * 6, 9)))));
+        else dot(xr, y, r * .35, PAL.dim);
+      }
+      ctx.font = "600 11px -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif"; ctx.fillStyle = "rgba(255,255,255,.45)";
+      ctx.textAlign = "center"; ctx.fillText("REAL", W * .23, 20); ctx.fillText("SIMULATED", W * .77, 20); ctx.textAlign = "left";
+      label("synthetic tissue with known ground truth");
+    },
+    agent(t) {
+      // A plan of analysis steps lights up in turn, each calling a tool and returning a result.
+      const steps = ["Load data", "QC", "Domains", "Deconvolve", "Report"], n = steps.length;
+      const pad = Math.max(24, W * .08), y = H * .44, gap = (W - 2 * pad) / (n - 1), cur = Math.floor(t / 1100) % (n + 1);
+      ctx.strokeStyle = "rgba(255,255,255,.18)"; ctx.lineWidth = 2; ctx.beginPath(); ctx.moveTo(pad, y); ctx.lineTo(W - pad, y); ctx.stroke();
+      steps.forEach((s, i) => {
+        const x = pad + i * gap, on = i < cur, now = i === cur;
+        pdot(x, y, now ? 15 + 3 * Math.sin(t / 200) : 12, on ? PAL.d : now ? PAL.b : "rgba(255,255,255,.18)", on || now ? 1 : .8);
+        ctx.font = "500 11px -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif"; ctx.textAlign = "center";
+        ctx.fillStyle = on || now ? "rgba(255,255,255,.85)" : "rgba(255,255,255,.4)"; ctx.fillText(s, x, y + 34);
+      });
+      ctx.textAlign = "left";
+      rrect(pad - 6, H * .12, W - 2 * pad + 12, 30, 9); ctx.fillStyle = "rgba(255,255,255,.06)"; ctx.fill();
+      ctx.font = "500 12px -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif"; ctx.fillStyle = "rgba(255,255,255,.6)";
+      ctx.fillText("› find tumour domains and their cell types", pad + 6, H * .12 + 19);
+      label("an agent plans and runs the analysis");
+    },
     uq(t) {
       const sp = hexSpots(13), r = W / 13 * .26;
       for (const [x, y] of sp) {
@@ -302,6 +455,13 @@
       label("signals passing between cells and genes");
     },
   };
+  // Fixed layout for the segmentation schematic: cell centres/radii and transcripts near them.
+  const SEG_CELLS = [[.28, .32, .13], [.55, .27, .11], [.75, .42, .12], [.36, .62, .12], [.62, .64, .13], [.5, .46, .08]];
+  const SEG_TX = (() => {
+    const out = [];
+    SEG_CELLS.forEach(([x, y, r], k) => { for (let i = 0; i < 26; i++) { const a = i * 2.4 + k, d = r * Math.sqrt((i % 13 + .5) / 13) * .95; out.push([x + Math.cos(a) * d * .62, y + Math.sin(a) * d, k]); } });
+    return out;
+  })();
   function pdot(x, y, r, col, a = 1) { ctx.globalAlpha = a; ctx.beginPath(); ctx.arc(x, y, Math.max(r, .5), 0, Math.PI * 2); ctx.fillStyle = col; ctx.fill(); ctx.globalAlpha = 1; }
   function rrect(x, y, w, h, r) { ctx.beginPath(); ctx.roundRect ? ctx.roundRect(x, y, w, h, r) : ctx.rect(x, y, w, h); }
   // Points on a sphere (Fibonacci), coloured by the nearest of four cluster centres.

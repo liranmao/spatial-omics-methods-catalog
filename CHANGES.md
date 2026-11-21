@@ -22,3 +22,22 @@ Source: `main/08012026_AOAS_aoas.tex`, lines 312–450 (113 rows, 9 categories, 
   (see `MANUAL_KEYS` in `scripts/extract_table.py`).
 - Code links for 18 methods, taken only from URLs printed in the paper's own abstract.
 - Automatic filter tags: input data, model family, and paradigm (Statistical / classical ML, Deep learning, Hybrid).
+
+## Living edition only (dev branch, 2026-11)
+These changes apply to the living edition (`/dev/`). The paper edition keeps the categories above.
+1. **"Multi-sample & multi-modal integration" → "Spatial domain detection & integration".** Most methods in this
+   category learn a spatially aware embedding that serves both domain detection and integration, so single-sample
+   domain-detection methods now belong here too. Subtypes: Single-sample domain detection / Multi-sample integration /
+   Multi-modal integration.
+2. **Four new categories:** Spatial niche identification; Cell segmentation (Image-based / Transcript-based / Joint);
+   CNV inference; Preprocessing & quality control (Quality control / Normalization / Denoising & batch correction /
+   Image processing & registration / Data formats & infrastructure).
+   Five more categories (2026-11-21): Cell-type annotation (Reference-based / Reference-free / From histology;
+   single-cell resolution — spot-level reference-based methods stay in Cell-type deconvolution); Spatial statistics &
+   co-localization; Subcellular RNA localization; Simulation; AI agents & analysis assistants. Spatial pathway/gene-set
+   activity methods are listed under SVG identification, and perturbation-response prediction under spatial gene
+   expression prediction.
+3. **`spatial_design` column.** `spatial-specific` = built for spatial omics data; `adapted` = a single-cell or general
+   method with a dedicated spatial mode (shown with an "Adapted" badge and a filter). Single-cell methods with no
+   spatial component are not included. Paper-edition rows are left blank.
+4. Categories are listed in pipeline order (preprocessing → segmentation → … → uncertainty quantification).

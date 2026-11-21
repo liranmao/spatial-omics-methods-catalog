@@ -37,14 +37,23 @@
     { key: "Deep learning", short: "Deep learning", cls: "dl" },
   ];
   const PCLS = Object.fromEntries(PARADIGMS.map(p => [p.key, p.cls]));
-  const TASKS = [...new Set([...DATA.map(m => m.categories[0]), ...DATA.flatMap(m => m.categories)])];
+  // Categories in pipeline order; any category not listed here is appended in data order.
+  const TASK_ORDER = ["Preprocessing & quality control", "Cell segmentation", "Subcellular RNA localization",
+    "Cell-type annotation", "Cell-type deconvolution", "Spatially variable gene identification",
+    "Spatial gene expression prediction", "Spatial domain detection & integration", "Multi-sample & multi-modal integration",
+    "Spatial niche identification", "Spatial statistics & co-localization", "Spatial alignment", "CNV inference",
+    "Cell communication & interpretable models", "Gene regulatory networks", "Trajectory inference",
+    "Foundation models", "AI agents & analysis assistants", "Uncertainty quantification", "Simulation"];
+  const PRESENT = new Set(DATA.flatMap(m => m.categories));
+  const TASKS = [...new Set([...TASK_ORDER.filter(c => PRESENT.has(c)), ...DATA.map(m => m.categories[0]), ...DATA.flatMap(m => m.categories)])];
+  const HAS_ADAPTED = DATA.some(m => m.spatial_design === "adapted");
   DATA.forEach((m, i) => {
     m._i = i;
     m._hay = [m.method, m.task, m.subtype, m.input, m.core_method, m.title, m.first_author, m.journal,
       m.categories.join(" "), m.model_tags.join(" "), m.year].join(" ").toLowerCase();
   });
 
-  const state = { have: new Set(), task: "", paradigm: "", lang: "", model: "", q: "", sort: "", open: new Set() };
+  const state = { have: new Set(), task: "", paradigm: "", lang: "", model: "", design: "", q: "", sort: "", open: new Set() };
   const $ = id => document.getElementById(id);
   const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
   const terms = () => state.q.toLowerCase().split(/\s+/).filter(Boolean);
@@ -67,6 +76,7 @@
     if (skip !== "paradigm" && state.paradigm && m.paradigm !== state.paradigm) return false;
     if (skip !== "lang" && state.lang && !m.languages.includes(state.lang)) return false;
     if (skip !== "model" && state.model && !m.model_tags.includes(state.model)) return false;
+    if (skip !== "design" && state.design === "spatial" && m.spatial_design === "adapted") return false;
     return true;
   }
 
@@ -109,7 +119,7 @@
       return `<button type="button" data-paradigm="${esc(p.key)}" aria-pressed="${state.paradigm === p.key}" title="${n} methods">` +
         `${esc(p.short)}</button>`;
     }).join("");
-    $("reset").hidden = !(state.have.size || state.task || state.paradigm || state.lang || state.model || state.q);
+    $("reset").hidden = !(state.have.size || state.task || state.paradigm || state.lang || state.model || state.design || state.q);
   }
 
   function fillSelects() {
@@ -143,7 +153,7 @@
     const paper = m.paper_url ? `<a href="${esc(m.paper_url)}" target="_blank" rel="noopener">Paper<svg aria-hidden="true"><use href="#i-ext"/></svg></a>` : "";
     const code = m.code_url ? `<a href="${esc(m.code_url)}" target="_blank" rel="noopener">Code<svg aria-hidden="true"><use href="#i-ext"/></svg></a>` : "";
     let html = `<tr class="m-row${miss.length ? " dim" : ""}${open ? " open" : ""}" style="view-transition-name:m-${esc(m.id)}">
-      <td class="m"><button type="button" class="mname" aria-expanded="${open}" aria-controls="d-${esc(m.id)}" data-open="${esc(m.id)}">${hl(m.method)}<svg aria-hidden="true"><use href="#i-chev"/></svg></button>${m.source === "added" ? `<span class="badge-new" title="Added after the review${m.added_on ? ` (${esc(m.added_on)})` : ""}">New</span>` : ""}${refLine(m)}
+      <td class="m"><button type="button" class="mname" aria-expanded="${open}" aria-controls="d-${esc(m.id)}" data-open="${esc(m.id)}">${hl(m.method)}<svg aria-hidden="true"><use href="#i-chev"/></svg></button>${m.source === "added" ? `<span class="badge-new" title="Added after the review${m.added_on ? ` (${esc(m.added_on)})` : ""}">New</span>` : ""}${m.spatial_design === "adapted" ? `<span class="badge-adapted" title="A single-cell or general method with a dedicated spatial mode">Adapted</span>` : ""}${refLine(m)}
         ${miss.length ? `<span class="missing-note">Needs ${esc(miss.map(t => (LABEL[t] || t).replace(/^([A-Z])(?=[a-z])/, c => c.toLowerCase())).join(", "))}</span>` : ""}</td>
       <td class="task">${m.subtype ? `<span class="sub">${hl(m.subtype)}</span>` : ""}${hl(m.task)}</td>
       <td class="core"><span class="ct"><span class="pd p-${PCLS[m.paradigm] || "x"}" title="${esc(m.paradigm)}"></span>${hl(m.core_method)}</span></td>
@@ -160,6 +170,7 @@
         <div><dt>Input (as published)</dt><dd>${esc(m.input)}</dd></div>
         <div><dt>Cited by</dt><dd>${m.citations != null ? `${fmtN(m.citations)}${CATALOG_ASOF ? ` (as of ${esc(CATALOG_ASOF)})` : ""}` : "Not available"}</dd></div>
         <div><dt>Model family</dt><dd>${esc(m.paradigm)}${m.model_tags.length ? `: ${esc(m.model_tags.join(", "))}` : ""}</dd></div>
+        ${m.spatial_design ? `<div><dt>Spatial design</dt><dd>${m.spatial_design === "adapted" ? "Adapted from a single-cell or general method (has a dedicated spatial mode)" : "Built for spatial omics data"}</dd></div>` : ""}
         <div><dt>Listed under</dt><dd>${esc(m.categories.join("; "))} · ${esc(m.language)}</dd></div>
         <div><dt>Source</dt><dd>${m.source === "review" ? "Discussed in the review" : `Added after the review${m.added_on ? ` on ${esc(m.added_on)}` : ""}`}</dd></div>
       </dl></td></tr>`;
@@ -219,6 +230,7 @@
       ["paradigm", state.paradigm && `“${state.paradigm}”`],
       ["lang", state.lang && `language ${state.lang}`],
       ["model", state.model && `model family “${state.model}”`],
+      ["design", state.design && "spatial-specific methods only"],
     ].filter(o => o[1]).map(([k, label]) => {
       const saved = state[k]; state[k] = "";
       const n = DATA.filter(m => passes(m)).length; state[k] = saved;
@@ -240,19 +252,20 @@
     const p = new URLSearchParams();
     state.have.forEach(v => p.append("have", v));
     if (EDITION_PARAM) p.set("edition", EDITION_PARAM);
-    for (const k of ["task", "paradigm", "lang", "model", "q", "sort"]) if (state[k]) p.set(k, state[k]);
+    for (const k of ["task", "paradigm", "lang", "model", "design", "q", "sort"]) if (state[k]) p.set(k, state[k]);
     const qs = p.toString();
     try { history.replaceState(null, "", (qs ? `?${qs}` : location.pathname) + location.hash); } catch (_) { /* file:// */ }
   }
   function readUrl() {
     const p = new URLSearchParams(location.search);
     state.have = new Set();
-    for (const k of ["task", "paradigm", "lang", "model", "q", "sort"]) state[k] = p.get(k) || "";
-    $("q").value = state.q; $("lang").value = state.lang; $("model").value = state.model;
+    for (const k of ["task", "paradigm", "lang", "model", "design", "q", "sort"]) state[k] = p.get(k) || "";
+    if (!HAS_ADAPTED) state.design = "";
+    $("q").value = state.q; $("lang").value = state.lang; $("model").value = state.model; $("design").value = state.design;
   }
   function clearAll() {
-    state.have.clear(); state.task = state.paradigm = state.lang = state.model = state.q = "";
-    $("q").value = ""; $("lang").value = ""; $("model").value = "";
+    state.have.clear(); state.task = state.paradigm = state.lang = state.model = state.design = state.q = "";
+    $("q").value = ""; $("lang").value = ""; $("model").value = ""; $("design").value = "";
     render(true);
   }
 
@@ -276,6 +289,7 @@
       if (b.dataset.drop === "q") $("q").value = "";
       if (b.dataset.drop === "lang") $("lang").value = "";
       if (b.dataset.drop === "model") $("model").value = "";
+      if (b.dataset.drop === "design") $("design").value = "";
       render(true);
     }
   });
@@ -283,6 +297,8 @@
   $("q").addEventListener("input", e => { clearTimeout(timer); timer = setTimeout(() => { state.q = e.target.value.trim(); render(); }, 120); });
   $("lang").addEventListener("change", e => { state.lang = e.target.value; render(true); });
   $("model").addEventListener("change", e => { state.model = e.target.value; render(true); });
+  $("design").addEventListener("change", e => { state.design = e.target.value; render(true); });
+  $("design-wrap").hidden = !HAS_ADAPTED;
   $("reset").addEventListener("click", clearAll);
   $("copy-cite").addEventListener("click", async e => {
     const btn = e.currentTarget;
@@ -363,7 +379,7 @@
     openMethod(id) {
       const m = DATA.find(x => x.id === id);
       if (!m) return;
-      if (!passes(m)) { state.task = state.paradigm = state.lang = state.model = state.q = ""; $("q").value = $("lang").value = $("model").value = ""; }
+      if (!passes(m)) { state.task = state.paradigm = state.lang = state.model = state.design = state.q = ""; $("q").value = $("lang").value = $("model").value = $("design").value = ""; }
       state.open.add(id);
       render();
       const btn = document.querySelector(`[data-open="${CSS.escape(id)}"]`);
