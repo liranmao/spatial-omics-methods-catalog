@@ -45,3 +45,5 @@ These changes apply to the living edition (`/dev/`). The paper edition keeps the
    method with a dedicated spatial mode (shown with an "Adapted" badge and a filter). Single-cell methods with no
    spatial component are not included. Paper-edition rows are left blank.
 4. Categories are listed in pipeline order (preprocessing → segmentation → … → uncertainty quantification).
+5. **Second search (2026-11-21): methods first released 2019–2023.** Same five-path discovery, double screening and
+   adjudication as the 2024–2026 search; 366 methods added (living edition: 2,473 methods).
