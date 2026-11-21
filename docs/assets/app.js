@@ -152,7 +152,7 @@
     const open = state.open.has(m.id);
     const paper = m.paper_url ? `<a href="${esc(m.paper_url)}" target="_blank" rel="noopener">Paper<svg aria-hidden="true"><use href="#i-ext"/></svg></a>` : "";
     const code = m.code_url ? `<a href="${esc(m.code_url)}" target="_blank" rel="noopener">Code<svg aria-hidden="true"><use href="#i-ext"/></svg></a>` : "";
-    let html = `<tr class="m-row${miss.length ? " dim" : ""}${open ? " open" : ""}" style="view-transition-name:m-${esc(m.id)}">
+    let html = `<tr class="m-row${miss.length ? " dim" : ""}${open ? " open" : ""}"${VT_ROWS && !vtSeen.has(m.id) && vtSeen.add(m.id) ? ` style="view-transition-name:m-${esc(m.id)}"` : ""}>
       <td class="m"><button type="button" class="mname" aria-expanded="${open}" aria-controls="d-${esc(m.id)}" data-open="${esc(m.id)}">${hl(m.method)}<svg aria-hidden="true"><use href="#i-chev"/></svg></button>${m.source === "added" ? `<span class="badge-new" title="Added after the review${m.added_on ? ` (${esc(m.added_on)})` : ""}">New</span>` : ""}${m.spatial_design === "adapted" ? `<span class="badge-adapted" title="A single-cell or general method with a dedicated spatial mode">Adapted</span>` : ""}${refLine(m)}
         ${miss.length ? `<span class="missing-note">Needs ${esc(miss.map(t => (LABEL[t] || t).replace(/^([A-Z])(?=[a-z])/, c => c.toLowerCase())).join(", "))}</span>` : ""}</td>
       <td class="task">${m.subtype ? `<span class="sub">${hl(m.subtype)}</span>` : ""}${hl(m.task)}</td>
@@ -190,26 +190,52 @@
   }
   const grp = (title, n, cls = "") => `<tr class="grp ${cls}"><td colspan="13"><h3>${esc(title)}<span class="gn">${n}</span></h3></td></tr>`;
 
+  // Large tables are rendered in pages: a few rows per category in the overview, PAGE rows in flat lists.
+  const PAGE = 150, GROUP_N = 8;
+  let VT_ROWS = true, limit = PAGE, moreObs = null, vtSeen = new Set();
+  const more = (n, label, attr) => `<tr class="more-row"><td colspan="13"><button type="button" class="more-btn" ${attr}>${esc(label)}<span class="gn">${n}</span></button></td></tr>`;
+  const page = list => {
+    const need = list.findIndex(m => state.open.has(m.id));  // keep an opened method visible
+    if (need >= limit) limit = need + 20;
+    return list.slice(0, limit);
+  };
   function renderTable() {
     const hits = DATA.filter(m => passes(m));
-    let html = "";
+    let html = "", shown = 0, rest = 0;
+    vtSeen = new Set();
     if (state.have.size) {
       const ok = sorted(hits.filter(m => !missing(m).length));
       const no = sorted(hits.filter(m => missing(m).length)).sort((a, b) => state.sort ? 0 : missing(a).length - missing(b).length);
-      if (ok.length) html += grp("Runnable with your data", ok.length) + ok.map(row).join("");
-      if (no.length) html += grp("Needs data you don’t have", no.length, "missing") + no.map(row).join("");
+      const all = [...ok, ...no], vis = page(all), nOk = Math.min(ok.length, vis.length);
+      shown = vis.length; rest = all.length - vis.length; VT_ROWS = shown <= 60;
+      if (ok.length) html += grp("Runnable with your data", ok.length) + vis.slice(0, nOk).map(row).join("");
+      if (no.length && vis.length > nOk) html += grp("Needs data you don’t have", no.length, "missing") + vis.slice(nOk).map(row).join("");
       $("status").innerHTML = `<b>${ok.length}</b> of ${plural(hits.length, "matching method")} can run with your data.`;
     } else if (!state.sort && !state.task) {
-      for (const c of TASKS) {
-        const g = hits.filter(m => m.categories[0] === c || (m.categories.includes(c) && m.categories[0] !== c));
-        if (g.length) html += grp(c, g.length) + g.map(row).join("");
+      const groups = TASKS.map(c => [c, hits.filter(m => m.categories.includes(c))]).filter(([, g]) => g.length);
+      const cap = hits.length > 120 ? GROUP_N : Infinity;
+      VT_ROWS = groups.reduce((n, [, g]) => n + Math.min(g.length, cap), 0) <= 60;
+      for (const [c, g] of groups) {
+        const vis = g.filter((m, i) => i < cap || state.open.has(m.id));
+        html += grp(c, g.length) + vis.map(row).join("");
+        if (vis.length < g.length) html += more(g.length, `Show all in ${c}`, `data-task="${esc(c)}"`);
       }
       $("status").innerHTML = hits.length === DATA.length ? `Showing all <b>${DATA.length}</b> methods.` : `Showing <b>${hits.length}</b> of ${DATA.length} methods.`;
     } else {
-      html = sorted(hits).map(row).join("");
+      const all = sorted(hits), vis = page(all);
+      shown = vis.length; rest = all.length - vis.length; VT_ROWS = shown <= 60;
+      html = vis.map(row).join("");
       $("status").innerHTML = `Showing <b>${hits.length}</b> of ${DATA.length} methods${state.task ? ` in ${esc(state.task.toLowerCase())}` : ""}.`;
     }
+    if (rest > 0) html += more(rest, `Show ${Math.min(rest, PAGE)} more`, "data-more");
     $("rows").innerHTML = html;
+    // Load the next page automatically when the "Show more" row scrolls into view.
+    if (moreObs) moreObs.disconnect();
+    const btn = document.querySelector("[data-more]");
+    if (btn && "IntersectionObserver" in window) {
+      moreObs = new IntersectionObserver(es => { if (es.some(e => e.isIntersecting)) { moreObs.disconnect(); limit += PAGE; renderTable(); } }, { rootMargin: "600px 0px" });
+      moreObs.observe(btn);
+    }
     $("grid").hidden = !hits.length;
     $("empty").hidden = !!hits.length;
     if (!hits.length) renderEmpty();
@@ -242,6 +268,7 @@
   }
 
   function render(animate = false) {
+    limit = PAGE;
     const run = () => { renderHave(); renderTasks(); renderToolbar(); renderTable(); writeUrl(); };
     if (animate && document.startViewTransition && !matchMedia("(prefers-reduced-motion: reduce)").matches) { const vt = document.startViewTransition(run); [vt.ready, vt.finished, vt.updateCallbackDone].forEach(p => p.catch(() => {})); }
     else run();
@@ -276,6 +303,7 @@
     if (b.dataset.have !== undefined) { const t = b.dataset.have; state.have.has(t) ? state.have.delete(t) : state.have.add(t); render(true); }
     else if (b.dataset.task !== undefined) { state.task = state.task === b.dataset.task ? "" : b.dataset.task; render(true); }
     else if (b.dataset.paradigm !== undefined) { state.paradigm = b.dataset.paradigm; render(true); }
+    else if (b.dataset.more !== undefined) { limit += PAGE; renderTable(); }
     else if (b.dataset.open !== undefined) { const id = b.dataset.open; state.open.has(id) ? state.open.delete(id) : state.open.add(id); renderTable(); document.querySelector(`[data-open="${CSS.escape(id)}"]`)?.focus(); }
     else if (b.dataset.sort !== undefined) {
       const k = b.dataset.sort, [key, dir] = state.sort.split("-");
