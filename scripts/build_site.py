@@ -58,7 +58,10 @@ MODEL_RULES = [  # (tag, paradigm, regex on the "core_method" column)
 CATEGORIES = {  # allowed category -> allowed subtypes (living edition)
     "Spatially variable gene identification": {"Overall SVG", "Cell-type-specific SVG", "Domain-marker SVG", "Domain-marker / Differential Expression"},
     "Cell-type deconvolution": set(),
-    "Spatial gene expression prediction": {"From histology", "From scRNA-seq reference (imputation)", "From ST alone (imputation / super-resolution)"},
+    "Spatial gene expression prediction": {"From histology: RNA", "From histology: protein (virtual staining)",
+                                           "Super-resolution & enhancement", "Imputation within ST",
+                                           "Gene panel expansion from scRNA-seq", "Slice interpolation & 3D reconstruction",
+                                           "Cross-modality translation", "Perturbation response"},
     "Spatial domain detection & integration": {"Single-sample domain detection", "Multi-sample integration", "Multi-modal integration"},
     "Spatial niche identification": set(),
     "Spatial alignment": set(),
@@ -89,6 +92,8 @@ def check(rows):
         for st in filter(None, (x.strip() for x in r["subtype"].split(";"))):
             if st not in ALL_SUBTYPES:
                 bad.append(f'{r["id"]}: unknown subtype "{st}"')
+            elif not any(st in CATEGORIES.get(c.strip(), set()) for c in r["categories"].split(";")):
+                bad.append(f'{r["id"]}: subtype "{st}" does not belong to any of its categories')
         if r.get("spatial_design", "") not in ("", "spatial-specific", "adapted"):
             bad.append(f'{r["id"]}: bad spatial_design "{r["spatial_design"]}"')
     if bad:

@@ -37,6 +37,10 @@ These changes apply to the living edition (`/dev/`). The paper edition keeps the
    co-localization; Subcellular RNA localization; Simulation; AI agents & analysis assistants. Spatial pathway/gene-set
    activity methods are listed under SVG identification, and perturbation-response prediction under spatial gene
    expression prediction.
+   "Spatial gene expression prediction" subtypes are now defined by input → output (2026-11-21): From histology: RNA;
+   From histology: protein (virtual staining); Super-resolution & enhancement; Imputation within ST; Gene panel
+   expansion from scRNA-seq; Slice interpolation & 3D reconstruction; Cross-modality translation; Perturbation response.
+   They replace the three paper-edition subtypes (From histology / From ST alone / From scRNA-seq reference).
 3. **`spatial_design` column.** `spatial-specific` = built for spatial omics data; `adapted` = a single-cell or general
    method with a dedicated spatial mode (shown with an "Adapted" badge and a filter). Single-cell methods with no
    spatial component are not included. Paper-edition rows are left blank.

@@ -1077,7 +1077,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Out-of-sample expression prediction",
    "input": "H&E image patches (training: paired ST)",
    "language": "Python",
@@ -1113,7 +1113,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Expression prediction (multi-scale)",
    "input": "H&E image patches (training: paired ST)",
    "language": "Python",
@@ -1149,7 +1149,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "Super-resolution & enhancement; From histology: RNA",
    "task": "Super-resolution expression prediction",
    "input": "H&E image + low-resolution ST",
    "language": "Python",
@@ -1185,7 +1185,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "Super-resolution & enhancement; From histology: RNA",
    "task": "Super-resolution expression prediction",
    "input": "H&E image + low-resolution ST",
    "language": "Python",
@@ -1221,7 +1221,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Super-resolution expression prediction",
    "input": "H&E image + low-resolution ST",
    "language": "Python",
@@ -1257,7 +1257,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Out-of-sample expression prediction",
    "input": "H&E image (training: paired ST)",
    "language": "Python",
@@ -1293,7 +1293,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Expression prediction",
    "input": "H&E image (training: paired ST)",
    "language": "Python",
@@ -1330,7 +1330,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Expression prediction",
    "input": "H&E image (training: paired ST)",
    "language": "Python",
@@ -1366,7 +1366,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Expression prediction",
    "input": "H&E image + ST + spatial coords",
    "language": "Python",
@@ -1403,7 +1403,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Expression prediction",
    "input": "H&E image + ST + spatial coords",
    "language": "Python",
@@ -1441,7 +1441,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Expression prediction (long-range dependencies)",
    "input": "H&E image + ST + spatial coords",
    "language": "Python",
@@ -1478,7 +1478,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Expression prediction",
    "input": "H&E image + ST + spatial coords",
    "language": "Python",
@@ -1516,7 +1516,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA; Super-resolution & enhancement",
    "task": "Super-resolution expression prediction",
    "input": "H&E image + low-resolution ST",
    "language": "Python",
@@ -1552,7 +1552,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "Super-resolution & enhancement; From histology: RNA",
    "task": "Super-resolution expression prediction",
    "input": "H&E image + low-resolution ST",
    "language": "Python",
@@ -1588,7 +1588,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Out-of-sample ST generation",
    "input": "H&E image (training: paired ST)",
    "language": "Python",
@@ -1624,7 +1624,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Expression prediction (biologically structured)",
    "input": "H&E image + ST + cell-type labels",
    "language": "Python",
@@ -1662,7 +1662,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Expression prediction via FM alignment",
    "input": "H&E image + ST",
    "language": "Python",
@@ -1699,7 +1699,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Expression prediction via FM",
    "input": "H&E image + ST",
    "language": "Python",
@@ -1736,7 +1736,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Expression prediction + downstream tasks",
    "input": "H&E image + ST",
    "language": "Python",
@@ -1774,7 +1774,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "ST foundation model pretraining",
    "input": "H&E image + ST (large-scale paired dataset)",
    "language": "Python",
@@ -1811,7 +1811,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Expression prediction with uncertainty",
    "input": "H&E image patches (training: paired ST)",
    "language": "Python",
@@ -1848,7 +1848,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Expression prediction (breast cancer)",
    "input": "H&E image (training: paired ST)",
    "language": "Python",
@@ -1884,7 +1884,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Virtual single-cell ST prediction from H&E",
    "input": "H&E image (training: spot-level ST supervision)",
    "language": "Python",
@@ -1920,7 +1920,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "Super-resolution & enhancement; From histology: RNA",
    "task": "Super-resolution expression prediction",
    "input": "H&E image + spot-level ST + spatial coords",
    "language": "Python",
@@ -1957,7 +1957,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA; Super-resolution & enhancement",
    "task": "Super-resolution expression prediction",
    "input": "H&E image + low-resolution ST (tumor tissue)",
    "language": "Python",
@@ -1993,7 +1993,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "Super-resolution & enhancement; From histology: RNA",
    "task": "Super-resolution ST by deep data fusion",
    "input": "H&E image + low-resolution ST",
    "language": "Python",
@@ -2029,7 +2029,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Out-of-sample expression prediction + between-spot imputation",
    "input": "H&E image patches (training: paired ST, breast cancer)",
    "language": "Python",
@@ -2065,7 +2065,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Out-of-sample expression prediction (prostate cancer)",
    "input": "H&E image patches (training: paired ST)",
    "language": "Python",
@@ -2101,7 +2101,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From scRNA-seq reference (imputation)",
+   "subtype": "Gene panel expansion from scRNA-seq",
    "task": "Unmeasured gene prediction / spatial imputation",
    "input": "ST count matrix + scRNA-seq reference",
    "language": "R",
@@ -2138,7 +2138,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From scRNA-seq reference (imputation)",
+   "subtype": "Gene panel expansion from scRNA-seq",
    "task": "Unmeasured gene prediction",
    "input": "ST count matrix + scRNA-seq reference",
    "language": "R / Python",
@@ -2175,7 +2175,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From scRNA-seq reference (imputation)",
+   "subtype": "Gene panel expansion from scRNA-seq",
    "task": "Spatial gene expression enhancement",
    "input": "ST count matrix + scRNA-seq reference",
    "language": "Python",
@@ -2212,7 +2212,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From scRNA-seq reference (imputation)",
+   "subtype": "Gene panel expansion from scRNA-seq",
    "task": "Spatial gene expression prediction",
    "input": "ST count matrix + scRNA-seq reference",
    "language": "Python",
@@ -2249,7 +2249,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From scRNA-seq reference (imputation)",
+   "subtype": "Gene panel expansion from scRNA-seq",
    "task": "Multi-reference gene prediction",
    "input": "ST count matrix + multiple scRNA-seq references",
    "language": "R / Python",
@@ -2286,7 +2286,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From scRNA-seq reference (imputation)",
+   "subtype": "Gene panel expansion from scRNA-seq",
    "task": "Pathway-oriented gene imputation",
    "input": "ST count matrix + scRNA-seq + pathway priors",
    "language": "Python",
@@ -2322,7 +2322,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From scRNA-seq reference (imputation)",
+   "subtype": "Gene panel expansion from scRNA-seq",
    "task": "Spatial gene imputation & signaling inference",
    "input": "ST count matrix + scRNA-seq reference",
    "language": "Python",
@@ -2358,7 +2358,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From scRNA-seq reference (imputation)",
+   "subtype": "Gene panel expansion from scRNA-seq",
    "task": "De novo spatial gene expression reconstruction",
    "input": "scRNA-seq (optional spatial reference)",
    "language": "Python",
@@ -2393,7 +2393,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From scRNA-seq reference (imputation)",
+   "subtype": "Gene panel expansion from scRNA-seq",
    "task": "Missing gene imputation",
    "input": "ST count matrix + scRNA-seq reference",
    "language": "Python",
@@ -2429,7 +2429,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From scRNA-seq reference (imputation)",
+   "subtype": "Gene panel expansion from scRNA-seq",
    "task": "Unmeasured gene prediction with UQ",
    "input": "Subcellular ST + scRNA-seq reference",
    "language": "Python",
@@ -2466,7 +2466,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From scRNA-seq reference (imputation)",
+   "subtype": "Gene panel expansion from scRNA-seq",
    "task": "Diffusion-based spatial imputation",
    "input": "ST count matrix + scRNA-seq reference",
    "language": "Python",
@@ -2503,7 +2503,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From scRNA-seq reference (imputation)",
+   "subtype": "Gene panel expansion from scRNA-seq",
    "task": "Imputation via style transfer",
    "input": "ST count matrix + scRNA-seq reference",
    "language": "Python",
@@ -2539,7 +2539,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From scRNA-seq reference (imputation)",
+   "subtype": "Imputation within ST",
    "task": "Reference-free denoising & imputation",
    "input": "ST count matrix",
    "language": "Python",
@@ -4127,7 +4127,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "Super-resolution & enhancement; From histology: RNA",
    "task": "Spatial resolution enhancement + unmeasured-region imputation",
    "input": "ST count matrix + H&E image",
    "language": "Python",
@@ -4164,7 +4164,7 @@ window.CATALOG = {
     "Spatial gene expression prediction",
     "Spatial domain detection & integration"
    ],
-   "subtype": "From ST alone (imputation / super-resolution)",
+   "subtype": "Imputation within ST",
    "task": "Expression denoising/imputation + multi-dataset integration + domain detection",
    "input": "ST count matrix + spatial coords",
    "language": "Python",
@@ -4201,7 +4201,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From ST alone (imputation / super-resolution)",
+   "subtype": "Imputation within ST",
    "task": "Imputation of DE genes for robust domain clustering",
    "input": "ST count matrix + spatial coords",
    "language": "Python",
@@ -4237,7 +4237,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From ST alone (imputation / super-resolution)",
+   "subtype": "Imputation within ST",
    "task": "Missing value imputation",
    "input": "ST count matrix + spatial coords",
    "language": "Python",
@@ -4274,7 +4274,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From scRNA-seq reference (imputation)",
+   "subtype": "Gene panel expansion from scRNA-seq",
    "task": "Missing gene imputation",
    "input": "ST count matrix + scRNA-seq reference",
    "language": "Python",
@@ -4313,7 +4313,7 @@ window.CATALOG = {
     "Spatial gene expression prediction",
     "Spatial domain detection & integration"
    ],
-   "subtype": "From histology",
+   "subtype": "Super-resolution & enhancement; From histology: RNA",
    "task": "Spatial resolution enhancement across omics types",
    "input": "ST + multi-omics + spatial coords + H&E image",
    "language": "Python",
@@ -4351,7 +4351,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "Super-resolution & enhancement; From histology: RNA",
    "task": "Single-cell resolution reconstruction from histology",
    "input": "ST count matrix + H&E image",
    "language": "Python",
@@ -4684,7 +4684,7 @@ window.CATALOG = {
     "Foundation models",
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Spatial gene expression prediction from histology",
    "input": "H&E image (+ ST for training)",
    "language": "Python",
@@ -4795,7 +4795,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From scRNA-seq reference (imputation)",
+   "subtype": "Gene panel expansion from scRNA-seq",
    "task": "scRNA-seq-to-space mapping using a spatial reference atlas",
    "input": "scRNA-seq + ST count matrices",
    "language": "MATLAB",
@@ -4832,7 +4832,7 @@ window.CATALOG = {
     "Cell-type deconvolution",
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "Super-resolution & enhancement",
    "task": "Deconvolution + pseudo-single-cell whole-transcriptome imaging",
    "input": "ST count matrix + scRNA-seq reference + H&E image",
    "language": "Python",
@@ -5272,7 +5272,7 @@ window.CATALOG = {
     "Cell-type deconvolution",
     "Spatial gene expression prediction"
    ],
-   "subtype": "From ST alone (imputation / super-resolution)",
+   "subtype": "Super-resolution & enhancement",
    "task": "Single-cell expression recovery from multi-cellular spots",
    "input": "ST count matrix + spatial coords",
    "language": "Python",
@@ -5415,7 +5415,7 @@ window.CATALOG = {
     "Cell-type annotation",
     "Spatial statistics & co-localization"
    ],
-   "subtype": "From scRNA-seq reference (imputation); Reference-based",
+   "subtype": "Reference-based; Gene panel expansion from scRNA-seq; Cross-modality translation",
    "task": "Transcriptome mapping onto multiplexed protein images",
    "input": "CODEX protein data + CITE-seq",
    "language": "R",
@@ -5936,7 +5936,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From scRNA-seq reference (imputation)",
+   "subtype": "Gene panel expansion from scRNA-seq",
    "task": "Missing gene imputation + spatial context projection onto scRNA-seq",
    "input": "ST count matrix + scRNA-seq reference + spatial coords",
    "language": "Python",
@@ -5974,7 +5974,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From scRNA-seq reference (imputation)",
+   "subtype": "Gene panel expansion from scRNA-seq",
    "task": "Post-processing refinement of imputed gene expression",
    "input": "ST count matrix + spatial coords + predicted expression from existing imputation methods",
    "language": "Python",
@@ -6010,7 +6010,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From scRNA-seq reference (imputation)",
+   "subtype": "Gene panel expansion from scRNA-seq",
    "task": "Genome-wide spatial expression inference",
    "input": "ST count matrix + scRNA-seq reference",
    "language": "R",
@@ -6044,7 +6044,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From ST alone (imputation / super-resolution)",
+   "subtype": "Super-resolution & enhancement",
    "task": "Imputation at unmeasured locations + expression enhancement",
    "input": "ST count matrix + spatial coords",
    "language": "Python",
@@ -6081,7 +6081,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "Slice interpolation & 3D reconstruction; From histology: RNA",
    "task": "3D ST imputation from 3D histology + single 2D ST slide",
    "input": "H&E image (3D WSI sections) + single 2D ST slide",
    "language": "Python",
@@ -6117,7 +6117,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "Super-resolution & enhancement; From histology: RNA",
    "task": "Pixel-level super-resolution expression + tissue annotation",
    "input": "ST count matrix + H&E image",
    "language": "Python",
@@ -6153,7 +6153,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA; Super-resolution & enhancement",
    "task": "High-resolution expression prediction from histology",
    "input": "H&E image + low-resolution ST",
    "language": "Python",
@@ -6300,7 +6300,7 @@ window.CATALOG = {
     "Spatial gene expression prediction",
     "Spatially variable gene identification"
    ],
-   "subtype": "From scRNA-seq reference (imputation)",
+   "subtype": "Gene panel expansion from scRNA-seq",
    "task": "Mapping scRNA-seq cells to spatial coordinates; SVG suggestion",
    "input": "scRNA-seq + ST count matrices",
    "language": "Python",
@@ -6995,7 +6995,7 @@ window.CATALOG = {
     "Cell-type deconvolution",
     "Spatial gene expression prediction"
    ],
-   "subtype": "From scRNA-seq reference (imputation)",
+   "subtype": "Gene panel expansion from scRNA-seq",
    "task": "Deconvolution + unmeasured gene expression prediction",
    "input": "ST count matrix + scRNA-seq reference + spatial coords",
    "language": "R",
@@ -7068,7 +7068,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "Super-resolution & enhancement; From histology: RNA",
    "task": "Reference-free single-cell super-resolution",
    "input": "ST count matrix + H&E image",
    "language": "Python",
@@ -7324,7 +7324,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "Super-resolution & enhancement; From histology: RNA",
    "task": "Single-cell super-resolution from spot-level ST + histology",
    "input": "ST count matrix + H&E image",
    "language": "Python",
@@ -7696,7 +7696,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From ST alone (imputation / super-resolution)",
+   "subtype": "Imputation within ST",
    "task": "Missing gene imputation (2D/3D)",
    "input": "ST count matrix + spatial coords",
    "language": "Python",
@@ -7732,7 +7732,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From ST alone (imputation / super-resolution)",
+   "subtype": "Imputation within ST",
    "task": "Missing gene imputation",
    "input": "ST count matrix + spatial coords + gene network",
    "language": "Python",
@@ -7769,7 +7769,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From ST alone (imputation / super-resolution)",
+   "subtype": "Imputation within ST",
    "task": "Expression smoothing / denoising",
    "input": "ST count matrix + spatial coords",
    "language": "R",
@@ -7805,7 +7805,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From ST alone (imputation / super-resolution)",
+   "subtype": "Imputation within ST",
    "task": "Denoising / imputation + domain detection",
    "input": "ST count matrix + spatial coords",
    "language": "Python",
@@ -7841,7 +7841,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Spot-level expression prediction from WSI + bulk RNA-seq",
    "input": "H&E image + bulk RNA-seq (trained on ST)",
    "language": "Python",
@@ -7878,7 +7878,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "Super-resolution & enhancement; From histology: RNA",
    "task": "Single-cell-resolution expression reconstruction",
    "input": "ST count matrix + H&E image",
    "language": "R",
@@ -8492,7 +8492,7 @@ window.CATALOG = {
     "Cell communication & interpretable models",
     "Spatial gene expression prediction"
    ],
-   "subtype": "From ST alone (imputation / super-resolution)",
+   "subtype": "Imputation within ST",
    "task": "Spatial trajectory (PSTS) + CCC (SCTP) + imputation (stSME)",
    "input": "ST count matrix + H&E image + spatial coords",
    "language": "Python",
@@ -8565,7 +8565,7 @@ window.CATALOG = {
     "Cell-type deconvolution",
     "Spatial gene expression prediction"
    ],
-   "subtype": "From scRNA-seq reference (imputation)",
+   "subtype": "Gene panel expansion from scRNA-seq; Super-resolution & enhancement",
    "task": "Single-cell-resolution deconvolution + transcriptome-wide imputation",
    "input": "ST count matrix + scRNA-seq reference + spatial coords",
    "language": "R / Python",
@@ -9547,7 +9547,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From ST alone (imputation / super-resolution)",
+   "subtype": "Imputation within ST",
    "task": "Imputation / denoising of high-resolution ST",
    "input": "ST count matrix + spatial coords",
    "language": "Python",
@@ -9620,7 +9620,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From scRNA-seq reference (imputation)",
+   "subtype": "Gene panel expansion from scRNA-seq",
    "task": "Missing gene imputation",
    "input": "ST count matrix + scRNA-seq reference",
    "language": "Python",
@@ -9658,7 +9658,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From ST alone (imputation / super-resolution)",
+   "subtype": "Slice interpolation & 3D reconstruction",
    "task": "Intermediate ST slice interpolation",
    "input": "ST count matrices + H&E image (adjacent slices)",
    "language": "Python",
@@ -9694,7 +9694,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From ST alone (imputation / super-resolution)",
+   "subtype": "Super-resolution & enhancement",
    "task": "Subspot resolution enhancement + spatial clustering",
    "input": "ST count matrix + spatial coords",
    "language": "R",
@@ -9730,7 +9730,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From ST alone (imputation / super-resolution)",
+   "subtype": "Super-resolution & enhancement",
    "task": "Spatial enhancement + domain detection",
    "input": "ST count matrix + spatial coords",
    "language": "Python",
@@ -10721,7 +10721,7 @@ window.CATALOG = {
     "Spatial gene expression prediction",
     "Cell communication & interpretable models"
    ],
-   "subtype": "From ST alone (imputation / super-resolution)",
+   "subtype": "Imputation within ST",
    "task": "Denoising + in silico signaling interaction simulation",
    "input": "ST count matrix + spatial coords",
    "language": "Python",
@@ -10938,7 +10938,7 @@ window.CATALOG = {
     "Trajectory inference",
     "Spatial gene expression prediction"
    ],
-   "subtype": "From scRNA-seq reference (imputation)",
+   "subtype": "Gene panel expansion from scRNA-seq",
    "task": "Spatial reconstruction of single cells + SpaRNA velocity",
    "input": "scRNA-seq + ST count matrices",
    "language": "Python",
@@ -11202,7 +11202,7 @@ window.CATALOG = {
     "Spatial gene expression prediction",
     "Cell-type deconvolution"
    ],
-   "subtype": "From ST alone (imputation / super-resolution)",
+   "subtype": "Imputation within ST",
    "task": "Gene imputation + denoising + deconvolution",
    "input": "ST count matrices + spatial coords (multiple slices)",
    "language": "Python",
@@ -11382,7 +11382,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: protein (virtual staining); Cross-modality translation",
    "task": "Spatial protein profile reconstruction from histology and transcriptomics",
    "input": "ST count matrix + H&E image",
    "language": "",
@@ -11564,7 +11564,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From scRNA-seq reference (imputation)",
+   "subtype": "Gene panel expansion from scRNA-seq",
    "task": "Spatial gene imputation",
    "input": "ST count matrix + scRNA-seq reference",
    "language": "",
@@ -12069,7 +12069,7 @@ window.CATALOG = {
     "Spatial domain detection & integration",
     "Spatially variable gene identification"
    ],
-   "subtype": "From ST alone (imputation / super-resolution); Single-sample domain detection; Overall SVG",
+   "subtype": "Single-sample domain detection; Overall SVG; Imputation within ST",
    "task": "Spatially informed gene representation learning",
    "input": "ST count matrix + spatial coords",
    "language": "",
@@ -12319,7 +12319,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Gene expression prediction from whole slide images",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -12355,7 +12355,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Spatial transcriptomics prediction from histology",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -12391,7 +12391,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Spatial transcriptomics prediction from histology",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -12426,7 +12426,7 @@ window.CATALOG = {
     "Spatial gene expression prediction",
     "Spatial alignment"
    ],
-   "subtype": "From ST alone (imputation / super-resolution)",
+   "subtype": "Super-resolution & enhancement; Slice interpolation & 3D reconstruction",
    "task": "Spatial metabolite prediction across adjacent MSI sections",
    "input": "MSI data (adjacent sections)",
    "language": "",
@@ -12462,7 +12462,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA; From histology: protein (virtual staining)",
    "task": "Multimodal representation learning bridging H&E, spatial protein and transcriptome",
    "input": "H&E image + multiplex IHC (training: pseudo-ST)",
    "language": "",
@@ -12498,7 +12498,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA; Super-resolution & enhancement",
    "task": "Cell-resolved transcriptome inference from histology",
    "input": "ST count matrix + H&E image",
    "language": "",
@@ -12567,7 +12567,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Spatial gene expression prediction from H&E",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -12638,7 +12638,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From ST alone (imputation / super-resolution)",
+   "subtype": "Super-resolution & enhancement",
    "task": "Guided super-resolution of MSI metabolomics",
    "input": "MSI data + IMC image",
    "language": "",
@@ -12671,7 +12671,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Pathway expression prediction from H&E",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -12775,7 +12775,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Histology-to-spatial expression linking with natural language",
    "input": "H&E image + spatial gene expression + text annotations",
    "language": "",
@@ -12811,7 +12811,7 @@ window.CATALOG = {
     "Spatial domain detection & integration",
     "Spatial gene expression prediction"
    ],
-   "subtype": "Multi-modal integration; From ST alone (imputation / super-resolution)",
+   "subtype": "Multi-modal integration; Cross-modality translation",
    "task": "Domain identification + omics imputation for incompletely paired spatial multi-omics",
    "input": "Spatial multi-omics (incompletely paired) + spatial coords",
    "language": "",
@@ -12845,7 +12845,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Single-cell expression prediction from H&E",
    "input": "H&E image (training: paired ST) + neighbouring cells",
    "language": "",
@@ -12882,7 +12882,7 @@ window.CATALOG = {
     "Spatial domain detection & integration",
     "Spatial gene expression prediction"
    ],
-   "subtype": "Multi-modal integration; From histology",
+   "subtype": "Multi-modal integration; Cross-modality translation; From histology: RNA",
    "task": "Multimodal spatial omics integration + modality prediction",
    "input": "ST + multi-omics + H&E image + spatial coords",
    "language": "",
@@ -12956,7 +12956,7 @@ window.CATALOG = {
     "Spatial gene expression prediction",
     "Foundation models"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Spot-level expression prediction from histology (zero-shot genes)",
    "input": "H&E image (training: paired ST) + gene text descriptions",
    "language": "",
@@ -13100,7 +13100,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From ST alone (imputation / super-resolution)",
+   "subtype": "Imputation within ST",
    "task": "Multi-channel imputation (spatial proteomics)",
    "input": "Spatial proteomics (IMC) multi-channel images",
    "language": "",
@@ -13173,7 +13173,7 @@ window.CATALOG = {
     "Spatial domain detection & integration",
     "Spatial gene expression prediction"
    ],
-   "subtype": "Multi-modal integration; From ST alone (imputation / super-resolution)",
+   "subtype": "Multi-modal integration; Imputation within ST",
    "task": "Spatial domain identification (+ imputation)",
    "input": "ST count matrix + H&E image + spatial coords",
    "language": "Python",
@@ -13208,7 +13208,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: protein (virtual staining)",
    "task": "Protein multiplex generation from H&E",
    "input": "H&E image (training: paired multiplexed protein imaging)",
    "language": "",
@@ -13322,7 +13322,7 @@ window.CATALOG = {
     "Trajectory inference",
     "Preprocessing & quality control"
    ],
-   "subtype": "Single-sample domain detection; From ST alone (imputation / super-resolution); Denoising & batch correction",
+   "subtype": "Single-sample domain detection; Denoising & batch correction; Imputation within ST",
    "task": "Spatial representation learning: domains, imputation, batch removal, trajectory",
    "input": "ST count matrix + spatial coords",
    "language": "",
@@ -13398,7 +13398,7 @@ window.CATALOG = {
     "Spatial domain detection & integration",
     "Spatial gene expression prediction"
    ],
-   "subtype": "Multi-modal integration; From ST alone (imputation / super-resolution)",
+   "subtype": "Multi-modal integration; Imputation within ST",
    "task": "Pathology domain identification with imputation",
    "input": "ST count matrix + H&E image + spatial coords",
    "language": "",
@@ -13437,7 +13437,7 @@ window.CATALOG = {
     "Spatial domain detection & integration",
     "Spatial gene expression prediction"
    ],
-   "subtype": "Multi-modal integration; From ST alone (imputation / super-resolution)",
+   "subtype": "Multi-modal integration; Cross-modality translation",
    "task": "Paired spatial transcriptome-proteome integration + protein imputation",
    "input": "Spatial multi-omics (RNA + protein) + spatial coords",
    "language": "",
@@ -13473,7 +13473,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA; Super-resolution & enhancement",
    "task": "Single-cell-resolution ST prediction from histology",
    "input": "H&E image + scRNA-seq reference (training: paired ST)",
    "language": "",
@@ -13927,7 +13927,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: protein (virtual staining)",
    "task": "Protein marker expression prediction from H&E",
    "input": "H&E image (training: paired CyCIF)",
    "language": "",
@@ -14000,7 +14000,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Gene expression prediction from H&E",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -14468,7 +14468,7 @@ window.CATALOG = {
     "Spatial domain detection & integration",
     "Spatial gene expression prediction"
    ],
-   "subtype": "Multi-modal integration; From scRNA-seq reference (imputation)",
+   "subtype": "Multi-modal integration; Gene panel expansion from scRNA-seq",
    "task": "Integration of unpaired spatial and single-cell modalities",
    "input": "ST count matrix + scRNA-seq reference + spatial coords",
    "language": "",
@@ -14613,7 +14613,7 @@ window.CATALOG = {
     "Spatial domain detection & integration",
     "Spatial gene expression prediction"
    ],
-   "subtype": "Multi-modal integration; From ST alone (imputation / super-resolution)",
+   "subtype": "Multi-modal integration; Cross-modality translation",
    "task": "Cross-modality prediction of spatial multi-omics",
    "input": "Spatial multi-omics + spatial coords",
    "language": "",
@@ -16080,7 +16080,7 @@ window.CATALOG = {
     "Cell-type deconvolution",
     "Spatial gene expression prediction"
    ],
-   "subtype": "From scRNA-seq reference (imputation)",
+   "subtype": "Gene panel expansion from scRNA-seq",
    "task": "Spatiotemporal scRNA-seq to ST mapping",
    "input": "ST count matrix + scRNA-seq reference + spatial coords (multiple time points)",
    "language": "",
@@ -16513,7 +16513,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From ST alone (imputation / super-resolution)",
+   "subtype": "Super-resolution & enhancement",
    "task": "Spatial transcriptome resolution enhancement",
    "input": "ST count matrix + spatial coords",
    "language": "",
@@ -17018,7 +17018,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From ST alone (imputation / super-resolution)",
+   "subtype": "Slice interpolation & 3D reconstruction",
    "task": "3D spatial expression reconstruction from RNA tomography",
    "input": "RNA tomography bulk expression of cryosections (three orthographic views)",
    "language": "",
@@ -17289,7 +17289,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From ST alone (imputation / super-resolution)",
+   "subtype": "Cross-modality translation",
    "task": "Spatial protein abundance prediction from ST",
    "input": "ST count matrix + spatial coords (training: paired spatial protein)",
    "language": "",
@@ -17473,7 +17473,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From ST alone (imputation / super-resolution)",
+   "subtype": "Cross-modality translation",
    "task": "Spatial protein expression prediction",
    "input": "Spatial multi-omics (RNA + protein) + spatial coords",
    "language": "",
@@ -17656,7 +17656,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Relative gene expression trend prediction from histology",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -17691,7 +17691,7 @@ window.CATALOG = {
     "Foundation models",
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: protein (virtual staining)",
    "task": "Tri-modal mIF/H&E/clinical representation + biomarker inference",
    "input": "Multiplexed immunofluorescence patches + H&E image + clinical metadata",
    "language": "",
@@ -17728,7 +17728,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Gene expression prediction from WSI",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -17764,7 +17764,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Gene expression prediction from histology",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -17840,7 +17840,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Gene expression prediction from H&E",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -17951,7 +17951,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From ST alone (imputation / super-resolution)",
+   "subtype": "Slice interpolation & 3D reconstruction; From histology: RNA",
    "task": "Active sampling + 3D spatial expression reconstruction",
    "input": "Sparse voxel-wise ST + H&E image + scRNA-seq prior",
    "language": "",
@@ -17988,7 +17988,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Expression prediction from histology with partial expression anchors",
    "input": "H&E image + partial ST expression (anchor spots)",
    "language": "",
@@ -18025,7 +18025,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Spatial gene expression prediction from WSI",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -18100,7 +18100,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From ST alone (imputation / super-resolution)",
+   "subtype": "Slice interpolation & 3D reconstruction; From histology: RNA",
    "task": "Continuous 3D ST reconstruction (missing section imputation)",
    "input": "Sparse 2D ST sections + histology images (training) + 3D coords",
    "language": "",
@@ -18135,7 +18135,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From ST alone (imputation / super-resolution)",
+   "subtype": "Super-resolution & enhancement; From histology: RNA",
    "task": "ST super-resolution guided by histology",
    "input": "Low-resolution ST + H&E image",
    "language": "",
@@ -18210,7 +18210,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Expression prediction from histology",
    "input": "H&E image (training: paired ST) + spatial coords",
    "language": "",
@@ -18284,7 +18284,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Bulk and spatial expression prediction from pathology images",
    "input": "H&E image (training: paired ST or bulk)",
    "language": "",
@@ -18394,7 +18394,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Text-guided expression prediction from histology",
    "input": "H&E image + gene text summaries (training: paired ST)",
    "language": "",
@@ -19310,7 +19310,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From scRNA-seq reference (imputation)",
+   "subtype": "Gene panel expansion from scRNA-seq",
    "task": "Unmeasured gene expression prediction",
    "input": "ST count matrix + scRNA-seq reference",
    "language": "",
@@ -19455,7 +19455,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From ST alone (imputation / super-resolution)",
+   "subtype": "Slice interpolation & 3D reconstruction",
    "task": "3D gene expression field reconstruction from serial sections",
    "input": "ST count matrices + spatial coords (multiple slices)",
    "language": "",
@@ -19823,7 +19823,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From ST alone (imputation / super-resolution)",
+   "subtype": "Super-resolution & enhancement",
    "task": "ST densification and expression enhancement (super-resolution)",
    "input": "ST count matrix + spatial coords",
    "language": "",
@@ -19934,7 +19934,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From ST alone (imputation / super-resolution)",
+   "subtype": "Super-resolution & enhancement",
    "task": "Spatial omics resolution enhancement (depixelation)",
    "input": "ST count matrix + spatial coords",
    "language": "",
@@ -19969,7 +19969,7 @@ window.CATALOG = {
     "Cell communication & interpretable models",
     "Spatial gene expression prediction"
    ],
-   "subtype": "",
+   "subtype": "Perturbation response",
    "task": "Tissue graph counterfactual / in-silico neighbour perturbation",
    "input": "ST count matrix + spatial coords (cell graph)",
    "language": "",
@@ -20648,7 +20648,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From ST alone (imputation / super-resolution)",
+   "subtype": "Super-resolution & enhancement",
    "task": "High-resolution gene expression prediction (super-resolution)",
    "input": "ST count matrix + spatial coords",
    "language": "",
@@ -21428,7 +21428,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: protein (virtual staining)",
    "task": "Multiplex immunofluorescence (protein) prediction from H&E",
    "input": "H&E image (training: paired mIF)",
    "language": "",
@@ -21742,7 +21742,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From ST alone (imputation / super-resolution)",
+   "subtype": "Slice interpolation & 3D reconstruction",
    "task": "Voxel-level brain gene expression interpolation",
    "input": "Allen Human Brain Atlas microarray expression + spatial coords",
    "language": "",
@@ -21917,7 +21917,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "ST prediction from histology",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -21951,7 +21951,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From ST alone (imputation / super-resolution)",
+   "subtype": "Slice interpolation & 3D reconstruction; Super-resolution & enhancement",
    "task": "3D spatial transcriptomics reconstruction",
    "input": "ST count matrices + spatial coords (multiple slices)",
    "language": "",
@@ -22201,7 +22201,7 @@ window.CATALOG = {
     "Spatial domain detection & integration",
     "Spatial gene expression prediction"
    ],
-   "subtype": "Single-sample domain detection",
+   "subtype": "Single-sample domain detection; Perturbation response",
    "task": "Tissue organization decoding + perturbation response prediction",
    "input": "ST count matrix + spatial coords",
    "language": "",
@@ -22235,7 +22235,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From ST alone (imputation / super-resolution)",
+   "subtype": "Imputation within ST",
    "task": "Spatial proteomics imputation/prediction",
    "input": "Spatial proteomics (multiplexed imaging) cell/pixel × marker data + coords",
    "language": "",
@@ -22272,7 +22272,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From ST alone (imputation / super-resolution)",
+   "subtype": "Imputation within ST",
    "task": "Spatial gene expression reconstruction",
    "input": "ST count matrix + spatial coords",
    "language": "",
@@ -22409,7 +22409,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Gene expression prediction from H&E",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -22593,7 +22593,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology; From ST alone (imputation / super-resolution)",
+   "subtype": "From histology: RNA; Super-resolution & enhancement",
    "task": "Gene expression prediction/super-resolution from H&E",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -22739,7 +22739,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Gene expression prediction from H&E",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -22851,7 +22851,7 @@ window.CATALOG = {
     "Foundation models",
     "Spatial gene expression prediction"
    ],
-   "subtype": "From ST alone (imputation / super-resolution)",
+   "subtype": "Cross-modality translation",
    "task": "Proteome-wide spatial protein prediction",
    "input": "ST count matrix + spatial coords",
    "language": "",
@@ -22997,7 +22997,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From ST alone (imputation / super-resolution)",
+   "subtype": "Imputation within ST",
    "task": "Spatial transcriptomics imputation",
    "input": "ST count matrix",
    "language": "",
@@ -23067,7 +23067,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From scRNA-seq reference (imputation)",
+   "subtype": "Gene panel expansion from scRNA-seq",
    "task": "Gene imputation + cell type identification",
    "input": "ST count matrix + scRNA-seq reference + spatial coords",
    "language": "",
@@ -23287,7 +23287,7 @@ window.CATALOG = {
     "Spatial domain detection & integration",
     "Spatial gene expression prediction"
    ],
-   "subtype": "Multi-sample integration; From ST alone (imputation / super-resolution)",
+   "subtype": "Multi-sample integration; Imputation within ST",
    "task": "Cell and niche code learning (niche identification, integration, imputation)",
    "input": "ST count matrices + spatial coords (multiple slices)",
    "language": "",
@@ -23509,7 +23509,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From scRNA-seq reference (imputation)",
+   "subtype": "Cross-modality translation",
    "task": "Protein inference and panel expansion",
    "input": "ST count matrix + spatial coords",
    "language": "",
@@ -23616,7 +23616,7 @@ window.CATALOG = {
     "Spatial gene expression prediction",
     "Foundation models"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "H&E encoder distilled from transcriptomic models; gene expression/cell-type prediction from H&E",
    "input": "H&E image (training: paired ST)",
    "language": "Python",
@@ -24091,7 +24091,7 @@ window.CATALOG = {
     "Spatial gene expression prediction",
     "Spatial domain detection & integration"
    ],
-   "subtype": "From scRNA-seq reference (imputation); Multi-modal integration",
+   "subtype": "Multi-modal integration; Gene panel expansion from scRNA-seq",
    "task": "Multimodal integration / scRNA-to-ST mapping, deconvolution, gene imputation",
    "input": "ST count matrix + scRNA-seq reference + spatial coords",
    "language": "",
@@ -24236,7 +24236,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA; From histology: protein (virtual staining)",
    "task": "Multi-modal spatial omics prediction from histology",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -25304,7 +25304,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From scRNA-seq reference (imputation)",
+   "subtype": "Gene panel expansion from scRNA-seq",
    "task": "Spatial gene expression imputation of undetected transcripts",
    "input": "ST count matrix + scRNA-seq reference",
    "language": "",
@@ -25522,7 +25522,7 @@ window.CATALOG = {
     "Spatial gene expression prediction",
     "Cell-type annotation"
    ],
-   "subtype": "From scRNA-seq reference (imputation); Reference-based",
+   "subtype": "Reference-based; Gene panel expansion from scRNA-seq",
    "task": "Missing gene imputation + cell-type annotation",
    "input": "ST count matrix + scRNA-seq reference",
    "language": "",
@@ -25560,7 +25560,7 @@ window.CATALOG = {
     "Spatial domain detection & integration",
     "Cell-type deconvolution"
    ],
-   "subtype": "From ST alone (imputation / super-resolution); Multi-sample integration",
+   "subtype": "Multi-sample integration; Slice interpolation & 3D reconstruction",
    "task": "3D reconstruction / virtual section generation + domain identification + deconvolution",
    "input": "ST count matrices + spatial coords (multiple slices)",
    "language": "",
@@ -25846,7 +25846,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Gene expression prediction from H&E (virtual RNA inference)",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -26098,7 +26098,7 @@ window.CATALOG = {
     "Spatial gene expression prediction",
     "Spatial domain detection & integration"
    ],
-   "subtype": "From ST alone (imputation / super-resolution); Multi-sample integration; Multi-modal integration",
+   "subtype": "Multi-sample integration; Multi-modal integration; Imputation within ST",
    "task": "Spatial foundation model for integration, deconvolution and imputation",
    "input": "ST count matrix + spatial coords",
    "language": "",
@@ -26172,7 +26172,7 @@ window.CATALOG = {
     "Cell-type deconvolution",
     "Spatial gene expression prediction"
    ],
-   "subtype": "From scRNA-seq reference (imputation)",
+   "subtype": "Gene panel expansion from scRNA-seq",
    "task": "Spatial reconstruction of scRNA-seq via cell-spot mapping",
    "input": "ST count matrix + scRNA-seq reference",
    "language": "",
@@ -26356,7 +26356,7 @@ window.CATALOG = {
     "Cell-type deconvolution",
     "Spatial gene expression prediction"
    ],
-   "subtype": "Single-sample domain detection; From ST alone (imputation / super-resolution)",
+   "subtype": "Single-sample domain detection; Super-resolution & enhancement",
    "task": "Spatial domain identification with inter-spot interpolation and deconvolution",
    "input": "ST count matrix + scRNA-seq reference + spatial coords",
    "language": "",
@@ -26433,7 +26433,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Gene expression prediction from H&E",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -26469,7 +26469,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Gene expression prediction from H&E",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -26507,7 +26507,7 @@ window.CATALOG = {
     "Foundation models",
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA; Slice interpolation & 3D reconstruction",
    "task": "3D tissue reconstruction and gene expression prediction from H&E",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -26543,7 +26543,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Gene expression prediction from H&E",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -26581,7 +26581,7 @@ window.CATALOG = {
     "Spatial gene expression prediction",
     "Uncertainty quantification"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Genome-wide expression prediction from H&E with calibrated uncertainty",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -26615,7 +26615,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Gene expression prediction from H&E",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -26651,7 +26651,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology; From ST alone (imputation / super-resolution)",
+   "subtype": "Slice interpolation & 3D reconstruction; From histology: RNA",
    "task": "3D molecular atlas reconstruction from sparse ST and H&E",
    "input": "ST count matrices + spatial coords (multiple slices)",
    "language": "",
@@ -26719,7 +26719,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Gene expression prediction/imputation from H&E",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -26757,7 +26757,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Gene expression prediction from H&E",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -26795,7 +26795,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Gene expression prediction from H&E",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -26834,7 +26834,7 @@ window.CATALOG = {
     "Spatial gene expression prediction",
     "Spatial domain detection & integration"
    ],
-   "subtype": "From histology; Single-sample domain detection",
+   "subtype": "Single-sample domain detection; From histology: RNA",
    "task": "Image-gene multimodal foundation model",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -26910,7 +26910,7 @@ window.CATALOG = {
     "Foundation models",
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Gene expression prediction from WSIs",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -26948,7 +26948,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Gene expression prediction from H&E",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -26985,7 +26985,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Gene expression prediction from H&E",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -27021,7 +27021,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Gene expression prediction from H&E",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -27061,7 +27061,7 @@ window.CATALOG = {
     "Spatial gene expression prediction",
     "Cell communication & interpretable models"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA; Super-resolution & enhancement",
    "task": "Single-cell-resolution expression prediction from histology",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -27100,7 +27100,7 @@ window.CATALOG = {
     "Spatial gene expression prediction",
     "Cell communication & interpretable models"
    ],
-   "subtype": "From ST alone (imputation / super-resolution)",
+   "subtype": "Perturbation response",
    "task": "Virtual tissue simulation and perturbation design",
    "input": "ST count matrix + spatial coords",
    "language": "",
@@ -27138,7 +27138,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From ST alone (imputation / super-resolution); From histology",
+   "subtype": "Super-resolution & enhancement; From histology: RNA",
    "task": "ST resolution enhancement",
    "input": "H&E image + low-resolution ST",
    "language": "",
@@ -27249,7 +27249,7 @@ window.CATALOG = {
     "Cell-type deconvolution",
     "Spatial gene expression prediction"
    ],
-   "subtype": "From ST alone (imputation / super-resolution)",
+   "subtype": "Super-resolution & enhancement; From histology: RNA",
    "task": "Spot-to-cell-level deconvolution using histology",
    "input": "H&E image + low-resolution ST",
    "language": "",
@@ -27285,7 +27285,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Gene expression prediction from H&E",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -27319,7 +27319,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Histology-gene alignment for expression prediction",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -27355,7 +27355,7 @@ window.CATALOG = {
     "Cell communication & interpretable models",
     "Spatial gene expression prediction"
    ],
-   "subtype": "From ST alone (imputation / super-resolution)",
+   "subtype": "Perturbation response",
    "task": "Spatial in silico perturbation of tumor microenvironment",
    "input": "ST count matrix + spatial coords",
    "language": "",
@@ -27391,7 +27391,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Gene expression prediction from H&E",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -27429,7 +27429,7 @@ window.CATALOG = {
     "Spatial gene expression prediction",
     "AI agents & analysis assistants"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Spatial molecular inference and reasoning from H&E",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -27465,7 +27465,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Spatially-aware data augmentation for expression prediction",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -27572,7 +27572,7 @@ window.CATALOG = {
     "Spatial gene expression prediction",
     "Spatial domain detection & integration"
    ],
-   "subtype": "From ST alone (imputation / super-resolution); Single-sample domain detection",
+   "subtype": "Single-sample domain detection; Imputation within ST",
    "task": "Gene imputation and spatial domain identification",
    "input": "ST count matrix + spatial coords",
    "language": "",
@@ -27610,7 +27610,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Gene expression prediction from H&E",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -27685,7 +27685,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Privacy-preserving gene expression prediction from H&E",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -27722,7 +27722,7 @@ window.CATALOG = {
     "Foundation models",
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Gene expression prediction from H&E (transcriptome-wide)",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -27795,7 +27795,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From scRNA-seq reference (imputation)",
+   "subtype": "Gene panel expansion from scRNA-seq",
    "task": "Gene expression imputation with scRNA-seq reference",
    "input": "ST count matrix + scRNA-seq reference",
    "language": "",
@@ -27978,7 +27978,7 @@ window.CATALOG = {
     "Spatial gene expression prediction",
     "Preprocessing & quality control"
    ],
-   "subtype": "From ST alone (imputation / super-resolution); From scRNA-seq reference (imputation); Denoising & batch correction",
+   "subtype": "Denoising & batch correction; Super-resolution & enhancement; Gene panel expansion from scRNA-seq; Imputation within ST",
    "task": "Coordinated ST enhancement (super-resolution, imputation, denoising)",
    "input": "ST count matrix + H&E image + scRNA-seq reference + spatial coords",
    "language": "",
@@ -28055,7 +28055,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "High-resolution gene expression prediction from H&E",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -28092,7 +28092,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Single-cell gene expression prediction from H&E",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -28129,7 +28129,7 @@ window.CATALOG = {
     "Foundation models",
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Virtual ST from histology (few-shot)",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -28239,7 +28239,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Single-cell gene expression prediction from H&E",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -28308,7 +28308,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Gene expression prediction from H&E",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -28344,7 +28344,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From ST alone (imputation / super-resolution)",
+   "subtype": "Imputation within ST",
    "task": "Generative imputation of missing tissue regions",
    "input": "ST count matrix + spatial coords",
    "language": "",
@@ -28422,7 +28422,7 @@ window.CATALOG = {
     "Foundation models",
     "Cell-type annotation"
    ],
-   "subtype": "Multi-sample integration; From ST alone (imputation / super-resolution); Reference-based",
+   "subtype": "Multi-sample integration; Reference-based; Imputation within ST",
    "task": "Cross-atlas integration, annotation and gene imputation",
    "input": "ST count matrices + spatial coords (multiple slices)",
    "language": "",
@@ -28460,7 +28460,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Gene expression prediction from H&E",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -28833,7 +28833,7 @@ window.CATALOG = {
     "Spatial niche identification",
     "Spatial gene expression prediction"
    ],
-   "subtype": "Single-sample domain detection; Multi-sample integration; Multi-modal integration; From ST alone (imputation / super-resolution)",
+   "subtype": "Single-sample domain detection; Multi-sample integration; Multi-modal integration; Imputation within ST",
    "task": "Scalable embedding for niche identification, integration, expression reconstruction",
    "input": "ST count matrix + spatial coords",
    "language": "",
@@ -28945,7 +28945,7 @@ window.CATALOG = {
     "Spatial domain detection & integration",
     "Trajectory inference"
    ],
-   "subtype": "From ST alone (imputation / super-resolution); Single-sample domain detection; Multi-sample integration",
+   "subtype": "Single-sample domain detection; Multi-sample integration; Slice interpolation & 3D reconstruction",
    "task": "Cross-slice/cross-platform spatiotemporal interpolation and generation",
    "input": "ST count matrices + spatial coords (multiple slices)",
    "language": "",
@@ -29243,7 +29243,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From ST alone (imputation / super-resolution)",
+   "subtype": "Cross-modality translation",
    "task": "Spatial cross-omics translation",
    "input": "Spatial single-omics data + morphology (multi-modal)",
    "language": "",
@@ -30032,7 +30032,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From scRNA-seq reference (imputation)",
+   "subtype": "Gene panel expansion from scRNA-seq",
    "task": "Spatial expression generation from scRNA-seq",
    "input": "ST count matrix + scRNA-seq reference",
    "language": "",
@@ -30149,7 +30149,7 @@ window.CATALOG = {
     "Spatial gene expression prediction",
     "Cell-type deconvolution"
    ],
-   "subtype": "From scRNA-seq reference (imputation)",
+   "subtype": "Gene panel expansion from scRNA-seq",
    "task": "Spatial reconstruction of scRNA-seq into ST",
    "input": "ST count matrix + scRNA-seq reference",
    "language": "",
@@ -30298,7 +30298,7 @@ window.CATALOG = {
     "Spatial niche identification",
     "Spatial gene expression prediction"
    ],
-   "subtype": "From ST alone (imputation / super-resolution)",
+   "subtype": "Perturbation response",
    "task": "Multi-scale tissue foundation model with in silico perturbation",
    "input": "ST count matrix + spatial coords",
    "language": "",
@@ -30412,7 +30412,7 @@ window.CATALOG = {
     "Spatial niche identification",
     "Spatial gene expression prediction"
    ],
-   "subtype": "From ST alone (imputation / super-resolution)",
+   "subtype": "Perturbation response",
    "task": "Multi-scale niche foundation models with perturbation analysis",
    "input": "ST count matrix + spatial coords",
    "language": "",
@@ -30520,7 +30520,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Gene expression prediction from H&E",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -30594,7 +30594,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Gene expression prediction from H&E",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -30699,7 +30699,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From ST alone (imputation / super-resolution)",
+   "subtype": "Super-resolution & enhancement",
    "task": "ST enhancement and imputation of unmeasured areas",
    "input": "ST count matrix + spatial coords",
    "language": "",
@@ -30775,7 +30775,7 @@ window.CATALOG = {
     "Preprocessing & quality control",
     "Spatial gene expression prediction"
    ],
-   "subtype": "Denoising & batch correction; From ST alone (imputation / super-resolution)",
+   "subtype": "Denoising & batch correction; Imputation within ST",
    "task": "ST denoising and interpolation",
    "input": "ST count matrix + spatial coords",
    "language": "",
@@ -31186,7 +31186,7 @@ window.CATALOG = {
     "Spatial gene expression prediction",
     "Cell-type deconvolution"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Single-cell spatial gene expression prediction from H&E",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -31256,7 +31256,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From ST alone (imputation / super-resolution)",
+   "subtype": "Super-resolution & enhancement",
    "task": "Spatial transcriptomics super-resolution",
    "input": "ST count matrix + spatial coords",
    "language": "",
@@ -31331,7 +31331,7 @@ window.CATALOG = {
     "Spatial gene expression prediction",
     "Cell-type deconvolution"
    ],
-   "subtype": "From ST alone (imputation / super-resolution)",
+   "subtype": "Imputation within ST",
    "task": "Cell-type deconvolution with ST denoising/imputation",
    "input": "ST count matrix + scRNA-seq reference + spatial coords",
    "language": "",
@@ -31372,7 +31372,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Gene expression generation from H&E",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -31447,7 +31447,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Gene expression prediction from H&E",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -31484,7 +31484,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Active sampling and gene expression prediction from tissue images",
    "input": "H&E image (training: paired ST) + scRNA-seq prior",
    "language": "",
@@ -31523,7 +31523,7 @@ window.CATALOG = {
     "Spatial gene expression prediction",
     "Foundation models"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Single-cell gene expression prediction from H&E",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -31600,7 +31600,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Gene expression prediction from H&E",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -31675,7 +31675,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Gene expression prediction from histology via parameter-efficient transfer",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -31711,7 +31711,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Gene expression prediction from pathology images",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -31748,7 +31748,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Gene expression prediction from WSIs",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -31785,7 +31785,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Gene expression prediction from H&E (breast cancer)",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -31821,7 +31821,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA; From histology: protein (virtual staining)",
    "task": "Single-cell RNA and protein prediction from H&E",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -31855,7 +31855,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Spatially resolved gene prediction from pathology images",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -31891,7 +31891,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From ST alone (imputation / super-resolution); From histology",
+   "subtype": "Super-resolution & enhancement; From histology: RNA",
    "task": "Super-resolution ST imputation",
    "input": "ST count matrix + spatial coords + H&E image",
    "language": "",
@@ -31928,7 +31928,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From ST alone (imputation / super-resolution)",
+   "subtype": "Imputation within ST",
    "task": "ST gene expression imputation",
    "input": "ST count matrix + spatial coords + H&E image",
    "language": "",
@@ -32004,7 +32004,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Single-cell gene expression prediction from histology",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -32040,7 +32040,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From ST alone (imputation / super-resolution); From histology",
+   "subtype": "Super-resolution & enhancement; Slice interpolation & 3D reconstruction",
    "task": "3D MSI-H&E fusion / super-resolution of mass spectrometry imaging",
    "input": "H&E image + low-resolution ST",
    "language": "",
@@ -32077,7 +32077,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From ST alone (imputation / super-resolution)",
+   "subtype": "Super-resolution & enhancement; From histology: protein (virtual staining)",
    "task": "Spatial super-resolution of sequencing-based spatial proteomics",
    "input": "ST count matrix + H&E image",
    "language": "",
@@ -32111,7 +32111,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Single-cell full-gene expression prediction from H&E",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -32148,7 +32148,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Gene expression prediction from H&E (breast cancer)",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -32185,7 +32185,7 @@ window.CATALOG = {
     "Spatial gene expression prediction",
     "Foundation models"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Contrastive text-image pretraining for ST and zero-shot expression prediction",
    "input": "H&E image + ST count matrix",
    "language": "",
@@ -32223,7 +32223,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Gene expression prediction from histology (retrieval-augmented)",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -32257,7 +32257,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Gene expression prediction from histology across slices",
    "input": "H&E image + spatial coords (training: paired ST)",
    "language": "",
@@ -32296,7 +32296,7 @@ window.CATALOG = {
     "Foundation models",
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Single-cell pan-cancer multimodal foundation model (histology + expression)",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -32407,7 +32407,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Gene expression prediction from H&E (QA framework)",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -32480,7 +32480,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Gene expression prediction from H&E",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -32516,7 +32516,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Gene expression prediction from H&E",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -32552,7 +32552,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Gene expression prediction from H&E",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -32589,7 +32589,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Gene expression prediction from H&E",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -32626,7 +32626,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Pan-cancer gene expression prediction from H&E",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -32662,7 +32662,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Gene expression prediction from H&E",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -32699,7 +32699,7 @@ window.CATALOG = {
     "Foundation models",
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Multimodal H&E + ST pretraining; gene expression prediction",
    "input": "H&E image + ST transcript tokens (paired)",
    "language": "",
@@ -32736,7 +32736,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Gene expression prediction from H&E",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -32811,7 +32811,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Gene expression prediction from H&E (spot and cell level)",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -32848,7 +32848,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Gene expression inference from H&E",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -32925,7 +32925,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Bulk, spatial and single-cell expression prediction from WSIs",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -32962,7 +32962,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA; Super-resolution & enhancement",
    "task": "Cellular-resolution expression prediction from H&E",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -32998,7 +32998,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Pan-cancer gene expression prediction from H&E",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -33034,7 +33034,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA; Gene panel expansion from scRNA-seq",
    "task": "Open-set (unseen gene) expression prediction from H&E",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -33070,7 +33070,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Zero-shot gene expression prediction from H&E",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -33106,7 +33106,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Gene expression prediction from H&E",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -33142,7 +33142,7 @@ window.CATALOG = {
     "Spatial gene expression prediction",
     "Spatial domain detection & integration"
    ],
-   "subtype": "From histology; Single-sample domain detection",
+   "subtype": "Single-sample domain detection; From histology: RNA",
    "task": "Multimodal ST-histology foundation model; expression prediction and domain discovery",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -33178,7 +33178,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Gene expression prediction from H&E",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -33213,7 +33213,7 @@ window.CATALOG = {
     "Spatial domain detection & integration",
     "Spatial gene expression prediction"
    ],
-   "subtype": "Single-sample domain detection; From ST alone (imputation / super-resolution)",
+   "subtype": "Single-sample domain detection; Imputation within ST",
    "task": "Gene expression imputation and spatial domain identification",
    "input": "ST count matrix + spatial coords",
    "language": "",
@@ -33250,7 +33250,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Joint H&E-ST representation learning for expression prediction",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -33286,7 +33286,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Gene expression prediction from H&E",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -33322,7 +33322,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Gene expression prediction from H&E",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -33431,7 +33431,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From scRNA-seq reference (imputation)",
+   "subtype": "Gene panel expansion from scRNA-seq",
    "task": "Spatial gene expression generation integrating scRNA-seq and ST",
    "input": "ST count matrix + scRNA-seq reference",
    "language": "",
@@ -33833,7 +33833,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA; Slice interpolation & 3D reconstruction",
    "task": "3D spatial expression prediction from 3D morphology",
    "input": "H&E image + low-resolution ST",
    "language": "",
@@ -33907,7 +33907,7 @@ window.CATALOG = {
     "Foundation models",
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Cell-centric pretraining for virtual spatial omics from microscopy",
    "input": "Microscopy / H&E image",
    "language": "",
@@ -34120,7 +34120,7 @@ window.CATALOG = {
     "Foundation models",
     "Cell-type annotation"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology; From histology: RNA",
    "task": "Multimodal histology/ST tasks incl. gene expression prediction from H&E",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -34156,7 +34156,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Histology-conditioned ST prediction",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -34190,7 +34190,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Histology-based expression prediction preserving DEG rankings",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -34260,7 +34260,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Single-cell expression prediction from H&E and lineage assignment",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -34296,7 +34296,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Gene expression prediction from WSIs with LLM-derived gene knowledge",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -34368,7 +34368,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Spatial gene expression estimation with auxiliary gene tasks",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -34436,7 +34436,7 @@ window.CATALOG = {
     "Cell-type deconvolution",
     "Spatial gene expression prediction"
    ],
-   "subtype": "From ST alone (imputation / super-resolution)",
+   "subtype": "Super-resolution & enhancement",
    "task": "Cell-type deconvolution with imputation at unmeasured locations",
    "input": "ST count matrix + scRNA-seq reference + spatial coords",
    "language": "",
@@ -34473,7 +34473,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Gene expression prediction from histopathological images",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -34543,7 +34543,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: protein (virtual staining)",
    "task": "Protein expression prediction from H&E and H&E generation from protein",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -34579,7 +34579,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Lightweight gene expression prediction from H&E",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -34649,7 +34649,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Gene expression prediction from histology",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -34754,7 +34754,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Gene expression prediction from H&E",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -34788,7 +34788,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Gene expression prediction from H&E",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -34822,7 +34822,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Gene expression prediction from H&E",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -34856,7 +34856,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Gene expression prediction from H&E",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -34892,7 +34892,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Gene expression prediction from H&E",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -34926,7 +34926,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Gene expression prediction from H&E",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -34960,7 +34960,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Gene expression prediction from H&E",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -34991,49 +34991,12 @@ window.CATALOG = {
    "paradigm": "Deep learning"
   },
   {
-   "id": "mv",
-   "method": "MV",
-   "categories": [
-    "Spatial gene expression prediction"
-   ],
-   "subtype": "From histology",
-   "task": "Gene expression prediction from H&E",
-   "input": "H&E image (training: paired ST)",
-   "language": "",
-   "core_method": "Hybrid state space-Vision Transformer backbone in pathology vision foundation models (title only; abstract unavailable).",
-   "year": 2025,
-   "first_author": "",
-   "title": "MV: Improving Spatial Transcriptomics Prediction with Hybrid State Space-Vision Transformer Backbone in Pathology Vision Foundation Models",
-   "journal": "arXiv (CoRR) 2025",
-   "doi": "",
-   "paper_url": "https://openreview.net/forum?id=cE5kVuuBf8",
-   "citations": null,
-   "code_url": "",
-   "code_source": "",
-   "table3_no": "",
-   "spatial_design": "spatial-specific",
-   "source": "added",
-   "added_on": "2026-11-20",
-   "languages": [
-    ""
-   ],
-   "input_tags": [
-    "ST expression",
-    "H&E image"
-   ],
-   "model_tags": [
-    "Transformer / ViT",
-    "Foundation model / LLM"
-   ],
-   "paradigm": "Deep learning"
-  },
-  {
    "id": "scor",
    "method": "SCOR",
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Gene expression prediction from H&E",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -35102,7 +35065,7 @@ window.CATALOG = {
     "Foundation models",
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology; From ST alone (imputation / super-resolution)",
+   "subtype": "From histology: RNA",
    "task": "Multi-scale cell-image/expression representation, gene imputation, cross-modal prediction and image generation",
    "input": "ST count matrix + H&E image",
    "language": "",
@@ -35140,7 +35103,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Cross-domain gene expression prediction from H&E",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -35174,7 +35137,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Gene expression prediction from H&E",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -35244,7 +35207,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From scRNA-seq reference (imputation); From ST alone (imputation / super-resolution)",
+   "subtype": "Gene panel expansion from scRNA-seq",
    "task": "Gene imputation for Xenium",
    "input": "ST count matrix",
    "language": "",
@@ -35280,7 +35243,7 @@ window.CATALOG = {
     "Cell-type deconvolution",
     "Spatial gene expression prediction"
    ],
-   "subtype": "From scRNA-seq reference (imputation)",
+   "subtype": "Super-resolution & enhancement",
    "task": "Single-cell resolution reconstruction of spot-level ST",
    "input": "ST count matrix + scRNA-seq reference + spatial coords",
    "language": "",
@@ -35350,7 +35313,7 @@ window.CATALOG = {
     "Spatial gene expression prediction",
     "Uncertainty quantification"
    ],
-   "subtype": "From histology; From ST alone (imputation / super-resolution)",
+   "subtype": "Super-resolution & enhancement; From histology: RNA; Gene panel expansion from scRNA-seq",
    "task": "Super-resolution enhancement of spot-level spatial omics with reliability estimation",
    "input": "ST count matrix + H&E image + scRNA-seq reference",
    "language": "",
@@ -35704,7 +35667,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From ST alone (imputation / super-resolution)",
+   "subtype": "Imputation within ST",
    "task": "Recovery/imputation of sparse spatial transcriptomics",
    "input": "ST count matrix + spatial coords (+ multimodal priors)",
    "language": "",
@@ -35813,7 +35776,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From ST alone (imputation / super-resolution)",
+   "subtype": "Cross-modality translation",
    "task": "Spatial RNA-to-protein prediction",
    "input": "ST count matrix + spatial coords (training: paired spatial protein)",
    "language": "",
@@ -36717,7 +36680,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From ST alone (imputation / super-resolution)",
+   "subtype": "Slice interpolation & 3D reconstruction",
    "task": "Inferring spatial expression from serial bulk RNA-seq using ST reference",
    "input": "Serial bulk RNA-seq + ST reference",
    "language": "",
@@ -36786,7 +36749,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From scRNA-seq reference (imputation)",
+   "subtype": "Gene panel expansion from scRNA-seq",
    "task": "Reconstruction of missing expression in ST",
    "input": "ST count matrix + scRNA-seq reference + spatial coords",
    "language": "",
@@ -36823,7 +36786,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: protein (virtual staining)",
    "task": "Predicting single-cell expression from low-plex immunofluorescence",
    "input": "Low-plex immunofluorescence image (training: high-plex spatial omics)",
    "language": "",
@@ -37643,7 +37606,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From scRNA-seq reference (imputation)",
+   "subtype": "Gene panel expansion from scRNA-seq",
    "task": "Spatial gene imputation with cross-modality alignment",
    "input": "ST count matrix + scRNA-seq reference + spatial coords",
    "language": "",
@@ -38038,7 +38001,7 @@ window.CATALOG = {
     "Cell-type deconvolution",
     "Spatial gene expression prediction"
    ],
-   "subtype": "From scRNA-seq reference (imputation)",
+   "subtype": "Gene panel expansion from scRNA-seq",
    "task": "Integrating scRNA-seq and ST to reconstruct genome-wide spatial expression and cell locations",
    "input": "ST count matrix + scRNA-seq reference",
    "language": "",
@@ -38260,7 +38223,7 @@ window.CATALOG = {
     "Cell-type deconvolution",
     "Spatial gene expression prediction"
    ],
-   "subtype": "From scRNA-seq reference (imputation)",
+   "subtype": "Gene panel expansion from scRNA-seq",
    "task": "3D/spatiotemporal per-spot deconvolution across multiple slices",
    "input": "ST count matrices + scRNA-seq reference + spatial coords (multiple slices)",
    "language": "",
@@ -38589,7 +38552,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA; Super-resolution & enhancement",
    "task": "Cell type prediction and gene expression reconstruction at single-cell resolution from H&E",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -38805,7 +38768,7 @@ window.CATALOG = {
     "Spatial gene expression prediction",
     "Cell-type deconvolution"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Inferring cell-type composition and gene expression from pathology foundation model embeddings",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -39023,7 +38986,7 @@ window.CATALOG = {
     "Spatial gene expression prediction",
     "Foundation models"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA; From histology: protein (virtual staining)",
    "task": "Predicting spatial transcriptomics and proteomics from H&E",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -39100,7 +39063,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Gene expression prediction from histology",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -39137,7 +39100,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From ST alone (imputation / super-resolution)",
+   "subtype": "From histology: RNA; Super-resolution & enhancement",
    "task": "Super-resolution ST imputation",
    "input": "ST count matrix + spatial coords + H&E-derived features",
    "language": "",
@@ -39251,7 +39214,7 @@ window.CATALOG = {
     "Cell communication & interpretable models",
     "Cell segmentation"
    ],
-   "subtype": "From histology; Image-based",
+   "subtype": "Image-based; Super-resolution & enhancement; From histology: RNA",
    "task": "Nuclei-resolved expression imputation and ligand-receptor analysis",
    "input": "ST count matrix + H&E image",
    "language": "",
@@ -39329,7 +39292,7 @@ window.CATALOG = {
     "Spatial gene expression prediction",
     "Spatial alignment"
    ],
-   "subtype": "From ST alone (imputation / super-resolution)",
+   "subtype": "Super-resolution & enhancement; Slice interpolation & 3D reconstruction",
    "task": "Sample-specific sparse-to-dense imputation for 2.5D/3D ST",
    "input": "ST count matrices + spatial coords (multiple slices)",
    "language": "",
@@ -39471,7 +39434,7 @@ window.CATALOG = {
     "Spatial gene expression prediction",
     "Spatial domain detection & integration"
    ],
-   "subtype": "From histology; Single-sample domain detection",
+   "subtype": "Single-sample domain detection; From histology: RNA",
    "task": "Tri-modal histology-ST-language foundation model",
    "input": "H&E image + ST + text",
    "language": "",
@@ -39544,7 +39507,7 @@ window.CATALOG = {
     "Spatial gene expression prediction",
     "Preprocessing & quality control"
    ],
-   "subtype": "From ST alone (imputation / super-resolution); Denoising & batch correction",
+   "subtype": "Denoising & batch correction; Super-resolution & enhancement",
    "task": "Coordinate-based imputation, denoising and super-resolution",
    "input": "ST count matrix + spatial coords",
    "language": "",
@@ -39614,7 +39577,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Gene expression prediction from foundation model embeddings",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -39915,7 +39878,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From ST alone (imputation / super-resolution)",
+   "subtype": "Cross-modality translation",
    "task": "Spatial protein expression imputation from ST",
    "input": "ST count matrix + spatial coords (training: paired spatial proteomics)",
    "language": "",
@@ -39987,7 +39950,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Single-cell spatial expression from H&E",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -40023,7 +39986,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Training-free correction of histology-predicted expression",
    "input": "Predicted expression + spatial coords",
    "language": "",
@@ -40056,7 +40019,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: protein (virtual staining)",
    "task": "Virtual spatial proteomics from H&E",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -40129,7 +40092,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Single-cell reference-informed expression prediction from H&E",
    "input": "H&E image + scRNA-seq reference (training: paired ST)",
    "language": "",
@@ -40201,7 +40164,7 @@ window.CATALOG = {
     "Spatial gene expression prediction",
     "Preprocessing & quality control"
    ],
-   "subtype": "Single-sample domain detection; From ST alone (imputation / super-resolution); Denoising & batch correction",
+   "subtype": "Single-sample domain detection; Denoising & batch correction; Imputation within ST",
    "task": "Imputation, denoising and clustering of ST",
    "input": "ST count matrix + spatial coords",
    "language": "",
@@ -40239,7 +40202,7 @@ window.CATALOG = {
     "Spatial gene expression prediction",
     "Spatial domain detection & integration"
    ],
-   "subtype": "From ST alone (imputation / super-resolution); Multi-modal integration; Multi-sample integration",
+   "subtype": "Multi-modal integration; Multi-sample integration; From histology: RNA; Super-resolution & enhancement",
    "task": "High-resolution spatial metagene embedding with histology",
    "input": "ST count matrix + H&E image",
    "language": "",
@@ -40314,7 +40277,7 @@ window.CATALOG = {
     "Foundation models",
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Histology-ST multimodal pretraining for virtual ST",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -40385,7 +40348,7 @@ window.CATALOG = {
     "Spatial gene expression prediction",
     "Cell communication & interpretable models"
    ],
-   "subtype": "",
+   "subtype": "Perturbation response",
    "task": "Predicting spatial effects of in silico cell perturbations in tissue",
    "input": "Spatially resolved single-cell transcriptomics (cell expression + coords)",
    "language": "",
@@ -40419,7 +40382,7 @@ window.CATALOG = {
     "Preprocessing & quality control",
     "Spatial gene expression prediction"
    ],
-   "subtype": "Denoising & batch correction; From ST alone (imputation / super-resolution)",
+   "subtype": "Denoising & batch correction; Imputation within ST",
    "task": "Spatially aware denoising and imputation of spatial omics",
    "input": "ST count matrix + spatial coords",
    "language": "",
@@ -40455,7 +40418,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Histology-based gene expression prediction by integrating multiple foundation models",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -40639,7 +40602,7 @@ window.CATALOG = {
     "Uncertainty quantification",
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Calibrated multiscale confidence for virtual ST predictions",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -40674,7 +40637,7 @@ window.CATALOG = {
     "Spatial gene expression prediction",
     "Spatial domain detection & integration"
    ],
-   "subtype": "From ST alone (imputation / super-resolution); Multi-modal integration",
+   "subtype": "Multi-modal integration; Cross-modality translation",
    "task": "Spatial transcriptome-proteome integration and protein prediction",
    "input": "ST + multi-omics + spatial coords",
    "language": "",
@@ -40854,7 +40817,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From scRNA-seq reference (imputation)",
+   "subtype": "Gene panel expansion from scRNA-seq",
    "task": "Gene panel extension for imaging-based ST",
    "input": "ST count matrix + scRNA-seq reference + spatial coords",
    "language": "",
@@ -40926,7 +40889,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From ST alone (imputation / super-resolution)",
+   "subtype": "Imputation within ST",
    "task": "Spatial transcriptomic gene imputation",
    "input": "ST count matrix + spatial coords",
    "language": "",
@@ -41111,7 +41074,7 @@ window.CATALOG = {
     "Spatial domain detection & integration",
     "Spatial gene expression prediction"
    ],
-   "subtype": "Single-sample domain detection; From ST alone (imputation / super-resolution)",
+   "subtype": "Single-sample domain detection; Imputation within ST",
    "task": "High-order spatial factorization for gene modules, tissue segmentation and imputation",
    "input": "ST count matrix + spatial coords",
    "language": "",
@@ -42552,7 +42515,7 @@ window.CATALOG = {
     "Spatial domain detection & integration",
     "Spatial gene expression prediction"
    ],
-   "subtype": "Multi-modal integration; From ST alone (imputation / super-resolution)",
+   "subtype": "Multi-modal integration; Cross-modality translation",
    "task": "Cross-modality translation of spatial omics",
    "input": "ST + multi-omics + spatial coords",
    "language": "",
@@ -42738,7 +42701,7 @@ window.CATALOG = {
     "Cell communication & interpretable models",
     "Spatial gene expression prediction"
    ],
-   "subtype": "",
+   "subtype": "Perturbation response",
    "task": "LLM-based generative modeling of ST, interaction prediction and in silico perturbation",
    "input": "ST count matrix + spatial coords",
    "language": "",
@@ -43936,7 +43899,7 @@ window.CATALOG = {
     "Cell-type annotation",
     "Spatial gene expression prediction"
    ],
-   "subtype": "Reference-free",
+   "subtype": "Reference-free; Perturbation response",
    "task": "Language-aligned single-cell/spatial foundation model for perturbation and niche interpretation",
    "input": "ST count matrix + scRNA-seq reference + spatial coords",
    "language": "",
@@ -44625,7 +44588,7 @@ window.CATALOG = {
     "Spatial gene expression prediction",
     "Cell-type deconvolution"
    ],
-   "subtype": "From scRNA-seq reference (imputation)",
+   "subtype": "Gene panel expansion from scRNA-seq",
    "task": "Joint cell-type inference and microenvironment zone delineation",
    "input": "ST count matrix + scRNA-seq reference + spatial coords",
    "language": "",
@@ -44949,7 +44912,7 @@ window.CATALOG = {
     "Spatial alignment",
     "Spatial gene expression prediction"
    ],
-   "subtype": "From ST alone (imputation / super-resolution)",
+   "subtype": "Slice interpolation & 3D reconstruction; Super-resolution & enhancement",
    "task": "Continuous 3D reconstruction of spatial omics",
    "input": "ST count matrices + spatial coords (multiple slices)",
    "language": "",
@@ -44987,7 +44950,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From scRNA-seq reference (imputation)",
+   "subtype": "Gene panel expansion from scRNA-seq",
    "task": "Microenvironment-aware transcriptome reconstruction",
    "input": "ST count matrix + scRNA-seq reference + spatial coords",
    "language": "",
@@ -45025,7 +44988,7 @@ window.CATALOG = {
     "Spatial niche identification",
     "Spatial gene expression prediction"
    ],
-   "subtype": "",
+   "subtype": "Perturbation response",
    "task": "In silico perturbation of TFs, ligands and receptors for functional microniches",
    "input": "ST count matrix + spatial coords",
    "language": "",
@@ -47033,7 +46996,7 @@ window.CATALOG = {
     "Cell communication & interpretable models",
     "Spatial gene expression prediction"
    ],
-   "subtype": "",
+   "subtype": "Perturbation response",
    "task": "Disentangling intra- and inter-cellular gene regulation and counterfactual perturbation modeling",
    "input": "ST count matrix + spatial coords",
    "language": "",
@@ -47180,7 +47143,7 @@ window.CATALOG = {
     "Cell communication & interpretable models",
     "Spatial gene expression prediction"
    ],
-   "subtype": "",
+   "subtype": "Perturbation response",
    "task": "Spatiotemporal perturbation propagation and regulatory link modeling",
    "input": "scRNA-seq / ST time-series + spatial coords",
    "language": "",
@@ -47320,7 +47283,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From scRNA-seq reference (imputation)",
+   "subtype": "Gene panel expansion from scRNA-seq",
    "task": "Transcriptome-scale completion of panel-limited imaging ST",
    "input": "Imaging-based ST count matrix + scRNA-seq reference + spatial coords",
    "language": "",
@@ -47798,7 +47761,7 @@ window.CATALOG = {
     "Cell-type deconvolution",
     "Spatial gene expression prediction"
    ],
-   "subtype": "Multi-sample integration; From scRNA-seq reference (imputation)",
+   "subtype": "Multi-sample integration; Gene panel expansion from scRNA-seq",
    "task": "Batch alignment, deconvolution and gene imputation",
    "input": "ST count matrices + spatial coords (multiple slices) + scRNA-seq reference",
    "language": "",
@@ -47836,7 +47799,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Gene expression estimation from pathology images with cell-type prototypes",
    "input": "H&E image (training: paired ST) + scRNA-seq reference",
    "language": "",
@@ -47916,7 +47879,7 @@ window.CATALOG = {
     "Cell-type annotation",
     "Spatial gene expression prediction"
    ],
-   "subtype": "Reference-based",
+   "subtype": "Reference-based; Perturbation response",
    "task": "Multi-omic single-cell/spatial foundation model for in-silico perturbation",
    "input": "scRNA-seq + ATAC + CITE-seq + MERFISH / imaging mass cytometry",
    "language": "",
@@ -48060,7 +48023,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Spatial gene expression prediction from H&E",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -48097,7 +48060,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Multi-scale H&E-ST contrastive alignment and expression prediction",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -48209,7 +48172,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Explainable virtual ST from H&E",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -48280,7 +48243,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From ST alone (imputation / super-resolution)",
+   "subtype": "Imputation within ST",
    "task": "ST imputation",
    "input": "ST count matrix + spatial coords",
    "language": "",
@@ -48317,7 +48280,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Histology-to-ST prediction",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -48394,7 +48357,7 @@ window.CATALOG = {
     "Spatial niche identification",
     "Spatial gene expression prediction"
    ],
-   "subtype": "From scRNA-seq reference (imputation)",
+   "subtype": "Imputation within ST",
    "task": "Multi-scale gene covariance niche representation and panel imputation",
    "input": "ST count matrix + spatial coords",
    "language": "",
@@ -48430,7 +48393,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Histology-to-ST generation",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -48467,7 +48430,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Histology-to-ST prediction",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -48576,7 +48539,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "Slice interpolation & 3D reconstruction; From histology: RNA",
    "task": "3D ST imputation from WSIs and sparse 2D ST reference",
    "input": "H&E image + low-resolution ST",
    "language": "",
@@ -48610,7 +48573,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Histology-to-transcriptomics neighborhood retrieval",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -48646,7 +48609,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From ST alone (imputation / super-resolution)",
+   "subtype": "Super-resolution & enhancement",
    "task": "ST super-resolution",
    "input": "ST count matrix + spatial coords",
    "language": "",
@@ -48682,7 +48645,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Histology-to-ST prediction with neighbor context",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -48719,7 +48682,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Gene and pathway expression prediction from histology",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -49113,7 +49076,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From ST alone (imputation / super-resolution)",
+   "subtype": "From histology: RNA; Super-resolution & enhancement",
    "task": "Enhancement of gene expression with histology features",
    "input": "ST count matrix + H&E image + spatial coords",
    "language": "",
@@ -49891,7 +49854,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Histology-to-ST prediction with zero-shot unseen genes",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -50391,7 +50354,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From ST alone (imputation / super-resolution)",
+   "subtype": "Super-resolution & enhancement",
    "task": "Sparse-sampling spatial proteome image reconstruction",
    "input": "Spatial proteomics (sparse MS sampling)",
    "language": "",
@@ -50466,7 +50429,7 @@ window.CATALOG = {
     "Spatial niche identification",
     "Spatial gene expression prediction"
    ],
-   "subtype": "",
+   "subtype": "Perturbation response",
    "task": "Microenvironment influence on cell states and in silico perturbation",
    "input": "ST count matrix + spatial coords",
    "language": "",
@@ -50894,7 +50857,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA; From histology: protein (virtual staining)",
    "task": "Spatial biomarker expression prediction from H&E",
    "input": "H&E image + GeoMx ROI spatial omics",
    "language": "",
@@ -50999,7 +50962,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Spot-level gene expression prediction from WSIs",
    "input": "H&E image + ST (training)",
    "language": "",
@@ -51743,7 +51706,7 @@ window.CATALOG = {
     "Spatial domain detection & integration",
     "Spatial gene expression prediction"
    ],
-   "subtype": "Single-sample domain detection; From ST alone (imputation / super-resolution)",
+   "subtype": "Single-sample domain detection; Imputation within ST",
    "task": "Spatial clustering and signal amplification in ultra-large ST",
    "input": "ST count matrix + spatial coords",
    "language": "",
@@ -52172,7 +52135,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From ST alone (imputation / super-resolution)",
+   "subtype": "Super-resolution & enhancement; From histology: RNA",
    "task": "Single-cell resolution enhancement of spot/bin ST",
    "input": "H&E image + low-resolution ST (Visium / Visium HD)",
    "language": "",
@@ -52280,7 +52243,7 @@ window.CATALOG = {
     "Spatial gene expression prediction",
     "Cell-type deconvolution"
    ],
-   "subtype": "From ST alone (imputation / super-resolution)",
+   "subtype": "Imputation within ST",
    "task": "Joint imputation and deconvolution across ST platforms",
    "input": "Paired ST datasets from different platforms (e.g. Xenium + Visium)",
    "language": "Python",
@@ -52958,7 +52921,7 @@ window.CATALOG = {
     "Spatial gene expression prediction",
     "Foundation models"
    ],
-   "subtype": "From ST alone (imputation / super-resolution)",
+   "subtype": "Super-resolution & enhancement; From histology: RNA",
    "task": "Zero-shot super-resolution of ST across capture geometries",
    "input": "ST count matrix + H&E image",
    "language": "",
@@ -52996,7 +52959,7 @@ window.CATALOG = {
     "CNV inference",
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Spatial CNV prediction from H&E",
    "input": "H&E image (trained on paired ST)",
    "language": "",
@@ -53033,7 +52996,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Spatial gene expression prediction from H&E",
    "input": "H&E image (trained on paired ST)",
    "language": "",
@@ -53107,7 +53070,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Spatial gene expression prediction from WSIs with sparse ST prompts",
    "input": "H&E image + low-resolution ST",
    "language": "",
@@ -53143,7 +53106,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: protein (virtual staining)",
    "task": "Single-cell spatial proteomics prediction from H&E",
    "input": "H&E image (trained on paired spatial proteomics)",
    "language": "",
@@ -53180,7 +53143,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From ST alone (imputation / super-resolution)",
+   "subtype": "Super-resolution & enhancement",
    "task": "Super-resolution of spot-based ST via transfer learning",
    "input": "ST count matrix + spatial coords + high-definition ST reference",
    "language": "",
@@ -53216,7 +53179,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Spatial gene expression prediction from H&E",
    "input": "H&E image (trained on paired ST)",
    "language": "",
@@ -53320,7 +53283,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From ST alone (imputation / super-resolution)",
+   "subtype": "Super-resolution & enhancement; From histology: RNA",
    "task": "Single-cell spatial multi-omics reconstruction from spot-based data",
    "input": "Spot-based spatial omics + H&E image",
    "language": "",
@@ -53353,7 +53316,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "Super-resolution & enhancement; From histology: RNA",
    "task": "Histology-guided denoising, reconstruction and prediction of spatial expression",
    "input": "ST count matrix + H&E image",
    "language": "",
@@ -53424,7 +53387,7 @@ window.CATALOG = {
     "Spatial gene expression prediction",
     "Spatial domain detection & integration"
    ],
-   "subtype": "From histology; Single-sample domain detection",
+   "subtype": "Single-sample domain detection; Slice interpolation & 3D reconstruction; From histology: RNA",
    "task": "3D single-cell spatial multi-omics reconstruction from H&E",
    "input": "H&E images (serial sections) + sparse spatial omics",
    "language": "",
@@ -53493,7 +53456,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: protein (virtual staining)",
    "task": "Virtual multiplex immunofluorescence (spatial proteomics) from H&E",
    "input": "H&E image (trained on paired MIF)",
    "language": "",
@@ -53527,7 +53490,7 @@ window.CATALOG = {
     "Spatial gene expression prediction",
     "Simulation"
    ],
-   "subtype": "From ST alone (imputation / super-resolution)",
+   "subtype": "Super-resolution & enhancement; Slice interpolation & 3D reconstruction",
    "task": "ST simulation, imputation and super-resolution",
    "input": "ST count matrices + spatial coords (multiple slices / 3D)",
    "language": "",
@@ -53634,7 +53597,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From ST alone (imputation / super-resolution)",
+   "subtype": "Super-resolution & enhancement; From histology: RNA",
    "task": "Single-cell expression reconstruction from spot-level ST",
    "input": "ST count matrix + H&E image",
    "language": "",
@@ -53671,7 +53634,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Gene expression prediction from WSIs",
    "input": "H&E image (trained on paired ST)",
    "language": "",
@@ -53779,7 +53742,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From ST alone (imputation / super-resolution)",
+   "subtype": "Super-resolution & enhancement",
    "task": "Super-resolution of mass spectrometry imaging",
    "input": "MSI data + optical microscopy image",
    "language": "",
@@ -53812,7 +53775,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From ST alone (imputation / super-resolution)",
+   "subtype": "Slice interpolation & 3D reconstruction; Imputation within ST",
    "task": "Imputation of missing regions and cross-slice gaps in ST",
    "input": "ST count matrices + spatial coords (multiple slices)",
    "language": "",
@@ -54057,7 +54020,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA; From histology: protein (virtual staining)",
    "task": "ROI selection and whole-slide single-cell molecular reconstruction from H&E",
    "input": "H&E image + ROI spatial omics (ST or proteomics)",
    "language": "",
@@ -54094,7 +54057,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA; Super-resolution & enhancement",
    "task": "Continuous spatial gene expression field prediction from histology",
    "input": "H&E image (trained on paired ST)",
    "language": "",
@@ -54165,7 +54128,7 @@ window.CATALOG = {
     "Foundation models",
     "Subcellular RNA localization"
    ],
-   "subtype": "From ST alone (imputation / super-resolution)",
+   "subtype": "Imputation within ST",
    "task": "Modeling subcellular transcript localization and subcellular imputation",
    "input": "Subcellular ST (transcript coordinates) + cell morphology",
    "language": "",
@@ -54200,7 +54163,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From scRNA-seq reference (imputation)",
+   "subtype": "Gene panel expansion from scRNA-seq",
    "task": "Genome-wide imputation for sparse subcellular ST panels",
    "input": "Subcellular ST count matrix + pretrained pan-cancer scRNA-seq atlas",
    "language": "",
@@ -54273,7 +54236,7 @@ window.CATALOG = {
     "Spatial gene expression prediction",
     "Foundation models"
    ],
-   "subtype": "From histology",
+   "subtype": "Imputation within ST; Cross-modality translation; From histology: RNA",
    "task": "Transcriptome-wide spatial inference of unassayed genes",
    "input": "Gene embeddings + spatial omics (histology, ATAC, subcellular ST)",
    "language": "",
@@ -54418,7 +54381,7 @@ window.CATALOG = {
     "Spatial domain detection & integration",
     "Spatial gene expression prediction"
    ],
-   "subtype": "Single-sample domain detection; From ST alone (imputation / super-resolution)",
+   "subtype": "Single-sample domain detection; Imputation within ST",
    "task": "Spatial domain identification and enhancement of subcellular ST",
    "input": "Subcellular ST + morphology image",
    "language": "",
@@ -54487,7 +54450,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA; Super-resolution & enhancement",
    "task": "Single-cell-resolution ST prediction from H&E",
    "input": "ST count matrix + H&E image",
    "language": "",
@@ -54523,7 +54486,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Multi-scale (bulk and spot) gene expression prediction from WSIs",
    "input": "ST spots + bulk RNA-seq + whole-slide H&E images",
    "language": "",
@@ -54559,7 +54522,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "Cross-modality translation; From histology: protein (virtual staining)",
    "task": "Spatial protein abundance prediction",
    "input": "ST count matrix + multiscale H&E image + spatial coords",
    "language": "",
@@ -54596,7 +54559,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Pan-cancer virtual spatial transcriptomics from histology",
    "input": "H&E image (trained on ST)",
    "language": "",
@@ -54671,7 +54634,7 @@ window.CATALOG = {
     "Spatial gene expression prediction",
     "Preprocessing & quality control"
    ],
-   "subtype": "From scRNA-seq reference (imputation); Denoising & batch correction",
+   "subtype": "Denoising & batch correction; Gene panel expansion from scRNA-seq",
    "task": "Reference-based imputation and denoising of imaging-based ST",
    "input": "ST count matrix + scRNA-seq reference",
    "language": "",
@@ -54707,7 +54670,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Spatial gene expression prediction from histopathology",
    "input": "ST count matrix + H&E image",
    "language": "",
@@ -54743,7 +54706,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Spatial gene expression prediction from H&E",
    "input": "ST count matrix + H&E image + spatial coords (multiple slices)",
    "language": "",
@@ -54821,7 +54784,7 @@ window.CATALOG = {
     "Preprocessing & quality control",
     "Spatial gene expression prediction"
    ],
-   "subtype": "Denoising & batch correction; From scRNA-seq reference (imputation)",
+   "subtype": "Denoising & batch correction; Gene panel expansion from scRNA-seq",
    "task": "Denoising and imputation of spatial epigenomic data",
    "input": "Spatial epigenomic peak matrix + spatial coords + single-cell epigenomic atlas",
    "language": "",
@@ -54856,7 +54819,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA; Super-resolution & enhancement",
    "task": "High-resolution (Visium HD) ST prediction from histology",
    "input": "H&E image + Visium HD ST",
    "language": "",
@@ -54892,7 +54855,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Spatial gene expression prediction from pathology images",
    "input": "ST count matrix + H&E image + spatial coords",
    "language": "",
@@ -54930,7 +54893,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From ST alone (imputation / super-resolution)",
+   "subtype": "Super-resolution & enhancement; From histology: RNA",
    "task": "Image-guided resolution enhancement and denoising of spatial omics",
    "input": "H&E image + low-resolution ST",
    "language": "",
@@ -55003,7 +54966,7 @@ window.CATALOG = {
     "Spatial gene expression prediction",
     "Spatial domain detection & integration"
    ],
-   "subtype": "From ST alone (imputation / super-resolution)",
+   "subtype": "Cross-modality translation",
    "task": "Cross-modal imputation and multi-section integration of spatial multi-omics",
    "input": "Spatial multi-omics matrices + spatial coords (multiple slices)",
    "language": "",
@@ -55077,7 +55040,7 @@ window.CATALOG = {
     "Spatial domain detection & integration",
     "Spatial gene expression prediction"
    ],
-   "subtype": "Multi-sample integration; From ST alone (imputation / super-resolution)",
+   "subtype": "Multi-sample integration; Imputation within ST",
    "task": "Multi-slice joint embedding, domain identification and imputation",
    "input": "ST count matrices + spatial coords (multiple slices)",
    "language": "",
@@ -55151,7 +55114,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From scRNA-seq reference (imputation)",
+   "subtype": "Gene panel expansion from scRNA-seq; Cross-modality translation",
    "task": "Inference and imputation of single-cell spatial proteomics from scRNA-seq",
    "input": "scRNA-seq + spatial proteomics",
    "language": "",
@@ -55470,7 +55433,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Spatial gene expression prediction from histology",
    "input": "ST count matrix + H&E image",
    "language": "",
@@ -55507,7 +55470,7 @@ window.CATALOG = {
     "Spatial gene expression prediction",
     "Preprocessing & quality control"
    ],
-   "subtype": "From ST alone (imputation / super-resolution); Denoising & batch correction",
+   "subtype": "Denoising & batch correction; Slice interpolation & 3D reconstruction; Super-resolution & enhancement",
    "task": "3D reconstruction and super-resolution of spatial omics",
    "input": "ST count matrices + spatial coords (multiple slices)",
    "language": "",
@@ -55647,7 +55610,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From ST alone (imputation / super-resolution)",
+   "subtype": "Slice interpolation & 3D reconstruction",
    "task": "Isotropic 3D ST reconstruction from sparse 2D sections",
    "input": "ST count matrices + spatial coords (multiple slices)",
    "language": "",
@@ -55827,7 +55790,7 @@ window.CATALOG = {
     "Spatial domain detection & integration",
     "Spatial gene expression prediction"
    ],
-   "subtype": "Multi-modal integration; From ST alone (imputation / super-resolution)",
+   "subtype": "Multi-modal integration; Cross-modality translation",
    "task": "Mosaic cross-omic and cross-slice integration of spatial multi-omics",
    "input": "Spatial multi-omics matrices + spatial coords (multiple slices)",
    "language": "",
@@ -56006,7 +55969,7 @@ window.CATALOG = {
     "Spatial gene expression prediction",
     "Preprocessing & quality control"
    ],
-   "subtype": "Single-sample domain detection; From ST alone (imputation / super-resolution); Denoising & batch correction",
+   "subtype": "Single-sample domain detection; Denoising & batch correction; Imputation within ST",
    "task": "Spatial domain identification, denoising and imputation",
    "input": "ST count matrix + spatial coords",
    "language": "",
@@ -56078,7 +56041,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Gene expression prediction from histology",
    "input": "ST count matrix + H&E image",
    "language": "",
@@ -56193,7 +56156,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From ST alone (imputation / super-resolution)",
+   "subtype": "Slice interpolation & 3D reconstruction; Super-resolution & enhancement",
    "task": "Dense 3D ST reconstruction from sparse serial sections",
    "input": "ST count matrices + spatial coords (multiple slices)",
    "language": "",
@@ -58483,7 +58446,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From scRNA-seq reference (imputation)",
+   "subtype": "Gene panel expansion from scRNA-seq",
    "task": "Prediction of unmeasured genes in imaging-based ST",
    "input": "Imaging-based ST + scRNA-seq reference",
    "language": "",
@@ -58522,7 +58485,7 @@ window.CATALOG = {
     "Preprocessing & quality control",
     "Simulation"
    ],
-   "subtype": "Single-sample domain detection; Multi-sample integration; Denoising & batch correction",
+   "subtype": "Single-sample domain detection; Multi-sample integration; Denoising & batch correction; Imputation within ST",
    "task": "Multi-task spatial omics analysis (domains, slice integration, spot completion, denoising)",
    "input": "ST count matrices + spatial coords (single or multiple slices)",
    "language": "",
@@ -58802,7 +58765,7 @@ window.CATALOG = {
     "Spatial gene expression prediction",
     "Preprocessing & quality control"
    ],
-   "subtype": "From scRNA-seq reference (imputation); Denoising & batch correction",
+   "subtype": "Denoising & batch correction; Gene panel expansion from scRNA-seq",
    "task": "Prediction of undetected genes and denoising for imaging-based ST",
    "input": "Imaging-based ST + scRNA-seq reference",
    "language": "",
@@ -59087,7 +59050,7 @@ window.CATALOG = {
     "Cell segmentation",
     "Spatial gene expression prediction"
    ],
-   "subtype": "Transcript-based; From scRNA-seq reference (imputation)",
+   "subtype": "Transcript-based; Gene panel expansion from scRNA-seq",
    "task": "Transcript-based cell segmentation and whole-transcriptome imputation",
    "input": "Subcellular ST (transcript coordinates) + scRNA-seq reference",
    "language": "",
@@ -59813,7 +59776,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From ST alone (imputation / super-resolution)",
+   "subtype": "Slice interpolation & 3D reconstruction",
    "task": "3D reconstruction by section repair and interpolation",
    "input": "Spatial proteomics (multiple 2D sections)",
    "language": "",
@@ -59922,7 +59885,7 @@ window.CATALOG = {
     "Spatial gene expression prediction",
     "Spatial alignment"
    ],
-   "subtype": "From ST alone (imputation / super-resolution)",
+   "subtype": "Slice interpolation & 3D reconstruction",
    "task": "Generating virtual slices to build dense 3D cell atlases",
    "input": "ST count matrices + spatial coords (multiple slices)",
    "language": "",
@@ -59988,7 +59951,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "Slice interpolation & 3D reconstruction; From histology: RNA",
    "task": "3D expression prediction from micro-CT",
    "input": "Micro-CT volume + paired 2D ST section",
    "language": "",
@@ -60555,7 +60518,7 @@ window.CATALOG = {
     "Spatial gene expression prediction",
     "Cell segmentation"
    ],
-   "subtype": "From ST alone (imputation / super-resolution); Joint",
+   "subtype": "Joint; Super-resolution & enhancement",
    "task": "Single-cell expression recovery from multicellular spots",
    "input": "ST count matrix + tissue image (Visium/Visium HD)",
    "language": "",
@@ -61631,7 +61594,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From ST alone (imputation / super-resolution)",
+   "subtype": "Slice interpolation & 3D reconstruction",
    "task": "Interpolation of unseen ST slices",
    "input": "ST count matrices + spatial coords (multiple slices)",
    "language": "",
@@ -61880,7 +61843,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From scRNA-seq reference (imputation)",
+   "subtype": "Gene panel expansion from scRNA-seq",
    "task": "Imputation of missing genes in imaging-based ST",
    "input": "ST count matrix + scRNA-seq reference",
    "language": "",
@@ -61916,7 +61879,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Gene expression prediction from H&E",
    "input": "ST count matrix + H&E image",
    "language": "",
@@ -62062,7 +62025,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Gene expression prediction from H&E",
    "input": "ST count matrix + H&E image",
    "language": "",
@@ -62100,7 +62063,7 @@ window.CATALOG = {
     "Spatial gene expression prediction",
     "Uncertainty quantification"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Gene expression prediction from H&E with uncertainty",
    "input": "ST count matrix + H&E image (multiple sections)",
    "language": "",
@@ -62206,7 +62169,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Single-cell gene expression prediction from H&E",
    "input": "Subcellular ST (Xenium) + H&E image",
    "language": "",
@@ -62351,7 +62314,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Gene expression prediction from histopathology",
    "input": "ST count matrix + H&E image",
    "language": "",
@@ -62385,7 +62348,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Gene expression prediction from histology",
    "input": "ST count matrix + H&E image",
    "language": "",
@@ -62419,7 +62382,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From ST alone (imputation / super-resolution)",
+   "subtype": "Imputation within ST",
    "task": "Reference-free completion of ST dropout",
    "input": "ST count matrix + spatial coords",
    "language": "",
@@ -62489,7 +62452,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Large-panel gene expression prediction from histology",
    "input": "ST count matrix + H&E image",
    "language": "",
@@ -62525,7 +62488,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Gene expression prediction from histology",
    "input": "ST count matrix + H&E image + scRNA-seq reference",
    "language": "",
@@ -62562,7 +62525,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Gene expression prediction from histology in program space",
    "input": "ST count matrix + H&E image",
    "language": "",
@@ -62635,7 +62598,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Gene expression prediction from H&E",
    "input": "ST count matrix + H&E image",
    "language": "",
@@ -62669,7 +62632,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Gene expression prediction from H&E",
    "input": "ST count matrix + H&E image",
    "language": "",
@@ -62703,7 +62666,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From scRNA-seq reference (imputation)",
+   "subtype": "Gene panel expansion from scRNA-seq",
    "task": "Imputation of ST dropouts",
    "input": "ST count matrix + scRNA-seq reference",
    "language": "",
@@ -62739,7 +62702,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "Slice interpolation & 3D reconstruction; From histology: RNA",
    "task": "3D expression imputation on unprofiled serial sections",
    "input": "H&E images + ST of adjacent serial sections",
    "language": "",
@@ -62776,7 +62739,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Gene expression prediction from H&E WSIs",
    "input": "ST count matrix + H&E image",
    "language": "",
@@ -62812,7 +62775,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Gene expression prediction from histopathology",
    "input": "ST count matrix + H&E image",
    "language": "",
@@ -62848,7 +62811,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From ST alone (imputation / super-resolution)",
+   "subtype": "Super-resolution & enhancement",
    "task": "Super-resolution of spot-level ST to subcellular resolution",
    "input": "ST count matrix (Visium) + Xenium reference",
    "language": "",
@@ -62883,7 +62846,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA; Super-resolution & enhancement",
    "task": "Dense pixel-level gene expression prediction from histology",
    "input": "ST count matrix + H&E image",
    "language": "",
@@ -63766,7 +63729,7 @@ window.CATALOG = {
     "Spatial gene expression prediction",
     "Spatial niche identification"
    ],
-   "subtype": "Single-sample domain detection; From ST alone (imputation / super-resolution)",
+   "subtype": "Single-sample domain detection; Imputation within ST",
    "task": "Spatial clustering, expression enhancement and niche identification for subcellular ST",
    "input": "Subcellular ST (cell-level count matrix + spatial coords)",
    "language": "",
@@ -64505,7 +64468,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: protein (virtual staining); Imputation within ST",
    "task": "Virtual multiplex tissue imaging from H&E plus minimal markers",
    "input": "H&E image + subset of multiplexed protein markers (paired MTI)",
    "language": "",
@@ -64613,7 +64576,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From ST alone (imputation / super-resolution)",
+   "subtype": "Imputation within ST",
    "task": "Predicting full multiplexed protein images from a minimal marker subset",
    "input": "Multiplexed protein image (IMC/CODEX)",
    "language": "",
@@ -64713,7 +64676,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: protein (virtual staining)",
    "task": "In-silico multiplex marker stain generation from H&E",
    "input": "H&E image + subset of multiplexed protein markers",
    "language": "",
@@ -65030,7 +64993,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From ST alone (imputation / super-resolution)",
+   "subtype": "Super-resolution & enhancement",
    "task": "Super-resolution reconstruction of imaging mass spectrometry data",
    "input": "IMS/MSI data",
    "language": "",
@@ -65101,7 +65064,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Single-cell spatial gene expression prediction from H&E",
    "input": "H&E image + paired Xenium 5K (training)",
    "language": "",
@@ -65245,7 +65208,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Spatial gene expression prediction from H&E",
    "input": "H&E image + paired ST (training)",
    "language": "",
@@ -65281,7 +65244,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Gene expression prediction from whole-slide images",
    "input": "H&E WSI + paired ST (training)",
    "language": "",
@@ -65317,7 +65280,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From ST alone (imputation / super-resolution); From histology",
+   "subtype": "Imputation within ST; From histology: RNA",
    "task": "ST expression completion to improve histology-based prediction",
    "input": "ST count matrix (+ H&E image for downstream prediction)",
    "language": "Python",
@@ -65498,7 +65461,7 @@ window.CATALOG = {
     "Spatial gene expression prediction",
     "Uncertainty quantification"
    ],
-   "subtype": "From scRNA-seq reference (imputation)",
+   "subtype": "Gene panel expansion from scRNA-seq; Cross-modality translation",
    "task": "Imputation of unmeasured ST genes from scRNA-seq with uncertainty estimates",
    "input": "ST count matrix + scRNA-seq reference",
    "language": "Python",
@@ -65894,7 +65857,7 @@ window.CATALOG = {
     "Spatial gene expression prediction",
     "Spatial alignment"
    ],
-   "subtype": "From ST alone (imputation / super-resolution)",
+   "subtype": "Slice interpolation & 3D reconstruction",
    "task": "ST simulation and OT-guided 3D interpolation of unmeasured intermediate slices",
    "input": "ST count matrix + spatial coords (serial slices)",
    "language": "Python",
@@ -66034,7 +65997,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From ST alone (imputation / super-resolution); From histology",
+   "subtype": "Super-resolution & enhancement",
    "task": "Super-resolution fusion of plant MSI with microscopy images",
    "input": "MSI data + microscopy image",
    "language": "",
@@ -66105,7 +66068,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From ST alone (imputation / super-resolution)",
+   "subtype": "Super-resolution & enhancement",
    "task": "Reconstruct high-resolution ion images from sparsely sampled MSI acquisitions",
    "input": "Mass spectrometry imaging (sparse raster)",
    "language": "",
@@ -66140,7 +66103,7 @@ window.CATALOG = {
     "Spatial gene expression prediction",
     "Cell-type deconvolution"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Predict spot cell type/state proportions from H&E/brightfield histology",
    "input": "Histology images paired with Visium (training); histology only at inference",
    "language": "",
@@ -66355,7 +66318,7 @@ window.CATALOG = {
     "Foundation models",
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "ST-supervised finetuning of pathology foundation models",
    "input": "H&E histology paired with spatial transcriptomics",
    "language": "Python",
@@ -66426,7 +66389,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Generative data augmentation to improve histology-to-expression prediction",
    "input": "H&E histology paired with spatial transcriptomics",
    "language": "",
@@ -66496,7 +66459,7 @@ window.CATALOG = {
     "Spatial gene expression prediction",
     "Foundation models"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Predict spatial gene expression (biomarkers) from histology with an improved vision foundation backbone",
    "input": "H&E histology paired with spatial transcriptomics",
    "language": "Python",
@@ -66668,7 +66631,7 @@ window.CATALOG = {
     "Spatial gene expression prediction",
     "Spatial niche identification"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: protein (virtual staining)",
    "task": "Predict virtual mIF from H&E and discover prognostic spatial immune niches",
    "input": "H&E histology paired with multiplex immunofluorescence (training)",
    "language": "",
@@ -66737,7 +66700,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Gene-enhanced pathology representation learning",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -66773,7 +66736,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From ST alone (imputation / super-resolution)",
+   "subtype": "Cross-modality translation",
    "task": "Spatial protein abundance inference from ST",
    "input": "ST count matrix + spatial coords (training: paired spatial protein)",
    "language": "",
@@ -66880,7 +66843,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: protein (virtual staining)",
    "task": "Spatial proteome prediction from H&E",
    "input": "H&E image (training: tile-level spatial proteomics)",
    "language": "",
@@ -66917,7 +66880,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: protein (virtual staining)",
    "task": "Multiplex immunofluorescence (protein) prediction from H&E",
    "input": "H&E image (training: paired mIF)",
    "language": "",
@@ -66952,7 +66915,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From ST alone (imputation / super-resolution)",
+   "subtype": "Super-resolution & enhancement",
    "task": "Microscopy-guided MSI super-resolution (image fusion)",
    "input": "MSI data + brightfield/IHC microscopy images",
    "language": "",
@@ -66989,7 +66952,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: protein (virtual staining)",
    "task": "Virtual multiplex immunofluorescence generation from H&E",
    "input": "H&E image (training: paired mIF)",
    "language": "",
@@ -67088,7 +67051,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Spatial expression prediction from H&E",
    "input": "H&E image (training: paired ST)",
    "language": "",
@@ -67262,7 +67225,7 @@ window.CATALOG = {
     "Spatial gene expression prediction",
     "Cell communication & interpretable models"
    ],
-   "subtype": "From ST alone (imputation / super-resolution)",
+   "subtype": "Perturbation response",
    "task": "Counterfactual in silico perturbation of tissue microenvironments",
    "input": "Single-cell spatial omics cell × gene matrix + cell coords",
    "language": "",
@@ -67679,7 +67642,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: protein (virtual staining)",
    "task": "Virtual multiplexed immunofluorescence staining from label-free fluorescence images",
    "input": "Autofluorescence + DAPI images; paired mIF for training",
    "language": "",
@@ -68022,7 +67985,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From ST alone (imputation / super-resolution)",
+   "subtype": "Slice interpolation & 3D reconstruction",
    "task": "3D reconstruction/imputation of spatial lipid profiles",
    "input": "Registered 2D MALDI-MSI sections with 3D CCF coordinates",
    "language": "Python",
@@ -68285,7 +68248,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From ST alone (imputation / super-resolution)",
+   "subtype": "Super-resolution & enhancement",
    "task": "Enhance ST resolution/quality (inferred)",
    "input": "Spatial transcriptomics",
    "language": "",
@@ -68548,7 +68511,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Active spot sampling and expression prediction combining scRNA-seq with ST",
    "input": "Histology images, ST, scRNA-seq",
    "language": "",
@@ -68712,7 +68675,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA; Super-resolution & enhancement",
    "task": "Predict spatial gene expression from H&E at near single-cell resolution",
    "input": "H&E WSI + paired Visium (training)",
    "language": "",
@@ -68966,7 +68929,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Predict spatial-omics-derived TME signatures from H&E",
    "input": "H&E WSI + paired spatial omics (training)",
    "language": "",
@@ -69067,7 +69030,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From ST alone (imputation / super-resolution)",
+   "subtype": "Imputation within ST",
    "task": "Generative in/outpainting of single-cell spatial tissue maps",
    "input": "Single-cell spatial omics cell-identity maps + spatial coords",
    "language": "",
@@ -69590,7 +69553,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Predict spatial pathway activity (e.g., TGFb) from H&E at spot resolution, trained on paired ST",
    "input": "H&E images + paired spatial transcriptomics (training)",
    "language": "",
@@ -69661,7 +69624,7 @@ window.CATALOG = {
     "Cell-type deconvolution",
     "Spatial gene expression prediction"
    ],
-   "subtype": "From scRNA-seq reference (imputation)",
+   "subtype": "Gene panel expansion from scRNA-seq",
    "task": "Transfer cell identities from scRNA-seq to single-cell-resolution ST and reconstruct unmeasured expression with interpretable gene attribution",
    "input": "scRNA-seq reference + single-cell-resolution spatial transcriptomics",
    "language": "",
@@ -69999,7 +69962,7 @@ window.CATALOG = {
     "Spatial gene expression prediction",
     "Cell communication & interpretable models"
    ],
-   "subtype": "From ST alone (imputation / super-resolution); From scRNA-seq reference (imputation)",
+   "subtype": "Super-resolution & enhancement; Gene panel expansion from scRNA-seq; From histology: RNA",
    "task": "Enhance sequencing ST to single-cell resolution, infer whole-transcriptome expression for image-based ST and build spatial CCI networks",
    "input": "Spatial transcriptomics + nuclear histology images + scRNA-seq reference",
    "language": "",
@@ -70071,7 +70034,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Infer spatial gene expression from H&E images for prognostic and therapeutic-response prediction",
    "input": "H&E images + paired spatial transcriptomics (training)",
    "language": "",
@@ -70490,7 +70453,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: protein (virtual staining)",
    "task": "Single-cell biomarker state prediction from H&E trained on paired mIF",
    "input": "H&E whole-slide images with paired multiplex immunofluorescence for training",
    "language": "",
@@ -71492,7 +71455,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: protein (virtual staining)",
    "task": "Prediction of MSI molecular maps from label-free vibrational images",
    "input": "Label-free IR/Raman vibrational images (training: paired MSI)",
    "language": "",
@@ -72093,7 +72056,7 @@ window.CATALOG = {
     "Spatial gene expression prediction",
     "Foundation models"
    ],
-   "subtype": "From scRNA-seq reference (imputation)",
+   "subtype": "Gene panel expansion from scRNA-seq",
    "task": "Unpaired cross-modal translation between ST and scRNA-seq profiles",
    "input": "Unpaired targeted ST and scRNA-seq data",
    "language": "",
@@ -72339,7 +72302,7 @@ window.CATALOG = {
     "Spatial gene expression prediction",
     "Cell-type annotation"
    ],
-   "subtype": "Quality control; Image-based; Single-sample domain detection; From scRNA-seq reference (imputation); Reference-based",
+   "subtype": "Quality control; Image-based; Single-sample domain detection; Reference-based; Gene panel expansion from scRNA-seq",
    "task": "Atlas-scale processing of imaging ST: 3D segmentation, QC/doublet filtering, label transfer, domain detection, CCFv3 registration, imputation",
    "input": "Atlas-level imaging spatial transcriptomics (e.g., MERFISH whole mouse brain) + scRNA-seq taxonomy",
    "language": "",
@@ -72637,7 +72600,7 @@ window.CATALOG = {
     "Spatial gene expression prediction",
     "Preprocessing & quality control"
    ],
-   "subtype": "From ST alone (imputation / super-resolution); Denoising & batch correction",
+   "subtype": "Denoising & batch correction; Imputation within ST",
    "task": "Recovery (completion/denoising) of spatio-irregular tensors such as spatial transcriptomics",
    "input": "Spatial transcriptomics arranged as spatio-irregular tensor (non-rectangular spatial domain)",
    "language": "",
@@ -73348,7 +73311,7 @@ window.CATALOG = {
     "Spatial gene expression prediction",
     "Cell communication & interpretable models"
    ],
-   "subtype": "",
+   "subtype": "Perturbation response",
    "task": "Predict perturbation-induced cell-type/state composition shifts, including in tissue neighbourhoods",
    "input": "Perturb-seq scRNA-seq; spatial omics cell neighbourhoods (tissue extension)",
    "language": "",
@@ -74526,7 +74489,7 @@ window.CATALOG = {
    "categories": [
     "Spatial gene expression prediction"
    ],
-   "subtype": "From ST alone (imputation / super-resolution)",
+   "subtype": "Perturbation response; Imputation within ST",
    "task": "Niche-aware prediction of spatial perturbation responses and reconstruction of unmeasured spatial expression",
    "input": "Spatial perturbation transcriptomics (single-cell or spot) + spatial coords + perturbation labels",
    "language": "",
@@ -74812,7 +74775,7 @@ window.CATALOG = {
     "Spatial gene expression prediction",
     "Cell-type deconvolution"
    ],
-   "subtype": "From histology",
+   "subtype": "From histology: RNA",
    "task": "Map bulk-reconstructed single cells to tissue coordinates guided by H&E",
    "input": "Bulk RNA-seq + H&E image + transcriptomic references",
    "language": "",
