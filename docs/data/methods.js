@@ -462,7 +462,7 @@ window.CATALOG = {
    "categories": [
     "Spatially variable gene identification"
    ],
-   "subtype": "Spatial differential expression",
+   "subtype": "Cell-type-specific SVG",
    "task": "Niche-dependent (cell-type-specific) differential expression",
    "input": "ST count matrix + spatial coords + cell-type annotations or deconvolved proportions",
    "language": "R",
@@ -498,7 +498,7 @@ window.CATALOG = {
    "categories": [
     "Spatially variable gene identification"
    ],
-   "subtype": "Spatial differential expression",
+   "subtype": "Domain-marker / Differential Expression",
    "task": "Differential spatial patterns across conditions (multi-sample)",
    "input": "ST count matrices + spatial domain labels from multiple samples and conditions",
    "language": "R",
