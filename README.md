@@ -18,7 +18,7 @@
 ## What is this?
 
 Spatial omics has produced a fast-growing number of analysis methods, and picking the right one for your data is not easy.
-The **Spatial Omics Methods Catalog** collects the 112 methods discussed in our review,
+The **Spatial Omics Methods Catalog** collects the 114 methods discussed in our review,
 *Computational landscape and emerging frontiers in spatial omics* (Annals of Applied Statistics), into one website
 where you can browse, compare and find them.
 
@@ -26,7 +26,7 @@ where you can browse, compare and find them.
 
 | Edition | Link | What it contains |
 |---|---|---|
-| **Paper edition** | [liranmao.github.io/spatial-omics-methods-catalog](https://liranmao.github.io/spatial-omics-methods-catalog/) | The 112 methods discussed in the review, kept as published ([v1.0.0](https://github.com/liranmao/spatial-omics-methods-catalog/releases/tag/v1.0.0)). |
+| **Paper edition** | [liranmao.github.io/spatial-omics-methods-catalog](https://liranmao.github.io/spatial-omics-methods-catalog/) | The 114 methods discussed in the review, kept as published ([v1.0.0](https://github.com/liranmao/spatial-omics-methods-catalog/releases/tag/v1.0.0)). |
 | **Living edition** (ongoing) | [liranmao.github.io/spatial-omics-methods-catalog/dev](https://liranmao.github.io/spatial-omics-methods-catalog/dev/) | All methods: the review methods plus new ones added since, marked "New". Updated continuously. |
 
 A switch at the top of every page moves between the two.
@@ -59,7 +59,7 @@ New methods go into the **living edition**; the paper edition stays as published
 If you find the catalog useful, please cite our review:
 
 > Mao L\*, Li C\*, Jiang S, Li W, Jin K, Zhang NR, Li M†. Computational landscape and emerging frontiers in spatial omics.
-> *Annals of Applied Statistics*, in revision.
+> *Annals of Applied Statistics*, in press.
 >
 > \*Equal contribution · †Corresponding author
 

@@ -22,3 +22,9 @@ Source: `main/08012026_AOAS_aoas.tex`, lines 312–450 (113 rows, 9 categories, 
   (see `MANUAL_KEYS` in `scripts/extract_table.py`).
 - Code links for 18 methods, taken only from URLs printed in the paper's own abstract.
 - Automatic filter tags: input data, model family, and paradigm (Statistical / classical ML, Deep learning, Hybrid).
+
+## Updates after acceptance (November 2026)
+- The manuscript's Table 3 became **Supplementary Table S1** of the published article.
+- **Added Niche-DE and DESpace2** (spatial differential expression), which were added to Section 2.2 in the minor
+  revision. Both are review methods, so they appear in both editions: 114 review methods in total.
+- **SOMDE** now has its citation (Hao, Hua and Zhang, 2021, *Bioinformatics*), which was added to the manuscript.
