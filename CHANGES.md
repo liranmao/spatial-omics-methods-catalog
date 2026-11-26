@@ -47,3 +47,9 @@ These changes apply to the living edition (`/dev/`). The paper edition keeps the
 4. Categories are listed in pipeline order (preprocessing → segmentation → … → uncertainty quantification).
 5. **Second search (2026-11-21): methods first released 2019–2023.** Same five-path discovery, double screening and
    adjudication as the 2024–2026 search; 366 methods added (living edition: 2,473 methods).
+
+## Updates after acceptance (November 2026)
+- The manuscript's Table 3 became **Supplementary Table S1** of the published article.
+- **Added Niche-DE and DESpace2** (spatial differential expression), which were added to Section 2.2 in the minor
+  revision. Both are review methods, so they appear in both editions: 114 review methods in total.
+- **SOMDE** now has its citation (Hao, Hua and Zhang, 2021, *Bioinformatics*), which was added to the manuscript.
